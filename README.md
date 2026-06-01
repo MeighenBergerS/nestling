@@ -2,108 +2,38 @@
 
 A beginner-friendly, physics-first learning repository for early-career researchers and graduates.
 
-This project aims to make practical research skills accessible through short guides, templates, examples, and exercises.
+[![CI](https://github.com/MeighenBergerS/nestling/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/MeighenBergerS/nestling/actions/workflows/ci.yml)
+[![Docs](https://github.com/MeighenBergerS/nestling/actions/workflows/deploy-mkdocs.yml/badge.svg?branch=main)](https://meighenbergers.github.io/nestling/)
+[![Python Versions](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)](https://www.python.org/)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-## Goals
+|               |                                              |
+|---------------|----------------------------------------------|
+| Repository    | <https://github.com/MeighenBergerS/nestling> |
+| Documentation | <https://meighenbergers.github.io/nestling/> |
 
-- Help physics graduates get productive quickly.
-- Provide a supportive path from novice to independent contributor.
-- Offer clear documentation, examples, and tests where relevant.
-- Encourage good habits in writing, coding, and collaboration.
+## Summary
 
-## Proposed Learning Tracks
+Nestling provides short guides, templates, examples, and exercises across seven learning tracks:
+ArXiv and reading papers, journal club, writing papers, Git and GitHub, coding practices,
+plotting, and working with LLMs.
 
-1. ArXiv and reading papers
-2. Journal club
-3. Writing papers
-4. Git and GitHub
-5. Coding practices
-6. Plotting and scientific visualization
+**Everything is on the [documentation site](https://meighenbergers.github.io/nestling/).**
+Start there rather than reading the repository directly.
 
-## Suggested Repository Structure
+## Contributing
 
-```text
-nestling/
-  README.md
-  LICENSE
-  .gitignore
+Contributions are welcome — new lessons, examples, bug fixes, and documentation improvements.
 
-  docs/
-    index.md
-    getting-started/
-      environment-setup.md
-      how-to-use-this-repo.md
-    tracks/
-      arxiv-and-reading-papers.md
-      journal-club.md
-      writing-papers.md
-      git-and-github.md
-      coding-practices.md
-      plotting.md
-    glossary.md
-    faq.md
+Read the [contribution guidelines](./CONTRIBUTING.md) to learn how to get started.
 
-  lessons/
-    arxiv/
-      01-finding-papers.md
-      02-reading-strategy.md
-    journal-club/
-      01-how-to-present.md
-      02-discussion-prompts.md
-    writing/
-      01-paper-structure.md
-      02-revision-checklist.md
-    git-github/
-      01-git-basics.md
-      02-github-collaboration.md
-    coding/
-      01-project-layout.md
-      02-testing-basics.md
-    plotting/
-      01-figure-design.md
-      02-matplotlib-basics.md
+## Getting Help
 
-  templates/
-    journal-club-template.md
-    paper-outline-template.md
-    code-review-checklist.md
-    issue-template.md
-    pull-request-template.md
+Have a question or need help? Open a
+[discussion](https://github.com/MeighenBergerS/nestling/discussions).
 
-  examples/
-    plotting/
-      simple-line-plot.py
-      publication-style-plot.py
-    git/
-      branching-workflow.md
-
-  tests/
-    README.md
-```
-
-## What We Need First (MVP)
-
-1. A concise onboarding path for new users
-2. One complete lesson per learning track
-3. Reusable templates for journal club and writing
-4. Simple, runnable coding and plotting examples
-5. Basic test and quality checks for code examples
-6. Contribution guidelines for community growth
-
-## Accessibility and Novice-Friendliness Principles
-
-- Define jargon before using it.
-- Keep lessons short and stepwise.
-- Include expected outcomes and common mistakes.
-- Add checklists and worked examples.
-- Prefer practical tasks over abstract descriptions.
-
-## Testing and Quality Approach
-
-- Add lightweight tests for executable examples.
-- Validate links and markdown formatting in docs.
-- Keep examples minimal and reproducible.
-- Use CI once initial example code exists.
+Found a bug or want to suggest a change?
+[Open an issue](https://github.com/MeighenBergerS/nestling/issues/new/choose).
 
 ## License
 

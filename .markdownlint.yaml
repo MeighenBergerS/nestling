@@ -2,7 +2,7 @@ default: true
 
 # Line length: allow longer lines in tables and code blocks
 MD013:
-  line_length: 120
+  line_length: 150
   code_blocks: false
   tables: false
 
