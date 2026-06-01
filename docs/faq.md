@@ -5,6 +5,28 @@
 
 ---
 
+**Do I need to install anything to use Nestling?**
+
+No — if you are here to read the lessons, this site is all you need.
+You only need to install Python and Git if you want to run the code examples locally.
+See [Environment Setup](getting-started/environment-setup.md) if that applies to you.
+
+---
+
+**My supervisor hasn't told me where to start. What do I do?**
+
+Ask them — they know your project and can point you to the right track.
+If you want a rough guide in the meantime, see [How to Use This Repo](getting-started/how-to-use-this-repo.md).
+
+---
+
+**Something isn't working. What should I do?**
+
+Ask your supervisor first — they have almost certainly hit the same issue before.
+If you think there is an error in Nestling itself, [open a GitHub issue](https://github.com/MeighenBergerS/nestling/issues).
+
+---
+
 **Do I need to complete the tracks in order?**
 
 No. Each track is self-contained. Start with the one most relevant to your current work.

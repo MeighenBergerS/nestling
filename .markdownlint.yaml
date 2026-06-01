@@ -15,3 +15,7 @@ MD041: true
 # Allow duplicate headings in different sections
 MD024:
   siblings_only: true
+
+# Require fenced code blocks (allows language hints for syntax highlighting)
+MD046:
+  style: fenced
