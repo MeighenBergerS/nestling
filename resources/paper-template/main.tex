@@ -1,67 +1,253 @@
-% Minimal two-column physics paper template.
-% Compile with: pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex main.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% HEP paper template — Meighen-Berger group
+% Based on the group style guide.
+%
+% Compile with:
+%   latexmk -pdf main.tex
+%
+% Or manually:
+%   pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex main.tex
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[twocolumn,aps,prd,superscriptaddress]{revtex4-2}
+\documentclass[aps,prd,twocolumn,superscriptaddress,bibnotes,longbibliography,
+               preprintnumbers,floatfix,10pt]{revtex4-2}
 
-\usepackage{amsmath}
-\usepackage{amssymb}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage[colorlinks]{hyperref}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{multirow}
+
+\hypersetup{
+    pdfnewwindow=true,
+    colorlinks=true,
+    linkcolor=violet,
+    citecolor=violet,
+    filecolor=violet,
+    urlcolor=violet
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Macros
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ORCID icon link — requires figures/orcid.pdf
+\newcommand{\orcid}[1]{%
+    \href{https://orcid.org/#1}{%
+        \includegraphics[width=10pt]{figures/orcid.pdf}}}
+
+% Add paper-specific \newcommand definitions here, before \begin{document}.
+% Example: \newcommand{\mchi}{m_{\mathrm{\chi}}}
+
+\graphicspath{{./figures/}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title and author block
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \title{Paper Title}
 
-\author{Author Name}
-\email{author@example.com}
-\affiliation{Department, University, City, Country}
+% Each author follows this pattern exactly.
+% The \, after \orcid{} is required to separate from the next author.
+\author{Author Name \orcid{0000-0000-0000-0000}\,}
+\email{author@institution.edu}
+\affiliation{%
+    Department of Physics, University Name, City, Country
+    \href{https://ror.org/XXXXXXXX}{[ROR]}}
+
+% Add additional authors below, repeating the block above.
+% \author{Second Author \orcid{0000-0000-0000-0000}\,}
+% \email{second@institution.edu}
+% \affiliation{...}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abstract
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{abstract}
-% 4--5 sentences following this structure:
-% 1. Setting + motivation (1 sentence): physical system and why it matters.
-% 2. What we do (1--2 sentences): method and scope. Begin with "We ...".
-% 3. Main quantitative result (1 sentence): a specific number or comparison.
-% 4. Broader implication (1 sentence): how this complements existing work.
+% 4--5 sentences following this structure — no citations:
+%   1. Setting + motivation (1 sentence): physical system and why it matters.
+%   2. What we do (1--2 sentences): method, systems studied, scope. Begin with "We...".
+%   3. Main quantitative result (1 sentence): a specific number, not "significant improvement".
+%   4. Broader implication (1 sentence): what this adds to the field or opens up.
+[Abstract text.]
 \end{abstract}
 
 \maketitle
 
-% ---------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Introduction}
-% ---------------------------------------------------------------
+\label{sec:introduction}
 
 % Paragraph 1 (3--5 sentences): broad physical setting.
+% Why is this system interesting from first principles?
+% Reference landmark experiments concisely -- one citation per result.
 
 % Paragraph 2 (3--5 sentences): specific opportunity and prior work.
+% Zoom in on the precise gap this paper fills.
+% Cite prior work without summarising it at length.
 
 % Paragraph 3 (2--4 sentences): what this paper does.
-% Begin with "In this work, we ..." or "In this paper, we show ...".
+% Begin with "In this work, we..." or "In this paper, we show...".
+% Name the two or three key things computed or proposed.
 
-% Paragraph 4 (optional): paper structure.
-% "In Section~\ref{sec:methods}, we ... We conclude in Section~\ref{sec:conclusion}."
+% Paragraph 4 (optional, 1--2 sentences): paper structure.
+% "In Section~\ref{sec:methods}, we... We conclude in Section~\ref{sec:conclusion}."
+% Only include if the structure is non-obvious.
 
-% ---------------------------------------------------------------
+% Figure 1 (introduction sketch -- not a data figure):
+% Reference it explicitly: "Figure~\ref{fig:overview} illustrates our approach."
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[b]
+\centering
+\includegraphics[width=\columnwidth]{figures/overview.pdf}
+\caption{%
+    Overview of the physical setup. [What it shows.]
+    [Data or model used.]
+    \textit{[Key takeaway sentence in italics.]}}
+\label{fig:overview}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Methods}
 \label{sec:methods}
-% ---------------------------------------------------------------
 
-% ---------------------------------------------------------------
+% Open with 1--2 sentences: what this section does and why.
+% Do not repeat motivation from the introduction.
+
+% Scope constraints go at the end of the opening paragraph:
+%   "For simplicity, we assume..."
+%   "We conservatively require..."
+
+% Order-of-magnitude estimate: set off with
+%   "To build intuition, we note that..." or "A simple estimate gives..."
+% Close with a sentence comparing it to the full result.
+
+% Single equation:
+%
+\begin{equation}
+    \mathcal{L} = \text{[Lagrangian or key equation]}.
+    \label{eq:key}
+\end{equation}
+%
+
+% Define every symbol immediately after the equation in which it first appears:
+% "where $X$ is ..., and $Y$ is ...".
+
+% In-text equation reference: Eq.~(\ref{eq:key})
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Results}
 \label{sec:results}
-% ---------------------------------------------------------------
 
-% ---------------------------------------------------------------
+% Open each subsection with a scaling argument before the full calculation.
+% Introduce every figure before or at the start of the paragraph that interprets it:
+%   "Figure~\ref{fig:main} shows..."
+% Never: "As can be seen in Figure~\ref{fig:main}..."
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/result.pdf}
+\caption{%
+    [What the figure shows, result-first.]
+    [Data or model used; line styles defined here.]
+    \textit{[Key takeaway sentence in italics.]}}
+\label{fig:result}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Two-column-wide figure:
+%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{figure*}[t]
+% \centering
+% \includegraphics[width=\textwidth]{figures/wide_result.pdf}
+% \caption{%
+%     [Caption.]
+%     \textbf{Left panel:} [Left panel description.]
+%     \textbf{Right panel:} [Right panel description.]
+%     \textit{[Key takeaway.]}}
+% \label{fig:wide_result}
+% \end{figure*}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Conclusion}
 \label{sec:conclusion}
-% ---------------------------------------------------------------
 
 % Paragraph 1: restate the main result in one sentence.
+% "We have shown/computed/demonstrated [main result with number]."
+% No new results here.
 
-% Paragraph 2: broader implications.
+% Paragraph 2 (<=4 sentences): broader implications.
+% What does this mean for the field?
+% Which complementary experiments does it connect to?
 
-% Paragraph 3: outlook -- two or three natural follow-up directions.
+% Paragraph 3: future outlook.
+% Three or four concrete improvements or extensions.
+% End on a forward-looking note.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Acknowledgements}
+
+We are grateful for helpful discussions with [names].
+[Funding statement: grant numbers and agencies.]
+This work is based on the ideas and calculations of the authors, plus publicly available information.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Appendices (remove block if not needed)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+\counterwithin{figure}{section}
+\vspace{0.75cm}
+\centerline{\Large {\bf Appendices}}
+\vspace{0.75cm}
+
+Here, we provide additional details on [topic].
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Appendix Title}
+\label{app:name}
+
+% Each appendix opens with one sentence stating its purpose:
+% "In this appendix, we provide additional details on..."
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
 \bibliography{references}
 
 \end{document}
