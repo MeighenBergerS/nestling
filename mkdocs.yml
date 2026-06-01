@@ -8,7 +8,6 @@ theme:
   name: readthedocs
   logo: img/logo.png
   favicon: img/favicon.ico
-  custom_dir: docs/overrides
 
 nav:
   - Home: index.md

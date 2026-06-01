@@ -35,7 +35,13 @@ jobs:
       - name: Run unit tests
         run: pytest tests/
       - name: Test notebooks
-        run: pytest --nbmake examples/
+        run: |
+          notebooks=$(find examples -name "*.ipynb" | head -1)
+          if [ -n "$notebooks" ]; then
+            pytest --nbmake examples/
+          else
+            echo "No notebooks found — skipping nbmake."
+          fi
 
   docs:
     name: Docs build (mkdocs)
