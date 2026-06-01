@@ -28,6 +28,7 @@ nav:
     - Paper Outline: templates/paper-outline.md
   - Glossary: glossary.md
   - FAQ: faq.md
+  - Community: community.md
   - Credits: credits.md
 
 extra_css:
