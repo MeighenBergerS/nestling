@@ -35,6 +35,7 @@ extra_css:
   - css/custom_rules.css
 
 extra_javascript:
+  - js/clipboard.js
   - js/copy_code.js
 
 markdown_extensions:
