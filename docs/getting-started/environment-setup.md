@@ -4,6 +4,19 @@
     If you are here to read the lessons and follow the tracks, **you do not need to install anything** — this site is all you need.
     Only follow this guide if you want to run the code examples locally.
 
+## What is an environment, and why do I need one?
+
+When you install Python packages (libraries of code that other people have written), they get stored somewhere on your computer.
+The problem is that different projects often need different versions of the same package — and they can conflict with each other.
+
+A **virtual environment** solves this by giving each project its own private, isolated space for its packages.
+Think of it like a separate toolbox for each project: tools in one box don't interfere with tools in another.
+
+This guide walks you through creating that toolbox for Nestling.
+If the terminology feels unfamiliar, check the [Glossary](../glossary.md) or ask your supervisor — this is a normal first hurdle.
+
+---
+
 ## What you will need
 
 - Python 3.11 or later

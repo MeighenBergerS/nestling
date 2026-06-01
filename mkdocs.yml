@@ -34,6 +34,9 @@ nav:
 extra_css:
   - css/custom_rules.css
 
+extra_javascript:
+  - js/copy_code.js
+
 markdown_extensions:
   - admonition
   - toc:
