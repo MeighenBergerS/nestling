@@ -12,8 +12,8 @@ theme:
 nav:
   - Home: index.md
   - Getting Started:
-    - Environment Setup: getting-started/environment-setup.md
     - How to Use This Repo: getting-started/how-to-use-this-repo.md
+    - Environment Setup: getting-started/environment-setup.md
   - Tracks:
     - ArXiv & Reading Papers: tracks/01-arxiv/index.md
     - Journal Club: tracks/02-journal-club/index.md

@@ -36,6 +36,10 @@ LLMs can generate plausible-sounding citations, equations, or code that are wron
 **Linting**
 : Automated checking of code or text for style and error violations.
 
+**pip**
+: The standard package installer for Python.
+Running `pip install <package>` downloads and installs a library from the Python Package Index (PyPI).
+
 **Preprint**
 : A version of a paper shared publicly before formal peer review, typically on ArXiv.
 
@@ -45,8 +49,21 @@ LLMs can generate plausible-sounding citations, equations, or code that are wron
 **pytest**
 : A Python testing framework used to write and run unit tests.
 
+**Repository (Repo)**
+: A directory tracked by Git, containing your project files and the full history of every change ever made to them.
+Repositories can be hosted on platforms like GitHub for collaboration and backup.
+
 **ruff**
 : A fast Python linter and formatter used in Nestling to enforce code style.
 
+**Terminal**
+: A text-based interface for interacting with your computer by typing commands.
+Also called the command line, shell, or console.
+On macOS and Linux it is built in; on Windows it is accessible via WSL or the Command Prompt.
+
 **Virtual Environment**
 : An isolated Python installation that keeps project dependencies separate from the system Python.
+
+**WSL (Windows Subsystem for Linux)**
+: A feature of Windows that lets you run a Linux environment directly inside Windows without a separate virtual machine.
+Nestling's setup instructions assume WSL for Windows users.
