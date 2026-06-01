@@ -33,6 +33,8 @@ For guidance, see: docs/tracks/07-llm-practices/index.md
 
 
 def main() -> None:
+    if len(sys.argv) < 2:
+        return
     commit_msg_file = sys.argv[1]
     with open(commit_msg_file) as f:
         msg = f.read()

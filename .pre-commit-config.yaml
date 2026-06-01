@@ -6,7 +6,6 @@ repos:
         language: python
         entry: python .hooks/llm_coauthor_notice.py
         stages: [commit-msg]
-        pass_filenames: false
         always_run: true
         verbose: true
 
