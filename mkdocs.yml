@@ -15,7 +15,11 @@ nav:
     - How to Use This Repo: getting-started/how-to-use-this-repo.md
     - Environment Setup: getting-started/environment-setup.md
   - Tracks:
-    - ArXiv & Reading Papers: tracks/01-arxiv/index.md
+    - ArXiv & Reading Papers:
+      - Overview: tracks/01-arxiv/index.md
+      - Lesson 01 — Finding Papers: tracks/01-arxiv/lesson-01.md
+      - Lesson 02 — Reading Strategy: tracks/01-arxiv/lesson-02.md
+      - Lesson 03 — Managing Papers: tracks/01-arxiv/lesson-03.md
     - Journal Club: tracks/02-journal-club/index.md
     - Writing Papers: tracks/03-writing/index.md
     - Git & GitHub: tracks/04-git-github/index.md

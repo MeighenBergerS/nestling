@@ -4,16 +4,24 @@ This track teaches you to find, read, and manage physics research papers efficie
 By the end, you will be comfortable navigating ArXiv, identifying relevant literature,
 and building a systematic reading workflow.
 
-!!! note "Under construction"
-    Lesson content is being developed. The outline below shows what each lesson will cover.
-
 ## Lessons
 
-- **Lesson 01 — Finding Papers**: ArXiv categories, search, keyword filters, and e-mail alert subscriptions.
-- **Lesson 02 — Reading Strategy**: How to read efficiently: abstract → conclusions → figures → methods.
-- **Lesson 03 — Managing Papers**: Reference managers, annotation tools, and building a literature archive.
+| Lesson | Topic | What you will learn |
+| --- | --- | --- |
+| [01 — Finding Papers](lesson-01.md) | ArXiv & search tools | ArXiv categories, search, keyword filters, and email alert subscriptions |
+| [02 — Reading Strategy](lesson-02.md) | How to read efficiently | Abstract → conclusions → figures → methods; the three-pass method |
+| [03 — Managing Papers](lesson-03.md) | Reference management | Zotero, annotation tools, and building a literature archive |
+
+Work through the lessons in order if you are starting from scratch.
+If you already know how to find papers, jump to whichever lesson covers what you need.
 
 ## Examples
 
-See the [`examples/arxiv/`](https://github.com/MeighenBergerS/nestling/tree/main/examples/arxiv) folder
-for runnable notebooks demonstrating how to fetch and filter ArXiv papers programmatically.
+The [`examples/arxiv/`](https://github.com/MeighenBergerS/nestling/tree/main/examples/arxiv) folder
+contains runnable scripts and notebooks covered in Lesson 01.
+Each topic has both a plain script and a Jupyter notebook with step-by-step commentary.
+
+| Topic | Script | Notebook |
+| --- | --- | --- |
+| ArXiv API | [`arxiv_api.py`](https://github.com/MeighenBergerS/nestling/tree/main/examples/arxiv/arxiv_api.py) | [`arxiv_api.ipynb`](https://github.com/MeighenBergerS/nestling/tree/main/examples/arxiv/notebooks/arxiv_api.ipynb) |
+| Inspire-HEP API | [`inspire_api.py`](https://github.com/MeighenBergerS/nestling/tree/main/examples/arxiv/inspire_api.py) | [`inspire_api.ipynb`](https://github.com/MeighenBergerS/nestling/tree/main/examples/arxiv/notebooks/inspire_api.ipynb) |

@@ -15,6 +15,8 @@ requires-python = ">=3.11"
 dependencies = [
     "numpy>=1.26",
     "matplotlib>=3.8",
+    "arxiv>=2.1",
+    "requests>=2.31",
 ]
 
 [project.optional-dependencies]
@@ -48,3 +50,6 @@ select = ["E", "F", "W", "I"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
+markers = [
+    "network: tests that make real network requests (deselect with '-m not network')",
+]
