@@ -26,7 +26,13 @@ nav:
       - Lesson 02 — Leading a Discussion: tracks/02-journal-club/lesson-02.md
       - Lesson 03 — Giving Feedback: tracks/02-journal-club/lesson-03.md
     - Writing Papers: tracks/03-writing/index.md
-    - Git & GitHub: tracks/04-git-github/index.md
+    - Git & GitHub:
+      - Overview: tracks/04-git-github/index.md
+      - Lesson 01 — Git Basics: tracks/04-git-github/lesson-01.md
+      - Lesson 02 — Branching: tracks/04-git-github/lesson-02.md
+      - Lesson 03 — GitHub Collaboration: tracks/04-git-github/lesson-03.md
+      - Lesson 04 — Issues and Project Management: tracks/04-git-github/lesson-04.md
+      - Lesson 05 — GitHub Actions: tracks/04-git-github/lesson-05.md
     - Coding Practices: tracks/05-coding/index.md
     - Plotting: tracks/06-plotting/index.md
     - Working with LLMs: tracks/07-llm-practices/index.md
