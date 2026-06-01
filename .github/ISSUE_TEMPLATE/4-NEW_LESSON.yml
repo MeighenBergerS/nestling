@@ -1,0 +1,61 @@
+name: New lesson proposal
+description: Propose a new lesson or example for an existing track
+title: "[Lesson]: "
+labels: ["new lesson"]
+body:
+  - type: input
+    id: contact
+    attributes:
+      label: Contact details
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: dropdown
+    id: track
+    attributes:
+      label: Track
+      description: Which learning track would this lesson belong to?
+      options:
+        - ArXiv & Reading Papers
+        - Journal Club
+        - Writing Papers
+        - Git & GitHub
+        - Coding Practices
+        - Plotting
+        - Working with LLMs
+        - New track (describe below)
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: Lesson summary
+      description: What would the lesson cover and what would learners be able to do after completing it?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Motivation
+      description: Why is this lesson missing and who would benefit from it?
+    validations:
+      required: true
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      description: Are you willing to write or help write this lesson?
+      options:
+        - label: "Yes, I can write a draft."
+        - label: "I can help review a draft."
+        - label: "I am proposing only — I cannot contribute directly."
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?
+      description: >
+        References, existing resources, or related issues.
+    validations:
+      required: false

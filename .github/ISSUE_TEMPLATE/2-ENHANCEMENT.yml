@@ -1,0 +1,43 @@
+name: Enhancement suggestion
+description: Suggest an improvement to an existing lesson, example, or template
+title: "[Enhancement]: "
+labels: ["enhancement"]
+body:
+  - type: input
+    id: contact
+    attributes:
+      label: Contact details
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: input
+    id: track
+    attributes:
+      label: Track or section
+      description: Which learning track or section does this relate to?
+      placeholder: >
+        e.g. Plotting, Coding Practices, Writing Papers
+    validations:
+      required: false
+  - type: textarea
+    id: what
+    attributes:
+      label: Suggested change
+      description: What would you like to see improved?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Reasoning
+      description: Why is this change useful?
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?
+      description: >
+        Anything that gives us more context: links, references, etc.
+    validations:
+      required: false

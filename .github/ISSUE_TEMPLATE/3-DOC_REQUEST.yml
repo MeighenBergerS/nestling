@@ -1,0 +1,42 @@
+name: Documentation request
+description: Report missing, unclear, or incorrect documentation
+title: "[Docs]: "
+labels: ["documentation"]
+body:
+  - type: input
+    id: contact
+    attributes:
+      label: Contact details
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: Which page or section is affected?
+      placeholder: e.g. docs/tracks/05-coding/index.md
+    validations:
+      required: false
+  - type: textarea
+    id: what
+    attributes:
+      label: Suggested change
+      description: What is missing, unclear, or incorrect?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Reasoning
+      description: Why is this change necessary?
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?
+      description: >
+        Anything that gives us more context: links, references, etc.
+    validations:
+      required: false
