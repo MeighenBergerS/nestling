@@ -50,3 +50,6 @@ select = ["E", "F", "W", "I"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
+markers = [
+    "network: tests that make real network requests (deselect with '-m not network')",
+]
