@@ -1,20 +1,38 @@
 # Writing Papers
 
-This track covers the structure, style, and tools for writing physics research papers.
-You will learn how to build a clear argument, apply consistent writing conventions, and produce
-publication-ready LaTeX documents.
-
-!!! note "Under construction"
-    Lesson content is being developed. The outline below shows what each lesson will cover.
+This track covers how to write a physics research paper from first draft to submission.
+The focus is on the specific conventions used in high-energy and astroparticle physics:
+how to structure the argument, what each section must do, how to write clearly in the field's voice,
+and how to produce a clean LaTeX document.
 
 ## Lessons
 
-- **Lesson 01 — Paper Structure**: The standard anatomy of a physics paper: abstract,
-  introduction, methods, results, and conclusion.
-- **Lesson 02 — The Abstract Formula**: A strict 4–5 sentence template that communicates your result clearly.
-- **Lesson 03 — Writing Conventions**: Voice, tense, paragraph structure, and section titles.
-- **Lesson 04 — LaTeX Basics**: Getting started with LaTeX: compiling, equations, figures, and references.
-- **Lesson 05 — Revision Checklist**: A systematic checklist for self-reviewing a draft before submission.
+| Lesson | Topic | What you will learn |
+| --- | --- | --- |
+| [01 — Paper Structure](lesson-01.md) | Anatomy and narrative arc | How a HEP paper is organised, what each section must deliver, and how figures support the argument |
+| [02 — The Abstract Formula](lesson-02.md) | Writing the abstract | A four-sentence template that communicates your result clearly and completely |
+| [03 — Writing Conventions](lesson-03.md) | Voice, paragraphs, and style | First-person plural, paragraph structure, section titles, order-of-magnitude estimates, and what to avoid |
+| [04 — LaTeX Basics](lesson-04.md) | Producing the document | Document class, figures, equations, cross-references, citations, and the conventions used in RevTeX |
+| [05 — Revision Checklist](lesson-05.md) | Before you submit | A systematic checklist for catching the most common errors before your paper goes out |
+
+Work through the lessons in order if you are writing your first paper.
+If you are revising a draft, jump to the lesson that covers what you need.
+
+## Style guide and reference papers
+
+The conventions in this track are drawn from a writing style guide developed by analysing
+representative papers and refined through collaboration with
+[John Beacom](https://inspirehep.net/authors/1017043) — whose high standards for clarity and precision
+are directly reflected in the rules you will encounter here.
+Stylistic choices also reflect the author's own evolving preferences.
+
+The three papers below are used as worked examples throughout the lessons:
+
+| Paper | arXiv | Topic |
+| --- | --- | --- |
+| [Towards Measuring the CP-Violating Phase with Atmospheric Neutrinos](https://inspirehep.net/literature/3157184) | 2605.16721 | CP violation, atmospheric neutrinos |
+| [New Multimessenger Probe of DM–Nucleon Interactions from UHECR Acceleration](https://inspirehep.net/literature/3094737) | 2512.18093 | Dark matter, UHECRs |
+| [Enhancing DUNE's Solar Neutrino Capabilities with Neutral-Current Detection](https://inspirehep.net/literature/2836055) | 2410.00330 | Solar neutrinos, DUNE |
 
 ## Templates
 
