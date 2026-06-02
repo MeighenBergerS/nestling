@@ -33,7 +33,20 @@ nav:
       - Lesson 03 — GitHub Collaboration: tracks/04-git-github/lesson-03.md
       - Lesson 04 — Issues and Project Management: tracks/04-git-github/lesson-04.md
       - Lesson 05 — GitHub Actions: tracks/04-git-github/lesson-05.md
-    - Coding Practices: tracks/05-coding/index.md
+    - Coding Practices:
+      - Overview: tracks/05-coding/index.md
+      - Lesson 01 — IDE Setup: tracks/05-coding/lesson-01.md
+      - Lesson 02 — Python & Jupyter: tracks/05-coding/lesson-02.md
+      - Lesson 03 — Package Management: tracks/05-coding/lesson-03.md
+      - Lesson 04 — Scientific Python Stack: tracks/05-coding/lesson-04.md
+      - Lesson 05 — Code Style & Quality: tracks/05-coding/lesson-05.md
+      - Lesson 06 — Performance & Parallelism: tracks/05-coding/lesson-06.md
+      - Lesson 07 — ML Basics with PyTorch: tracks/05-coding/lesson-07.md
+      - Lesson 08 — Project Layout: tracks/05-coding/lesson-08.md
+      - Lesson 09 — Documentation: tracks/05-coding/lesson-09.md
+      - Lesson 10 — Testing: tracks/05-coding/lesson-10.md
+      - Lesson 11 — Packaging: tracks/05-coding/lesson-11.md
+      - Lesson 12 — Linting & Automation: tracks/05-coding/lesson-12.md
     - Plotting: tracks/06-plotting/index.md
     - Working with LLMs: tracks/07-llm-practices/index.md
   - Templates:
