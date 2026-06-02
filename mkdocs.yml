@@ -47,7 +47,12 @@ nav:
       - Lesson 10 — Testing: tracks/05-coding/lesson-10.md
       - Lesson 11 — Packaging: tracks/05-coding/lesson-11.md
       - Lesson 12 — Linting & Automation: tracks/05-coding/lesson-12.md
-    - Plotting: tracks/06-plotting/index.md
+    - Plotting:
+      - Overview: tracks/06-plotting/index.md
+      - Lesson 01 — Figure Design Principles: tracks/06-plotting/lesson-01.md
+      - Lesson 02 — matplotlib Basics: tracks/06-plotting/lesson-02.md
+      - Lesson 03 — Publication Style: tracks/06-plotting/lesson-03.md
+      - Lesson 04 — Colour and Accessibility: tracks/06-plotting/lesson-04.md
     - Working with LLMs: tracks/07-llm-practices/index.md
     - Code of Conduct:
       - Overview: tracks/08-code-of-conduct/index.md
