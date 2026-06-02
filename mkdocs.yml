@@ -53,7 +53,15 @@ nav:
       - Lesson 02 — matplotlib Basics: tracks/06-plotting/lesson-02.md
       - Lesson 03 — Publication Style: tracks/06-plotting/lesson-03.md
       - Lesson 04 — Colour and Accessibility: tracks/06-plotting/lesson-04.md
-    - Working with LLMs: tracks/07-llm-practices/index.md
+    - Working with LLMs:
+      - Overview: tracks/07-llm-practices/index.md
+      - Lesson 01 — What LLMs Are and Are Not: tracks/07-llm-practices/lesson-01.md
+      - Lesson 02 — LLMs for Code: tracks/07-llm-practices/lesson-02.md
+      - Lesson 03 — LLMs for Writing: tracks/07-llm-practices/lesson-03.md
+      - Lesson 04 — LLMs for Literature Search: tracks/07-llm-practices/lesson-04.md
+      - Lesson 05 — Prompt Engineering for Research: tracks/07-llm-practices/lesson-05.md
+      - Lesson 06 — Verification Habits: tracks/07-llm-practices/lesson-06.md
+      - Lesson 07 — Skill Files: tracks/07-llm-practices/lesson-07.md
     - Code of Conduct:
       - Overview: tracks/08-code-of-conduct/index.md
       - Lesson 01 — Understanding and Living the Code of Conduct: tracks/08-code-of-conduct/lesson-01.md

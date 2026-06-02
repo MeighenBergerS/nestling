@@ -14,20 +14,21 @@ jobs:
     name: Lint (ruff + markdownlint)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
       - name: Install dev dependencies
         run: pip install -e ".[dev]"
-      - uses: pre-commit/action@v3.0.1
+      - name: Run pre-commit
+        run: pre-commit run --all-files
 
   test:
     name: Tests (pytest + nbmake)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
       - name: Install dev dependencies
@@ -41,7 +42,7 @@ jobs:
           pip install -e examples/coding/neutrino_flux/
           pip install matplotlib pandas h5py
       - name: Run unit tests
-        run: pytest tests/
+        run: pytest tests/ -m "not network"
       - name: Test notebooks
         run: |
           notebooks=$(find examples -name "*.ipynb" | head -1)
@@ -58,8 +59,8 @@ jobs:
     name: Docs build (mkdocs)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
       - name: Install dev dependencies

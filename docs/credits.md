@@ -27,17 +27,27 @@ The ArXiv track and journal club materials are adapted from:
 
 ## Writing
 
-The writing track style conventions are based on:
+The writing track conventions, style rules, and the HEP writing skill file are based on
+collaborative work with:
 
-**SMB Style Guidelines** by Stephan Meighen-Berger
-: A detailed writing style guide derived from published physics papers.
+**John Beacom** (Ohio State University)
+: Many of the stylistic choices and rules — from paragraph structure and voice to
+  figure captions and OOM estimates — originate from or were refined through working
+  closely with John Beacom on published research papers.
+  His high standards for clarity and precision are directly reflected throughout
+  the Writing Papers track and the `examples/skill-files/writing-hep.md` skill file.
 
 ---
 
 ## Coding Practices & Documentation Style
 
-The coding track structure, docstring conventions, and MkDocs configuration are adapted from:
+The coding track conventions, docstring style, and documentation practices are
+primarily attributed to:
 
-**Prometheus** by Stephan Meighen-Berger and contributors
-: A Python-based neutrino detector simulation package with extensive documentation.
-  Repository: <https://github.com/Harvard-Neutrino/prometheus>
+**Ana Lastoviria** ([`@chivoi`](https://github.com/chivoi))
+: The coding conventions and documentation style taught in Nestling — including
+  NumPy docstring format, project layout, and testing discipline — were largely
+  defined by Ana Lastoviria for the Prometheus project.
+
+These conventions are reflected in the **Prometheus** codebase:
+<https://github.com/Harvard-Neutrino/prometheus>
