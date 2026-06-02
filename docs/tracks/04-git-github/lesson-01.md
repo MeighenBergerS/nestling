@@ -122,9 +122,9 @@ git commit -m "Add initial simulation script"
 
 ## Commit best practices
 
-Knowing how to commit is as important as knowing the commands.
+Writing good commit messages is a habit that develops over time — early commits are often rough and that is completely fine.
+The conventions below are worth building from the start, but do not let them slow you down while you are learning the basics.
 A well-structured history is easy to search, easy to review, and easy to recover from.
-A poor one makes debugging and collaboration significantly harder.
 
 ### One logical change per commit
 
@@ -191,9 +191,12 @@ The body explains *why* the change was made, not *what* changed — the diff alr
 ### Never commit secrets or large binary files
 
 Do not commit passwords, API keys, or access tokens.
-Once something is in Git history, removing it properly requires rewriting the entire history —
-a process that affects every collaborator and invalidates every existing clone.
-If a secret reaches a public repository, treat it as compromised immediately and rotate it.
+Setting up a `.gitignore` before your first `git add` is the easiest way to prevent this by accident —
+see the next section.
+If a secret does reach a public repository, treat it as compromised: rotate the key immediately
+and notify whoever manages that service.
+(Removing a secret from Git history is possible but requires rewriting every commit that followed it,
+which is disruptive for everyone who has cloned the repository.)
 
 Do not commit large data files or compiled outputs (see the `.gitignore` section below).
 

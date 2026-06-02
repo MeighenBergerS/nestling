@@ -131,6 +131,11 @@ The typical workflow:
 7. Address any feedback by adding more commits to the same branch.
 8. Once approved, merge the pull request on GitHub.
 
+!!! tip "Your first pull request does not need to be perfect"
+    The review process exists precisely to catch things.
+    If you miss something, a collaborator will flag it and you will know for next time.
+    Opening a PR that gets comments is not a failure — it is how the workflow is supposed to function.
+
 !!! tip "Keep pull requests small"
     A PR that touches one thing is much easier to review than one that touches ten.
     If your branch has grown large, consider splitting it into several smaller PRs.
@@ -223,8 +228,12 @@ Keep comments specific: "Line 42: this loop will fail if `particles` is empty" i
 
 ## Keeping your branch up to date
 
+!!! note "This section is for when you are comfortable with the basics"
+    If this is your first or second pull request, you can skip this section for now.
+    Once you are working on a project where `main` is moving frequently, come back to it.
+
 On a project with multiple developers, `main` moves forward continuously.
-Before opening a pull request, always update your local `main` and rebase your feature branch onto it.
+Before opening a pull request, it is good practice to update your local `main` and rebase your feature branch onto it.
 This ensures your PR is tested against the latest code and produces a clean, linear history for reviewers.
 
 **Step 1** — update your local `main` to match the remote:

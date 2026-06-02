@@ -139,5 +139,10 @@ Add linting and documentation checks once the basic test job is working.
 ## What to read next
 
 This is the last lesson in the Git & GitHub track.
+If you have worked through all five lessons, you now have a complete Git workflow —
+from making your first commit to automated CI running on every push.
+That is a genuinely substantial set of skills, and the habits you have built here
+(clear commits, code review, automated checks) will serve you throughout your research.
+
 For the next step in building good research software practices, see the
 [Coding Practices](../05-coding/index.md) track.
