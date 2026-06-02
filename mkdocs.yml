@@ -49,6 +49,9 @@ nav:
       - Lesson 12 — Linting & Automation: tracks/05-coding/lesson-12.md
     - Plotting: tracks/06-plotting/index.md
     - Working with LLMs: tracks/07-llm-practices/index.md
+    - Code of Conduct:
+      - Overview: tracks/08-code-of-conduct/index.md
+      - Lesson 01 — Understanding and Living the Code of Conduct: tracks/08-code-of-conduct/lesson-01.md
   - Templates:
     - Overview: templates/index.md
     - Journal Club: templates/journal-club.md
