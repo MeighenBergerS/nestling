@@ -1,0 +1,29 @@
+# Requirements for the coding-track examples
+# Install from the project root:
+#
+#   pip install -r examples/coding/requirements.txt
+#
+# Then install the neutrino_flux example package in editable mode:
+#
+#   pip install -e examples/coding/neutrino_flux/
+
+# ── Core scientific stack (all examples) ──────────────────────────────────────
+numpy>=2.0
+scipy>=1.13
+
+# ── Notebooks 01 & 02 ─────────────────────────────────────────────────────────
+matplotlib>=3.9
+pandas>=2.2
+h5py>=3.11
+jupyter>=1.0
+nbconvert>=7.0          # running notebooks non-interactively (CI, testing)
+
+# ── Notebook 02 & performance/comparison.py — compiled acceleration ────────────
+numba>=0.59             # JIT compilation for sequential loops
+
+# ── Notebook 03 — ML basics ───────────────────────────────────────────────────
+# CPU-only install (smaller download):
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# GPU install (if you have CUDA):
+#   pip install torch
+torch>=2.0
