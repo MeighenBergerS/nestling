@@ -8,6 +8,7 @@ on:
 
 env:
   MPLBACKEND: Agg
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
 jobs:
   quality:
@@ -41,7 +42,7 @@ jobs:
           pip install -e examples/coding/neutrino_flux/
           pip install matplotlib pandas h5py
       - name: Run unit tests
-        run: pytest tests/
+        run: pytest tests/ -m "not network"
       - name: Test notebooks
         run: |
           notebooks=$(find examples -name "*.ipynb" | head -1)
