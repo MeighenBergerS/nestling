@@ -28,6 +28,7 @@ Each track is self-contained. Start with whichever one your supervisor directs y
 | [Coding Practices](tracks/05-coding/index.md) | Project layout, documentation, and testing | You are writing research code for the first time |
 | [Plotting](tracks/06-plotting/index.md) | Scientific visualisation with matplotlib | You need to produce figures for a report or paper |
 | [Working with LLMs](tracks/07-llm-practices/index.md) | Using AI tools responsibly in research | You want to use AI assistants and do it well |
+| [Code of Conduct](tracks/08-code-of-conduct/index.md) | Community standards and expected behaviour | You are joining the group or want to understand how conflicts are handled |
 
 ## Templates
 
