@@ -9,8 +9,10 @@ Choosing one and learning it well is worth the upfront investment.
 ## Choosing an editor
 
 For physics research the practical choice is **Visual Studio Code (VSCode)**.
-It is free, cross-platform, and has the best Python tooling of any editor.
-The examples in this track assume VSCode, but the concepts apply elsewhere.
+It is free, cross-platform, and has excellent Python tooling — autocompletion, a built-in
+debugger, Git integration, and Jupyter notebook support all work out of the box.
+It is also what most people in the group use, which means help is easy to find.
+The examples in this track assume VSCode, but the concepts apply to any editor.
 
 If you prefer a terminal-based workflow — common in HPC environments where you SSH into a
 cluster — **Neovim** is the modern choice, with a large plugin ecosystem that replicates most
@@ -41,7 +43,7 @@ or via **File → Open Folder**.
 Install these via the Extensions panel (⇧⌘X on macOS, Ctrl+Shift+X elsewhere):
 
 | Extension | Publisher | Why |
-|-----------|-----------|-----|
+| --- | --- | --- |
 | **Python** | Microsoft | Language support, interpreter selection, debugger |
 | **Pylance** | Microsoft | Fast type checking and autocompletion |
 | **Jupyter** | Microsoft | Run `.ipynb` notebooks inside the editor |
@@ -81,7 +83,7 @@ Learning to use it early saves hours later.
 ## Keyboard shortcuts worth learning now
 
 | Action | macOS | Linux/Windows |
-|--------|-------|---------------|
+| --- | --- | --- |
 | Command palette | ⇧⌘P | Ctrl+Shift+P |
 | Go to file | ⌘P | Ctrl+P |
 | Go to symbol | ⌘⇧O | Ctrl+Shift+O |
