@@ -58,5 +58,11 @@ data/
 outputs/
 artifacts/
 
+# Generated plot outputs (run the scripts locally to reproduce)
+examples/plotting/**/*.pdf
+examples/plotting/**/*.png
+examples/plotting/**/*.svg
+examples/plotting/**/*.eps
+
 # Build docs
 site/
