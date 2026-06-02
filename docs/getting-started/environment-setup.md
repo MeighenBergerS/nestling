@@ -39,7 +39,10 @@ Verify it worked by opening a terminal and running:
 python --version
 ```
 
-You should see something like `Python 3.11.x`. If you see an error, ask your supervisor.
+You should see something like `Python 3.11.x`.
+If you see an error instead, search for the exact message online — most installation problems
+have a straightforward fix already documented somewhere.
+If you are still stuck, ask your supervisor; they have almost certainly seen the same issue.
 
 ---
 

@@ -156,6 +156,11 @@ Git warns you if the branch has not been merged, protecting you from accidentall
 
 ## Rebasing
 
+!!! note "This section is optional for now"
+    Rebasing is useful but not essential when you are starting out.
+    If you are new to Git, feel free to skip this section and come back once you are comfortable with branching and merging.
+    Pull requests work perfectly well without it.
+
 **Rebasing** is an alternative to merging for incorporating changes from one branch into another.
 Instead of creating a merge commit, rebase replays your commits one by one on top of the target branch,
 producing a linear history with no merge commits.

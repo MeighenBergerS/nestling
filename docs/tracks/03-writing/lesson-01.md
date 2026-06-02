@@ -1,6 +1,12 @@
 # Lesson 01 — Paper Structure
 
-A physics paper is not a lab notebook or a chronological account of what you tried.
+Writing your first paper feels daunting — and that is completely normal.
+Every researcher, at every career stage, finds the blank page difficult.
+What makes it easier is understanding that a physics paper has a fixed, learnable structure.
+Once you know what each part is supposed to do, the question changes from "how do I start?"
+to "what goes in this section?" — which is a much more manageable problem.
+
+A physics paper is not a chronological account of what you tried.
 It is a logical argument: a single central claim, supported by a chain of derivations and figures,
 presented in a fixed order that readers expect and rely on.
 This lesson explains that structure and why every part of it exists.
@@ -43,7 +49,7 @@ improving the sin²θ₂₃ measurement by 50--73%."
 Secondary results are clearly subordinate: they support the main result, assess its robustness,
 or explore a natural extension — but they are never presented as co-equal claims.
 
-Before you write a word, identify your one number. Every section exists either to derive it
+Before you start writing, identify your one number. Every section exists either to derive it
 or to assess how robust it is. If a section does neither, it probably does not belong in the paper.
 
 The three reference papers for this track each have a single primary claim:

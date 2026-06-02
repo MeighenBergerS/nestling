@@ -25,7 +25,13 @@ nav:
       - Lesson 01 — How to Present a Paper: tracks/02-journal-club/lesson-01.md
       - Lesson 02 — Leading a Discussion: tracks/02-journal-club/lesson-02.md
       - Lesson 03 — Giving Feedback: tracks/02-journal-club/lesson-03.md
-    - Writing Papers: tracks/03-writing/index.md
+    - Writing Papers:
+      - Overview: tracks/03-writing/index.md
+      - Lesson 01 — Paper Structure: tracks/03-writing/lesson-01.md
+      - Lesson 02 — The Abstract Formula: tracks/03-writing/lesson-02.md
+      - Lesson 03 — Writing Conventions: tracks/03-writing/lesson-03.md
+      - Lesson 04 — LaTeX Basics: tracks/03-writing/lesson-04.md
+      - Lesson 05 — Revision Checklist: tracks/03-writing/lesson-05.md
     - Git & GitHub:
       - Overview: tracks/04-git-github/index.md
       - Lesson 01 — Git Basics: tracks/04-git-github/lesson-01.md
@@ -86,6 +92,9 @@ markdown_extensions:
   - toc:
       permalink: true
   - tables
+
+exclude_docs: |
+  !templates/
 
 plugins:
   - search

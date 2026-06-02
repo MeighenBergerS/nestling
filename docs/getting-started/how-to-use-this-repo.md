@@ -14,9 +14,13 @@ If they haven't yet, ask — they know what is most relevant to your project rig
 As a rough guide:
 
 - Asked to find and read papers? → [ArXiv & Reading Papers](../tracks/01-arxiv/index.md)
-- Joining a project that uses code? → [Git & GitHub](../tracks/04-git-github/index.md)
 - Preparing a journal club presentation? → [Journal Club](../tracks/02-journal-club/index.md)
 - Writing up results or a report? → [Writing Papers](../tracks/03-writing/index.md)
+- Joining a project that uses code? → [Git & GitHub](../tracks/04-git-github/index.md)
+- Writing research code for the first time? → [Coding Practices](../tracks/05-coding/index.md)
+- Producing figures for a report or paper? → [Plotting](../tracks/06-plotting/index.md)
+- Using AI assistants in your work? → [Working with LLMs](../tracks/07-llm-practices/index.md)
+- New to the group, or want to understand community standards? → [Code of Conduct](../tracks/08-code-of-conduct/index.md)
 
 You do not need to finish a track before it becomes useful.
 Work through what is relevant now and come back when you need the rest.

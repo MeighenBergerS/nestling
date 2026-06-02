@@ -15,8 +15,10 @@ See [Environment Setup](getting-started/environment-setup.md) if that applies to
 
 **My supervisor hasn't told me where to start. What do I do?**
 
-Ask them — they know your project and can point you to the right track.
-If you want a rough guide in the meantime, see [How to Use This Repo](getting-started/how-to-use-this-repo.md).
+Start with [How to Use This Repo](getting-started/how-to-use-this-repo.md) — it has a short guide
+to choosing a track based on what you are working on right now.
+When you next meet your supervisor, ask them which track to prioritise;
+they know your project and can give you a more specific steer.
 
 ---
 

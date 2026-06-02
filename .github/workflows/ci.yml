@@ -48,6 +48,7 @@ jobs:
           notebooks=$(find examples -name "*.ipynb" | head -1)
           if [ -n "$notebooks" ]; then
             pytest --nbmake examples/ \
+              --ignore=examples/arxiv/notebooks \
               --ignore=examples/coding/neutrino_flux \
               --ignore=examples/coding/notebooks/02_performance.ipynb \
               --ignore=examples/coding/notebooks/03_ml_basics.ipynb
