@@ -12,18 +12,6 @@ It is designed to complement your work with your supervisor, not to replace that
     2. Do I need to run the code examples locally, or just read the lessons?
     3. How often should we check in as I work through this?
 
-## Working Together
-
-Before diving into any track, it is worth understanding the relationships and expectations that
-shape research life. These three pages cover the foundations.
-
-- [Code of Conduct](tracks/08-code-of-conduct/index.md): the standards that apply to everyone
-  in the community, always
-- [Your Supervisor](working-together/supervisor.md): what good supervision looks like, common
-  failure modes, and what to do when something is wrong
-- [Your Role](working-together/student.md): how to get the most out of the relationship and
-  the research environment
-
 ## Getting Started
 
 If you are new, begin here:
