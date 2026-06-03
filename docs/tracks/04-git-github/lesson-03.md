@@ -1,4 +1,4 @@
-# Lesson 03 — GitHub Collaboration
+# Lesson 03: GitHub Collaboration
 
 GitHub hosts your Git repository on the internet so that others can read it, contribute to it,
 and review your work.
@@ -73,8 +73,8 @@ git diff main origin/main
 ### Pruning stale remote-tracking branches
 
 On an active repository, branches are created and deleted frequently.
-Git does not automatically remove your local references to remote branches that have been deleted on the remote —
-these stale references (`origin/some-old-feature`) accumulate over time and clutter `git branch -r` output.
+Git does not automatically remove your local references to remote branches that have been deleted on the remote.
+These stale references (`origin/some-old-feature`) accumulate over time and clutter `git branch -r` output.
 
 Pass `--prune` to clean them up during a fetch:
 
@@ -112,7 +112,7 @@ This downloads the full history and automatically sets the remote to `origin`.
 ## Forks
 
 A **fork** is a copy of someone else's repository under your own GitHub account.
-Forks are used when you do not have write access to the original repository —
+Forks are used when you do not have write access to the original repository,
 which is the standard situation for contributing to any project you do not own.
 
 To fork a repository, click **Fork** on its GitHub page.
@@ -159,7 +159,7 @@ The typical workflow:
 !!! tip "Your first pull request does not need to be perfect"
     The review process exists precisely to catch things.
     If you miss something, a collaborator will flag it and you will know for next time.
-    Opening a PR that gets comments is not a failure — it is how the workflow is supposed to function.
+    Opening a PR that gets comments is not a failure. It is how the workflow is supposed to function.
 
 !!! tip "Keep pull requests small"
     A PR that touches one thing is much easier to review than one that touches ten.
@@ -176,7 +176,7 @@ The PR title follows the same rules as a commit subject line: imperative, specif
 
 The description should answer three questions:
 
-1. **What changed?** A short summary — one paragraph or a brief bullet list.
+1. **What changed?** A short summary: one paragraph or a brief bullet list.
 2. **Why?** The motivation. Link to the relevant issue if one exists (`Fixes #12`).
 3. **How to verify it?** What a reviewer should check to confirm the change works correctly.
 
@@ -212,12 +212,12 @@ Draft PRs are visible to the team but clearly marked as not ready for review.
 When the work is complete, convert it to a regular PR with the "Ready for review" button.
 
 **Why this matters**: a draft PR starts the discussion early, makes your work visible to the team,
-and runs CI checks — so you catch failures before the final review.
+and runs CI checks, so you catch failures before the final review.
 It also signals to collaborators what you are working on, which avoids duplicated effort.
 
 ### Respond to every review comment
 
-When a reviewer leaves a comment, respond to it — even if only to say you have addressed it.
+When a reviewer leaves a comment, respond to it, even if only to say you have addressed it.
 If you disagree with a suggestion, explain why rather than silently ignoring it.
 Once all threads are resolved, re-request a review.
 
@@ -236,8 +236,8 @@ to re-review before you merge.
 
 ## Reviewing a pull request
 
-When someone asks you to review their code, your job is not to approve everything —
-it is to check whether the changes are correct, readable, and consistent with the project.
+When someone asks you to review their code, your job is not to approve everything.
+It is to check whether the changes are correct, readable, and consistent with the project.
 
 On GitHub, you can:
 
@@ -261,7 +261,7 @@ On a project with multiple developers, `main` moves forward continuously.
 Before opening a pull request, it is good practice to update your local `main` and rebase your feature branch onto it.
 This ensures your PR is tested against the latest code and produces a clean, linear history for reviewers.
 
-**Step 1** — update your local `main` to match the remote:
+**Step 1**: update your local `main` to match the remote:
 
 ```sh
 git switch main
@@ -271,7 +271,7 @@ git switch main
 git pull --rebase
 ```
 
-**Step 2** — rebase your feature branch onto the updated `main`:
+**Step 2**: rebase your feature branch onto the updated `main`:
 
 ```sh
 git switch my-feature
@@ -281,7 +281,7 @@ git switch my-feature
 git rebase main
 ```
 
-**Step 3** — force-push the rebased branch (its commit hashes have changed):
+**Step 3**: force-push the rebased branch (its commit hashes have changed):
 
 ```sh
 git push --force-with-lease
@@ -313,5 +313,5 @@ See [Lesson 02](lesson-02.md) for a full explanation of what rebase does and how
 
 ## What to read next
 
-[Lesson 04](lesson-04.md) covers GitHub Issues — how to track work, report bugs, and link issues
+[Lesson 04](lesson-04.md) covers GitHub Issues: how to track work, report bugs, and link issues
 to specific commits and pull requests.

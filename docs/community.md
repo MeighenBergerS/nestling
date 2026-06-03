@@ -14,7 +14,7 @@ Join the conversation on [GitHub Discussions](https://github.com/MeighenBergerS/
 
 ## Contributing
 
-We welcome contributions — new lessons, examples, bug fixes, and documentation improvements.
+We welcome contributions: new lessons, examples, bug fixes, and documentation improvements.
 See the [contribution guidelines](https://github.com/MeighenBergerS/nestling/blob/main/CONTRIBUTING.md)
 to get started.
 

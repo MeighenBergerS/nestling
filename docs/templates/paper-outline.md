@@ -1,7 +1,7 @@
 # Paper Outline Template
 
 Use this template before you write a word of prose.
-Filling it in forces you to make the argument explicit — you will find the weak points in the logic
+Filling it in forces you to make the argument explicit. You will find the weak points in the logic
 before you have invested days in writing around them.
 
 Work through the sections in order.
@@ -25,14 +25,14 @@ If a planned section does neither, remove it.
 
 ---
 
-## Abstract (4–5 sentences — fill in each slot)
+## Abstract (4–5 sentences: fill in each slot)
 
 | Sentence | Role | Draft |
 | --- | --- | --- |
-| 1 | Setting + motivation — the physical system and why it is interesting | |
-| 2 | What we do — method, systems studied, scope — begin with "We..." | |
-| 3 | **Main quantitative result** — a specific number, not "significant improvement" | |
-| 4 | Broader implication — what this adds to the field or opens up | |
+| 1 | Setting + motivation: the physical system and why it is interesting | |
+| 2 | What we do: method, systems studied, scope. Begin with "We..." | |
+| 3 | **Main quantitative result**: a specific number, not "significant improvement" | |
+| 4 | Broader implication: what this adds to the field or opens up | |
 | 5 (optional) | Second implication or complementarity statement | |
 
 Check: no citations. No section summary. Result sentence contains a number.
@@ -41,29 +41,29 @@ Check: no citations. No section summary. Result sentence contains a number.
 
 ## Introduction outline
 
-### Paragraph 1 — Broad physical setting (3–5 sentences)
+### Paragraph 1: Broad physical setting (3–5 sentences)
 
 Why is this system or environment interesting from first principles?
 Which landmark experiments or observations motivate it?
-(One citation per result — not clusters of five.)
+(One citation per result, not clusters of five.)
 
 > [bullet points → prose later]
 
-### Paragraph 2 — Specific opportunity and prior work (3–5 sentences)
+### Paragraph 2: Specific opportunity and prior work (3–5 sentences)
 
 What is the precise gap this paper fills?
 Who has worked on this before, and what did they miss or leave open?
 
 > [bullet points → prose later]
 
-### Paragraph 3 — What this paper does (2–4 sentences)
+### Paragraph 3: What this paper does (2–4 sentences)
 
 Begin with "In this work, we..." or "In this paper, we show...".
 Name the two or three key things computed or proposed.
 
 > [bullet points → prose later]
 
-### Paragraph 4 — Paper structure (1–2 sentences, optional)
+### Paragraph 4: Paper structure (1–2 sentences, optional)
 
 Only include if the structure is non-obvious.
 "In Section II, we... In Section III, we... We conclude in Section IV."
@@ -73,7 +73,7 @@ Only include if the structure is non-obvious.
 ### Figure 1 (introduction sketch)
 
 Figure 1 is a sketch or overview diagram that appears in the introduction.
-It is not a data figure — it introduces the setup visually.
+It is not a data figure. It introduces the setup visually.
 Describe what it shows.
 
 > [description: e.g., "Schematic of the physical setup: UHECR path from AGN through DM halo to Earth, with the relevant length scales labelled."]
@@ -101,7 +101,7 @@ If not, identify the physical effect that bridges the gap.
 
 For each Methods section, fill in:
 
-### Section [number]: [title — short noun phrase]
+### Section [number]: [title, short noun phrase]
 
 **Purpose** (one sentence): What question does this section answer?
 
@@ -148,7 +148,7 @@ For each Results subsection, fill in:
 
 ## Final figure (main constraint or exclusion plot)
 
-This is the most important figure in the paper — the one the reader takes away.
+This is the most important figure in the paper, the one the reader takes away.
 
 **What does it show?**
 > [description]
@@ -165,21 +165,21 @@ This is the most important figure in the paper — the one the reader takes away
 
 ## Conclusion outline
 
-### Paragraph 1 — Main result (1–2 sentences)
+### Paragraph 1: Main result (1–2 sentences)
 
 "We have shown/computed/demonstrated [main result]."
 Restate the key quantitative finding. No new results.
 
 > [fill in]
 
-### Paragraph 2 — Broader implications (≤ 4 sentences)
+### Paragraph 2: Broader implications (≤ 4 sentences)
 
 What does this mean for the field?
 Which complementary experiments does it connect to?
 
 > [bullet points → prose later]
 
-### Paragraph 3 — Future outlook (3–4 concrete directions)
+### Paragraph 3: Future outlook (3–4 concrete directions)
 
 What are the natural follow-up calculations or measurements?
 End on a forward-looking note.

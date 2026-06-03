@@ -1,4 +1,4 @@
-# Lesson 04 — LLMs for Literature Search
+# Lesson 04: LLMs for Literature Search
 
 Literature search is one of the most dangerous areas in which to use an LLM carelessly.
 The failure mode is specific and severe: models generate plausible-sounding citations
@@ -18,7 +18,7 @@ The model was trained on text that contains many papers, many citations, and man
 references to research.
 When asked to provide a citation, the model generates a plausible token sequence in the
 format of a citation.
-It is not retrieving from a database — it is sampling from the distribution of text that
+It is not retrieving from a database. It is sampling from the distribution of text that
 looks like citations.
 
 The result can look exactly like a real paper:
@@ -108,7 +108,7 @@ It is working from your supplied content, not hallucinating.
 
 Some tools combine an LLM with a real document retrieval system.
 The model searches a database, retrieves relevant passages, and generates a response
-grounded in the retrieved text — with citations pointing to the actual documents.
+grounded in the retrieved text, with citations pointing to the actual documents.
 
 Examples include Semantic Scholar's AI features, Perplexity AI (with source linking),
 and custom RAG pipelines.

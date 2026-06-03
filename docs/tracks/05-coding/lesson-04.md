@@ -1,7 +1,7 @@
-# Lesson 04 — Scientific Python Stack
+# Lesson 04: Scientific Python Stack
 
 These libraries underpin almost all computational physics in Python.
-You do not need to memorise the API — you need to understand what each one is for
+You do not need to memorise the API. You need to understand what each one is for
 and how to look things up efficiently.
 
 Install everything at once:
@@ -40,8 +40,8 @@ phi = 1e-4 * E ** -2.0        # power-law spectrum — no loop needed
 This is **vectorisation**: operations apply to every element simultaneously.
 It is typically 100–1000× faster than an equivalent Python `for` loop, because the loop
 runs in compiled C code inside NumPy rather than in the Python interpreter.
-Vectorisation is your single most important performance tool —
-see [Lesson 06](lesson-06.md) for a deeper discussion.
+Vectorisation is your single most important performance tool.
+See [Lesson 06](lesson-06.md) for a deeper discussion.
 
 ### Indexing and slicing
 
@@ -143,7 +143,7 @@ chi2, p = stats.chisquare(observed, expected)
 ## Pandas
 
 Pandas provides the `DataFrame`: a labelled 2-D table, analogous to a spreadsheet or SQL
-table. It is most useful when you have tabular data — event catalogues, parameter scans,
+table. It is most useful when you have tabular data: event catalogues, parameter scans,
 observational tables with mixed column types.
 
 ```python
@@ -167,7 +167,7 @@ df.to_csv("output.csv", index=False)
 df.to_hdf("output.h5", key="events")
 ```
 
-Pandas is less useful for pure numerical computation — prefer NumPy arrays there.
+Pandas is less useful for pure numerical computation. Prefer NumPy arrays there.
 It shines for loading mixed-type data, quick aggregation, and preparing tables for a paper.
 
 ---
@@ -175,7 +175,7 @@ It shines for loading mixed-type data, quick aggregation, and preparing tables f
 ## HDF5 and h5py
 
 Physics simulations produce large binary files.
-HDF5 is the standard format — structured, compressed, and fast.
+HDF5 is the standard format: structured, compressed, and fast.
 
 ```python
 import h5py
@@ -261,7 +261,7 @@ E_cutoff = optimize.brentq(
 print(f"Integrated flux drops below threshold at {E_cutoff:.2e} GeV")
 ```
 
-This pattern — define a flux function, integrate it, invert the integral — appears constantly
+This pattern, define a flux function, integrate it, invert the integral, appears constantly
 in neutrino physics, cosmic-ray analysis, and gravitational-wave parameter estimation.
 
 ---

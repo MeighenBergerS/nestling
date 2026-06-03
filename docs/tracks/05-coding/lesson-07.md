@@ -1,8 +1,8 @@
-# Lesson 07 — ML Basics with PyTorch
+# Lesson 07: ML Basics with PyTorch
 
 Machine learning has become a standard tool in high-energy physics, neutrino astronomy,
 and gravitational-wave analysis.
-This lesson covers the concepts and PyTorch mechanics you need to start using it —
+This lesson covers the concepts and PyTorch mechanics you need to start using it,
 and to understand what it is actually doing.
 
 ---
@@ -21,7 +21,7 @@ useful when:
 - You are doing parameter estimation and need a differentiable likelihood.
 
 [Prometheus](https://github.com/Harvard-Neutrino/prometheus) uses ML-based photon
-propagation (the `olympus` module) as a surrogate for the full optical simulation —
+propagation (the `olympus` module) as a surrogate for the full optical simulation,
 exactly the surrogate model use case. Instead of running the slow photon transport code
 for every event, it calls a trained neural network that gives the same answer in
 microseconds.
@@ -100,10 +100,10 @@ model = FluxRegressor(n_hidden=128)
 
 Training a neural network follows the same four steps every iteration:
 
-1. **Forward pass** — run the model on a batch of inputs to get predictions.
-2. **Compute loss** — measure how wrong the predictions are.
-3. **Backward pass** — compute gradients via backpropagation.
-4. **Update weights** — move parameters in the direction that reduces the loss.
+1. **Forward pass**: run the model on a batch of inputs to get predictions.
+2. **Compute loss**: measure how wrong the predictions are.
+3. **Backward pass**: compute gradients via backpropagation.
+4. **Update weights**: move parameters in the direction that reduces the loss.
 
 ```python
 import torch
@@ -132,7 +132,7 @@ for epoch in range(1000):
         print(f"Epoch {epoch:5d}  Loss {loss.item():.4e}")
 ```
 
-After training, the model evaluates new energies in microseconds — even if the
+After training, the model evaluates new energies in microseconds, even if the
 training data took hours to generate.
 
 ---

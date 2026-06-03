@@ -1,4 +1,4 @@
-# Working Together — Your Role
+# Working Together: Your Role
 
 The research group environment is unlike most other working environments you will have encountered.
 Hours are flexible, no one is monitoring your attendance, and the relationship with your supervisor
@@ -10,7 +10,7 @@ It also comes with a responsibility that is easy to underestimate at the start.
 ## Participation and responsiveness
 
 Flexibility of schedule is not the same as freedom from participation. Group meetings, seminars,
-journal clubs, and informal conversations are not optional extras — they are where a significant part
+journal clubs, and informal conversations are not optional extras. They are where a significant part
 of your scientific education happens. The insights, habits, and ways of thinking you absorb by being
 present in a research group are not available any other way.
 
@@ -21,7 +21,7 @@ expectations.
 
 ## Communicate before you disappear
 
-When you are stuck — and you will be, repeatedly — say so early. Do not wait until a problem has been
+When you are stuck, and you will be repeatedly, say so early. Do not wait until a problem has been
 sitting for weeks before mentioning it. A supervisor can help you with a blockage in week two; by
 week eight it is a crisis.
 
@@ -31,18 +31,18 @@ than a vague update that papers over a real problem.
 
 ## Prepare for meetings
 
-Your meeting time is your time — use it. Come with a short agenda: what you have done, what is
+Your meeting time is your time. Use it. Come with a short agenda: what you have done, what is
 blocking you, what you need. A prepared student gets significantly more out of supervision than one
 who arrives hoping the supervisor will drive the conversation.
 
 ## Engage broadly
 
-At the start of a PhD it is easy to feel overwhelmed by your own project and to retreat into it —
+At the start of a PhD it is easy to feel overwhelmed by your own project and to retreat into it,
 skipping seminars that are not directly related to your work, avoiding journal clubs, staying away
 from activities that feel tangential. This is a trap.
 
 Breadth is not a distraction from your research. It is part of it. Seminars on adjacent topics train
-you to follow an argument in unfamiliar territory — exactly the skill your own work demands. The
+you to follow an argument in unfamiliar territory, exactly the skill your own work demands. The
 people in the room are future collaborators and colleagues. The conversations over coffee after a talk
 are often where the most useful things happen.
 
@@ -51,7 +51,7 @@ who did one specific analysis.
 
 ## Take feedback constructively
 
-Feedback — on your writing, your analysis, your presentations — is how you improve. It is not always
+Feedback on your writing, your analysis, and your presentations is how you improve. It is not always
 easy to receive, especially when you have invested significant effort. The goal is to hear it without
 defensiveness: understand what is being said, ask questions if something is unclear, and use it.
 
@@ -59,7 +59,7 @@ How feedback is delivered is on your supervisor. How you receive it is on you.
 
 ## Everything takes longer than you expect
 
-This is not a comment on your work ethic — it is a structural fact about research that catches almost
+This is not a comment on your work ethic. It is a structural fact about research that catches almost
 every new student off guard.
 
 In coursework, there is always an answer key. You solve the problem, check it against the expected
@@ -68,7 +68,7 @@ responsibility, and establishing that validity requires cross-checks: arriving a
 through independent methods, verifying your code against known limits, testing edge cases, reproducing
 published results before extending them.
 
-Cross-checks are not optional polish — they are the standard of proof. Your supervisor will not audit
+Cross-checks are not optional polish. They are the standard of proof. Your supervisor will not audit
 every line of your code or every step of your analysis; that ownership is yours. This means that
 getting an answer is the beginning of the work, not the end.
 

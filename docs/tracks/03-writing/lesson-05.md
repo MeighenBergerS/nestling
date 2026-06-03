@@ -1,20 +1,20 @@
-# Lesson 05 — Revision Checklist
+# Lesson 05: Revision Checklist
 
 Writing a paper is an extended, often arduous process.
-Expect many drafts — far more than feels reasonable before you have done it.
+Expect many drafts, far more than feels reasonable before you have done it.
 You will write a version, share it with a co-author, receive substantial feedback, rewrite it,
 discover the argument is wrong in one section, rewrite that section, share it again,
 incorporate feedback from two people who disagree with each other, and rewrite it again.
 This is normal. It is not a sign that the paper is bad or that you are doing it wrong.
 
-Co-authors — especially experienced ones — will catch structural problems you cannot see
+Co-authors, especially experienced ones, will catch structural problems you cannot see
 because you are too close to the material.
 Let them.
 Responding to feedback is itself a skill: understanding what the co-author is actually pointing at
 (often deeper than the specific sentence they flagged), and deciding what to change and what to defend.
 
 This lesson is not a description of the full writing process.
-It is a checklist for the final systematic pass — the one you run on a draft that is already close to done,
+It is a checklist for the final systematic pass, the one you run on a draft that is already close to done,
 before it goes to co-authors for the last round or before submission.
 Work through it in order. Check each item before moving to the next.
 
@@ -32,21 +32,21 @@ This read-through gives you the structural issues to fix before you apply the it
 ## Structure and argument
 
 - [ ] The paper has exactly one primary claim, statable in one sentence with one number.
-- [ ] The introduction promises exactly what the results sections deliver — no more, no less.
+- [ ] The introduction promises exactly what the results sections deliver, no more, no less.
 - [ ] The conclusion restates the main result with the same numbers as the introduction and results sections.
       No new results appear in the conclusion.
 - [ ] Every section mentioned in the introduction ("In Section III, we...") maps to an actual section
       with a matching title and content.
 - [ ] Methods sections precede the results they produce. No result appears before its method is introduced.
 - [ ] When multiple scenarios are presented, the simplest appears first.
-- [ ] Every appendix contains either a long derivation, a robustness check, or a reader objection — not a main result.
+- [ ] Every appendix contains either a long derivation, a robustness check, or a reader objection, not a main result.
 
 ---
 
 ## Abstract
 
 - [ ] The abstract is four or five sentences. No more.
-- [ ] Sentence 3 contains a specific number — not "significant improvement" or "competitive sensitivity".
+- [ ] Sentence 3 contains a specific number, not "significant improvement" or "competitive sensitivity".
 - [ ] There are no in-text citations in the abstract.
 - [ ] The abstract does not summarise sections ("In Section II, we derive...").
 
@@ -72,15 +72,15 @@ This read-through gives you the structural issues to fix before you apply the it
 ## Figures
 
 - [ ] Every figure is referenced in the text before or at the start of the paragraph that interprets it.
-- [ ] No figure is introduced with "As can be seen in Figure X..." — only "Figure X shows..."
+- [ ] No figure is introduced with "As can be seen in Figure X...". Only "Figure X shows..."
       or "The results are presented in Figure X."
-- [ ] "Figure" is spelled out everywhere — never "Fig.".
+- [ ] "Figure" is spelled out everywhere, never "Fig.".
 - [ ] Every caption is self-contained (three-sentence structure: what it shows, data/model used, key takeaway).
 - [ ] The key takeaway sentence in each caption is wrapped in `\textit{...}`.
 - [ ] Multi-panel captions use `\textbf{Left panel:}`, `\textbf{Right panel:}` labels.
 - [ ] All figures are saved as PDF from the plotting script. No PNG in the main text.
 - [ ] Figure filenames are `lowercase_with_underscores.pdf`. Files live in `figures/`.
-- [ ] Color assignments are consistent across all figures — the same quantity uses the same color throughout.
+- [ ] Color assignments are consistent across all figures. The same quantity uses the same color throughout.
 - [ ] All axis labels use `\mathrm{}` for non-italic subscripts and include explicit units.
 - [ ] Figure 1 is a sketch or overview figure in the introduction, not a data figure.
 - [ ] Figures are cited in the order they appear in the source file. Figure 3 is not cited before Figure 2.
@@ -91,7 +91,7 @@ This read-through gives you the structural issues to fix before you apply the it
 ## Equations and notation
 
 - [ ] Every symbol is defined immediately after the equation in which it first appears.
-- [ ] Equation references use `Eq.~(\ref{eq:label})` — not `\eqref{}`, not `(1)` alone.
+- [ ] Equation references use `Eq.~(\ref{eq:label})`, not `\eqref{}`, not `(1)` alone.
 - [ ] Non-italic subscripts use `\mathrm{}`: `m_{\mathrm{p}}`, `\rho_{\mathrm{sp}}`.
 - [ ] Upright differentials: `\mathrm{d}` in `\frac{\mathrm{d}\Phi}{\mathrm{d}E}`.
 - [ ] `\sim` for order-of-magnitude, `\simeq` for approximate numerical equality in equations.
@@ -212,7 +212,7 @@ Beyond the format rules above, run this four-step physical verification on every
 before the paper goes out. Format mistakes are easy to catch; physics mistakes are expensive to correct
 after submission.
 
-### Step 1 — Dimensional consistency
+### Step 1: Dimensional consistency
 
 Every additive term in an equation must carry the same units.
 Check this mentally for every `+` and `−` sign in your displayed equations.
@@ -228,7 +228,7 @@ subtraction), `B(GT)` dimensionless → result is GeV⁻² (cross section in nat
 
 A red flag: energy added to a number density, or a rate added to a cross section, is always wrong.
 
-### Step 2 — Prefactors, signs, and exponents
+### Step 2: Prefactors, signs, and exponents
 
 Compare your formula against the textbook or paper form you are following. Check specifically:
 
@@ -242,7 +242,7 @@ Maxwell-Boltzmann distribution, Rutherford cross section), locate the original p
 your equation against it equation-by-equation.
 Note: factors of 2 and sign errors have passed through peer review before and been corrected only in erratum.
 
-### Step 3 — Literature match
+### Step 3: Literature match
 
 For any established formula, write next to it the reference and equation number you are following:
 
@@ -256,7 +256,7 @@ For any established formula, write next to it the reference and equation number 
 This comment does not go into the submitted paper, but it is invaluable during review.
 If a referee asks "where does this formula come from?", you will have the answer in the source.
 
-### Step 4 — Notation consistency
+### Step 4: Notation consistency
 
 Run through every symbol that appears in a displayed equation and ask:
 
@@ -283,7 +283,7 @@ These three checks are easy to miss when revising section by section.
 ### Forward pointers between sections
 
 Every section should end with a sentence that tells the reader what comes next.
-This is not filler — it is a contract with the reader.
+This is not filler. It is a contract with the reader.
 
 ```text
 ✅  "We now apply this framework to compute the detection prospects at DUNE,
@@ -293,7 +293,7 @@ This is not filler — it is a contract with the reader.
     three orders of magnitude below current direct-detection limits."
 
 ❌  "We have derived the interaction cross section."
-    [Ends abruptly — reader does not know what to expect next.]
+    [Ends abruptly. Reader does not know what to expect next.]
 ```
 
 ### Back-reference anti-patterns
@@ -309,7 +309,7 @@ Never open a section by summarising the previous one:
 ```
 
 The reader has just finished the previous section.
-Recapping it wastes a sentence and makes the opening sentence weak — it cannot carry the paragraph.
+Recapping it wastes a sentence and makes the opening sentence weak. It cannot carry the paragraph.
 
 ### Figure citation order
 
@@ -334,7 +334,7 @@ A figure never mentioned in the text either belongs in an appendix or does not b
 ## The automated pipeline
 
 The [SMB_style_guidelines](https://github.com/MeighenBergerS/SMB_style_guidelines) repository
-contains an automated pipeline that runs all of the above checks — and more — directly on a `.tex` file.
+contains an automated pipeline that runs all of the above checks, and more, directly on a `.tex` file.
 
 | Stage | What it checks | LLM? |
 | --- | --- | --- |
@@ -345,7 +345,7 @@ contains an automated pipeline that runs all of the above checks — and more �
 | Flow (Stage 3c) | Figure citation order + full narrative structure analysis | Smart |
 | Review (Stage 4) | Full PRD-style structured referee report | Smart |
 
-The mechanical stage runs with no API key and produces results immediately — it is worth running
+The mechanical stage runs with no API key and produces results immediately. It is worth running
 even on an early draft to catch the trivial violations before focusing on the harder ones.
 Once a draft is close to submission-ready, the full pipeline gives a structured list of remaining issues.
 
@@ -375,12 +375,12 @@ Identify the violation(s) before reading the analysis.
 
 Three violations:
 
-1. **Forbidden opener** — "It is worth noting that..." adds no information. Rewrite the opening sentence
+1. **Forbidden opener**: "It is worth noting that..." adds no information. Rewrite the opening sentence
    as a claim: "The atmospheric neutrino flux is the primary signal in our analysis."
-2. **Citation in the opening sentence** — `[12, 4, 37]` belongs in a supporting sentence, not the claim.
+2. **Citation in the opening sentence**: `[12, 4, 37]` belongs in a supporting sentence, not the claim.
    Three simultaneous citations are fine only if all three are needed for this specific point;
    for a general literature cluster, use a review.
-3. **"As can be seen in Fig. 3"** — two violations in one phrase: forbidden figure introduction and
+3. **"As can be seen in Fig. 3"**: two violations in one phrase: forbidden figure introduction and
    abbreviated "Fig.". Rewrite as: "Figure~\ref{fig:rates} shows the predicted event rate..."
 
 ---
@@ -393,12 +393,12 @@ This is a section title.
 
 One violation:
 
-1. **Gerund section title** — "Measuring" is a gerund. Use a noun phrase:
+1. **Gerund section title**: "Measuring" is a gerund. Use a noun phrase:
    "Cosmic-Ray Spectrum Measurement" or "CR Spectrum Sensitivity".
 
 ---
 
-### Passage C — from a LaTeX source
+### Passage C: from a LaTeX source
 
 ```latex
 The result is given by \eqref{eq:sigma}, where $G_F$ is the Fermi coupling constant.
@@ -406,7 +406,7 @@ The result is given by \eqref{eq:sigma}, where $G_F$ is the Fermi coupling const
 
 One violation:
 
-1. **`\eqref{}` instead of `Eq.~(\ref{})`** — replace with:
+1. **`\eqref{}` instead of `Eq.~(\ref{})`**: replace with:
 
    ```latex
    The result is given by Eq.~(\ref{eq:sigma}), where $G_F$ is the Fermi coupling constant.
@@ -414,7 +414,7 @@ One violation:
 
 ---
 
-### Passage D — from a LaTeX source
+### Passage D: from a LaTeX source
 
 ```latex
 \begin{equation}
@@ -424,7 +424,7 @@ One violation:
 
 One violation:
 
-1. **`\approx` in a displayed equation** — use `\simeq` for approximate numerical equalities.
+1. **`\approx` in a displayed equation**: use `\simeq` for approximate numerical equalities.
    `\approx` is reserved for numerical approximations outside the equation environment.
 
    ```latex
@@ -444,14 +444,14 @@ One violation:
 
 Four violations:
 
-1. **Setup opening sentence** — "In this section, we turn to the results" is filler.
+1. **Setup opening sentence**: "In this section, we turn to the results" is filler.
    Replace with the main claim: "The DM–nucleon cross section is constrained to
    $\sigma_{\chi p} \lesssim 10^{-33}$~cm² at $m_\chi \sim 1$~GeV."
-2. **Back-reference recap** — "In the previous section, we derived the cross section scaling"
+2. **Back-reference recap**: "In the previous section, we derived the cross section scaling"
    recaps what the reader just read. Delete it.
-3. **"as can be seen from Figure 4"** — use "Figure~\ref{fig:constraint} shows..."
+3. **"as can be seen from Figure 4"**: use "Figure~\ref{fig:constraint} shows..."
    and introduce the figure before interpreting it.
-4. **"We also note that..."** — "note" is a weak hedge. State the result directly:
+4. **"We also note that..."**: "note" is a weak hedge. State the result directly:
    "This bound lies three orders of magnitude below current direct-detection limits at this mass."
 
 Corrected version:
@@ -463,7 +463,7 @@ Corrected version:
 
 ---
 
-### Passage F — equation with a notation problem
+### Passage F: equation with a notation problem
 
 > "The capture rate is
 >
@@ -475,8 +475,8 @@ Corrected version:
 
 One violation:
 
-1. **Symbol reuse** — `\sigma` is used for two different quantities in the same passage:
+1. **Symbol reuse**: `\sigma` is used for two different quantities in the same passage:
    the DM–nucleon cross section in the capture rate equation, and the detection cross section
-   in the event rate expression. Introduce a new symbol for one of them —
-   e.g. `\sigma_{\mathrm{det}}` for the detection cross section — and redefine it explicitly
+   in the event rate expression. Introduce a new symbol for one of them,
+   e.g. `\sigma_{\mathrm{det}}` for the detection cross section, and redefine it explicitly
    at first use: "where $\sigma_{\mathrm{det}}$ is the neutrino detection cross section."

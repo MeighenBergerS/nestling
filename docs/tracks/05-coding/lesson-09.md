@@ -1,8 +1,8 @@
-# Lesson 09 — Documentation
+# Lesson 09: Documentation
 
 Documentation has two audiences: collaborators who will use your code, and your future self
 six months from now.
-Good docstrings make both audiences' lives easier — and they can be automatically rendered
+Good docstrings make both audiences' lives easier, and they can be automatically rendered
 into a browsable website.
 
 ---
@@ -12,7 +12,7 @@ into a browsable website.
 There are three common styles. The important thing is to **pick one and use it consistently**.
 
 [Prometheus](https://github.com/Harvard-Neutrino/prometheus) uses **Google style** in most
-of its source files, but its `mkdocs.yml` tells `mkdocstrings` to render **NumPy style** —
+of its source files, but its `mkdocs.yml` tells `mkdocstrings` to render **NumPy style**,
 a mismatch that produces imperfect API documentation.
 Do not do this: choose one style and configure your tools to match.
 
@@ -86,7 +86,7 @@ class Particle:
     When an attribute or parameter is an array, always state its expected shape and the
     physical units. `np.ndarray` alone tells the reader nothing.
     Prometheus's `PropagatableParticle` has `losses: np.ndarray` and `hits: np.ndarray`
-    with no docstrings — a real maintenance burden that forces every user to read the
+    with no docstrings, a real maintenance burden that forces every user to read the
     source code to understand the data structure.
 
 ---
@@ -95,7 +95,7 @@ class Particle:
 
 [MkDocs](https://www.mkdocs.org/) builds a documentation website from Markdown files.
 [mkdocstrings](https://mkdocstrings.github.io/) extends it to extract and render Python
-docstrings automatically — so your API reference stays in sync with the code.
+docstrings automatically, so your API reference stays in sync with the code.
 
 Install:
 
@@ -150,7 +150,7 @@ mkdocs gh-deploy
 
 This builds the site and pushes it to the `gh-pages` branch of your repository.
 Prometheus hosts its documentation at `harvard-neutrino.github.io/prometheus` exactly
-this way — via a GitHub Actions workflow (`.github/workflows/deploy-mkdocs.yml`) that
+this way, via a GitHub Actions workflow (`.github/workflows/deploy-mkdocs.yml`) that
 runs `mkdocs gh-deploy` on every push to `main`.
 See [Lesson 12](lesson-12.md) for the CI setup.
 

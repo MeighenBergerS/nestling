@@ -1,4 +1,4 @@
-# Lesson 11 — Packaging
+# Lesson 11: Packaging
 
 A **package** is a Python project that can be installed with `pip install`.
 Making your project installable means collaborators can use it without copying files into
@@ -54,7 +54,7 @@ pip install -e ".[dev]"
 ```
 
 Editable installs also mean that `import mypackage` works from anywhere on your machine
-while pointing at your actual source files — no more `sys.path` hacks.
+while pointing at your actual source files, no more `sys.path` hacks.
 
 ---
 
@@ -128,7 +128,7 @@ twine upload dist/*
 ```
 
 `build` creates a `.whl` (wheel) and a `.tar.gz` (source distribution) in `dist/`.
-`twine upload` pushes them to PyPI — you will need a PyPI account and an API token.
+`twine upload` pushes them to PyPI. You will need a PyPI account and an API token.
 
 ---
 

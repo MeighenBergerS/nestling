@@ -1,4 +1,4 @@
-# Lesson 01 — What LLMs Are and Are Not
+# Lesson 01: What LLMs Are and Are Not
 
 Large language models are among the most useful tools available to researchers today.
 They are also among the most misunderstood.
@@ -10,7 +10,7 @@ and what mental model you should carry whenever you use one.
 ## What an LLM does
 
 An LLM is a statistical model trained to predict the next token in a sequence.
-A **token** is roughly a word fragment — "uncer" and "tainty" might each be one token.
+A **token** is roughly a word fragment: "uncer" and "tainty" might each be one token.
 Given a prompt, the model assigns probabilities over its vocabulary and samples the next token,
 then repeats until a stopping condition is met.
 
@@ -33,7 +33,7 @@ This has important consequences:
 
 **Hallucination** is the term used when a model generates factually incorrect content
 with apparent confidence.
-It is not a bug or a rare failure mode — it is an intrinsic property of how these models work.
+It is not a bug or a rare failure mode. It is an intrinsic property of how these models work.
 
 A model that produces a plausible-sounding citation is not lying. It is doing exactly what
 it was trained to do: generating a token sequence that looks like a citation. Whether the
@@ -51,11 +51,11 @@ paper exists is simply not part of the prediction objective.
 
 | Situation | Risk |
 |-----------|------|
-| Asking for specific citations | High — model generates plausible-looking but nonexistent papers |
-| Asking about recent events | High — model has a training cutoff |
-| Asking about niche or specialised topics | High — sparse training data means poor calibration |
-| Asking for well-established general knowledge | Lower — but still possible |
-| Asking the model to summarise text you have provided | Lower — model has the ground truth in context |
+| Asking for specific citations | High: model generates plausible-looking but nonexistent papers |
+| Asking about recent events | High: model has a training cutoff |
+| Asking about niche or specialised topics | High: sparse training data means poor calibration |
+| Asking for well-established general knowledge | Lower, but still possible |
+| Asking the model to summarise text you have provided | Lower: model has the ground truth in context |
 
 The practical rule: **the further the question is from the centre of the training
 distribution, the less you should trust the answer without external verification.**
@@ -70,7 +70,7 @@ the content is correct.
 
 This is fundamentally different from how scientific uncertainty works.
 A calibrated scientist hedges when uncertain. A language model hedges when the *training
-distribution* contains hedged text about that topic — which is not the same thing.
+distribution* contains hedged text about that topic, which is not the same thing.
 
 You cannot use fluency, certainty of tone, or apparent authority as a proxy for accuracy.
 The only proxy for accuracy is **checking the claim against a reliable source**.
@@ -91,10 +91,10 @@ picture helps clarify the limits.
 Modern LLMs are **transformer** models.
 The key mechanism is **self-attention**: the model can, at each position in the output,
 attend to all previous tokens and weight their influence.
-This allows the model to capture long-range dependencies — it can use a term defined early
+This allows the model to capture long-range dependencies. It can use a term defined early
 in a document when generating text thousands of tokens later.
 
-Critically, the model has a **context window** — a maximum number of tokens it can attend to
+Critically, the model has a **context window**, a maximum number of tokens it can attend to
 at once. Anything outside this window is simply not available.
 Current frontier models have context windows in the range of 100 000 to 1 000 000 tokens,
 but performance typically degrades on tasks that require precise retrieval from the far end
@@ -142,12 +142,12 @@ The existence of red-teaming reflects the fact that all current models have fail
 that are not fully characterised.
 
 **Calibration and uncertainty.** Research groups such as Anthropic, DeepMind, and others
-publish work on model calibration — how well the model's expressed confidence
+publish work on model calibration, measuring how well the model's expressed confidence
 tracks actual accuracy. Current models are imperfectly calibrated. Do not infer correctness
 from confidence.
 
-**Human-in-the-loop.** High-stakes industrial deployments — in medicine, law,
-and financial services — require human review of LLM output before it is acted on.
+**Human-in-the-loop.** High-stakes industrial deployments, in medicine, law,
+and financial services, require human review of LLM output before it is acted on.
 The same principle applies to research: you are the expert, and you bear responsibility
 for what you publish.
 

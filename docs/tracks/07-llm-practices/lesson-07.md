@@ -1,8 +1,8 @@
-# Lesson 07 — Skill Files
+# Lesson 07: Skill Files
 
 Previous lessons covered how to write effective prompts for individual tasks.
-But much of the context you need — your project's structure, the conventions you follow,
-the rules you want applied every time — is repetitive.
+But much of the context you need, your project's structure, the conventions you follow,
+the rules you want applied every time, is repetitive.
 Typing it again in every conversation is tedious and error-prone.
 
 A **skill file** solves this problem.
@@ -19,7 +19,7 @@ conventions in the [Writing Papers track](../03-writing/index.md).
 
 ## What a skill file is
 
-A skill file is a text document — usually Markdown — that you pass to an LLM as
+A skill file is a text document, usually Markdown, that you pass to an LLM as
 persistent context.
 It is not a prompt for a single task.
 It is a briefing that applies to an entire session or workflow.
@@ -91,7 +91,7 @@ And it records domain knowledge that is not in the source code:
 | Noise window | 5000 ns |
 ```
 
-These are the numbers a contributor needs to avoid subtle bugs — and they are exactly
+These are the numbers a contributor needs to avoid subtle bugs, and they are exactly
 the kind of thing that is forgotten between sessions and expensive to re-derive.
 The skill file makes the model aware of them permanently.
 
@@ -113,7 +113,7 @@ remember it.
   environment, the architecture, or the naming conventions.
 - The LLM consistently uses `.prometheus_env/bin/python`, writes NumPy docstrings,
   and respects the 300 m cutoff.
-- The skill file is version-controlled alongside the code — so it stays accurate as
+- The skill file is version-controlled alongside the code, so it stays accurate as
   the project evolves.
 
 ---
@@ -177,8 +177,8 @@ examples/             runnable scripts demonstrating key workflows
 
 For the context of writing and revising physics papers, skill files are
 equally powerful.
-The conventions of HEP writing — described in the [Writing Papers track](../03-writing/index.md)
-— are detailed enough that an LLM can apply them reliably if told exactly what they are.
+The conventions of HEP writing, described in the [Writing Papers track](../03-writing/index.md),
+are detailed enough that an LLM can apply them reliably if told exactly what they are.
 But they are also too numerous to type into every session.
 
 A writing skill file encodes these conventions once, so that every LLM interaction
@@ -220,11 +220,11 @@ The relationship is:
 A student who has worked through track 03 can load the skill file and have the LLM
 check their draft against the exact conventions they have learned.
 A student who has not yet done track 03 will still get useful corrections from the skill
-file — and the corrections are a concrete entry point into the underlying rules.
+file, and the corrections are a concrete entry point into the underlying rules.
 
 ### Using the writing skill file: two modes
 
-#### Mode 1 — Drafting
+#### Mode 1: Drafting
 
 Load the skill file and give the model your notes or bullet points for a section.
 Ask it to draft the section following the style guide.
@@ -243,7 +243,7 @@ My notes:
 The model will produce a paragraph that follows the style conventions without you
 having to specify them in the prompt.
 
-#### Mode 2 — Review
+#### Mode 2: Review
 
 Load the skill file and paste a section of your draft.
 Ask the model to check it against the style rules and list violations.
@@ -258,7 +258,7 @@ For each violation, quote the offending text, name the rule, and suggest the fix
 ```
 
 This is the same workflow as the automated pipeline in the SMB_style_guidelines
-project — but interactive, so you can ask follow-up questions about each flagged item.
+project, but interactive, so you can ask follow-up questions about each flagged item.
 
 ### Example interaction
 
@@ -321,7 +321,7 @@ in the skill file.
 
 Write the skill file for what the model needs to know, not for how the tool works.
 "Run tests with `.venv/bin/pytest tests/ -x`" is useful.
-"Claude Code supports skill files in `.claude/commands/`" is not — that belongs in
+"Claude Code supports skill files in `.claude/commands/`" is not. That belongs in
 the documentation for the tool, not in the project skill file.
 
 ---
@@ -336,7 +336,7 @@ Professional deployments version-control system prompts as carefully as applicat
 because a change to the system prompt can alter the behaviour of every downstream interaction.
 
 **Prompt libraries.** Large organisations maintain libraries of validated system prompts
-for different task types — customer support, code generation, document review.
+for different task types: customer support, code generation, document review.
 A skill file is the individual contributor's equivalent: a validated context document
 for a specific project or domain.
 
@@ -344,7 +344,7 @@ for a specific project or domain.
 in a retrieval system, so the model can look up the relevant rule at query time rather
 than having the entire document in context.
 For most research uses, a single well-maintained skill file is simpler and equally
-effective — retrieval adds complexity without benefit at this scale.
+effective. Retrieval adds complexity without benefit at this scale.
 
 **Evaluation and regression testing.** When a skill file is updated, its effect on
 model behaviour can be measured by running a fixed set of test inputs and checking
@@ -363,9 +363,9 @@ For a hand-maintained skill file, periodic spot-checks serve the same purpose.
 | Why useful | Avoids repeating context; enforces conventions; encodes domain knowledge |
 | Prometheus example | Covers environment, architecture, pipeline, and coding conventions |
 | Coding template | `examples/skill-files/coding-docs-template.md` |
-| Writing skill file | `examples/skill-files/writing-hep.md` — encodes track 03 + SMB style guide |
+| Writing skill file | `examples/skill-files/writing-hep.md`: encodes track 03 + SMB style guide |
 | Two modes | Drafting mode (generate text that follows the style) and review mode (check violations) |
-| System prompt | The industrial equivalent — persistent context in API deployments |
+| System prompt | The industrial equivalent: persistent context in API deployments |
 
 ---
 
@@ -373,5 +373,5 @@ For a hand-maintained skill file, periodic spot-checks serve the same purpose.
 
 This is the final lesson in the track.
 Return to the [track overview](index.md) for the verification checklist from
-[Lesson 06](lesson-06.md), which applies to everything — including LLM-assisted
+[Lesson 06](lesson-06.md), which applies to everything, including LLM-assisted
 revision of a draft checked against a skill file.

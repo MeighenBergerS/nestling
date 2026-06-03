@@ -1,4 +1,4 @@
-# Lesson 03 — Package Management
+# Lesson 03: Package Management
 
 Python's strength is its ecosystem of libraries. `pip` installs them; virtual environments
 keep each project's dependencies isolated so they do not conflict.
@@ -8,7 +8,7 @@ keep each project's dependencies isolated so they do not conflict.
 ## pip
 
 `pip` is Python's package installer. It downloads packages from
-[PyPI](https://pypi.org/) — the Python Package Index.
+[PyPI](https://pypi.org/), the Python Package Index.
 
 Install a package:
 
@@ -57,7 +57,7 @@ on your machine.
 Without virtual environments, every project shares one Python installation, which causes
 two problems:
 
-1. Project A needs `numpy==1.24` and Project B needs `numpy==2.0` — you cannot have both at once.
+1. Project A needs `numpy==1.24` and Project B needs `numpy==2.0`. You cannot have both at once.
 2. Installing packages system-wide can break other tools that rely on the system Python.
 
 ### Creating a virtual environment
@@ -172,5 +172,5 @@ you need GPU libraries.
 
 ## What to read next
 
-[Lesson 04](lesson-04.md) covers the scientific Python stack — NumPy, SciPy, and Pandas —
+[Lesson 04](lesson-04.md) covers the scientific Python stack, NumPy, SciPy, and Pandas,
 the libraries you will use in almost every physics calculation.

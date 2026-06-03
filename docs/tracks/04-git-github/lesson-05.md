@@ -1,4 +1,4 @@
-# Lesson 05 — GitHub Actions
+# Lesson 05: GitHub Actions
 
 Every time code is pushed to a repository, the same questions arise:
 do the tests still pass, does the linter raise any warnings, does the documentation build?
@@ -11,7 +11,7 @@ This lesson explains what Actions is, how workflow files work, and how Nestling 
 
 GitHub Actions is a continuous integration (CI) system built into GitHub.
 You define workflows in YAML files stored in `.github/workflows/`.
-GitHub runs those workflows on its own servers whenever specified events occur —
+GitHub runs those workflows on its own servers whenever specified events occur,
 typically a push to a branch or the opening of a pull request.
 
 The result of each workflow run is shown on the pull request page as a green checkmark or red cross.
@@ -63,7 +63,7 @@ jobs:
 
 Nestling has two workflow files:
 
-**`.github/workflows/ci.yml`** — runs on every push to `main` and on every pull request targeting `main`.
+**`.github/workflows/ci.yml`**: runs on every push to `main` and on every pull request targeting `main`.
 It runs three jobs in parallel:
 
 | Job | What it checks |
@@ -72,7 +72,7 @@ It runs three jobs in parallel:
 | `test` | Unit tests with pytest and notebook tests with nbmake |
 | `docs` | Documentation build with `mkdocs build --strict` |
 
-**`.github/workflows/deploy-mkdocs.yml`** — runs only on pushes to `main`.
+**`.github/workflows/deploy-mkdocs.yml`**: runs only on pushes to `main`.
 It deploys the documentation site to GitHub Pages using `mkdocs gh-deploy`.
 
 The CI job must pass before any pull request can be merged.
@@ -121,7 +121,7 @@ mkdir -p .github/workflows
 ```
 
 Create a minimal workflow at `.github/workflows/ci.yml` that installs your dependencies and runs your tests.
-Start simple — a single job that runs pytest is enough to begin with.
+Start simple. A single job that runs pytest is enough to begin with.
 Add linting and documentation checks once the basic test job is working.
 
 !!! tip "Test locally before pushing"
@@ -139,7 +139,7 @@ Add linting and documentation checks once the basic test job is working.
 ## What to read next
 
 This is the last lesson in the Git & GitHub track.
-If you have worked through all five lessons, you now have a complete Git workflow —
+If you have worked through all five lessons, you now have a complete Git workflow,
 from making your first commit to automated CI running on every push.
 That is a genuinely substantial set of skills, and the habits you have built here
 (clear commits, code review, automated checks) will serve you throughout your research.

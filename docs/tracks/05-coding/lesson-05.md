@@ -1,7 +1,7 @@
-# Lesson 05 — Code Style & Quality
+# Lesson 05: Code Style & Quality
 
 Code is read far more often than it is written.
-A consistent style makes it easier for collaborators — and your future self — to understand
+A consistent style makes it easier for collaborators, and your future self, to understand
 and modify code. This lesson introduces PEP 8, type hints, and the tools that enforce style
 automatically so you do not have to think about it.
 
@@ -10,7 +10,7 @@ automatically so you do not have to think about it.
 ## PEP 8
 
 [PEP 8](https://peps.python.org/pep-0008/) is Python's official style guide.
-You do not need to memorise it — a linter will tell you when you violate it — but
+You do not need to memorise it. A linter will tell you when you violate it, but
 understanding the core rules prevents the most common problems.
 
 ### Naming conventions
@@ -28,9 +28,9 @@ helper functions are `snake_case`.
 
 ### Line length
 
-Keep lines under **88 characters** — the `ruff`/`black` default.
+Keep lines under **88 characters**, the `ruff`/`black` default.
 Long lines are hard to read side-by-side with a diff and awkward in terminal output.
-Prometheus sets a limit of 100 in `pyproject.toml` — slightly generous, but documented
+Prometheus sets a limit of 100 in `pyproject.toml`, slightly generous, but documented
 and consistently enforced.
 
 ### Imports
@@ -108,8 +108,8 @@ Rule codes:
 | `F` | Pyflakes (undefined names, unused imports) |
 | `W` | Warnings |
 | `I` | Import sorting (replaces `isort`) |
-| `N` | Naming conventions — add this |
-| `UP` | pyupgrade — flags outdated Python patterns — add this |
+| `N` | Naming conventions (add this) |
+| `UP` | pyupgrade: flags outdated Python patterns (add this) |
 
 For a new project add `"N"` and `"UP"` to the select list.
 
@@ -140,7 +140,7 @@ def load_config(path: str) -> dict[str, float]:
     Older code uses `from typing import List, Dict` and then `List[float]`.
     This was required before Python 3.9. In modern Python, use the built-in types
     directly: `list[float]`, `dict[str, int]`, `tuple[float, ...]`.
-    Prometheus contains several instances of the old style (`List[Particle]`) — harmless
+    Prometheus contains several instances of the old style (`List[Particle]`), harmless
     but unnecessary. ruff's `UP` rule flags these automatically.
 
 ### Optional and Union
@@ -152,7 +152,7 @@ def find_mass(name: str) -> float | None:
     return masses.get(name)
 ```
 
-`float | None` is the Python 3.10+ shorthand for `Optional[float]` — prefer it in new code.
+`float | None` is the Python 3.10+ shorthand for `Optional[float]`. Prefer it in new code.
 
 ---
 

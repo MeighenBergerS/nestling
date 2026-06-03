@@ -1,4 +1,4 @@
-# [Project Name] — coding and documentation skill
+# [Project Name]: coding and documentation skill
 
 Use this skill whenever working in the [Project Name] repository.
 Copy this file to `.claude/commands/coding.md` in your project and fill in the bracketed
@@ -8,7 +8,7 @@ placeholders. Load it with `/coding` at the start of a session.
 
 ## Environment
 
-**Python interpreter** — always use the project virtual environment; never rely on a
+**Python interpreter**: always use the project virtual environment; never rely on a
 bare `python` or `python3` in PATH:
 
 ```text
@@ -70,22 +70,22 @@ obj = [MainClass]([config])
 result = obj.[main_method]()
 ```
 
-**Configuration:** [describe how configuration works — TOML file, dataclass, dict, etc.]
+**Configuration:** [describe how configuration works: TOML file, dataclass, dict, etc.]
 
 ---
 
 ## Key invariants
 
 These are constraints the code assumes. Violating them produces silent wrong results,
-not exceptions — do not introduce code that breaks them.
+not exceptions. Do not introduce code that breaks them.
 
 - [Physical units]: all quantities in SI / [field convention] units throughout.
   Never store dimensionless intermediates in module-level state.
 - [Array shapes]: output arrays are always shape `(N,)`, never `(N, 1)`.
 - [Random state]: numpy/JAX random state is always passed explicitly to functions that use it.
   No global seeds in library code.
-- [Domain cutoff]: [describe any numerical domain limit, e.g. "distance cutoff at 300 m — model
-  not trained beyond this"].
+- [Domain cutoff]: [describe any numerical domain limit, e.g. "distance cutoff at 300 m;
+  model not trained beyond this"].
 
 ---
 
@@ -148,7 +148,7 @@ Rules:
 
 - Raise `ValueError` for invalid inputs at public API boundaries.
 - Do not catch and re-raise exceptions without adding information.
-- Do not use bare `except:` — always specify the exception type.
+- Do not use bare `except:`. Always specify the exception type.
 
 ### Testing
 
@@ -171,6 +171,11 @@ Rules:
 - **Inline comments** explain non-obvious WHY: a hidden constraint, a workaround
   for a known bug, a physical approximation. One line maximum.
 - Do not comment what the code obviously does. `# increment i` is noise.
+
+### Prose style
+
+- Do not use em dashes (—) in documentation or prose. Use a comma for parenthetical
+  elaboration, a colon for introducing a list, or split into a new sentence.
 
 ### Building the docs
 
@@ -201,4 +206,4 @@ mkdocs build      # build static site in site/
 - [ ] Lint passes (`ruff check src/`).
 - [ ] No hard-coded paths, credentials, or API keys.
 - [ ] Random seeds set for any function that produces numeric results.
-- [ ] `git diff` reviewed — no unintended changes included.
+- [ ] `git diff` reviewed, no unintended changes included.

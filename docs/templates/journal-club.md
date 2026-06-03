@@ -1,7 +1,7 @@
 # Journal Club Template
 
 Use this as a starting point if your group uses slides or a structured format.
-Adapt it freely — every journal club is different, and many groups do not use slides at all.
+Adapt it freely. Every journal club is different, and many groups do not use slides at all.
 Aim for roughly one slide per minute of talk time.
 
 ## Suggested Slide Structure
@@ -25,11 +25,11 @@ Use these to start the discussion, or write your own:
 - Is there a simpler explanation that is not ruled out by these results?
 - What experiment or observation would most convincingly confirm or refute this?
 - Does this result connect to anything else you have seen recently?
-- I found [specific result or figure] surprising — did anyone else?
+- I found [specific result or figure] surprising. Did anyone else?
 
 ## Notes
 
 - Short is usually better. A ten-minute presentation that sparks a long discussion is a success.
 - You do not need to cover every section. One clear key result is worth more than five rushed ones.
-- Saying "I did not fully understand this part" is fine — and often opens a useful discussion.
+- Saying "I did not fully understand this part" is fine, and often opens a useful discussion.
 - If your group does chalk talks or informal presentations, ignore the slide structure and focus on the prompts.

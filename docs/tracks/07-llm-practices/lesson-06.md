@@ -1,11 +1,11 @@
-# Lesson 06 — Verification Habits
+# Lesson 06: Verification Habits
 
 The previous lessons covered what LLMs can and cannot do, and how to use them
 in specific contexts.
 This lesson distils those lessons into a set of habits you can apply consistently
 to any LLM-assisted work.
 
-Good verification habits are not about distrust — they are about knowing what
+Good verification habits are not about distrust. They are about knowing what
 to check and doing it efficiently.
 
 ---
@@ -16,7 +16,7 @@ The core habit is simple: **treat every LLM output as a first draft that require
 not as a finished product.**
 
 This is not a counsel of paranoia. LLMs produce genuinely useful output most of the time.
-But the failure modes — confident wrong answers, hallucinated citations, subtle code bugs —
+But the failure modes, confident wrong answers, hallucinated citations, subtle code bugs,
 are hard to spot and consequential in research.
 A consistent habit of checking costs little time and prevents most problems.
 
@@ -116,7 +116,7 @@ Use this before incorporating any LLM output into your work.
 
 ## Building habits over time
 
-A checklist is most useful when it becomes automatic — when you run through it
+A checklist is most useful when it becomes automatic, when you run through it
 without thinking, as part of your normal workflow.
 The habits that matter most, in order of impact:
 
@@ -152,7 +152,7 @@ For research, keeping a record of which parts of a paper or analysis involved
 LLM assistance is good practice and increasingly expected by journals.
 
 **Staged review.** Industrial pipelines for high-stakes LLM use have multiple review
-stages — automated checks, then human review, then subject-matter expert review —
+stages, automated checks, then human review, then subject-matter expert review,
 before output is acted on.
 For a research paper, the analogous stages are: you verify the LLM output,
 your supervisor or collaborators review the work, and the peer review process provides
@@ -169,7 +169,7 @@ output to maintain calibration on its error rate for that task.
 ## A note on models and their limitations changing over time
 
 LLM capabilities improve rapidly. A task that a model handled unreliably in 2023 may
-be handled well in 2025, and vice versa — new models sometimes regress on specific tasks.
+be handled well in 2025, and vice versa. New models sometimes regress on specific tasks.
 
 This means:
 

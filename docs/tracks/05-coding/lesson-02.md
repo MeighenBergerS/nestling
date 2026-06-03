@@ -1,9 +1,9 @@
-# Lesson 02 — Python & Jupyter Notebooks
+# Lesson 02: Python & Jupyter Notebooks
 
 Python is the primary language of modern physics research.
 It is not the fastest language, but it is expressive, has an enormous scientific ecosystem,
 and is easy to read.
-This lesson covers enough Python to get you running, and introduces Jupyter notebooks —
+This lesson covers enough Python to get you running, and introduces Jupyter notebooks,
 the interactive environment used for exploration and analysis.
 
 ---
@@ -11,7 +11,7 @@ the interactive environment used for exploration and analysis.
 ## Why Python
 
 The scientific Python stack (NumPy, SciPy, Matplotlib, and hundreds of domain libraries)
-means that most physics tasks — numerical integration, fitting, plotting, reading HDF5 files —
+means that most physics tasks, numerical integration, fitting, plotting, reading HDF5 files,
 have well-tested implementations you can call rather than write.
 Simulation codes like [Prometheus](https://github.com/Harvard-Neutrino/prometheus) are
 written in Python precisely because this ecosystem exists.
@@ -100,7 +100,7 @@ from scipy import integrate
     This works, but it repeats the import machinery on every call and obscures what your
     module depends on. Always put imports at the top of the file.
     [Prometheus `particle.py`](https://github.com/Harvard-Neutrino/prometheus/blob/main/prometheus/particle/particle.py)
-    contains exactly this pattern — a useful real-world reminder that even well-maintained
+    contains exactly this pattern, a useful real-world reminder that even well-maintained
     codebases have small bad habits.
 
 A common mistake is placing imports inside a function body:
@@ -134,7 +134,7 @@ jupyter notebook
 
 | Type | Purpose |
 |------|---------|
-| **Code** | Python — press `Shift+Enter` to run |
+| **Code** | Python: press `Shift+Enter` to run |
 | **Markdown** | Text, equations ($E = mc^2$), headers |
 | **Raw** | Passed through as-is (rarely needed) |
 
@@ -185,5 +185,5 @@ module once it works.
 
 ## What to read next
 
-[Lesson 03](lesson-03.md) covers `pip` and virtual environments — the machinery that installs
+[Lesson 03](lesson-03.md) covers `pip` and virtual environments, the machinery that installs
 Python packages and keeps project dependencies isolated.

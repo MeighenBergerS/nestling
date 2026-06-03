@@ -1,4 +1,4 @@
-# Lesson 12 — Linting & Automation
+# Lesson 12: Linting & Automation
 
 Manual discipline breaks down under deadline pressure.
 The solution is to automate quality checks so they run without conscious effort:
@@ -46,7 +46,7 @@ pre-commit install
 ```
 
 From now on, `git commit` automatically runs ruff and the file checks.
-If ruff auto-fixes something, the commit is blocked once — you stage the changes and
+If ruff auto-fixes something, the commit is blocked once. Stage the changes and
 commit again.
 
 Run all hooks manually on every file at any time:
@@ -58,7 +58,7 @@ pre-commit run --all-files
 !!! note "Prometheus is missing pre-commit"
     Prometheus has a well-configured ruff setup in `pyproject.toml` and enforces linting
     in CI, but has no `.pre-commit-config.yaml`.
-    This means style issues are caught late — during a pull request review — rather than
+    This means style issues are caught late, during a pull request review, rather than
     before the commit is created. Adding pre-commit hooks is one of the easiest
     improvements you can make to any existing project.
 
@@ -105,7 +105,7 @@ jobs:
 Prometheus's `.github/workflows/ci.yml` follows exactly this pattern: a separate `lint`
 job and a separate `test` job, triggered on all PRs and pushes to `main`.
 Separating them means a lint failure appears in the lint job and a test failure in the
-test job — you know immediately where to look.
+test job. You know immediately where to look.
 
 ---
 
@@ -134,7 +134,7 @@ jobs:
       - run: mkdocs gh-deploy --force
 ```
 
-Prometheus uses this in `.github/workflows/deploy-mkdocs.yml` — every merge to `main`
+Prometheus uses this in `.github/workflows/deploy-mkdocs.yml`. Every merge to `main`
 automatically updates the public documentation at `harvard-neutrino.github.io/prometheus`.
 
 ---

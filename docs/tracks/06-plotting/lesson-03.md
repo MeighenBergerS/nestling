@@ -1,7 +1,7 @@
-# Lesson 03 — Publication Style
+# Lesson 03: Publication Style
 
 A consistent style across all figures in a paper signals professionalism and makes revision
-much easier — changing the font size across fifteen figures is one edit instead of fifteen.
+much easier. Changing the font size across fifteen figures is one edit instead of fifteen.
 matplotlib style sheets let you encode all style choices once and apply them everywhere.
 
 This lesson covers the Nestling style file, LaTeX labels, and how to size figures correctly
@@ -159,7 +159,7 @@ fig, axes = plt.subplots(1, 2, figsize=(7.09, 3.0))
 ```
 
 !!! tip "Check at the final size"
-    Always open the saved PDF at 100 % zoom — or print a draft copy — before submitting.
+    Always open the saved PDF at 100 % zoom, or print a draft copy, before submitting.
     A figure that looks fine on screen at 200 % can have illegible tick labels at print size.
 
 ---
@@ -170,10 +170,10 @@ fig, axes = plt.subplots(1, 2, figsize=(7.09, 3.0))
 plt.savefig("figure.pdf", bbox_inches="tight")
 ```
 
-- **PDF** — vector format, preferred by journals. Fonts are embedded.
-- **SVG** — vector, editable in Inkscape. Useful for final touch-ups.
-- **EPS** — accepted by many older journal workflows; avoid if PDF is accepted.
-- **PNG** — raster only; use `dpi=300` minimum. Set `dpi=600` for figures with fine lines.
+- **PDF**: vector format, preferred by journals. Fonts are embedded.
+- **SVG**: vector, editable in Inkscape. Useful for final touch-ups.
+- **EPS**: accepted by many older journal workflows; avoid if PDF is accepted.
+- **PNG**: raster only; use `dpi=300` minimum. Set `dpi=600` for figures with fine lines.
 
 `bbox_inches="tight"` trims excess whitespace around the figure, which avoids
 awkward spacing when the figure is included in a LaTeX document.

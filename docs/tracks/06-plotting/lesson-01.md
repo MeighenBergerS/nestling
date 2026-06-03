@@ -1,9 +1,9 @@
-# Lesson 01 — Figure Design Principles
+# Lesson 01: Figure Design Principles
 
 A scientific figure has one job: to let the reader extract the result as quickly and accurately
 as possible.
-Every element that fails that job — unnecessary gridlines, duplicate legends, decorative 3D
-effects — is in the way.
+Every element that fails that job, unnecessary gridlines, duplicate legends, decorative 3D
+effects, is in the way.
 This lesson covers the principles that separate figures which communicate from figures which
 merely display.
 
@@ -12,12 +12,12 @@ the other follows the Nestling style guide.
 
 | What not to do | What to do |
 | :-: | :-: |
-| ![Before — common mistakes](figures/before.png) | ![After — Nestling style](figures/after.png) |
+| ![Before: common mistakes](figures/before.png) | ![After: Nestling style](figures/after.png) |
 | Title inside panel, no units, outward ticks, framed legend | No title, LaTeX labels, inward mirror ticks, direct annotation |
 
 !!! note "Acknowledgement"
     Several principles in this lesson are drawn from or inspired by Ciaran O'Hare's
-    [HowToMakeAPlot](https://github.com/cajohare/HowToMakeAPlot) — a concise, practical guide
+    [HowToMakeAPlot](https://github.com/cajohare/HowToMakeAPlot), a concise, practical guide
     to scientific plotting in Python. It is well worth reading in full.
 
 ---
@@ -52,7 +52,7 @@ Common culprits:
 | Redundant legend inside a panel with only one line | The label on the axis already names it |
 | Excessively wide default margins | Waste space in multi-panel figures |
 
-Removing these elements is not minimalism for its own sake — it reduces the cognitive load on
+Removing these elements is not minimalism for its own sake. It reduces the cognitive load on
 the reader and lets the data speak.
 
 ### Labels and units
@@ -69,7 +69,7 @@ If the paper writes $\phi_\nu$, the axis should read $\phi_\nu$, not "flux".
 Ticks should face inward (into the plot area), not outward.
 Ticks on both top and right edges (mirror ticks) are conventional in particle and astroparticle
 physics and help the reader read off values without a grid.
-The Nestling style enables this by default — see [Lesson 03](lesson-03.md).
+The Nestling style enables this by default. See [Lesson 03](lesson-03.md).
 
 ### Font size
 
@@ -88,7 +88,7 @@ The Nestling style uses 8 pt throughout, which is legible at typical journal col
 The aspect ratio and axis limits control what the reader perceives as a "large" difference.
 A factor-of-two change can look dramatic or negligible depending on axis choice.
 
-- Never crop axes to exclude zero when the baseline matters — e.g., a bar chart where only the
+- Never crop axes to exclude zero when the baseline matters, e.g., a bar chart where only the
   top 5 % is shown dramatically exaggerates differences.
 - Log scales are appropriate for quantities that span orders of magnitude.
   Use them for energy spectra, flux, probability densities. Do not use them where the
@@ -106,7 +106,7 @@ explicitly in the caption.
 
 Changing the bin width of a histogram can make a distribution look smooth or noisy.
 Changing the smoothing kernel of a continuous estimate can suppress or reveal features.
-Neither choice is neutral — and neither should be invisible.
+Neither choice is neutral, and neither should be invisible.
 State binning and smoothing choices in the caption.
 
 ---
@@ -133,7 +133,7 @@ Two strategies that work together:
 ### Font and contrast
 
 Use a font with clear distinction between commonly confused characters (1/l/I, 0/O).
-Avoid very light colours for text or axis labels — ensure sufficient contrast with the
+Avoid very light colours for text or axis labels. Ensure sufficient contrast with the
 background.
 The default white background with dark text is the safest choice for publication.
 

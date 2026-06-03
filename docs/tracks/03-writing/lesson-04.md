@@ -1,4 +1,4 @@
-# Lesson 04 — LaTeX Basics
+# Lesson 04: LaTeX Basics
 
 HEP papers are written in LaTeX, specifically using the RevTeX 4-2 document class for APS journals.
 This lesson covers the conventions that apply throughout: document setup, figures, equations,
@@ -12,7 +12,7 @@ so you do not have to rediscover them from journal guidelines or by copying some
 
 The standard collaborative tool in HEP is [Overleaf](https://www.overleaf.com/project).
 Overleaf is a browser-based LaTeX editor that compiles in the cloud, tracks history, and lets multiple
-authors edit simultaneously — it removes the need to install a local LaTeX distribution or manage
+authors edit simultaneously, removing the need to install a local LaTeX distribution or manage
 a shared repository for the source files.
 
 When starting a new paper, create a new project on Overleaf and share it with your collaborators.
@@ -40,7 +40,7 @@ This is how most papers in this subfield are written in practice.
 \usepackage{multirow}
 ```
 
-Set all hyperlinks to violet — this is the standard in these papers:
+Set all hyperlinks to violet. This is the standard in these papers:
 
 ```latex
 \hypersetup{
@@ -100,7 +100,7 @@ Remove any `\Scomm{}` or `\AGcomm{}` author-note macros from any submitted draft
 - The final takeaway sentence of a caption is wrapped in `\textit{...}`.
 - Multi-panel captions label panels with `\textbf{Left panel:}`, `\textbf{Right panel:}`, etc.
 - Placement: the first figure in the paper uses `[b]`; all others use `[t]`. Never `[h]` or `[H]`.
-- Figure filenames are `lowercase_with_underscores.pdf` — no uppercase, no spaces.
+- Figure filenames are `lowercase_with_underscores.pdf`, no uppercase, no spaces.
 
 ### Caption structure
 
@@ -108,7 +108,7 @@ Each caption has a three-sentence structure:
 
 1. **What it shows** (result-first): "Energy deposited in S4714 as a fraction of stellar luminosity, as a function of DM mass."
 2. **What data or model was used**: "Solid (dotted) lines show the full Gould formalism (naive estimate). Experimental constraints from [refs] are included."
-3. **Key takeaway** (optional): "The spiked profile yields the largest predicted deposition, reaching O(L★) well below current sensitivity." — in `\textit{...}`.
+3. **Key takeaway** (optional): "The spiked profile yields the largest predicted deposition, reaching O(L★) well below current sensitivity." Wrap in `\textit{...}`.
 
 Captions must be self-contained. A reader should understand what the figure shows without reading the main text.
 Do not repeat verbatim what the surrounding paragraph says.
@@ -144,13 +144,13 @@ Do not repeat verbatim what the surrounding paragraph says.
 - A bare `%` comment line appears immediately above and below every equation block.
 - Four-space indentation inside equation environments.
 - Equations end with punctuation (`.` or `,`) matching the surrounding sentence.
-- Equation labels: `eq:descriptive_name` — lowercase, underscores only.
+- Equation labels: `eq:descriptive_name`, lowercase, underscores only.
 
 ---
 
 ## Math notation
 
-**Upright text in subscripts** — always `\mathrm{}` for multi-letter labels:
+**Upright text in subscripts**: always `\mathrm{}` for multi-letter labels:
 
 | ✅ Write this | ❌ Not this |
 | --- | --- |
@@ -164,7 +164,7 @@ Do not repeat verbatim what the surrounding paragraph says.
 | --- | --- |
 | `$\sim$` | Order-of-magnitude equalities: "σ ~ 10⁻³³ cm²" |
 | `$\simeq$` | Approximate numerical equality in equations (within 10–20%) |
-| `$\approx$` | Reserved for numerical approximations — do **not** use for rough estimates |
+| `$\approx$` | Reserved for numerical approximations. Do **not** use for rough estimates |
 
 **Calligraphic letters**: `\mathcal{R}` for rates, `\mathcal{N}` for counts.
 
@@ -181,7 +181,7 @@ This is one of the most common sources of inconsistency in drafts. Follow these 
 | Section | `Section~\ref{sec:name}` | Spelled out |
 | Appendix | `Appendix~\ref{app:name}` | Spelled out |
 
-**Do not use** `\eqref{}` — use `Eq.~(\ref{})` explicitly.
+**Do not use** `\eqref{}`. Use `Eq.~(\ref{})` explicitly.
 **Do not use** `\autoref{}` or `\Cref{}`.
 
 The non-breaking tilde `~` between the word and `\ref{}` is required in every case.
@@ -230,7 +230,7 @@ by publication or submission year (oldest first). Within the same year, sort alp
 **Do not cite in the abstract.**
 
 Spell out experiment names on first use:
-"the Xenon One Ton experiment (XENON1T) [ref]" — then use "XENON1T" throughout.
+"the Xenon One Ton experiment (XENON1T) [ref]", then use "XENON1T" throughout.
 
 **BibTeX keys**: Use INSPIRE-style keys (`Author:YYYYabc`). Include arXiv IDs for preprints.
 
@@ -241,7 +241,7 @@ Spell out experiment names on first use:
 - **En-dash for ranges**: `3--10` not `3-10`.
 - **Non-breaking space before units**: `100~kton-year`, `1.5~km`, `$\sim$3~MeV`.
 - **Percent**: `10\%` with no space before `\%`.
-- **Acknowledgements**: `\section*{Acknowledgements}` — asterisk (unnumbered), British spelling.
+- **Acknowledgements**: `\section*{Acknowledgements}`, asterisk (unnumbered), British spelling.
 
 ---
 
@@ -296,11 +296,11 @@ Each appendix is a full `\section{}`, not a `\subsection{}`.
 ```
 
 `\clearpage` before `\bibliography` flushes all pending floats.
-The `longbibliography` class option is already set — do not override it.
+The `longbibliography` class option is already set. Do not override it.
 
 ---
 
 ## What to read next
 
-[Lesson 05](lesson-05.md) is the revision checklist — a systematic pass through everything covered
+[Lesson 05](lesson-05.md) is the revision checklist, a systematic pass through everything covered
 in this track, designed to be run on a full draft before submission.

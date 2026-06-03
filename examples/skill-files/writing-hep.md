@@ -1,4 +1,4 @@
-# HEP paper writing skill — Meighen-Berger style
+# HEP paper writing skill: Meighen-Berger style
 
 Use this skill when drafting or reviewing sections of a high-energy or astroparticle physics
 paper. It encodes the conventions taught in the Nestling Writing Papers track (lessons 01–05)
@@ -6,7 +6,7 @@ and the SMB style guide (derived from detailed analysis of four representative p
 arXiv:2512.18093, 2505.09111, 2410.00330, 2311.01667).
 
 Load this skill at the start of a writing or revision session.
-You do not need to repeat these rules in individual prompts — they apply to everything
+You do not need to repeat these rules in individual prompts. They apply to everything
 in the session.
 
 ---
@@ -21,7 +21,7 @@ I will write a draft following these conventions.
 **Review mode:**
 Paste your draft text and ask me to check for violations.
 I will quote each offending passage, name the rule it breaks, and suggest the fix.
-I will not paraphrase or silently correct — I will flag every violation explicitly.
+I will not paraphrase or silently correct. I will flag every violation explicitly.
 
 ---
 
@@ -33,9 +33,9 @@ I will not paraphrase or silently correct — I will flag every violation explic
 - **Lead each paragraph** with the subject and an active verb:
   "We compute...", "We find...", "We demonstrate...", "We propose...", "Figure X shows...", "This approach..."
 - **Confidence level:**
-  - "we demonstrate" / "we show" — established, fully calculated results
-  - "we find" — numerical outputs
-  - "in principle" / "could" — speculative possibilities not yet calculated
+  - "we demonstrate" / "we show": established, fully calculated results
+  - "we find": numerical outputs
+  - "in principle" / "could": speculative possibilities not yet calculated
 - **Never start a sentence with:**
   "It is important to note that...", "It should be noted that...",
   "One can see that...", "It is worth mentioning..."
@@ -53,14 +53,14 @@ Structure: exactly 4–5 sentences, in this order:
    No "In this paper" yet.
 2. **What we do** (1–2 sentences): "We..." — name the method, systems studied, scope.
 3. **Main quantitative result** (1 sentence): a specific number with units.
-   Not "we show significant improvement" — "we find σ ≲ 10⁻³³ cm² at mχ ∼ 1 GeV".
+   Not "we show significant improvement"; write "we find σ ≲ 10⁻³³ cm² at mχ ∼ 1 GeV" instead.
 4. **Broader implication** (1 sentence): why it matters; complementarity with other probes.
 
 Rules:
 
 - No citations in the abstract.
 - No section-by-section summary.
-- Maximum 5 sentences total — if you have 6, merge or cut.
+- Maximum 5 sentences total. If you have 6, merge or cut.
 
 ---
 
@@ -128,11 +128,11 @@ Closing points to the next subsection.
 
 Three paragraphs, in this order:
 
-1. "We have computed/shown/demonstrated [main quantitative result]." — one sentence.
+1. "We have computed/shown/demonstrated [main quantitative result]." One sentence.
    Restate the key number from the results section. Introduce no new results.
-2. Broader implications — what this means for the field; complementarity with other experiments.
+2. Broader implications: what this means for the field; complementarity with other experiments.
    ≤ 4 sentences.
-3. Future outlook — 3–4 concrete improvements or extensions. End on a forward-looking note.
+3. Future outlook: 3–4 concrete improvements or extensions. End on a forward-looking note.
 
 The conclusion must not introduce any quantitative result not derived in the body.
 The numbers must match exactly what appears in the introduction and results sections.
@@ -153,13 +153,13 @@ The numbers must match exactly what appears in the introduction and results sect
 
 ### In-text references
 
-- Always "Figure~\ref{fig:name}" — never "Fig.", never `\Cref{}`, never `\autoref{}`.
-- Reference pattern: "Figure X shows [what it shows]" — never "Figure X (right panel)"
+- Always "Figure~\ref{fig:name}": never "Fig.", never `\Cref{}`, never `\autoref{}`.
+- Reference pattern: "Figure X shows [what it shows]": never "Figure X (right panel)"
   unless panels are discussed separately.
 - Introduce before interpreting: reference the figure at the start of the paragraph
   that interprets it.
 
-### Captions — three-sentence structure
+### Captions: three-sentence structure
 
 1. **What it shows** (result-first): "Energy deposited in DUNE as a fraction of
    solar luminosity, as a function of neutrino energy."
@@ -180,11 +180,11 @@ Rules:
 - **Display only essential equations.** Algebraic steps go in appendices.
 - **Define every symbol immediately after first appearance:**
   "where $R_\star$ is the stellar radius, $n_i$ is the number density..."
-- **In-text reference:** `Eq.~(\ref{eq:label})` — never `\eqref{}` alone,
+- **In-text reference:** `Eq.~(\ref{eq:label})`: never `\eqref{}` alone,
   never just `(\ref{eq:label})`.
 - **Subscripts:** always `\mathrm{}` for non-italic multi-letter subscripts:
   `m_{\mathrm{p}}`, `E_{\mathrm{det}}`, `\frac{\mathrm{d}\Phi}{\mathrm{d}E}`.
-- **Never use `\approx` in a displayed equation for rough estimates** — use `\sim` in
+- **Never use `\approx` in a displayed equation for rough estimates.** Use `\sim` in
   surrounding text.
 - Equations end with punctuation (`.` or `,`) matching the surrounding sentence.
 
@@ -207,7 +207,7 @@ Rules:
 ## 11. LaTeX conventions
 
 | Object | Correct format | Never |
-|--------|---------------|-------|
+| --- | --- | --- |
 | Figure ref | `Figure~\ref{fig:name}` | `Fig.`, `\Cref{}`, `\autoref{}` |
 | Equation ref | `Eq.~(\ref{eq:name})` | `\eqref{}`, bare `(\ref{})` |
 | Section ref | `Section~\ref{sec:name}` | `Sec.`, `\Cref{}` |
@@ -221,7 +221,7 @@ Rules:
 
 **Acknowledgements:**
 
-- `\section*{Acknowledgements}` — asterisk, British spelling.
+- `\section*{Acknowledgements}`: asterisk, British spelling.
 - Standard format: "We are grateful for helpful discussions with [names]."
 - Funding statement.
 - Mandatory closing sentence: "This work is based on the ideas and calculations
@@ -251,7 +251,7 @@ Never `\approx` for rough estimates.
 ## 13. Forbidden phrases
 
 | ❌ Never write | ✅ Write instead |
-|---|---|
+| --- | --- |
 | "As can be seen in Figure X..." | "Figure X shows..." |
 | "It is shown that..." | "We show that..." |
 | "It is important to note that..." | [state the claim directly] |
@@ -262,6 +262,7 @@ Never `\approx` for rough estimates.
 | "it turns out" | "we find" |
 | "The authors would like to thank..." | "We are grateful for helpful discussions with..." |
 | "Summary and Conclusions" (section title) | "Conclusions and Outlook" |
+| X — Y (em dash in prose) | Comma, colon, or new sentence |
 
 ---
 
@@ -272,11 +273,11 @@ When reviewing an entire paper, check these structural properties:
 - **One main result rule:** the paper has exactly one primary claim statable in one sentence
   with one number. Identify it before reviewing.
 - **Introduction–Conclusion contract:** every claim in the introduction is discharged in
-  the body. The conclusion restates the main result with the same numbers — no new values.
+  the body. The conclusion restates the main result with the same numbers. No new values.
 - **Methods before results:** no result appears before its method is introduced.
 - **Simplest case first:** when multiple scenarios exist, present the most general case first.
-- **Appendices:** carry derivations, robustness checks, and answers to natural objections —
-  never the paper's main results.
+- **Appendices:** carry derivations, robustness checks, and answers to natural objections.
+  Never the paper's main results.
 - **Figure architecture:**
   - Figure 1 (intro): overview sketch or OOM summary, not a data figure.
   - Each subsequent figure answers exactly one question.
@@ -304,5 +305,5 @@ When reviewing an entire paper, check these structural properties:
 
 ---
 
-*Skill file version 1.0 — based on Nestling Writing Papers track (lessons 01–05) and
+*Skill file version 1.0, based on Nestling Writing Papers track (lessons 01–05) and
 SMB style guide v1.1 (arXiv:2512.18093, 2505.09111, 2410.00330, 2311.01667).*
