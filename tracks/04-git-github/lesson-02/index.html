@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Lesson 02 — Branching - Nestling</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 02 \u2014 Branching";
+        var mkdocs_page_input_path = "tracks/04-git-github/lesson-02.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/environment-setup/">Environment Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >ArXiv & Reading Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-01/">Lesson 01 — Finding Papers</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-03/">Lesson 03 — Managing Papers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Writing Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-04/">Lesson 04 — LaTeX Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Git & GitHub</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-01/">Lesson 01 — Git Basics</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lesson 02 — Branching</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#what-a-branch-is">What a branch is</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#creating-and-switching-branches">Creating and switching branches</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#making-commits-on-a-branch">Making commits on a branch</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#merging">Merging</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#resolving-conflicts">Resolving conflicts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deleting-a-branch">Deleting a branch</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rebasing">Rebasing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#stashing-work-in-progress">Stashing work in progress</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#when-to-branch">When to branch</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-to-read-next">What to read next</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-03/">Lesson 03 — GitHub Collaboration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Coding Practices</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-02/">Lesson 02 — Python & Jupyter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-04/">Lesson 04 — Scientific Python Stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-05/">Lesson 05 — Code Style & Quality</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-06/">Lesson 06 — Performance & Parallelism</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-07/">Lesson 07 — ML Basics with PyTorch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-10/">Lesson 10 — Testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Plotting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-01/">Lesson 01 — Figure Design Principles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-04/">Lesson 04 — Colour and Accessibility</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Working with LLMs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-01/">Lesson 01 — What LLMs Are and Are Not</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-02/">Lesson 02 — LLMs for Code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-03/">Lesson 03 — LLMs for Writing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-04/">Lesson 04 — LLMs for Literature Search</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-05/">Lesson 05 — Prompt Engineering for Research</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-06/">Lesson 06 — Verification Habits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-07/">Lesson 07 — Skill Files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/paper-outline/">Paper Outline</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tracks</li>
+          <li class="breadcrumb-item">Git & GitHub</li>
+      <li class="breadcrumb-item active">Lesson 02 — Branching</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/tracks/04-git-github/lesson-02.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-02-branching">Lesson 02: Branching<a class="headerlink" href="#lesson-02-branching" title="Permanent link">&para;</a></h1>
+<p>A branch is an independent line of development within a repository.
+Branches let you work on a new feature, try an experiment, or fix a bug in isolation,
+without touching the main line of the project until you are ready.
+This lesson covers how to create, switch between, merge, and delete branches,
+and how to resolve conflicts when two branches have edited the same file.</p>
+<hr />
+<h2 id="what-a-branch-is">What a branch is<a class="headerlink" href="#what-a-branch-is" title="Permanent link">&para;</a></h2>
+<p>Every repository starts with one branch, conventionally named <code>main</code>.
+Every commit you make on <code>main</code> extends its history forward in a straight line.</p>
+<p>When you create a new branch, Git creates a new pointer starting at the current commit.
+From that point on, commits on the new branch do not affect <code>main</code>, and commits on <code>main</code>
+do not affect the new branch.</p>
+<p>This separation is safe and cheap: creating a branch takes milliseconds and costs almost no disk space.</p>
+<hr />
+<h2 id="creating-and-switching-branches">Creating and switching branches<a class="headerlink" href="#creating-and-switching-branches" title="Permanent link">&para;</a></h2>
+<p>Create a new branch and switch to it immediately:</p>
+<pre><code class="language-sh">git switch -c my-feature
+</code></pre>
+<p>List all branches (the current one is marked with <code>*</code>):</p>
+<pre><code class="language-sh">git branch
+</code></pre>
+<p>Switch to an existing branch:</p>
+<pre><code class="language-sh">git switch main
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">git switch vs. git checkout</p>
+<p>Older tutorials use <code>git checkout -b branch-name</code> to create branches and <code>git checkout branch-name</code> to switch.
+Both work, but <code>git switch</code> (introduced in Git 2.23) is clearer about intent.
+Use <code>git switch</code> in new work.</p>
+</div>
+<hr />
+<h2 id="making-commits-on-a-branch">Making commits on a branch<a class="headerlink" href="#making-commits-on-a-branch" title="Permanent link">&para;</a></h2>
+<p>Once you are on the new branch, any commits you make are recorded there and do not appear on <code>main</code>.</p>
+<pre><code class="language-sh">git switch -c add-energy-loss
+</code></pre>
+<p>Edit files, stage, and commit as normal:</p>
+<pre><code class="language-sh">git add physics/energy_loss.py
+</code></pre>
+<pre><code class="language-sh">git commit -m &quot;Add energy loss calculation for iron nuclei&quot;
+</code></pre>
+<p>Switch back to <code>main</code> and your working directory reverts to its state on <code>main</code>:</p>
+<pre><code class="language-sh">git switch main
+</code></pre>
+<hr />
+<h2 id="merging">Merging<a class="headerlink" href="#merging" title="Permanent link">&para;</a></h2>
+<p>When you are ready to bring your branch's work into <code>main</code>, merge it.</p>
+<p>First, switch to the branch you want to merge <em>into</em>:</p>
+<pre><code class="language-sh">git switch main
+</code></pre>
+<p>Then merge your feature branch:</p>
+<pre><code class="language-sh">git merge add-energy-loss
+</code></pre>
+<p>If <code>main</code> has not changed since the branch was created, Git performs a <strong>fast-forward merge</strong>:
+it simply moves the <code>main</code> pointer forward to the tip of the feature branch.
+No merge commit is created.</p>
+<p>If <code>main</code> has new commits that are not on the feature branch, Git creates a <strong>merge commit</strong>
+that combines both histories.</p>
+<hr />
+<h2 id="resolving-conflicts">Resolving conflicts<a class="headerlink" href="#resolving-conflicts" title="Permanent link">&para;</a></h2>
+<p>A conflict occurs when both branches have edited the same lines of the same file.
+Git cannot decide which version to keep, so it asks you to resolve it manually.</p>
+<p>During a merge with conflicts, <code>git status</code> shows which files are conflicted:</p>
+<pre><code class="language-sh">git status
+</code></pre>
+<p>Open each conflicted file. Git marks the conflict with:</p>
+<pre><code class="language-text">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+code from your current branch
+=======
+code from the branch being merged
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; add-energy-loss
+</code></pre>
+<p>Edit the file to keep the version you want (or a combination of both), removing all the conflict markers.
+Then stage the resolved file:</p>
+<pre><code class="language-sh">git add physics/energy_loss.py
+</code></pre>
+<p>Complete the merge:</p>
+<pre><code class="language-sh">git commit
+</code></pre>
+<p>Git opens your editor with a pre-written merge commit message. Save and close it to finish.</p>
+<div class="admonition tip">
+<p class="admonition-title">Prevent conflicts by merging frequently</p>
+<p>Long-lived branches diverge more from <code>main</code> and accumulate harder conflicts.
+Merge your feature branch back into <code>main</code> as soon as the feature is complete.
+Regularly pulling changes from <code>main</code> into your branch (see <a href="../lesson-03/">Lesson 03</a>) also helps.</p>
+</div>
+<hr />
+<h2 id="deleting-a-branch">Deleting a branch<a class="headerlink" href="#deleting-a-branch" title="Permanent link">&para;</a></h2>
+<p>Once a branch has been merged, it is safe to delete:</p>
+<pre><code class="language-sh">git branch -d add-energy-loss
+</code></pre>
+<p>Git warns you if the branch has not been merged, protecting you from accidentally discarding work.</p>
+<hr />
+<h2 id="rebasing">Rebasing<a class="headerlink" href="#rebasing" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">This section is optional for now</p>
+<p>Rebasing is useful but not essential when you are starting out.
+If you are new to Git, feel free to skip this section and come back once you are comfortable with branching and merging.
+Pull requests work perfectly well without it.</p>
+</div>
+<p><strong>Rebasing</strong> is an alternative to merging for incorporating changes from one branch into another.
+Instead of creating a merge commit, rebase replays your commits one by one on top of the target branch,
+producing a linear history with no merge commits.</p>
+<p>Rebase your feature branch onto the current tip of <code>main</code>:</p>
+<pre><code class="language-sh">git switch my-feature
+</code></pre>
+<pre><code class="language-sh">git rebase main
+</code></pre>
+<p>Git replays each commit on <code>my-feature</code> as if you had started the branch from the current tip of <code>main</code>.
+The result is identical code, but with a cleaner, straight-line history.</p>
+<p>If there are conflicts during replay, Git pauses and asks you to resolve them, one commit at a time.
+After resolving each conflict:</p>
+<pre><code class="language-sh">git add the-conflicted-file.py
+</code></pre>
+<pre><code class="language-sh">git rebase --continue
+</code></pre>
+<p>To abort and return to the state before the rebase:</p>
+<pre><code class="language-sh">git rebase --abort
+</code></pre>
+<div class="admonition warning">
+<p class="admonition-title">Never rebase a branch others have cloned</p>
+<p>Rebase rewrites commit hashes. If someone else has cloned or checked out your branch,
+rebasing it leaves their copy pointing at commits that no longer exist in the shared history.
+Only rebase branches that only you are working on.</p>
+</div>
+<p>When to use rebase, when to use merge:</p>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Recommendation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Updating a private feature branch before a PR</td>
+<td><strong>Rebase</strong>: keeps the history linear and clean</td>
+</tr>
+<tr>
+<td>Merging a completed feature branch into <code>main</code></td>
+<td><strong>Merge</strong>: creates a clear record that the feature landed</td>
+</tr>
+<tr>
+<td>Updating a shared branch that others have cloned</td>
+<td><strong>Merge</strong>: never rebase shared branches</td>
+</tr>
+</tbody>
+</table>
+<p>See <a href="../lesson-03/">Lesson 03</a> for the full pre-PR rebase workflow with remotes.</p>
+<hr />
+<h2 id="stashing-work-in-progress">Stashing work in progress<a class="headerlink" href="#stashing-work-in-progress" title="Permanent link">&para;</a></h2>
+<p>If you need to switch branches but have uncommitted changes you are not ready to commit,
+use <code>git stash</code> to temporarily set them aside:</p>
+<pre><code class="language-sh">git stash
+</code></pre>
+<p>Switch to another branch, do your work, then return and restore the stashed changes:</p>
+<pre><code class="language-sh">git switch main
+</code></pre>
+<pre><code class="language-sh">git switch add-energy-loss
+</code></pre>
+<pre><code class="language-sh">git stash pop
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Stash is a stack</p>
+<p>You can stash multiple times; <code>git stash pop</code> restores the most recent stash.
+Use <code>git stash list</code> to see all stashed states.</p>
+</div>
+<hr />
+<h2 id="when-to-branch">When to branch<a class="headerlink" href="#when-to-branch" title="Permanent link">&para;</a></h2>
+<p>A useful rule of thumb for research code: branch whenever you want to try something that might not work.</p>
+<p>Common cases:</p>
+<ul>
+<li>Adding a new physical process or cross-section model.</li>
+<li>Refactoring a module while keeping the working version on <code>main</code>.</li>
+<li>Running a sensitivity study that changes the simulation parameters.</li>
+<li>Fixing a bug that requires more than one commit.</li>
+</ul>
+<p>For tiny, obvious fixes (correcting a typo, fixing a broken import), committing directly to <code>main</code> is fine.</p>
+<hr />
+<h2 id="what-to-read-next">What to read next<a class="headerlink" href="#what-to-read-next" title="Permanent link">&para;</a></h2>
+<p><a href="../lesson-03/">Lesson 03</a> covers GitHub: how to push your local repository to a remote,
+open pull requests to propose merging a branch, and review other people's code.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../lesson-01/" class="btn btn-neutral float-left" title="Lesson 01 — Git Basics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lesson-03/" class="btn btn-neutral float-right" title="Lesson 03 — GitHub Collaboration">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../lesson-01/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lesson-03/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/clipboard.js"></script>
+      <script src="../../../js/copy_code.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Lesson 04 — Colour and Accessibility - Nestling</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 04 \u2014 Colour and Accessibility";
+        var mkdocs_page_input_path = "tracks/06-plotting/lesson-04.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/environment-setup/">Environment Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >ArXiv & Reading Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-01/">Lesson 01 — Finding Papers</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-03/">Lesson 03 — Managing Papers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Writing Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-04/">Lesson 04 — LaTeX Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Git & GitHub</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-01/">Lesson 01 — Git Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-02/">Lesson 02 — Branching</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-03/">Lesson 03 — GitHub Collaboration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Coding Practices</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-02/">Lesson 02 — Python & Jupyter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-04/">Lesson 04 — Scientific Python Stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-05/">Lesson 05 — Code Style & Quality</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-06/">Lesson 06 — Performance & Parallelism</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-07/">Lesson 07 — ML Basics with PyTorch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-10/">Lesson 10 — Testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Plotting</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-01/">Lesson 01 — Figure Design Principles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lesson 04 — Colour and Accessibility</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#why-colour-choice-matters">Why colour choice matters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#types-of-colour-palette">Types of colour palette</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#qualitative-palettes">Qualitative palettes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sequential-and-diverging-colormaps">Sequential and diverging colormaps</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-jet-is-wrong">Why "jet" is wrong</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#recommended-sequential-colormaps">Recommended sequential colormaps</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#recommended-diverging-colormaps">Recommended diverging colormaps</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#combining-colour-with-other-channels">Combining colour with other channels</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#testing-your-figure-for-accessibility">Testing your figure for accessibility</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#greyscale-test">Greyscale test</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#cvd-simulation">CVD simulation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#matplotlibs-built-in-greyscale-preview">matplotlib's built-in greyscale preview</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#colour-in-context-a-few-more-rules">Colour in context: a few more rules</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#resources">Resources</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Working with LLMs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-01/">Lesson 01 — What LLMs Are and Are Not</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-02/">Lesson 02 — LLMs for Code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-03/">Lesson 03 — LLMs for Writing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-04/">Lesson 04 — LLMs for Literature Search</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-05/">Lesson 05 — Prompt Engineering for Research</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-06/">Lesson 06 — Verification Habits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-07/">Lesson 07 — Skill Files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/paper-outline/">Paper Outline</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tracks</li>
+          <li class="breadcrumb-item">Plotting</li>
+      <li class="breadcrumb-item active">Lesson 04 — Colour and Accessibility</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/tracks/06-plotting/lesson-04.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-04-colour-and-accessibility">Lesson 04: Colour and Accessibility<a class="headerlink" href="#lesson-04-colour-and-accessibility" title="Permanent link">&para;</a></h1>
+<p>Colour is the element of a figure most likely to cause problems for readers and most likely to
+be handled carelessly.
+This lesson covers how to choose palettes that are accurate, accessible, and still visually
+effective.</p>
+<div class="admonition note">
+<p class="admonition-title">Acknowledgement</p>
+<p>The discussion of palette choice in this lesson draws on Ciaran O'Hare's
+<a href="https://github.com/cajohare/HowToMakeAPlot">HowToMakeAPlot</a>, which contains practical
+examples of colourblind simulations and palette comparisons for physics figures.</p>
+</div>
+<hr />
+<h2 id="why-colour-choice-matters">Why colour choice matters<a class="headerlink" href="#why-colour-choice-matters" title="Permanent link">&para;</a></h2>
+<p>Roughly <strong>8 % of men</strong> and <strong>0.5 % of women</strong> have some form of colour vision deficiency (CVD),
+most commonly red-green.
+On top of that, many readers will encounter your figure in a printed PDF, a black-and-white
+photocopy, or a low-contrast projection.</p>
+<p>A figure that relies on colour as the sole distinguishing feature excludes a significant fraction
+of your audience.
+The fix is not to abandon colour. It is to use colour correctly.</p>
+<hr />
+<h2 id="types-of-colour-palette">Types of colour palette<a class="headerlink" href="#types-of-colour-palette" title="Permanent link">&para;</a></h2>
+<p>Choose the palette type to match the type of data:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>When to use</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Qualitative</strong></td>
+<td>Distinct categories with no ordering</td>
+<td>Model A vs B vs C, different experiments</td>
+</tr>
+<tr>
+<td><strong>Sequential</strong></td>
+<td>Ordered data from low to high</td>
+<td>Flux intensity, temperature, probability</td>
+</tr>
+<tr>
+<td><strong>Diverging</strong></td>
+<td>Data diverging from a meaningful midpoint</td>
+<td>Residuals, signed differences, correlation</td>
+</tr>
+</tbody>
+</table>
+<p>Using a sequential palette for categorical data is a common mistake, as the implied ordering
+misleads the reader.</p>
+<hr />
+<h2 id="qualitative-palettes">Qualitative palettes<a class="headerlink" href="#qualitative-palettes" title="Permanent link">&para;</a></h2>
+<p>For line plots and markers comparing distinct categories, use a qualitative palette from
+<a href="https://colorbrewer2.org/#type=qualitative&amp;scheme=Set1&amp;n=7">ColorBrewer</a>.</p>
+<p>The Nestling style uses <strong>Dark2</strong>, a six-colour qualitative palette that is:</p>
+<ul>
+<li>Distinguishable by the most common CVD types (deuteranopia, protanopia, tritanopia).</li>
+<li>Distinguishable in greyscale when combined with different line styles.</li>
+<li>Distinguishable on screen and in print.</li>
+</ul>
+<p>Dark2 hex codes:</p>
+<pre><code class="language-python">DARK2 = [&quot;#1b9e77&quot;, &quot;#d95f02&quot;, &quot;#7570b3&quot;, &quot;#e7298a&quot;, &quot;#66a61e&quot;, &quot;#e6ab02&quot;]
+</code></pre>
+<p>These are already set as the default colour cycle in <code>nestling.mplstyle</code>.</p>
+<p>Other well-tested qualitative palettes from ColorBrewer:</p>
+<ul>
+<li><strong>Set1</strong>: high-contrast, slightly garish; works when CVD is not a concern.</li>
+<li><strong>Set2</strong>: softer, but less distinguishable in greyscale.</li>
+<li><strong>Paired</strong>: six pairs of light/dark variants; good for showing related quantities.</li>
+</ul>
+<p>Explore all options interactively at
+<a href="https://colorbrewer2.org/#type=qualitative&amp;scheme=Set1&amp;n=7">colorbrewer2.org</a>.
+The site lets you filter by CVD-safe and print-safe status.</p>
+<hr />
+<h2 id="sequential-and-diverging-colormaps">Sequential and diverging colormaps<a class="headerlink" href="#sequential-and-diverging-colormaps" title="Permanent link">&para;</a></h2>
+<p>For heatmaps, 2D histograms, and scatter plots coloured by a continuous quantity, use a
+<strong>perceptually uniform</strong> colormap.</p>
+<h3 id="why-jet-is-wrong">Why "jet" is wrong<a class="headerlink" href="#why-jet-is-wrong" title="Permanent link">&para;</a></h3>
+<p>The default matplotlib colormap for many years was <code>jet</code> (rainbow).
+It has two fatal flaws:</p>
+<ol>
+<li><strong>Not perceptually uniform.</strong> Equal steps in data produce unequal steps in perceived
+   brightness, creating false features and hiding real ones.</li>
+<li><strong>Not greyscale-friendly.</strong> Distant hues in <code>jet</code> map to the same grey value, making
+   features invisible in greyscale.</li>
+</ol>
+<h3 id="recommended-sequential-colormaps">Recommended sequential colormaps<a class="headerlink" href="#recommended-sequential-colormaps" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Colormap</th>
+<th>Character</th>
+<th>Good for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>viridis</code></td>
+<td>Blue → green → yellow</td>
+<td>General purpose, default choice</td>
+</tr>
+<tr>
+<td><code>cividis</code></td>
+<td>Blue → yellow, CVD-optimised</td>
+<td>When CVD accessibility is critical</td>
+</tr>
+<tr>
+<td><code>plasma</code></td>
+<td>Purple → orange → yellow</td>
+<td>High-contrast alternative to viridis</td>
+</tr>
+<tr>
+<td><code>inferno</code></td>
+<td>Black → red → yellow</td>
+<td>Dark backgrounds, signal detection</td>
+</tr>
+</tbody>
+</table>
+<p>All four are perceptually uniform and CVD-safe.</p>
+<pre><code class="language-python">fig, ax = plt.subplots()
+sc = ax.scatter(x, y, c=z, cmap=&quot;viridis&quot;)
+plt.colorbar(sc, ax=ax, label=r&quot;$z$&quot;)
+</code></pre>
+<h3 id="recommended-diverging-colormaps">Recommended diverging colormaps<a class="headerlink" href="#recommended-diverging-colormaps" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Colormap</th>
+<th>Character</th>
+<th>Good for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>RdBu_r</code></td>
+<td>Red → white → blue</td>
+<td>Signed residuals, correlations</td>
+</tr>
+<tr>
+<td><code>coolwarm</code></td>
+<td>Blue → white → red</td>
+<td>Same, with more saturation</td>
+</tr>
+<tr>
+<td><code>seismic</code></td>
+<td>Same family</td>
+<td>Geophysics convention</td>
+</tr>
+</tbody>
+</table>
+<p>For diverging maps, always set <code>vmin</code> and <code>vmax</code> symmetrically about the midpoint:</p>
+<pre><code class="language-python">import numpy as np
+vmax = np.abs(residuals).max()
+sc = ax.scatter(x, y, c=residuals, cmap=&quot;RdBu_r&quot;, vmin=-vmax, vmax=vmax)
+</code></pre>
+<hr />
+<h2 id="combining-colour-with-other-channels">Combining colour with other channels<a class="headerlink" href="#combining-colour-with-other-channels" title="Permanent link">&para;</a></h2>
+<p>Because colour alone is unreliable, always pair it with a redundant encoding:</p>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+import numpy as np
+
+E = np.logspace(0, 6, 300)
+
+fig, ax = plt.subplots()
+ax.loglog(E, 1e-18 * (E / 1e5) ** -2.7,
+          color=&quot;C0&quot;, linestyle=&quot;-&quot;,  label=&quot;Model A&quot;)
+ax.loglog(E, 1e-18 * (E / 1e5) ** -2.0,
+          color=&quot;C1&quot;, linestyle=&quot;--&quot;, label=&quot;Model B&quot;)
+ax.loglog(E, 1e-18 * (E / 1e5) ** -2.4,
+          color=&quot;C2&quot;, linestyle=&quot;:&quot;,  label=&quot;Model C&quot;)
+ax.legend()
+</code></pre>
+<p>Here colour AND line style distinguish the curves. The figure is still readable when
+printed in black and white.</p>
+<p>For scatter plots, pair colour with marker shape:</p>
+<pre><code class="language-python">ax.scatter(x_a, y_a, c=&quot;C0&quot;, marker=&quot;o&quot;, label=&quot;Sample A&quot;)
+ax.scatter(x_b, y_b, c=&quot;C1&quot;, marker=&quot;s&quot;, label=&quot;Sample B&quot;)
+ax.scatter(x_c, y_c, c=&quot;C2&quot;, marker=&quot;^&quot;, label=&quot;Sample C&quot;)
+</code></pre>
+<hr />
+<h2 id="testing-your-figure-for-accessibility">Testing your figure for accessibility<a class="headerlink" href="#testing-your-figure-for-accessibility" title="Permanent link">&para;</a></h2>
+<h3 id="greyscale-test">Greyscale test<a class="headerlink" href="#greyscale-test" title="Permanent link">&para;</a></h3>
+<p>Convert your saved PDF or PNG to greyscale (in Preview on macOS, or any image editor) and
+check whether all curves and regions remain distinguishable.
+If they do not, add line style or marker differentiation.</p>
+<h3 id="cvd-simulation">CVD simulation<a class="headerlink" href="#cvd-simulation" title="Permanent link">&para;</a></h3>
+<p>Several online tools simulate how your figure appears with common colour vision deficiencies:</p>
+<ul>
+<li><a href="https://www.color-blindness.com/coblis-color-blindness-simulator/">Coblis: Color Blindness Simulator</a>: upload an image, get CVD-simulated previews.</li>
+<li><a href="https://projects.susielu.com/viz-palette">Viz Palette</a>: test named palettes interactively.</li>
+</ul>
+<p>The ColorBrewer site also labels palettes as "colorblind safe". Filter by this when choosing.</p>
+<h3 id="matplotlibs-built-in-greyscale-preview">matplotlib's built-in greyscale preview<a class="headerlink" href="#matplotlibs-built-in-greyscale-preview" title="Permanent link">&para;</a></h3>
+<p>A quick in-notebook check:</p>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+
+fig.savefig(&quot;check.png&quot;)
+# Reload and desaturate
+img = plt.imread(&quot;check.png&quot;)
+grey = img @ [0.2126, 0.7152, 0.0722, 0]   # luminance weights
+plt.imsave(&quot;check_grey.png&quot;, grey, cmap=&quot;grey&quot;)
+</code></pre>
+<hr />
+<h2 id="colour-in-context-a-few-more-rules">Colour in context: a few more rules<a class="headerlink" href="#colour-in-context-a-few-more-rules" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Avoid red and green together</strong> for any information-carrying distinction. This is the most
+  common CVD combination.</li>
+<li><strong>Don't use colour to encode the same information as position.</strong>
+  If the x-axis already distinguishes the curves, adding colour is redundant and distracting.</li>
+<li><strong>Use transparency (<code>alpha</code>) with care.</strong> Overlapping transparent regions can create new
+  colours that were not in your palette and that are hard to predict under CVD.</li>
+<li><strong>Match your colour choices to the journal.</strong> Some journals have house styles or restrictions
+  on colour figures (especially print journals with per-colour-page charges).</li>
+</ul>
+<hr />
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Do</th>
+<th>Don't</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use Dark2 or another CVD-safe palette from ColorBrewer</td>
+<td>Use the default matplotlib colour cycle for publications</td>
+</tr>
+<tr>
+<td>Use <code>viridis</code> / <code>cividis</code> for continuous data</td>
+<td>Use <code>jet</code> or <code>rainbow</code></td>
+</tr>
+<tr>
+<td>Pair colour with line style or marker shape</td>
+<td>Rely on colour as the only distinguishing feature</td>
+</tr>
+<tr>
+<td>Test in greyscale and with a CVD simulator</td>
+<td>Assume your monitor is representative</td>
+</tr>
+<tr>
+<td>Set symmetric <code>vmin</code>/<code>vmax</code> for diverging maps</td>
+<td>Let matplotlib choose limits automatically for residuals</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://colorbrewer2.org/#type=qualitative&amp;scheme=Set1&amp;n=7">ColorBrewer 2.0</a>: interactive palette explorer, filtered by CVD-safe and print-safe status.</li>
+<li><a href="https://github.com/cajohare/HowToMakeAPlot">Ciaran O'Hare: HowToMakeAPlot</a>: worked examples of palette choice and CVD simulation in matplotlib.</li>
+<li><a href="https://matplotlib.org/stable/gallery/color/colormap_reference.html">matplotlib colormap reference</a>: full list of built-in colormaps.</li>
+<li><a href="https://www.color-blindness.com/coblis-color-blindness-simulator/">Coblis CVD simulator</a>: upload any figure and preview CVD variants.</li>
+<li><a href="https://projects.susielu.com/viz-palette">Viz Palette</a>: design and test named palettes interactively.</li>
+<li><a href="https://www.fabiocrameri.ch/colourmaps/">Scientific colour maps (Crameri)</a>: perceptually uniform, CVD-safe maps optimised for scientific data.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../lesson-03/" class="btn btn-neutral float-left" title="Lesson 03 — Publication Style"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../07-llm-practices/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../lesson-03/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../07-llm-practices/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/clipboard.js"></script>
+      <script src="../../../js/copy_code.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

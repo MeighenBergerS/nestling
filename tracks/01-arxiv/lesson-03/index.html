@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Lesson 03 — Managing Papers - Nestling</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 03 \u2014 Managing Papers";
+        var mkdocs_page_input_path = "tracks/01-arxiv/lesson-03.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/environment-setup/">Environment Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >ArXiv & Reading Papers</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-01/">Lesson 01 — Finding Papers</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lesson 03 — Managing Papers</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#why-you-need-a-system">Why you need a system</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#zotero-recommended">Zotero (recommended)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#getting-started-with-zotero">Getting started with Zotero</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#adding-papers-from-arxiv">Adding papers from ArXiv</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#organising-your-library">Organising your library</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#exporting-bibtex">Exporting BibTeX</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#other-reference-managers">Other reference managers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#annotating-pdfs">Annotating PDFs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#building-a-reading-list">Building a reading list</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#keeping-your-library-healthy">Keeping your library healthy</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Writing Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-04/">Lesson 04 — LaTeX Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Git & GitHub</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-01/">Lesson 01 — Git Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-02/">Lesson 02 — Branching</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-03/">Lesson 03 — GitHub Collaboration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Coding Practices</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-02/">Lesson 02 — Python & Jupyter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-04/">Lesson 04 — Scientific Python Stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-05/">Lesson 05 — Code Style & Quality</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-06/">Lesson 06 — Performance & Parallelism</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-07/">Lesson 07 — ML Basics with PyTorch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-10/">Lesson 10 — Testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Plotting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-01/">Lesson 01 — Figure Design Principles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-04/">Lesson 04 — Colour and Accessibility</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Working with LLMs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-01/">Lesson 01 — What LLMs Are and Are Not</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-02/">Lesson 02 — LLMs for Code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-03/">Lesson 03 — LLMs for Writing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-04/">Lesson 04 — LLMs for Literature Search</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-05/">Lesson 05 — Prompt Engineering for Research</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-06/">Lesson 06 — Verification Habits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-07/">Lesson 07 — Skill Files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/paper-outline/">Paper Outline</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tracks</li>
+          <li class="breadcrumb-item">ArXiv & Reading Papers</li>
+      <li class="breadcrumb-item active">Lesson 03 — Managing Papers</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/tracks/01-arxiv/lesson-03.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-03-managing-papers">Lesson 03: Managing Papers<a class="headerlink" href="#lesson-03-managing-papers" title="Permanent link">&para;</a></h1>
+<p>Finding and reading papers is only useful if you can find them again later.
+A reference manager keeps your literature organised, stores your notes,
+and generates citations automatically when you write.</p>
+<hr />
+<h2 id="why-you-need-a-system">Why you need a system<a class="headerlink" href="#why-you-need-a-system" title="Permanent link">&para;</a></h2>
+<p>Without a system, papers accumulate in a downloads folder, filenames like <code>2312.01234.pdf</code>
+tell you nothing, and the note you wrote three months ago about why a paper mattered is gone.</p>
+<p>A good reference manager lets you:</p>
+<ul>
+<li>Store papers with metadata (title, authors, year, journal, abstract).</li>
+<li>Search your own library by keyword or author.</li>
+<li>Attach notes, highlights, and tags to each paper.</li>
+<li>Generate BibTeX entries for use in LaTeX documents.</li>
+<li>Sync across devices so your library is available wherever you work.</li>
+</ul>
+<p>Setting this up early, before your library grows large, is much easier than organising retroactively.</p>
+<hr />
+<h2 id="zotero-recommended">Zotero (recommended)<a class="headerlink" href="#zotero-recommended" title="Permanent link">&para;</a></h2>
+<p><a href="https://www.zotero.org">Zotero</a> is a free, open-source reference manager widely used in academia.
+It is the most common choice in physics and related fields.</p>
+<h3 id="getting-started-with-zotero">Getting started with Zotero<a class="headerlink" href="#getting-started-with-zotero" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Download and install Zotero from <a href="https://www.zotero.org/download/">zotero.org</a>.</li>
+<li>Install the <strong>Zotero Connector</strong> browser extension, which lets you save papers to your library with one click while browsing ArXiv or journal websites.</li>
+<li>Create a free Zotero account to sync your library across devices.</li>
+</ol>
+<h3 id="adding-papers-from-arxiv">Adding papers from ArXiv<a class="headerlink" href="#adding-papers-from-arxiv" title="Permanent link">&para;</a></h3>
+<p>With the Zotero Connector installed:</p>
+<ol>
+<li>Open the ArXiv page for a paper (e.g. <code>arxiv.org/abs/2312.01234</code>).</li>
+<li>Click the Zotero Connector icon in your browser toolbar.</li>
+<li>Zotero will save the paper's metadata and, in most cases, download the PDF automatically.</li>
+</ol>
+<p>You can also add papers manually using their ArXiv identifier or DOI:
+in Zotero, click <strong>File → Add item by identifier</strong> and paste the number.</p>
+<h3 id="organising-your-library">Organising your library<a class="headerlink" href="#organising-your-library" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create <strong>Collections</strong> (folders) by project or topic.</li>
+<li>Use <strong>Tags</strong> for cross-cutting themes (e.g. <code>to-read</code>, <code>important</code>, <code>method-paper</code>).</li>
+<li>Add notes to each paper while you read. The note field in Zotero is a good home for your per-paper summaries from <a href="../lesson-02/">Lesson 02</a>.</li>
+<li>Use <strong>Zotero Groups</strong> to share a library with your research group. Many labs maintain a shared group
+  library so that everyone has access to the papers the group has collected and annotated.
+  Ask your supervisor whether your group has one. Joining it is often the fastest way to bootstrap
+  your library with relevant papers.</li>
+</ul>
+<h3 id="exporting-bibtex">Exporting BibTeX<a class="headerlink" href="#exporting-bibtex" title="Permanent link">&para;</a></h3>
+<p>When writing a paper in LaTeX, you will need a <code>.bib</code> file containing your references.</p>
+<p>In Zotero:</p>
+<ol>
+<li>Select the papers (or a whole collection) you want to export.</li>
+<li>Right-click and choose <strong>Export Collection</strong>.</li>
+<li>Select <strong>BibTeX</strong> as the format and save the <code>.bib</code> file.</li>
+</ol>
+<p>Alternatively, use the <a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a> plugin,
+which keeps an auto-updated <code>.bib</code> file linked to your Zotero library, very convenient for active writing projects.</p>
+<hr />
+<h2 id="other-reference-managers">Other reference managers<a class="headerlink" href="#other-reference-managers" title="Permanent link">&para;</a></h2>
+<p>Zotero is a solid default, but alternatives exist:</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.mendeley.com">Mendeley</a></td>
+<td>Free, owned by Elsevier. Good PDF annotation. Institutional accounts are common.</td>
+</tr>
+<tr>
+<td><a href="https://www.jabref.org">JabRef</a></td>
+<td>Open-source, BibTeX-native. Good if you prefer to manage <code>.bib</code> files directly.</td>
+</tr>
+<tr>
+<td><a href="https://www.papersapp.com">Papers</a></td>
+<td>Polished interface, Mac and iOS focus. Paid.</td>
+</tr>
+<tr>
+<td>Manual <code>.bib</code> file</td>
+<td>Works, but scales poorly and has no annotation or search.</td>
+</tr>
+</tbody>
+</table>
+<p>Ask your group what they use. Sharing a group Zotero library (Zotero Groups feature) is common in some labs.</p>
+<hr />
+<h2 id="annotating-pdfs">Annotating PDFs<a class="headerlink" href="#annotating-pdfs" title="Permanent link">&para;</a></h2>
+<p>Reading on screen with annotations is more efficient than printing.</p>
+<p>Most reference managers include basic annotation (highlighting, sticky notes).
+For more powerful annotation:</p>
+<ul>
+<li><strong>Zotero's built-in PDF reader</strong> (version 6+) supports highlights and notes that sync with your library.</li>
+<li><strong><a href="https://okular.kde.org">Okular</a></strong> (Linux): free, excellent for annotation.</li>
+<li><strong><a href="https://pdfexpert.com">PDF Expert</a></strong> (Mac/iOS): paid, very polished.</li>
+<li><strong><a href="https://www.adobe.com/acrobat/pdf-reader.html">Adobe Acrobat Reader</a></strong>: free version supports basic highlighting.</li>
+</ul>
+<p>Whatever tool you use, the key habit is to add a brief note when you highlight: not just a yellow stripe, but a word or two about why the passage mattered.</p>
+<hr />
+<h2 id="building-a-reading-list">Building a reading list<a class="headerlink" href="#building-a-reading-list" title="Permanent link">&para;</a></h2>
+<p>Tracking what you intend to read is as important as tracking what you have read.</p>
+<p>Simple approaches that work:</p>
+<ul>
+<li>A <code>to-read</code> tag in Zotero.</li>
+<li>A plain text or Markdown file listing paper identifiers with a sentence on why each is relevant.</li>
+<li>A shared document with your supervisor, reviewed in meetings.</li>
+</ul>
+<p>The right system is one you will actually use.
+Start simple and add complexity only when you feel the need.</p>
+<hr />
+<h2 id="keeping-your-library-healthy">Keeping your library healthy<a class="headerlink" href="#keeping-your-library-healthy" title="Permanent link">&para;</a></h2>
+<p>A reference library is only useful if it stays accurate.</p>
+<p>A few habits that help:</p>
+<ul>
+<li><strong>Save immediately</strong>: add a paper to Zotero when you first open it, not after you read it. Papers you intend to save later often disappear.</li>
+<li><strong>Check metadata on import</strong>: ArXiv metadata is usually correct, but author names and titles occasionally need fixing.</li>
+<li><strong>Note why you saved it</strong>: even one sentence reminds you why a paper was relevant when you come back to it months later.</li>
+<li><strong>Prune occasionally</strong>: if a paper turned out to be irrelevant, removing it keeps searches clean.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Your reference library is a long-term asset</p>
+<p>The library you build during your PhD or first research project will still be useful years later.
+The few minutes it takes to file a paper properly are worth it.</p>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../lesson-02/" class="btn btn-neutral float-left" title="Lesson 02 — Reading Strategy"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../02-journal-club/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../lesson-02/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../02-journal-club/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/clipboard.js"></script>
+      <script src="../../../js/copy_code.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

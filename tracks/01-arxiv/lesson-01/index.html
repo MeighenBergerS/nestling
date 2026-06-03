@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Lesson 01 — Finding Papers - Nestling</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 01 \u2014 Finding Papers";
+        var mkdocs_page_input_path = "tracks/01-arxiv/lesson-01.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/environment-setup/">Environment Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >ArXiv & Reading Papers</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lesson 01 — Finding Papers</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#what-is-arxiv">What is ArXiv?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-arxiv-is-organised">How ArXiv is organised</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#where-to-start-review-articles">Where to start: review articles</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#finding-papers-on-arxiv">Finding papers on ArXiv</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#browsing-new-submissions">Browsing new submissions</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#searching-arxiv">Searching ArXiv</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#inspire-hep">Inspire-HEP</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#nasa-ads">NASA ADS</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#google-scholar">Google Scholar</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#following-a-specific-papers-identifier">Following a specific paper's identifier</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#setting-up-email-alerts">Setting up email alerts</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arxiv-email-alerts">ArXiv email alerts</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#inspire-hep-author-alerts">Inspire-HEP author alerts</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#google-scholar-alerts">Google Scholar alerts</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-to-do-with-a-paper-once-you-find-it">What to do with a paper once you find it</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#code-examples">Code examples</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arxiv-api-arxiv_apipy-arxiv_apiipynb">ArXiv API: arxiv_api.py · arxiv_api.ipynb</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#inspire-hep-api-inspire_apipy-inspire_apiipynb">Inspire-HEP API: inspire_api.py · inspire_api.ipynb</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-03/">Lesson 03 — Managing Papers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Writing Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-04/">Lesson 04 — LaTeX Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Git & GitHub</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-01/">Lesson 01 — Git Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-02/">Lesson 02 — Branching</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-03/">Lesson 03 — GitHub Collaboration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Coding Practices</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-02/">Lesson 02 — Python & Jupyter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-04/">Lesson 04 — Scientific Python Stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-05/">Lesson 05 — Code Style & Quality</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-06/">Lesson 06 — Performance & Parallelism</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-07/">Lesson 07 — ML Basics with PyTorch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-10/">Lesson 10 — Testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Plotting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-01/">Lesson 01 — Figure Design Principles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-04/">Lesson 04 — Colour and Accessibility</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Working with LLMs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-01/">Lesson 01 — What LLMs Are and Are Not</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-02/">Lesson 02 — LLMs for Code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-03/">Lesson 03 — LLMs for Writing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-04/">Lesson 04 — LLMs for Literature Search</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-05/">Lesson 05 — Prompt Engineering for Research</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-06/">Lesson 06 — Verification Habits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-07/">Lesson 07 — Skill Files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/paper-outline/">Paper Outline</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tracks</li>
+          <li class="breadcrumb-item">ArXiv & Reading Papers</li>
+      <li class="breadcrumb-item active">Lesson 01 — Finding Papers</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/tracks/01-arxiv/lesson-01.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-01-finding-papers">Lesson 01: Finding Papers<a class="headerlink" href="#lesson-01-finding-papers" title="Permanent link">&para;</a></h1>
+<p>Before you can read a paper, you need to find it.
+This lesson covers the main tools physicists use to locate research literature,
+how ArXiv is structured, and how to set up alerts so new relevant work lands in your inbox automatically.</p>
+<hr />
+<h2 id="what-is-arxiv">What is ArXiv?<a class="headerlink" href="#what-is-arxiv" title="Permanent link">&para;</a></h2>
+<p><a href="https://arxiv.org">ArXiv</a> is a free, open-access preprint server run by Cornell University.
+A <strong>preprint</strong> is a version of a paper that the authors have made publicly available before (or alongside) formal peer review.</p>
+<p>In physics, mathematics, and related fields, ArXiv is the central hub for research.
+Papers usually appear on ArXiv on the same day they are submitted to a journal,
+which means you can read new results weeks or months before they appear in a published journal.</p>
+<div class="admonition note">
+<p class="admonition-title">ArXiv versus published journals</p>
+<p>ArXiv preprints have not been formally peer-reviewed.
+In practice, most physics papers on ArXiv are solid, but errors occasionally slip through.
+Your supervisor can help you develop a sense for which papers to trust.</p>
+</div>
+<hr />
+<h2 id="how-arxiv-is-organised">How ArXiv is organised<a class="headerlink" href="#how-arxiv-is-organised" title="Permanent link">&para;</a></h2>
+<p>ArXiv divides papers into <strong>subject categories</strong>.
+Each category has a short identifier. The ones most common in physics research are:</p>
+<table>
+<thead>
+<tr>
+<th>Identifier</th>
+<th>Area</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hep-ph</code></td>
+<td>High-energy physics: phenomenology</td>
+</tr>
+<tr>
+<td><code>hep-th</code></td>
+<td>High-energy physics: theory</td>
+</tr>
+<tr>
+<td><code>hep-ex</code></td>
+<td>High-energy physics: experiment</td>
+</tr>
+<tr>
+<td><code>astro-ph</code></td>
+<td>Astrophysics (with sub-categories like <code>astro-ph.HE</code>, <code>astro-ph.CO</code>)</td>
+</tr>
+<tr>
+<td><code>cond-mat</code></td>
+<td>Condensed matter physics</td>
+</tr>
+<tr>
+<td><code>gr-qc</code></td>
+<td>General relativity and quantum cosmology</td>
+</tr>
+<tr>
+<td><code>nucl-th</code> / <code>nucl-ex</code></td>
+<td>Nuclear theory / experiment</td>
+</tr>
+<tr>
+<td><code>physics</code></td>
+<td>Applied, atomic, plasma, and other physics</td>
+</tr>
+<tr>
+<td><code>math-ph</code></td>
+<td>Mathematical physics</td>
+</tr>
+</tbody>
+</table>
+<p>Ask your supervisor which categories are most relevant to your project.
+It is common to watch two or three related categories at once.</p>
+<hr />
+<h2 id="where-to-start-review-articles">Where to start: review articles<a class="headerlink" href="#where-to-start-review-articles" title="Permanent link">&para;</a></h2>
+<p>Before diving into primary research papers, look for a <strong>review article</strong> on your topic.
+Review articles are written specifically to introduce a field, summarise its current state,
+and point to the key primary literature, exactly what you need when you are new to an area.</p>
+<p>Good places to find review articles:</p>
+<ul>
+<li>Search ArXiv for your topic with the word "review" or "introduction" in the title:
+  <code>ti:review AND ti:neutrino AND cat:hep-ph</code></li>
+<li><a href="https://www.sciencedirect.com/journal/physics-reports">Physics Reports</a>: in-depth reviews across all physics.</li>
+<li><a href="https://www.annualreviews.org/journal/nucl">Annual Review of Nuclear and Particle Science</a>: HEP and nuclear physics.</li>
+<li><a href="https://link.springer.com/journal/41114">Living Reviews in Relativity</a>: continuously updated reviews in GR and cosmology.</li>
+<li>Ask your supervisor directly. They will know which review papers people in your subfield actually read.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Read a review before reading primary papers</p>
+<p>A good review article will teach you the vocabulary, the open questions, and the ten papers
+everyone in the field knows. Without that background, primary papers are much harder to follow.
+An hour spent on a review can save days of confusion later.</p>
+</div>
+<hr />
+<h2 id="finding-papers-on-arxiv">Finding papers on ArXiv<a class="headerlink" href="#finding-papers-on-arxiv" title="Permanent link">&para;</a></h2>
+<h3 id="browsing-new-submissions">Browsing new submissions<a class="headerlink" href="#browsing-new-submissions" title="Permanent link">&para;</a></h3>
+<p>The ArXiv listing page for a category (e.g. <code>arxiv.org/list/hep-ph/new</code>) shows every paper submitted in the last working day.
+This is useful once you know roughly what you are looking for, but can be overwhelming at first.</p>
+<h3 id="searching-arxiv">Searching ArXiv<a class="headerlink" href="#searching-arxiv" title="Permanent link">&para;</a></h3>
+<p>Use <a href="https://arxiv.org/search/">ArXiv search</a> to find papers by keyword, author, or title.</p>
+<p><strong>Tips for effective searching:</strong></p>
+<ul>
+<li>Use <code>AND</code>, <code>OR</code>, <code>NOT</code> to combine terms (e.g. <code>dark matter AND direct detection</code>).</li>
+<li>Search by author name to find all papers from a specific researcher.</li>
+<li>Restrict to a category using the "Subject area" dropdown.</li>
+<li>Use the "Abstract" field to search within abstracts rather than just titles.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Your supervisor's name is a useful starting point</p>
+<p>Search for your supervisor's papers on ArXiv.
+Reading their recent work is one of the fastest ways to understand the context of your project.</p>
+</div>
+<h3 id="inspire-hep">Inspire-HEP<a class="headerlink" href="#inspire-hep" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">HEP bias</p>
+<p>Inspire-HEP is the standard tool in high-energy physics and related fields.
+If your project is outside that community, Google Scholar or a field-specific database may serve you better.</p>
+</div>
+<p><a href="https://inspirehep.net">Inspire-HEP</a> is a database specifically for high-energy physics.
+It indexes ArXiv papers and journal articles together, tracks citation counts,
+and makes it easy to find which papers cite a given paper (useful for tracing how a field has developed).</p>
+<p>Inspire-HEP is also the standard source for <strong>BibTeX citation entries</strong> in HEP.
+Each paper has a <em>texkey</em>, a short identifier like <code>ATLAS:2012yve</code>, which is what you use in <code>\cite{}</code>
+commands in a LaTeX document. You can copy a ready-to-use BibTeX entry directly from any paper's Inspire page.</p>
+<p>If your project is in particle physics or related areas, Inspire-HEP is worth bookmarking alongside ArXiv.</p>
+<p><strong>Following citations forward:</strong> once you find a key paper, use the <em>Cited by</em> tab on its Inspire page
+to see every paper that has cited it. This is one of the most effective ways to trace how a subfield
+has developed and to find the current state of the art. Start from a foundational paper and follow
+the thread forward to the most recent work.</p>
+<h3 id="nasa-ads">NASA ADS<a class="headerlink" href="#nasa-ads" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Astrophysics focus</p>
+<p>NASA ADS is the standard literature database in astrophysics and space science.
+If your project is in astroparticle physics or has an astrophysics component, it is worth knowing
+alongside Inspire-HEP.</p>
+</div>
+<p><a href="https://ui.adsabs.harvard.edu/">NASA ADS</a> (Astrophysics Data System) indexes astrophysics,
+physics, and space science literature. Like Inspire-HEP, it tracks citations and links ArXiv
+preprints to their published journal versions. It covers a broader range of astrophysics
+subfields than Inspire-HEP, and its citation tools are widely used in that community.</p>
+<p>If you are unsure which database your subfield uses, ask your supervisor.</p>
+<h3 id="google-scholar">Google Scholar<a class="headerlink" href="#google-scholar" title="Permanent link">&para;</a></h3>
+<p><a href="https://scholar.google.com">Google Scholar</a> indexes papers across all disciplines,
+including ArXiv preprints and published journal articles.
+It is useful for finding papers outside physics, or when you want citation counts and links to the published version.</p>
+<hr />
+<h2 id="following-a-specific-papers-identifier">Following a specific paper's identifier<a class="headerlink" href="#following-a-specific-papers-identifier" title="Permanent link">&para;</a></h2>
+<p>Every ArXiv paper has a unique identifier, for example <code>2312.01234</code>.
+You can reach any paper directly at <code>arxiv.org/abs/2312.01234</code>.</p>
+<p>When a colleague or supervisor mentions a paper, they will often give you just this number.</p>
+<div class="admonition note">
+<p class="admonition-title">Preprint vs. published version</p>
+<p>The ArXiv version and the published journal version of a paper sometimes differ.
+Most of the time the differences are minor (typos, small clarifications), but occasionally
+a correction is substantial. When a published version exists, that is what you should cite,
+and for papers that are central to your work, it is worth checking whether the published version
+contains corrections relative to the preprint.
+The DOI link on the ArXiv abstract page takes you directly to the published version.</p>
+</div>
+<hr />
+<h2 id="setting-up-email-alerts">Setting up email alerts<a class="headerlink" href="#setting-up-email-alerts" title="Permanent link">&para;</a></h2>
+<p>Checking ArXiv daily by hand is impractical once your project is running.
+Email alerts let new relevant papers come to you.</p>
+<h3 id="arxiv-email-alerts">ArXiv email alerts<a class="headerlink" href="#arxiv-email-alerts" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Go to your category listing page (e.g. <code>arxiv.org/list/hep-ph/new</code>).</li>
+<li>Click <strong>"Subscribe"</strong> at the top of the page.</li>
+<li>Enter your email address. You will receive a daily digest of new submissions.</li>
+</ol>
+<p>This gives you everything in the category, which is useful for staying broad, but noisy if the category is large.</p>
+<h3 id="inspire-hep-author-alerts">Inspire-HEP author alerts<a class="headerlink" href="#inspire-hep-author-alerts" title="Permanent link">&para;</a></h3>
+<p>On <a href="https://inspirehep.net">Inspire-HEP</a>, you can follow a specific author.
+When they upload a new paper, you receive a notification.
+This is a good way to track your supervisor's collaborators or key figures in your field.</p>
+<h3 id="google-scholar-alerts">Google Scholar alerts<a class="headerlink" href="#google-scholar-alerts" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Search for a keyword or author on Google Scholar.</li>
+<li>Scroll to the bottom of the results and click <strong>"Create alert"</strong>.</li>
+<li>Google will email you when new matching papers appear.</li>
+</ol>
+<p>This works across disciplines and catches papers that may not be on ArXiv.</p>
+<hr />
+<h2 id="what-to-do-with-a-paper-once-you-find-it">What to do with a paper once you find it<a class="headerlink" href="#what-to-do-with-a-paper-once-you-find-it" title="Permanent link">&para;</a></h2>
+<p>Finding a paper is just the first step.
+Once you have identified something relevant, save it to your reference manager before you forget about it. You will thank yourself later.
+The next lesson, <a href="../lesson-02/">Lesson 02</a>, covers how to actually read a paper efficiently.
+<a href="../lesson-03/">Lesson 03</a> covers how to manage and organise what you find.</p>
+<div class="admonition tip">
+<p class="admonition-title">Ask your supervisor about the field's key papers</p>
+<p>Every subfield has a small set of foundational papers that almost everyone knows.
+Ask your supervisor for two or three papers to start with. Reading those first will give you the vocabulary to search more effectively.</p>
+</div>
+<hr />
+<h2 id="code-examples">Code examples<a class="headerlink" href="#code-examples" title="Permanent link">&para;</a></h2>
+<p>The <a href="https://github.com/MeighenBergerS/nestling/tree/main/examples/arxiv"><code>examples/arxiv/</code></a> folder
+contains runnable Python scripts and Jupyter notebooks that demonstrate everything covered in this lesson.
+You do not need to run these to follow the track. They are for when you want to automate or explore programmatically.
+Each topic has a plain script for quick reference and a notebook with step-by-step commentary.</p>
+<h3 id="arxiv-api-arxiv_apipy-arxiv_apiipynb">ArXiv API: <a href="https://github.com/MeighenBergerS/nestling/tree/main/examples/arxiv/arxiv_api.py"><code>arxiv_api.py</code></a> · <a href="https://github.com/MeighenBergerS/nestling/tree/main/examples/arxiv/notebooks/arxiv_api.ipynb"><code>arxiv_api.ipynb</code></a><a class="headerlink" href="#arxiv-api-arxiv_apipy-arxiv_apiipynb" title="Permanent link">&para;</a></h3>
+<p>Uses the <a href="https://pypi.org/project/arxiv/"><code>arxiv</code></a> Python package to:</p>
+<ul>
+<li>Search ArXiv by keyword with boolean filters and category restrictions.</li>
+<li>Fetch a single paper directly by its ArXiv identifier.</li>
+</ul>
+<pre><code class="language-python">import arxiv
+
+client = arxiv.Client()
+search = arxiv.Search(
+    query=&quot;ti:neutrino mass AND cat:hep-ph&quot;,
+    max_results=5,
+    sort_by=arxiv.SortCriterion.SubmittedDate,
+)
+for result in client.results(search):
+    print(result.title, result.entry_id)
+</code></pre>
+<h3 id="inspire-hep-api-inspire_apipy-inspire_apiipynb">Inspire-HEP API: <a href="https://github.com/MeighenBergerS/nestling/tree/main/examples/arxiv/inspire_api.py"><code>inspire_api.py</code></a> · <a href="https://github.com/MeighenBergerS/nestling/tree/main/examples/arxiv/notebooks/inspire_api.ipynb"><code>inspire_api.ipynb</code></a><a class="headerlink" href="#inspire-hep-api-inspire_apipy-inspire_apiipynb" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">HEP bias</p>
+<p>This script uses the Inspire-HEP API, which covers high-energy physics literature.
+The patterns transfer to other REST APIs, but the database itself is HEP-specific.</p>
+</div>
+<p>Uses the <a href="https://inspirehep.net/api/">Inspire-HEP REST API</a> (no authentication needed) to:</p>
+<ul>
+<li>Search by keyword, author, or any Inspire query syntax.</li>
+<li>Fetch a paper's full metadata, including its texkey and citation count, by ArXiv ID.</li>
+<li>Retrieve a ready-to-use BibTeX entry from Inspire, which is the standard citation format in HEP.</li>
+<li><strong>Verify that a paper actually exists</strong>: useful when working with LLMs, which sometimes hallucinate
+  plausible-sounding citations. Querying Inspire with the ArXiv ID or texkey is a fast sanity check:
+  a clean hit with a matching title is strong evidence the paper is real; no hit means proceed with caution.</li>
+</ul>
+<pre><code class="language-python">import requests
+
+# Check whether a paper with a given ArXiv ID exists in Inspire-HEP
+response = requests.get(
+    &quot;https://inspirehep.net/api/literature&quot;,
+    params={&quot;q&quot;: &quot;eprint 1207.7214&quot;, &quot;size&quot;: 1},
+    timeout=10,
+)
+hits = response.json()[&quot;hits&quot;][&quot;hits&quot;]
+print(&quot;Found&quot; if hits else &quot;Not found&quot;)
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../" class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lesson-02/" class="btn btn-neutral float-right" title="Lesson 02 — Reading Strategy">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lesson-02/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/clipboard.js"></script>
+      <script src="../../../js/copy_code.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

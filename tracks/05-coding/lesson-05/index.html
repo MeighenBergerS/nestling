@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Lesson 05 — Code Style & Quality - Nestling</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 05 \u2014 Code Style \u0026 Quality";
+        var mkdocs_page_input_path = "tracks/05-coding/lesson-05.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/environment-setup/">Environment Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >ArXiv & Reading Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-01/">Lesson 01 — Finding Papers</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-03/">Lesson 03 — Managing Papers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Writing Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-04/">Lesson 04 — LaTeX Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Git & GitHub</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-01/">Lesson 01 — Git Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-02/">Lesson 02 — Branching</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-03/">Lesson 03 — GitHub Collaboration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Coding Practices</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-02/">Lesson 02 — Python & Jupyter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-04/">Lesson 04 — Scientific Python Stack</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lesson 05 — Code Style & Quality</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#pep-8">PEP 8</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#naming-conventions">Naming conventions</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#line-length">Line length</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#imports">Imports</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#blank-lines">Blank lines</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ruff">ruff</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#configuration-in-pyprojecttoml">Configuration in pyproject.toml</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#type-hints">Type hints</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#optional-and-union">Optional and Union</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#vscode-integration">VSCode integration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-to-read-next">What to read next</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-06/">Lesson 06 — Performance & Parallelism</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-07/">Lesson 07 — ML Basics with PyTorch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-10/">Lesson 10 — Testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Plotting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-01/">Lesson 01 — Figure Design Principles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-04/">Lesson 04 — Colour and Accessibility</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Working with LLMs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-01/">Lesson 01 — What LLMs Are and Are Not</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-02/">Lesson 02 — LLMs for Code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-03/">Lesson 03 — LLMs for Writing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-04/">Lesson 04 — LLMs for Literature Search</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-05/">Lesson 05 — Prompt Engineering for Research</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-06/">Lesson 06 — Verification Habits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-07/">Lesson 07 — Skill Files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/paper-outline/">Paper Outline</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tracks</li>
+          <li class="breadcrumb-item">Coding Practices</li>
+      <li class="breadcrumb-item active">Lesson 05 — Code Style & Quality</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/tracks/05-coding/lesson-05.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-05-code-style-quality">Lesson 05: Code Style &amp; Quality<a class="headerlink" href="#lesson-05-code-style-quality" title="Permanent link">&para;</a></h1>
+<p>Code is read far more often than it is written.
+A consistent style makes it easier for collaborators, and your future self, to understand
+and modify code. This lesson introduces PEP 8, type hints, and the tools that enforce style
+automatically so you do not have to think about it.</p>
+<hr />
+<h2 id="pep-8">PEP 8<a class="headerlink" href="#pep-8" title="Permanent link">&para;</a></h2>
+<p><a href="https://peps.python.org/pep-0008/">PEP 8</a> is Python's official style guide.
+You do not need to memorise it. A linter will tell you when you violate it, but
+understanding the core rules prevents the most common problems.</p>
+<h3 id="naming-conventions">Naming conventions<a class="headerlink" href="#naming-conventions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Thing</th>
+<th>Convention</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variables, functions</td>
+<td><code>snake_case</code></td>
+<td><code>particle_energy</code>, <code>compute_flux()</code></td>
+</tr>
+<tr>
+<td>Classes</td>
+<td><code>PascalCase</code></td>
+<td><code>NeutrinoFlux</code>, <code>DetectorConfig</code></td>
+</tr>
+<tr>
+<td>Constants</td>
+<td><code>UPPER_SNAKE_CASE</code></td>
+<td><code>SPEED_OF_LIGHT</code>, <code>MAX_EVENTS</code></td>
+</tr>
+<tr>
+<td>Private attributes</td>
+<td><code>_leading_underscore</code></td>
+<td><code>_cache</code>, <code>_validate()</code></td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://github.com/Harvard-Neutrino/prometheus">Prometheus</a> follows this correctly
+throughout. <code>PrometheusConfig</code>, <code>DetectorConfig</code>, <code>RunConfig</code> are all <code>PascalCase</code>;
+helper functions are <code>snake_case</code>.</p>
+<h3 id="line-length">Line length<a class="headerlink" href="#line-length" title="Permanent link">&para;</a></h3>
+<p>Keep lines under <strong>88 characters</strong>, the <code>ruff</code>/<code>black</code> default.
+Long lines are hard to read side-by-side with a diff and awkward in terminal output.
+Prometheus sets a limit of 100 in <code>pyproject.toml</code>, slightly generous, but documented
+and consistently enforced.</p>
+<h3 id="imports">Imports<a class="headerlink" href="#imports" title="Permanent link">&para;</a></h3>
+<p>Imports go at the <strong>top of the file</strong>, grouped and ordered:</p>
+<ol>
+<li>Standard library (<code>os</code>, <code>math</code>, <code>copy</code>)</li>
+<li>Third-party (<code>numpy</code>, <code>scipy</code>)</li>
+<li>Local (<code>from .config import Config</code>)</li>
+</ol>
+<p>Separate groups with a blank line:</p>
+<pre><code class="language-python">import os
+from pathlib import Path
+
+import numpy as np
+from scipy import integrate
+
+from prometheus.config import PrometheusConfig
+</code></pre>
+<h3 id="blank-lines">Blank lines<a class="headerlink" href="#blank-lines" title="Permanent link">&para;</a></h3>
+<p>Two blank lines between top-level functions and classes; one blank line between methods
+inside a class.</p>
+<hr />
+<h2 id="ruff">ruff<a class="headerlink" href="#ruff" title="Permanent link">&para;</a></h2>
+<p><a href="https://docs.astral.sh/ruff/">ruff</a> is a fast Python linter and formatter.
+It replaces <code>flake8</code>, <code>isort</code>, and <code>black</code> in a single tool.</p>
+<pre><code class="language-sh">pip install ruff
+</code></pre>
+<p>Run the linter:</p>
+<pre><code class="language-sh">ruff check .
+</code></pre>
+<p>Auto-fix what can be fixed:</p>
+<pre><code class="language-sh">ruff check --fix .
+</code></pre>
+<p>Format all files:</p>
+<pre><code class="language-sh">ruff format .
+</code></pre>
+<h3 id="configuration-in-pyprojecttoml">Configuration in pyproject.toml<a class="headerlink" href="#configuration-in-pyprojecttoml" title="Permanent link">&para;</a></h3>
+<p>Ruff is configured in <code>pyproject.toml</code>. This is what Prometheus uses:</p>
+<pre><code class="language-toml">[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = [&quot;E&quot;, &quot;F&quot;, &quot;W&quot;, &quot;I&quot;]
+exclude = [&quot;resources&quot;, &quot;paper_plots&quot;, &quot;site&quot;, &quot;olympus&quot;, &quot;examples/legacy&quot;]
+</code></pre>
+<p>Rule codes:</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>What it checks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>E</code></td>
+<td>PEP 8 style errors</td>
+</tr>
+<tr>
+<td><code>F</code></td>
+<td>Pyflakes (undefined names, unused imports)</td>
+</tr>
+<tr>
+<td><code>W</code></td>
+<td>Warnings</td>
+</tr>
+<tr>
+<td><code>I</code></td>
+<td>Import sorting (replaces <code>isort</code>)</td>
+</tr>
+<tr>
+<td><code>N</code></td>
+<td>Naming conventions (add this)</td>
+</tr>
+<tr>
+<td><code>UP</code></td>
+<td>pyupgrade: flags outdated Python patterns (add this)</td>
+</tr>
+</tbody>
+</table>
+<p>For a new project add <code>"N"</code> and <code>"UP"</code> to the select list.</p>
+<hr />
+<h2 id="type-hints">Type hints<a class="headerlink" href="#type-hints" title="Permanent link">&para;</a></h2>
+<p>Type hints annotate what types a function expects and returns.
+They do not change runtime behaviour, but Pylance and ruff use them to catch errors
+before you run the code.</p>
+<pre><code class="language-python">def compute_flux(energy: float, gamma: float, norm: float = 1.0) -&gt; float:
+    return norm * energy ** (-gamma)
+</code></pre>
+<p>For collections, use the <strong>built-in generic forms</strong> (Python 3.9+):</p>
+<pre><code class="language-python">def mean_energy(events: list[float]) -&gt; float:
+    return sum(events) / len(events)
+
+def load_config(path: str) -&gt; dict[str, float]:
+    ...
+</code></pre>
+<div class="admonition warning">
+<p class="admonition-title">Avoid typing.List and typing.Dict</p>
+<p>Older code uses <code>from typing import List, Dict</code> and then <code>List[float]</code>.
+This was required before Python 3.9. In modern Python, use the built-in types
+directly: <code>list[float]</code>, <code>dict[str, int]</code>, <code>tuple[float, ...]</code>.
+Prometheus contains several instances of the old style (<code>List[Particle]</code>), harmless
+but unnecessary. ruff's <code>UP</code> rule flags these automatically.</p>
+</div>
+<h3 id="optional-and-union">Optional and Union<a class="headerlink" href="#optional-and-union" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">def find_mass(name: str) -&gt; float | None:
+    &quot;&quot;&quot;Return the mass in MeV if known, else None.&quot;&quot;&quot;
+    masses = {&quot;muon&quot;: 105.7, &quot;electron&quot;: 0.511}
+    return masses.get(name)
+</code></pre>
+<p><code>float | None</code> is the Python 3.10+ shorthand for <code>Optional[float]</code>. Prefer it in new code.</p>
+<hr />
+<h2 id="vscode-integration">VSCode integration<a class="headerlink" href="#vscode-integration" title="Permanent link">&para;</a></h2>
+<p>With the <strong>Ruff</strong> and <strong>Pylance</strong> extensions installed, problems appear as underlines as
+you type and are listed in the Problems panel (⇧⌘M / Ctrl+Shift+M).</p>
+<p>Enable format-on-save by adding this to your project's <code>.vscode/settings.json</code>:</p>
+<pre><code class="language-json">{
+    &quot;[python]&quot;: {
+        &quot;editor.defaultFormatter&quot;: &quot;charliermarsh.ruff&quot;,
+        &quot;editor.formatOnSave&quot;: true,
+        &quot;editor.codeActionsOnSave&quot;: {
+            &quot;source.fixAll.ruff&quot;: &quot;explicit&quot;
+        }
+    }
+}
+</code></pre>
+<p>With this in place, every time you save a file it is automatically reformatted and
+fixable lint errors are resolved. Style stops being something you need to consciously manage.</p>
+<hr />
+<h2 id="what-to-read-next">What to read next<a class="headerlink" href="#what-to-read-next" title="Permanent link">&para;</a></h2>
+<p><a href="../lesson-06/">Lesson 06</a> covers performance: when Python is too slow for the calculation
+you are trying to run, and which tool to reach for first.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../lesson-04/" class="btn btn-neutral float-left" title="Lesson 04 — Scientific Python Stack"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lesson-06/" class="btn btn-neutral float-right" title="Lesson 06 — Performance & Parallelism">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../lesson-04/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lesson-06/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/clipboard.js"></script>
+      <script src="../../../js/copy_code.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

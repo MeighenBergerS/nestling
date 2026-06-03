@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Environment Setup - Nestling</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Environment Setup";
+        var mkdocs_page_input_path = "getting-started/environment-setup.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../..">
+          <img src="../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Environment Setup</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-an-environment-and-why-do-i-need-one">What is an environment, and why do I need one?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-you-will-need">What you will need</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-1-install-python">Step 1: Install Python</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-2-clone-the-repository">Step 2: Clone the repository</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-3-create-a-virtual-environment">Step 3: Create a virtual environment</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-4-install-dependencies">Step 4: Install dependencies</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-5-verify-the-setup">Step 5: Verify the setup</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >ArXiv & Reading Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/01-arxiv/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/01-arxiv/lesson-01/">Lesson 01 — Finding Papers</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/01-arxiv/lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/01-arxiv/lesson-03/">Lesson 03 — Managing Papers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Writing Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/03-writing/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/03-writing/lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/03-writing/lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/03-writing/lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/03-writing/lesson-04/">Lesson 04 — LaTeX Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/03-writing/lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Git & GitHub</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/04-git-github/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/04-git-github/lesson-01/">Lesson 01 — Git Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/04-git-github/lesson-02/">Lesson 02 — Branching</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/04-git-github/lesson-03/">Lesson 03 — GitHub Collaboration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/04-git-github/lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/04-git-github/lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Coding Practices</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-02/">Lesson 02 — Python & Jupyter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-04/">Lesson 04 — Scientific Python Stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-05/">Lesson 05 — Code Style & Quality</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-06/">Lesson 06 — Performance & Parallelism</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-07/">Lesson 07 — ML Basics with PyTorch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-10/">Lesson 10 — Testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Plotting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/06-plotting/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/06-plotting/lesson-01/">Lesson 01 — Figure Design Principles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/06-plotting/lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/06-plotting/lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/06-plotting/lesson-04/">Lesson 04 — Colour and Accessibility</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Working with LLMs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/07-llm-practices/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/07-llm-practices/lesson-01/">Lesson 01 — What LLMs Are and Are Not</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/07-llm-practices/lesson-02/">Lesson 02 — LLMs for Code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/07-llm-practices/lesson-03/">Lesson 03 — LLMs for Writing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/07-llm-practices/lesson-04/">Lesson 04 — LLMs for Literature Search</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/07-llm-practices/lesson-05/">Lesson 05 — Prompt Engineering for Research</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/07-llm-practices/lesson-06/">Lesson 06 — Verification Habits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/07-llm-practices/lesson-07/">Lesson 07 — Skill Files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../templates/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../templates/journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../templates/paper-outline/">Paper Outline</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Getting Started</li>
+      <li class="breadcrumb-item active">Environment Setup</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/getting-started/environment-setup.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="environment-setup">Environment Setup<a class="headerlink" href="#environment-setup" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Do you need this page?</p>
+<p>If you are here to read the lessons and follow the tracks, <strong>you do not need to install anything</strong>. This site is all you need.
+Only follow this guide if you want to run the code examples locally.</p>
+</div>
+<h2 id="what-is-an-environment-and-why-do-i-need-one">What is an environment, and why do I need one?<a class="headerlink" href="#what-is-an-environment-and-why-do-i-need-one" title="Permanent link">&para;</a></h2>
+<p>When you install Python packages (libraries of code that other people have written), they get stored somewhere on your computer.
+The problem is that different projects often need different versions of the same package, and they can conflict with each other.</p>
+<p>A <strong>virtual environment</strong> solves this by giving each project its own private, isolated space for its packages.
+Think of it like a separate toolbox for each project: tools in one box don't interfere with tools in another.</p>
+<p>This guide walks you through creating that toolbox for Nestling.
+If the terminology feels unfamiliar, check the <a href="../../glossary/">Glossary</a> or ask your supervisor. This is a normal first hurdle.</p>
+<hr />
+<h2 id="what-you-will-need">What you will need<a class="headerlink" href="#what-you-will-need" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Python 3.11 or later</li>
+<li>Git</li>
+<li>A terminal (Linux, macOS, or Windows with WSL)</li>
+</ul>
+<p>If any of these are unfamiliar, check the <a href="../../glossary/">Glossary</a> or ask your supervisor before continuing.</p>
+<hr />
+<h2 id="step-1-install-python">Step 1: Install Python<a class="headerlink" href="#step-1-install-python" title="Permanent link">&para;</a></h2>
+<p>Download and install Python 3.11 or later from <a href="https://www.python.org/downloads/">python.org</a>.</p>
+<p>On Windows, check <strong>"Add Python to PATH"</strong> during installation.</p>
+<p>Verify it worked by opening a terminal and running:</p>
+<pre><code class="language-sh">python --version
+</code></pre>
+<p>You should see something like <code>Python 3.11.x</code>.
+If you see an error instead, search for the exact message online. Most installation problems
+have a straightforward fix already documented somewhere.
+If you are still stuck, ask your supervisor; they have almost certainly seen the same issue.</p>
+<hr />
+<h2 id="step-2-clone-the-repository">Step 2: Clone the repository<a class="headerlink" href="#step-2-clone-the-repository" title="Permanent link">&para;</a></h2>
+<pre><code class="language-sh">git clone https://github.com/MeighenBergerS/nestling.git
+cd nestling
+</code></pre>
+<p>If you have not used Git before, work through the <a href="../../tracks/04-git-github/">Git &amp; GitHub</a> track first,
+or ask your supervisor to walk you through this step.</p>
+<hr />
+<h2 id="step-3-create-a-virtual-environment">Step 3: Create a virtual environment<a class="headerlink" href="#step-3-create-a-virtual-environment" title="Permanent link">&para;</a></h2>
+<p>A virtual environment keeps Nestling's dependencies separate from the rest of your system.</p>
+<pre><code class="language-sh">python -m venv .venv
+</code></pre>
+<p>Then activate it:</p>
+<ul>
+<li><strong>Linux or macOS:</strong> <code>source .venv/bin/activate</code></li>
+<li><strong>Windows (WSL):</strong> <code>source .venv/bin/activate</code></li>
+<li><strong>Windows (Command Prompt):</strong> <code>.venv\Scripts\activate</code></li>
+</ul>
+<p>Your terminal prompt should change to show <code>(.venv)</code> at the start.</p>
+<hr />
+<h2 id="step-4-install-dependencies">Step 4: Install dependencies<a class="headerlink" href="#step-4-install-dependencies" title="Permanent link">&para;</a></h2>
+<pre><code class="language-sh">pip install -e &quot;.[dev]&quot;
+</code></pre>
+<p>This installs Nestling along with all tools needed to run the examples and notebooks.</p>
+<hr />
+<h2 id="step-5-verify-the-setup">Step 5: Verify the setup<a class="headerlink" href="#step-5-verify-the-setup" title="Permanent link">&para;</a></h2>
+<pre><code class="language-sh">pytest tests/
+</code></pre>
+<p>If all tests pass, you are ready to run examples. Open any notebook in the <code>examples/</code> folder with Jupyter:</p>
+<pre><code class="language-sh">jupyter notebook
+</code></pre>
+<div class="admonition tip">
+<p class="admonition-title">Something not working?</p>
+<p>Environment setup is genuinely one of the trickier parts of getting started. You are not alone if something goes wrong.
+Ask your supervisor; they have almost certainly hit the same issue before and can help you get unstuck quickly.</p>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../how-to-use-this-repo/" class="btn btn-neutral float-left" title="How to Use This Repo"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../tracks/01-arxiv/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../how-to-use-this-repo/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../tracks/01-arxiv/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/copy_code.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

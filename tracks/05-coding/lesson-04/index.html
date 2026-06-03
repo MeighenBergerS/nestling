@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Lesson 04 — Scientific Python Stack - Nestling</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 04 \u2014 Scientific Python Stack";
+        var mkdocs_page_input_path = "tracks/05-coding/lesson-04.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/environment-setup/">Environment Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >ArXiv & Reading Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-01/">Lesson 01 — Finding Papers</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-03/">Lesson 03 — Managing Papers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Writing Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-04/">Lesson 04 — LaTeX Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Git & GitHub</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-01/">Lesson 01 — Git Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-02/">Lesson 02 — Branching</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-03/">Lesson 03 — GitHub Collaboration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Coding Practices</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-02/">Lesson 02 — Python & Jupyter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lesson 04 — Scientific Python Stack</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#numpy">NumPy</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#creating-arrays">Creating arrays</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#operations-are-element-wise">Operations are element-wise</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#indexing-and-slicing">Indexing and slicing</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#useful-functions">Useful functions</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#saving-and-loading">Saving and loading</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scipy">SciPy</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#integration">Integration</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#interpolation">Interpolation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#optimisation-and-fitting">Optimisation and fitting</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#statistics">Statistics</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pandas">Pandas</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hdf5-and-h5py">HDF5 and h5py</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#matplotlib">Matplotlib</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#domain-specific-libraries-worth-knowing">Domain-specific libraries worth knowing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#a-worked-physics-example">A worked physics example</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#further-reading">Further reading</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-to-read-next">What to read next</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-05/">Lesson 05 — Code Style & Quality</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-06/">Lesson 06 — Performance & Parallelism</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-07/">Lesson 07 — ML Basics with PyTorch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-10/">Lesson 10 — Testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Plotting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-01/">Lesson 01 — Figure Design Principles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-04/">Lesson 04 — Colour and Accessibility</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Working with LLMs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-01/">Lesson 01 — What LLMs Are and Are Not</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-02/">Lesson 02 — LLMs for Code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-03/">Lesson 03 — LLMs for Writing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-04/">Lesson 04 — LLMs for Literature Search</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-05/">Lesson 05 — Prompt Engineering for Research</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-06/">Lesson 06 — Verification Habits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-07/">Lesson 07 — Skill Files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/paper-outline/">Paper Outline</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tracks</li>
+          <li class="breadcrumb-item">Coding Practices</li>
+      <li class="breadcrumb-item active">Lesson 04 — Scientific Python Stack</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/tracks/05-coding/lesson-04.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-04-scientific-python-stack">Lesson 04: Scientific Python Stack<a class="headerlink" href="#lesson-04-scientific-python-stack" title="Permanent link">&para;</a></h1>
+<p>These libraries underpin almost all computational physics in Python.
+You do not need to memorise the API. You need to understand what each one is for
+and how to look things up efficiently.</p>
+<p>Install everything at once:</p>
+<pre><code class="language-sh">pip install numpy scipy pandas matplotlib h5py
+</code></pre>
+<hr />
+<h2 id="numpy">NumPy<a class="headerlink" href="#numpy" title="Permanent link">&para;</a></h2>
+<p>NumPy provides the <code>ndarray</code>: a fast, multi-dimensional array that supports vectorised
+operations. Almost every other scientific library builds on it.</p>
+<h3 id="creating-arrays">Creating arrays<a class="headerlink" href="#creating-arrays" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">import numpy as np
+
+a = np.array([1.0, 2.0, 3.0])         # from a list
+b = np.zeros(100)                       # 100 zeros
+c = np.linspace(0, 1, 50)              # 50 evenly spaced values in [0, 1]
+d = np.logspace(2, 6, 100)             # 100 points, 10^2 to 10^6
+e = np.arange(0, 10, 0.5)             # 0.0, 0.5, 1.0, ...
+M = np.zeros((3, 3))                   # 2-D array, shape (3, 3)
+</code></pre>
+<h3 id="operations-are-element-wise">Operations are element-wise<a class="headerlink" href="#operations-are-element-wise" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">E = np.logspace(2, 6, 1000)   # energies in GeV
+phi = 1e-4 * E ** -2.0        # power-law spectrum — no loop needed
+</code></pre>
+<p>This is <strong>vectorisation</strong>: operations apply to every element simultaneously.
+It is typically 100–1000× faster than an equivalent Python <code>for</code> loop, because the loop
+runs in compiled C code inside NumPy rather than in the Python interpreter.
+Vectorisation is your single most important performance tool.
+See <a href="../lesson-06/">Lesson 06</a> for a deeper discussion.</p>
+<h3 id="indexing-and-slicing">Indexing and slicing<a class="headerlink" href="#indexing-and-slicing" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">a = np.arange(10)       # [0, 1, 2, ..., 9]
+
+a[0]                    # 0      — first element
+a[-1]                   # 9      — last element
+a[2:5]                  # [2, 3, 4]
+a[a &gt; 5]                # [6, 7, 8, 9]   — boolean mask
+</code></pre>
+<p>Boolean masks are particularly useful in physics: <code>events[events["energy"] &gt; 1e5]</code> selects
+only high-energy events without a loop.</p>
+<h3 id="useful-functions">Useful functions<a class="headerlink" href="#useful-functions" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">np.sum(a)                        # sum all elements
+np.mean(a), np.std(a)            # statistics
+np.max(a), np.min(a)             # extremes
+np.sort(a)                       # sorted copy (does not modify a)
+np.where(a &gt; 3, a, 0)            # conditional: keep if &gt; 3, else 0
+np.dot(v1, v2)                   # dot product
+np.cross(v1, v2)                 # cross product
+np.linalg.norm(v)                # vector norm
+np.histogram(data, bins=50)      # histogram
+</code></pre>
+<h3 id="saving-and-loading">Saving and loading<a class="headerlink" href="#saving-and-loading" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">np.save(&quot;spectrum.npy&quot;, phi)
+phi_loaded = np.load(&quot;spectrum.npy&quot;)
+
+# Plain text (slower, human-readable)
+np.savetxt(&quot;spectrum.txt&quot;, np.column_stack([E, phi]))
+data = np.loadtxt(&quot;spectrum.txt&quot;)
+</code></pre>
+<hr />
+<h2 id="scipy">SciPy<a class="headerlink" href="#scipy" title="Permanent link">&para;</a></h2>
+<p>SciPy extends NumPy with algorithms for integration, optimisation, interpolation,
+linear algebra, and statistics. Each lives in a submodule.</p>
+<h3 id="integration">Integration<a class="headerlink" href="#integration" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">from scipy import integrate
+
+def integrand(E, gamma):
+    return E ** (-gamma)
+
+result, error = integrate.quad(integrand, 1e2, 1e6, args=(2.0,))
+print(f&quot;Integral = {result:.4e} ± {error:.2e}&quot;)
+</code></pre>
+<p>For 2-D integrals, use <code>integrate.dblquad</code>.
+For integrals over sampled data, use <code>integrate.trapezoid</code>.</p>
+<h3 id="interpolation">Interpolation<a class="headerlink" href="#interpolation" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">from scipy.interpolate import interp1d
+
+f = interp1d(E_data, phi_data, kind=&quot;cubic&quot;, bounds_error=False, fill_value=0.0)
+phi_fine = f(E_fine)
+</code></pre>
+<h3 id="optimisation-and-fitting">Optimisation and fitting<a class="headerlink" href="#optimisation-and-fitting" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">from scipy.optimize import curve_fit, brentq
+
+def power_law(E, norm, gamma):
+    return norm * E ** (-gamma)
+
+popt, pcov = curve_fit(power_law, E_data, phi_data, p0=[1e-4, 2.0])
+norm_fit, gamma_fit = popt
+perr = np.sqrt(np.diag(pcov))   # 1-sigma uncertainties
+
+# Root finding
+E_cross = brentq(lambda E: power_law(E, *popt) - threshold, 1e3, 1e8)
+</code></pre>
+<h3 id="statistics">Statistics<a class="headerlink" href="#statistics" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">from scipy import stats
+
+ks_stat, p_value = stats.kstest(samples, &quot;norm&quot;)  # Kolmogorov-Smirnov
+chi2, p = stats.chisquare(observed, expected)
+</code></pre>
+<hr />
+<h2 id="pandas">Pandas<a class="headerlink" href="#pandas" title="Permanent link">&para;</a></h2>
+<p>Pandas provides the <code>DataFrame</code>: a labelled 2-D table, analogous to a spreadsheet or SQL
+table. It is most useful when you have tabular data: event catalogues, parameter scans,
+observational tables with mixed column types.</p>
+<pre><code class="language-python">import pandas as pd
+
+df = pd.read_csv(&quot;events.csv&quot;)      # load
+df.head()                           # inspect first five rows
+df.describe()                       # summary statistics
+
+# Selecting columns
+energies = df[&quot;energy_GeV&quot;]
+
+# Filtering rows
+high_energy = df[df[&quot;energy_GeV&quot;] &gt; 1e5]
+
+# Grouping
+by_type = df.groupby(&quot;particle_type&quot;)[&quot;energy_GeV&quot;].mean()
+
+# Saving
+df.to_csv(&quot;output.csv&quot;, index=False)
+df.to_hdf(&quot;output.h5&quot;, key=&quot;events&quot;)
+</code></pre>
+<p>Pandas is less useful for pure numerical computation. Prefer NumPy arrays there.
+It shines for loading mixed-type data, quick aggregation, and preparing tables for a paper.</p>
+<hr />
+<h2 id="hdf5-and-h5py">HDF5 and h5py<a class="headerlink" href="#hdf5-and-h5py" title="Permanent link">&para;</a></h2>
+<p>Physics simulations produce large binary files.
+HDF5 is the standard format: structured, compressed, and fast.</p>
+<pre><code class="language-python">import h5py
+
+# Writing
+with h5py.File(&quot;simulation.h5&quot;, &quot;w&quot;) as f:
+    f.create_dataset(&quot;energies&quot;, data=E_array, compression=&quot;gzip&quot;)
+    f.create_dataset(&quot;weights&quot;, data=w_array)
+    f.attrs[&quot;description&quot;] = &quot;Neutrino MC run 001&quot;
+    f.attrs[&quot;n_events&quot;] = len(E_array)
+
+# Reading
+with h5py.File(&quot;simulation.h5&quot;, &quot;r&quot;) as f:
+    E = f[&quot;energies&quot;][:]     # [:] loads into memory
+    w = f[&quot;weights&quot;][:]
+    print(f.attrs[&quot;description&quot;])
+</code></pre>
+<p><a href="https://github.com/Harvard-Neutrino/prometheus">Prometheus</a> writes its output in HDF5.
+The Pandas <code>read_hdf</code> / <code>to_hdf</code> methods use the same format.</p>
+<hr />
+<h2 id="matplotlib">Matplotlib<a class="headerlink" href="#matplotlib" title="Permanent link">&para;</a></h2>
+<p>Matplotlib produces publication-quality plots.
+Full coverage is in the <a href="../../06-plotting/">Plotting track</a>; a minimal example:</p>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(6, 4))
+ax.loglog(E, phi, color=&quot;steelblue&quot;, label=r&quot;$\gamma = 2.37$&quot;)
+ax.set_xlabel(&quot;Energy [GeV]&quot;)
+ax.set_ylabel(r&quot;$\Phi$ [GeV$^{-1}$ cm$^{-2}$ s$^{-1}$ sr$^{-1}$]&quot;)
+ax.legend()
+fig.tight_layout()
+fig.savefig(&quot;spectrum.pdf&quot;)
+</code></pre>
+<p>Always save to PDF for vector graphics; use PNG only for quick inspection.</p>
+<hr />
+<h2 id="domain-specific-libraries-worth-knowing">Domain-specific libraries worth knowing<a class="headerlink" href="#domain-specific-libraries-worth-knowing" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Library</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.astropy.org/">astropy</a></td>
+<td>Coordinate systems, FITS files, cosmology, units</td>
+</tr>
+<tr>
+<td><a href="https://healpy.readthedocs.io/">healpy</a></td>
+<td>HEALPix sky maps (CMB, neutrino sky maps)</td>
+</tr>
+<tr>
+<td><a href="https://scikit-hep.org/iminuit/">iminuit</a></td>
+<td>Maximum-likelihood fitting (MINUIT wrapper)</td>
+</tr>
+<tr>
+<td><a href="https://uproot.readthedocs.io/">uproot</a></td>
+<td>Read/write ROOT files without a ROOT installation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="a-worked-physics-example">A worked physics example<a class="headerlink" href="#a-worked-physics-example" title="Permanent link">&para;</a></h2>
+<p>Compute the muon neutrino flux from a power-law source, then find the energy at which
+the integrated flux above that energy drops below a given threshold.</p>
+<pre><code class="language-python">import numpy as np
+from scipy import integrate, optimize
+
+GAMMA = 2.37                  # spectral index (IceCube best-fit)
+NORM = 1.66e-18               # normalisation [GeV^-1 cm^-2 s^-1 sr^-1] at 100 TeV
+E_REF = 1e5                   # reference energy [GeV]
+
+def flux(E: float) -&gt; float:
+    return NORM * (E / E_REF) ** (-GAMMA)
+
+def flux_above(E_min: float) -&gt; float:
+    &quot;&quot;&quot;Integrated flux above E_min [cm^-2 s^-1 sr^-1].&quot;&quot;&quot;
+    result, _ = integrate.quad(flux, E_min, np.inf)
+    return result
+
+threshold = 1e-22             # cm^-2 s^-1 sr^-1
+
+E_cutoff = optimize.brentq(
+    lambda E: flux_above(E) - threshold,
+    1e3, 1e8
+)
+print(f&quot;Integrated flux drops below threshold at {E_cutoff:.2e} GeV&quot;)
+</code></pre>
+<p>This pattern, define a flux function, integrate it, invert the integral, appears constantly
+in neutrino physics, cosmic-ray analysis, and gravitational-wave parameter estimation.</p>
+<hr />
+<h2 id="further-reading">Further reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
+<p>The <a href="https://lectures.scientific-python.org/">Scientific Python Lectures</a> (formerly the SciPy
+Lecture Notes) are the canonical free reference for the scientific Python stack. They cover
+NumPy, SciPy, and matplotlib in considerably more depth than this lesson, with worked examples
+throughout. If you want to go beyond the essentials covered here, start there.</p>
+<h2 id="what-to-read-next">What to read next<a class="headerlink" href="#what-to-read-next" title="Permanent link">&para;</a></h2>
+<p><a href="../lesson-05/">Lesson 05</a> covers code style: why consistent formatting matters,
+and how to enforce it automatically with <code>ruff</code>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../lesson-03/" class="btn btn-neutral float-left" title="Lesson 03 — Package Management"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lesson-05/" class="btn btn-neutral float-right" title="Lesson 05 — Code Style & Quality">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../lesson-03/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lesson-05/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/clipboard.js"></script>
+      <script src="../../../js/copy_code.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

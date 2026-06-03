@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Paper Outline - Nestling</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Paper Outline";
+        var mkdocs_page_input_path = "templates/paper-outline.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../..">
+          <img src="../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/environment-setup/">Environment Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >ArXiv & Reading Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/01-arxiv/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/01-arxiv/lesson-01/">Lesson 01 — Finding Papers</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/01-arxiv/lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/01-arxiv/lesson-03/">Lesson 03 — Managing Papers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Writing Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/03-writing/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/03-writing/lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/03-writing/lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/03-writing/lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/03-writing/lesson-04/">Lesson 04 — LaTeX Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/03-writing/lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Git & GitHub</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/04-git-github/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/04-git-github/lesson-01/">Lesson 01 — Git Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/04-git-github/lesson-02/">Lesson 02 — Branching</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/04-git-github/lesson-03/">Lesson 03 — GitHub Collaboration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/04-git-github/lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/04-git-github/lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Coding Practices</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-02/">Lesson 02 — Python & Jupyter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-04/">Lesson 04 — Scientific Python Stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-05/">Lesson 05 — Code Style & Quality</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-06/">Lesson 06 — Performance & Parallelism</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-07/">Lesson 07 — ML Basics with PyTorch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-10/">Lesson 10 — Testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/05-coding/lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Plotting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/06-plotting/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/06-plotting/lesson-01/">Lesson 01 — Figure Design Principles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/06-plotting/lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/06-plotting/lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/06-plotting/lesson-04/">Lesson 04 — Colour and Accessibility</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Working with LLMs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/07-llm-practices/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/07-llm-practices/lesson-01/">Lesson 01 — What LLMs Are and Are Not</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/07-llm-practices/lesson-02/">Lesson 02 — LLMs for Code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/07-llm-practices/lesson-03/">Lesson 03 — LLMs for Writing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/07-llm-practices/lesson-04/">Lesson 04 — LLMs for Literature Search</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/07-llm-practices/lesson-05/">Lesson 05 — Prompt Engineering for Research</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/07-llm-practices/lesson-06/">Lesson 06 — Verification Habits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/07-llm-practices/lesson-07/">Lesson 07 — Skill Files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tracks/08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Paper Outline</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#before-you-start-the-one-result">Before you start: the one result</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#abstract-45-sentences-fill-in-each-slot">Abstract (4–5 sentences: fill in each slot)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#introduction-outline">Introduction outline</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#paragraph-1-broad-physical-setting-35-sentences">Paragraph 1: Broad physical setting (3–5 sentences)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#paragraph-2-specific-opportunity-and-prior-work-35-sentences">Paragraph 2: Specific opportunity and prior work (3–5 sentences)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#paragraph-3-what-this-paper-does-24-sentences">Paragraph 3: What this paper does (2–4 sentences)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#paragraph-4-paper-structure-12-sentences-optional">Paragraph 4: Paper structure (1–2 sentences, optional)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#figure-1-introduction-sketch">Figure 1 (introduction sketch)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#order-of-magnitude-estimate-for-introduction-or-section-i">Order-of-magnitude estimate (for introduction or Section I)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#methods-sections">Methods sections</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#section-number-title-short-noun-phrase">Section [number]: [title, short noun phrase]</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#results-sections">Results sections</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#section-numberletter-title">Section [number].[letter]: [title]</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#final-figure-main-constraint-or-exclusion-plot">Final figure (main constraint or exclusion plot)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conclusion-outline">Conclusion outline</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#paragraph-1-main-result-12-sentences">Paragraph 1: Main result (1–2 sentences)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#paragraph-2-broader-implications-4-sentences">Paragraph 2: Broader implications (≤ 4 sentences)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#paragraph-3-future-outlook-34-concrete-directions">Paragraph 3: Future outlook (3–4 concrete directions)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#acknowledgements">Acknowledgements</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reference-list-planning-stage">Reference list (planning stage)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#checklist-before-you-start-writing">Checklist before you start writing</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Templates</li>
+      <li class="breadcrumb-item active">Paper Outline</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/templates/paper-outline.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="paper-outline-template">Paper Outline Template<a class="headerlink" href="#paper-outline-template" title="Permanent link">&para;</a></h1>
+<p>Use this template before you write a word of prose.
+Filling it in forces you to make the argument explicit. You will find the weak points in the logic
+before you have invested days in writing around them.</p>
+<p>Work through the sections in order.
+The most important field is the one-sentence main result: if you cannot fill that in, you are not ready to write.</p>
+<hr />
+<h2 id="before-you-start-the-one-result">Before you start: the one result<a class="headerlink" href="#before-you-start-the-one-result" title="Permanent link">&para;</a></h2>
+<p><strong>What is the single claim this paper makes, in one sentence with one number?</strong></p>
+<blockquote>
+<p><em>Example: "We demonstrate that UHECR survival in NGC 1068 excludes σ_χp ≳ 10⁻³³ (m_χ/GeV) cm²,
+three orders of magnitude below current direct-detection limits."</em></p>
+</blockquote>
+<p>Your version:</p>
+<blockquote>
+<p>[fill in]</p>
+</blockquote>
+<p>Every section of this paper exists either to derive this number or to test how robust it is.
+If a planned section does neither, remove it.</p>
+<hr />
+<h2 id="abstract-45-sentences-fill-in-each-slot">Abstract (4–5 sentences: fill in each slot)<a class="headerlink" href="#abstract-45-sentences-fill-in-each-slot" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Sentence</th>
+<th>Role</th>
+<th>Draft</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Setting + motivation: the physical system and why it is interesting</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>What we do: method, systems studied, scope. Begin with "We..."</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Main quantitative result</strong>: a specific number, not "significant improvement"</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Broader implication: what this adds to the field or opens up</td>
+<td></td>
+</tr>
+<tr>
+<td>5 (optional)</td>
+<td>Second implication or complementarity statement</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Check: no citations. No section summary. Result sentence contains a number.</p>
+<hr />
+<h2 id="introduction-outline">Introduction outline<a class="headerlink" href="#introduction-outline" title="Permanent link">&para;</a></h2>
+<h3 id="paragraph-1-broad-physical-setting-35-sentences">Paragraph 1: Broad physical setting (3–5 sentences)<a class="headerlink" href="#paragraph-1-broad-physical-setting-35-sentences" title="Permanent link">&para;</a></h3>
+<p>Why is this system or environment interesting from first principles?
+Which landmark experiments or observations motivate it?
+(One citation per result, not clusters of five.)</p>
+<blockquote>
+<p>[bullet points → prose later]</p>
+</blockquote>
+<h3 id="paragraph-2-specific-opportunity-and-prior-work-35-sentences">Paragraph 2: Specific opportunity and prior work (3–5 sentences)<a class="headerlink" href="#paragraph-2-specific-opportunity-and-prior-work-35-sentences" title="Permanent link">&para;</a></h3>
+<p>What is the precise gap this paper fills?
+Who has worked on this before, and what did they miss or leave open?</p>
+<blockquote>
+<p>[bullet points → prose later]</p>
+</blockquote>
+<h3 id="paragraph-3-what-this-paper-does-24-sentences">Paragraph 3: What this paper does (2–4 sentences)<a class="headerlink" href="#paragraph-3-what-this-paper-does-24-sentences" title="Permanent link">&para;</a></h3>
+<p>Begin with "In this work, we..." or "In this paper, we show...".
+Name the two or three key things computed or proposed.</p>
+<blockquote>
+<p>[bullet points → prose later]</p>
+</blockquote>
+<h3 id="paragraph-4-paper-structure-12-sentences-optional">Paragraph 4: Paper structure (1–2 sentences, optional)<a class="headerlink" href="#paragraph-4-paper-structure-12-sentences-optional" title="Permanent link">&para;</a></h3>
+<p>Only include if the structure is non-obvious.
+"In Section II, we... In Section III, we... We conclude in Section IV."</p>
+<blockquote>
+<p>[fill in or leave blank]</p>
+</blockquote>
+<h3 id="figure-1-introduction-sketch">Figure 1 (introduction sketch)<a class="headerlink" href="#figure-1-introduction-sketch" title="Permanent link">&para;</a></h3>
+<p>Figure 1 is a sketch or overview diagram that appears in the introduction.
+It is not a data figure. It introduces the setup visually.
+Describe what it shows.</p>
+<blockquote>
+<p>[description: e.g., "Schematic of the physical setup: UHECR path from AGN through DM halo to Earth, with the relevant length scales labelled."]</p>
+</blockquote>
+<hr />
+<h2 id="order-of-magnitude-estimate-for-introduction-or-section-i">Order-of-magnitude estimate (for introduction or Section I)<a class="headerlink" href="#order-of-magnitude-estimate-for-introduction-or-section-i" title="Permanent link">&para;</a></h2>
+<p>Write the estimate before computing the full result.
+If you cannot do this, it is a signal that you do not yet understand which physics controls the answer.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Controlling quantity</td>
+<td>What one or two quantities dominate the answer?</td>
+</tr>
+<tr>
+<td>Scaling</td>
+<td>Write the result as a product/ratio using ~</td>
+</tr>
+<tr>
+<td>Numerical plug-in</td>
+<td>One significant figure, with units</td>
+</tr>
+<tr>
+<td>Expected result</td>
+<td>What number do you expect?</td>
+</tr>
+</tbody>
+</table>
+<p>After the full calculation: does the full result agree with this estimate to within an order of magnitude?
+If not, identify the physical effect that bridges the gap.</p>
+<hr />
+<h2 id="methods-sections">Methods sections<a class="headerlink" href="#methods-sections" title="Permanent link">&para;</a></h2>
+<p>For each Methods section, fill in:</p>
+<h3 id="section-number-title-short-noun-phrase">Section [number]: [title, short noun phrase]<a class="headerlink" href="#section-number-title-short-noun-phrase" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong> (one sentence): What question does this section answer?</p>
+<p><strong>Key equations or assumptions:</strong></p>
+<ul>
+<li>[list]</li>
+</ul>
+<p><strong>Scope constraints</strong> (go at the end of the opening paragraph):</p>
+<ul>
+<li>"For simplicity, we assume..."</li>
+<li>"We conservatively require..."</li>
+</ul>
+<p><strong>Figure [N]</strong> (if any):</p>
+<ul>
+<li>What does it show?</li>
+<li>What question does it answer?</li>
+</ul>
+<hr />
+<h2 id="results-sections">Results sections<a class="headerlink" href="#results-sections" title="Permanent link">&para;</a></h2>
+<p>For each Results subsection, fill in:</p>
+<h3 id="section-numberletter-title">Section [number].[letter]: [title]<a class="headerlink" href="#section-numberletter-title" title="Permanent link">&para;</a></h3>
+<p><strong>OOM estimate</strong> (opening of the subsection, before the full result):</p>
+<blockquote>
+<p>[one or two sentences of scaling argument]</p>
+</blockquote>
+<p><strong>Main result:</strong></p>
+<blockquote>
+<p>[the number or bound, with units]</p>
+</blockquote>
+<p><strong>Figure [N]:</strong></p>
+<ul>
+<li>What does it show?</li>
+<li>What is the takeaway sentence (goes in <code>\textit{...}</code> at the end of the caption)?</li>
+</ul>
+<p><strong>Does this section derive the one main result, or test its robustness?</strong> (tick one)</p>
+<ul>
+<li>[ ] Derives it</li>
+<li>[ ] Tests robustness / sensitivity</li>
+<li>[ ] Other: [explain why it belongs]</li>
+</ul>
+<hr />
+<h2 id="final-figure-main-constraint-or-exclusion-plot">Final figure (main constraint or exclusion plot)<a class="headerlink" href="#final-figure-main-constraint-or-exclusion-plot" title="Permanent link">&para;</a></h2>
+<p>This is the most important figure in the paper, the one the reader takes away.</p>
+<p><strong>What does it show?</strong></p>
+<blockquote>
+<p>[description]</p>
+</blockquote>
+<p><strong>What is the one-sentence takeaway for the caption?</strong></p>
+<blockquote>
+<p>[fill in]</p>
+</blockquote>
+<p><strong>Are all axis labels finalised, with units and <code>\mathrm{}</code> subscripts?</strong></p>
+<ul>
+<li>[ ] Yes</li>
+<li>[ ] Not yet</li>
+</ul>
+<hr />
+<h2 id="conclusion-outline">Conclusion outline<a class="headerlink" href="#conclusion-outline" title="Permanent link">&para;</a></h2>
+<h3 id="paragraph-1-main-result-12-sentences">Paragraph 1: Main result (1–2 sentences)<a class="headerlink" href="#paragraph-1-main-result-12-sentences" title="Permanent link">&para;</a></h3>
+<p>"We have shown/computed/demonstrated [main result]."
+Restate the key quantitative finding. No new results.</p>
+<blockquote>
+<p>[fill in]</p>
+</blockquote>
+<h3 id="paragraph-2-broader-implications-4-sentences">Paragraph 2: Broader implications (≤ 4 sentences)<a class="headerlink" href="#paragraph-2-broader-implications-4-sentences" title="Permanent link">&para;</a></h3>
+<p>What does this mean for the field?
+Which complementary experiments does it connect to?</p>
+<blockquote>
+<p>[bullet points → prose later]</p>
+</blockquote>
+<h3 id="paragraph-3-future-outlook-34-concrete-directions">Paragraph 3: Future outlook (3–4 concrete directions)<a class="headerlink" href="#paragraph-3-future-outlook-34-concrete-directions" title="Permanent link">&para;</a></h3>
+<p>What are the natural follow-up calculations or measurements?
+End on a forward-looking note.</p>
+<blockquote>
+<p>[bullet points → prose later]</p>
+</blockquote>
+<hr />
+<h2 id="acknowledgements">Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permanent link">&para;</a></h2>
+<p>"We are grateful for helpful discussions with [names]."</p>
+<p>Funding: [grant numbers and agencies]</p>
+<p>Closing line (always include verbatim):</p>
+<blockquote>
+<p>"This work is based on the ideas and calculations of the authors, plus publicly available information."</p>
+</blockquote>
+<hr />
+<h2 id="reference-list-planning-stage">Reference list (planning stage)<a class="headerlink" href="#reference-list-planning-stage" title="Permanent link">&para;</a></h2>
+<p>List the key references you already know you will cite.
+Use INSPIRE texkeys (<code>Author:YYYYabc</code>).
+When multiple references are cited together, note the chronological order (oldest first).</p>
+<table>
+<thead>
+<tr>
+<th>texkey</th>
+<th>Paper</th>
+<th>Role in argument</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="checklist-before-you-start-writing">Checklist before you start writing<a class="headerlink" href="#checklist-before-you-start-writing" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] The one-sentence main result is filled in and contains a specific number.</li>
+<li>[ ] Every planned section either derives that number or tests its robustness.</li>
+<li>[ ] Figure 1 is a sketch, not a data figure.</li>
+<li>[ ] The last named figure is the main constraint plot.</li>
+<li>[ ] The introduction–conclusion contract holds: everything promised in the abstract is discharged in the body.</li>
+<li>[ ] The simplest scenario is presented first in each Results section.</li>
+<li>[ ] No result appears before the method that produces it.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../journal-club/" class="btn btn-neutral float-left" title="Journal Club"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../glossary/" class="btn btn-neutral float-right" title="Glossary">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../journal-club/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../glossary/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/copy_code.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Lesson 04 — LLMs for Literature Search - Nestling</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 04 \u2014 LLMs for Literature Search";
+        var mkdocs_page_input_path = "tracks/07-llm-practices/lesson-04.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/environment-setup/">Environment Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >ArXiv & Reading Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-01/">Lesson 01 — Finding Papers</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-03/">Lesson 03 — Managing Papers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Writing Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-04/">Lesson 04 — LaTeX Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Git & GitHub</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-01/">Lesson 01 — Git Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-02/">Lesson 02 — Branching</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-03/">Lesson 03 — GitHub Collaboration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Coding Practices</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-02/">Lesson 02 — Python & Jupyter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-04/">Lesson 04 — Scientific Python Stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-05/">Lesson 05 — Code Style & Quality</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-06/">Lesson 06 — Performance & Parallelism</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-07/">Lesson 07 — ML Basics with PyTorch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-10/">Lesson 10 — Testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Plotting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-01/">Lesson 01 — Figure Design Principles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-04/">Lesson 04 — Colour and Accessibility</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Working with LLMs</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-01/">Lesson 01 — What LLMs Are and Are Not</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-02/">Lesson 02 — LLMs for Code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-03/">Lesson 03 — LLMs for Writing</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lesson 04 — LLMs for Literature Search</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#why-llms-hallucinate-citations">Why LLMs hallucinate citations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#the-rule-never-use-a-citation-you-have-not-verified">The rule: never use a citation you have not verified</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-to-do-instead-of-asking-an-llm-for-references">What to do instead of asking an LLM for references</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#where-llms-legitimately-help-with-literature">Where LLMs legitimately help with literature</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#explaining-a-concept-before-you-search">Explaining a concept before you search</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#summarising-a-paper-you-have-pasted">Summarising a paper you have pasted</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#identifying-search-terms-and-related-concepts">Identifying search terms and related concepts</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#finding-connections-between-papers-you-already-have">Finding connections between papers you already have</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#retrieval-augmented-generation-rag">Retrieval-augmented generation (RAG)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#a-safe-workflow-for-llm-assisted-literature-work">A safe workflow for LLM-assisted literature work</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#industrial-context">Industrial context</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#checklist">Checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-to-read-next">What to read next</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-05/">Lesson 05 — Prompt Engineering for Research</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-06/">Lesson 06 — Verification Habits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-07/">Lesson 07 — Skill Files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/paper-outline/">Paper Outline</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tracks</li>
+          <li class="breadcrumb-item">Working with LLMs</li>
+      <li class="breadcrumb-item active">Lesson 04 — LLMs for Literature Search</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/tracks/07-llm-practices/lesson-04.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-04-llms-for-literature-search">Lesson 04: LLMs for Literature Search<a class="headerlink" href="#lesson-04-llms-for-literature-search" title="Permanent link">&para;</a></h1>
+<p>Literature search is one of the most dangerous areas in which to use an LLM carelessly.
+The failure mode is specific and severe: models generate plausible-sounding citations
+that do not exist, and the errors are hard to spot without checking each source.</p>
+<p>This lesson explains why this happens, what safe workflows look like, and where LLMs
+can legitimately help with literature search.</p>
+<hr />
+<h2 id="why-llms-hallucinate-citations">Why LLMs hallucinate citations<a class="headerlink" href="#why-llms-hallucinate-citations" title="Permanent link">&para;</a></h2>
+<p>Citation hallucination is not a bug that will be fixed in the next model version.
+It is a structural consequence of how LLMs work.</p>
+<p>The model was trained on text that contains many papers, many citations, and many
+references to research.
+When asked to provide a citation, the model generates a plausible token sequence in the
+format of a citation.
+It is not retrieving from a database. It is sampling from the distribution of text that
+looks like citations.</p>
+<p>The result can look exactly like a real paper:</p>
+<blockquote>
+<p>Smith, J. &amp; Jones, A. (2019). High-energy neutrino flux constraints from IceCube data.
+<em>Physical Review Letters</em>, 122(4), 041101.</p>
+</blockquote>
+<p>This paper may not exist.
+The authors, journal, volume, issue, and page number are all individually plausible,
+and the combination is plausible, but the combination may never have been published.</p>
+<p>Even if a real paper by those authors exists, the model may have the year wrong,
+the title wrong, or the journal wrong.</p>
+<hr />
+<h2 id="the-rule-never-use-a-citation-you-have-not-verified">The rule: never use a citation you have not verified<a class="headerlink" href="#the-rule-never-use-a-citation-you-have-not-verified" title="Permanent link">&para;</a></h2>
+<p><strong>Every citation you include in your work must be verified against the actual source.</strong></p>
+<p>Verification means:</p>
+<ol>
+<li>You found the paper in a real database (arXiv, ADS, InspireHEP, Google Scholar, etc.).</li>
+<li>You confirmed the authors, title, journal, year, and DOI or arXiv number.</li>
+<li>You confirmed that the paper says what you are claiming it says.</li>
+</ol>
+<p>Step 3 is not optional. An LLM may hallucinate not just the citation but also the claim
+attributed to it. A paper may exist but say something different from what the model claimed.</p>
+<hr />
+<h2 id="what-to-do-instead-of-asking-an-llm-for-references">What to do instead of asking an LLM for references<a class="headerlink" href="#what-to-do-instead-of-asking-an-llm-for-references" title="Permanent link">&para;</a></h2>
+<p>Use real search tools:</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Best for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org">arXiv</a></td>
+<td>Preprints in physics, maths, CS, quantitative biology</td>
+</tr>
+<tr>
+<td><a href="https://ui.adsabs.harvard.edu">ADS (NASA Astrophysics Data System)</a></td>
+<td>Astronomy and astrophysics</td>
+</tr>
+<tr>
+<td><a href="https://inspirehep.net">InspireHEP</a></td>
+<td>High-energy physics</td>
+</tr>
+<tr>
+<td><a href="https://scholar.google.com">Google Scholar</a></td>
+<td>Broad search across all disciplines</td>
+</tr>
+<tr>
+<td><a href="https://www.semanticscholar.org">Semantic Scholar</a></td>
+<td>AI-assisted search with citation graph</td>
+</tr>
+<tr>
+<td><a href="https://www.connectedpapers.com">Connected Papers</a></td>
+<td>Exploring citation networks around a seed paper</td>
+</tr>
+</tbody>
+</table>
+<p>These tools search indexed databases and return real papers.
+Use them for finding references.</p>
+<hr />
+<h2 id="where-llms-legitimately-help-with-literature">Where LLMs legitimately help with literature<a class="headerlink" href="#where-llms-legitimately-help-with-literature" title="Permanent link">&para;</a></h2>
+<p>LLMs are genuinely useful for several literature-adjacent tasks that do not require
+citing a specific paper.</p>
+<h3 id="explaining-a-concept-before-you-search">Explaining a concept before you search<a class="headerlink" href="#explaining-a-concept-before-you-search" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>"Explain the neutrino floor in direct dark matter detection at a graduate student level.
+I will verify and find references myself."</p>
+</blockquote>
+<p>The model can give you a conceptual orientation before you read the primary literature.
+Treat this as background, not as citable content.</p>
+<h3 id="summarising-a-paper-you-have-pasted">Summarising a paper you have pasted<a class="headerlink" href="#summarising-a-paper-you-have-pasted" title="Permanent link">&para;</a></h3>
+<p>When you paste the full text (or abstract) of a paper and ask for a summary, the model
+is working from the ground truth in its context rather than sampling from memory.
+Hallucination risk is much lower.
+Still verify that the summary is accurate before acting on it.</p>
+<h3 id="identifying-search-terms-and-related-concepts">Identifying search terms and related concepts<a class="headerlink" href="#identifying-search-terms-and-related-concepts" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>"I am searching for papers about anomalous magnetic moment measurements of the muon.
+What other terms, concepts, and authors should I search for?"</p>
+</blockquote>
+<p>The model can surface vocabulary and names you might not think to search for.
+The suggestions are starting points for your own search, not a reading list.</p>
+<h3 id="finding-connections-between-papers-you-already-have">Finding connections between papers you already have<a class="headerlink" href="#finding-connections-between-papers-you-already-have" title="Permanent link">&para;</a></h3>
+<p>Give the model a list of real papers you have already read and ask it to identify
+themes, contradictions, or gaps.
+It is working from your supplied content, not hallucinating.</p>
+<hr />
+<h2 id="retrieval-augmented-generation-rag">Retrieval-augmented generation (RAG)<a class="headerlink" href="#retrieval-augmented-generation-rag" title="Permanent link">&para;</a></h2>
+<p>Some tools combine an LLM with a real document retrieval system.
+The model searches a database, retrieves relevant passages, and generates a response
+grounded in the retrieved text, with citations pointing to the actual documents.</p>
+<p>Examples include Semantic Scholar's AI features, Perplexity AI (with source linking),
+and custom RAG pipelines.</p>
+<p>These tools are substantially more reliable for citations than a plain LLM, because
+the citations are drawn from the retrieval step rather than generated from the language
+model.</p>
+<p><strong>However:</strong> you should still verify that the retrieved passage actually says what the model
+claims, and that the passage is from the paper it claims.
+RAG systems can still mis-attribute or misquote.</p>
+<hr />
+<h2 id="a-safe-workflow-for-llm-assisted-literature-work">A safe workflow for LLM-assisted literature work<a class="headerlink" href="#a-safe-workflow-for-llm-assisted-literature-work" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Identify the concept or question you are researching.</strong></li>
+<li><strong>Ask the LLM for background and search terms.</strong> Do not ask for specific papers.</li>
+<li><strong>Use a real database to find actual papers.</strong> Use the search terms the LLM suggested.</li>
+<li><strong>Read the abstracts and papers you find.</strong></li>
+<li><strong>If you want a summary or comparison of the papers you found,</strong>
+   paste the text into the LLM and ask it to work from what you have provided.</li>
+<li><strong>Never include a citation</strong> unless you have completed step 4 for that citation.</li>
+</ol>
+<hr />
+<h2 id="industrial-context">Industrial context<a class="headerlink" href="#industrial-context" title="Permanent link">&para;</a></h2>
+<p><strong>Scientific publishing and preprint servers.</strong> Physics preprints on arXiv have been
+indexed since 1991, and the arXiv API supports programmatic access.
+For systematic literature reviews, scripted searches against indexed databases are
+more reliable than LLM-generated reading lists.</p>
+<p><strong>Citation graph tools.</strong> Semantic Scholar, Connected Papers, and ResearchRabbit build
+on citation graphs to surface related work.
+These tools are more reliable for discovery than asking an LLM, because they operate
+on a structured database rather than a language model.</p>
+<p><strong>AI search assistants with grounding.</strong> Tools that display the source document alongside
+the claim (such as Perplexity AI or AI-assisted search in Microsoft Bing) provide a way
+to check the claim against the source immediately.
+This is better practice than accepting ungrounded LLM output.</p>
+<p><strong>Retractions and errors.</strong> Even real papers can be wrong or retracted.
+The <a href="https://retractionwatch.com/">Retraction Watch</a> database tracks retracted papers.
+For any paper that forms a cornerstone of your argument, check its citation history
+and retraction status.</p>
+<hr />
+<h2 id="checklist">Checklist<a class="headerlink" href="#checklist" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] I use real databases (arXiv, ADS, InspireHEP, Google Scholar) to find references.</li>
+<li>[ ] I have verified every citation: authors, title, journal, year, DOI.</li>
+<li>[ ] I have read the abstract (at minimum) of every cited paper.</li>
+<li>[ ] I have confirmed that every cited paper says what I claim it says.</li>
+<li>[ ] I have not included any citation the LLM generated without completing the above steps.</li>
+</ul>
+<hr />
+<h2 id="what-to-read-next">What to read next<a class="headerlink" href="#what-to-read-next" title="Permanent link">&para;</a></h2>
+<p><a href="../lesson-05/">Lesson 05</a> covers prompt engineering: how to write prompts that get
+the most useful responses for research tasks like summarisation, explanation, and
+brainstorming.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../lesson-03/" class="btn btn-neutral float-left" title="Lesson 03 — LLMs for Writing"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lesson-05/" class="btn btn-neutral float-right" title="Lesson 05 — Prompt Engineering for Research">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../lesson-03/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lesson-05/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/clipboard.js"></script>
+      <script src="../../../js/copy_code.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

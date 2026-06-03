@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Lesson 02 — Python & Jupyter - Nestling</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 02 \u2014 Python \u0026 Jupyter";
+        var mkdocs_page_input_path = "tracks/05-coding/lesson-02.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/environment-setup/">Environment Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >ArXiv & Reading Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-01/">Lesson 01 — Finding Papers</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-03/">Lesson 03 — Managing Papers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Writing Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-04/">Lesson 04 — LaTeX Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Git & GitHub</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-01/">Lesson 01 — Git Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-02/">Lesson 02 — Branching</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-03/">Lesson 03 — GitHub Collaboration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Coding Practices</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lesson 02 — Python & Jupyter</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#why-python">Why Python</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#python-basics">Python basics</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#variables-and-types">Variables and types</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#arithmetic">Arithmetic</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#lists">Lists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#dictionaries">Dictionaries</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#loops">Loops</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#imports">Imports</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#jupyter-notebooks">Jupyter notebooks</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#starting-a-notebook">Starting a notebook</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#cell-types">Cell types</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#a-minimal-physics-notebook">A minimal physics notebook</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#notebooks-vs-scripts">Notebooks vs scripts</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#further-reading">Further reading</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-to-read-next">What to read next</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-04/">Lesson 04 — Scientific Python Stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-05/">Lesson 05 — Code Style & Quality</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-06/">Lesson 06 — Performance & Parallelism</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-07/">Lesson 07 — ML Basics with PyTorch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-10/">Lesson 10 — Testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Plotting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-01/">Lesson 01 — Figure Design Principles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-04/">Lesson 04 — Colour and Accessibility</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Working with LLMs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-01/">Lesson 01 — What LLMs Are and Are Not</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-02/">Lesson 02 — LLMs for Code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-03/">Lesson 03 — LLMs for Writing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-04/">Lesson 04 — LLMs for Literature Search</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-05/">Lesson 05 — Prompt Engineering for Research</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-06/">Lesson 06 — Verification Habits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-07/">Lesson 07 — Skill Files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/paper-outline/">Paper Outline</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tracks</li>
+          <li class="breadcrumb-item">Coding Practices</li>
+      <li class="breadcrumb-item active">Lesson 02 — Python & Jupyter</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/tracks/05-coding/lesson-02.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-02-python-jupyter-notebooks">Lesson 02: Python &amp; Jupyter Notebooks<a class="headerlink" href="#lesson-02-python-jupyter-notebooks" title="Permanent link">&para;</a></h1>
+<p>Python is the primary language of modern physics research.
+It is not the fastest language, but it is expressive, has an enormous scientific ecosystem,
+and is easy to read.
+This lesson covers enough Python to get you running, and introduces Jupyter notebooks,
+the interactive environment used for exploration and analysis.</p>
+<hr />
+<h2 id="why-python">Why Python<a class="headerlink" href="#why-python" title="Permanent link">&para;</a></h2>
+<p>The scientific Python stack (NumPy, SciPy, Matplotlib, and hundreds of domain libraries)
+means that most physics tasks, numerical integration, fitting, plotting, reading HDF5 files,
+have well-tested implementations you can call rather than write.
+Simulation codes like <a href="https://github.com/Harvard-Neutrino/prometheus">Prometheus</a> are
+written in Python precisely because this ecosystem exists.</p>
+<p>Python is also readable. Code you wrote six months ago, or code a collaborator wrote last year,
+is more likely to make sense than equivalent C++.</p>
+<hr />
+<h2 id="python-basics">Python basics<a class="headerlink" href="#python-basics" title="Permanent link">&para;</a></h2>
+<h3 id="variables-and-types">Variables and types<a class="headerlink" href="#variables-and-types" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">energy = 1e12         # float (in eV)
+name = &quot;IceCube&quot;      # str
+n_events = 10000      # int
+is_running = True     # bool
+</code></pre>
+<p>Python is dynamically typed: you do not declare types up front.
+See <a href="../lesson-05/">Lesson 05</a> for how to add optional type hints.</p>
+<h3 id="arithmetic">Arithmetic<a class="headerlink" href="#arithmetic" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">x = 3.0
+y = 2.0
+
+x + y    # 5.0
+x ** 2   # 9.0   — exponentiation
+x / y    # 1.5
+x // y   # 1.0   — floor division
+x % y    # 1.0   — remainder
+</code></pre>
+<h3 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">energies = [1e10, 1e11, 1e12, 1e13]  # ordered, mutable
+
+energies[0]     # 1e10   — first element
+energies[-1]    # 1e13   — last element
+energies[1:3]   # [1e11, 1e12]   — slice
+energies.append(1e14)
+</code></pre>
+<h3 id="dictionaries">Dictionaries<a class="headerlink" href="#dictionaries" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">particle = {&quot;name&quot;: &quot;muon&quot;, &quot;mass_GeV&quot;: 0.1057, &quot;charge&quot;: -1}
+
+particle[&quot;name&quot;]                    # &quot;muon&quot;
+particle[&quot;lifetime_s&quot;] = 2.2e-6    # add a new key
+</code></pre>
+<h3 id="loops">Loops<a class="headerlink" href="#loops" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">for e in energies:
+    print(f&quot;Energy: {e:.2e} eV&quot;)
+
+for i, e in enumerate(energies):
+    print(f&quot;  [{i}] {e:.2e} eV&quot;)
+</code></pre>
+<h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">def lorentz_gamma(energy_eV: float, mass_eV: float) -&gt; float:
+    &quot;&quot;&quot;Return the Lorentz factor for a relativistic particle.&quot;&quot;&quot;
+    return energy_eV / mass_eV
+
+gamma = lorentz_gamma(1e12, 1.057e8)   # muon at 1 TeV: γ ≈ 9450
+</code></pre>
+<h3 id="imports">Imports<a class="headerlink" href="#imports" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">import math
+import numpy as np            # the conventional alias
+from scipy import integrate
+</code></pre>
+<div class="admonition warning">
+<p class="admonition-title">Never import inside a function</p>
+<p>This works, but it repeats the import machinery on every call and obscures what your
+module depends on. Always put imports at the top of the file.
+<a href="https://github.com/Harvard-Neutrino/prometheus/blob/main/prometheus/particle/particle.py">Prometheus <code>particle.py</code></a>
+contains exactly this pattern, a useful real-world reminder that even well-maintained
+codebases have small bad habits.</p>
+</div>
+<p>A common mistake is placing imports inside a function body:</p>
+<pre><code class="language-python">def clone(self):
+    import copy        # bad: runs on every call
+    return copy.deepcopy(self)
+</code></pre>
+<hr />
+<h2 id="jupyter-notebooks">Jupyter notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permanent link">&para;</a></h2>
+<p>A Jupyter notebook is an interactive document that mixes code, output, and text in a single
+<code>.ipynb</code> file. It is the standard environment for exploratory physics work: you can run one
+cell at a time, inspect results immediately, and iterate without rerunning an entire script.</p>
+<h3 id="starting-a-notebook">Starting a notebook<a class="headerlink" href="#starting-a-notebook" title="Permanent link">&para;</a></h3>
+<p>In VSCode: Command Palette (⇧⌘P) → <strong>"Create: New Jupyter Notebook"</strong>.</p>
+<p>Or in the terminal (with <code>jupyter</code> installed):</p>
+<pre><code class="language-sh">pip install jupyter
+jupyter notebook
+</code></pre>
+<h3 id="cell-types">Cell types<a class="headerlink" href="#cell-types" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Code</strong></td>
+<td>Python: press <code>Shift+Enter</code> to run</td>
+</tr>
+<tr>
+<td><strong>Markdown</strong></td>
+<td>Text, equations ($E = mc^2$), headers</td>
+</tr>
+<tr>
+<td><strong>Raw</strong></td>
+<td>Passed through as-is (rarely needed)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="a-minimal-physics-notebook">A minimal physics notebook<a class="headerlink" href="#a-minimal-physics-notebook" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python"># Cell 1 — imports
+import numpy as np
+import matplotlib.pyplot as plt
+</code></pre>
+<pre><code class="language-python"># Cell 2 — compute a power-law neutrino spectrum
+E = np.logspace(2, 6, 500)     # 100 GeV to 1 PeV
+gamma = 2.37                   # IceCube best-fit spectral index
+phi = E ** (-gamma)            # differential flux (arbitrary units)
+</code></pre>
+<pre><code class="language-python"># Cell 3 — plot
+fig, ax = plt.subplots()
+ax.loglog(E, phi)
+ax.set_xlabel(&quot;Energy [GeV]&quot;)
+ax.set_ylabel(r&quot;$\Phi$ [a.u.]&quot;)
+ax.set_title(&quot;Power-law neutrino spectrum&quot;)
+plt.show()
+</code></pre>
+<h3 id="notebooks-vs-scripts">Notebooks vs scripts<a class="headerlink" href="#notebooks-vs-scripts" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Use a <strong>notebook</strong> when</th>
+<th>Use a <strong>script</strong> when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exploring data interactively</td>
+<td>Running batch jobs on a cluster</td>
+</tr>
+<tr>
+<td>Producing plots for a paper</td>
+<td>Writing reusable library code</td>
+</tr>
+<tr>
+<td>Teaching or demonstrating</td>
+<td>Running automated tests</td>
+</tr>
+<tr>
+<td>Prototyping a new calculation</td>
+<td>Long-running simulations</td>
+</tr>
+</tbody>
+</table>
+<p>A common workflow: prototype in a notebook, then move the cleaned-up logic into a <code>.py</code>
+module once it works.</p>
+<div class="admonition warning">
+<p class="admonition-title">Restart and run all before sharing</p>
+<p>Notebooks maintain state between cells; it is easy to run them out of order and produce
+results that cannot be reproduced.
+Before sharing or committing a notebook, always use
+<strong>Kernel → Restart and Run All</strong> to verify it runs cleanly from top to bottom.</p>
+</div>
+<hr />
+<h2 id="further-reading">Further reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
+<p>The <a href="https://docs.python.org/3/tutorial/">official Python tutorial</a> covers the full language
+in depth, from data structures and control flow to classes and standard library modules.
+It is the natural next step if any of the concepts in this lesson felt unfamiliar.</p>
+<h2 id="what-to-read-next">What to read next<a class="headerlink" href="#what-to-read-next" title="Permanent link">&para;</a></h2>
+<p><a href="../lesson-03/">Lesson 03</a> covers <code>pip</code> and virtual environments, the machinery that installs
+Python packages and keeps project dependencies isolated.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../lesson-01/" class="btn btn-neutral float-left" title="Lesson 01 — IDE Setup"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lesson-03/" class="btn btn-neutral float-right" title="Lesson 03 — Package Management">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../lesson-01/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lesson-03/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/clipboard.js"></script>
+      <script src="../../../js/copy_code.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

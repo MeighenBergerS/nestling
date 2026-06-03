@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Lesson 03 — LLMs for Writing - Nestling</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 03 \u2014 LLMs for Writing";
+        var mkdocs_page_input_path = "tracks/07-llm-practices/lesson-03.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/environment-setup/">Environment Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >ArXiv & Reading Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-01/">Lesson 01 — Finding Papers</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-03/">Lesson 03 — Managing Papers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Writing Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-04/">Lesson 04 — LaTeX Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Git & GitHub</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-01/">Lesson 01 — Git Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-02/">Lesson 02 — Branching</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-03/">Lesson 03 — GitHub Collaboration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Coding Practices</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-02/">Lesson 02 — Python & Jupyter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-04/">Lesson 04 — Scientific Python Stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-05/">Lesson 05 — Code Style & Quality</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-06/">Lesson 06 — Performance & Parallelism</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-07/">Lesson 07 — ML Basics with PyTorch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-10/">Lesson 10 — Testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Plotting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-01/">Lesson 01 — Figure Design Principles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-04/">Lesson 04 — Colour and Accessibility</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Working with LLMs</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-01/">Lesson 01 — What LLMs Are and Are Not</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-02/">Lesson 02 — LLMs for Code</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lesson 03 — LLMs for Writing</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#drafting-versus-authoring">Drafting versus authoring</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#academic-integrity">Academic integrity</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#where-llms-genuinely-help">Where LLMs genuinely help</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#overcoming-the-blank-page">Overcoming the blank page</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#tightening-prose">Tightening prose</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#consistency-and-register">Consistency and register</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#translation">Translation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#explaining-to-a-different-audience">Explaining to a different audience</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#where-llms-fail-for-writing">Where LLMs fail for writing</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#factual-accuracy">Factual accuracy</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#voice-and-style">Voice and style</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#hallucinated-citations-and-claims">Hallucinated citations and claims</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#long-documents">Long documents</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#a-practical-workflow">A practical workflow</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#industrial-context-llms-in-professional-writing">Industrial context: LLMs in professional writing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#checklist">Checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-to-read-next">What to read next</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-04/">Lesson 04 — LLMs for Literature Search</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-05/">Lesson 05 — Prompt Engineering for Research</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-06/">Lesson 06 — Verification Habits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-07/">Lesson 07 — Skill Files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/paper-outline/">Paper Outline</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tracks</li>
+          <li class="breadcrumb-item">Working with LLMs</li>
+      <li class="breadcrumb-item active">Lesson 03 — LLMs for Writing</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/tracks/07-llm-practices/lesson-03.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-03-llms-for-writing">Lesson 03: LLMs for Writing<a class="headerlink" href="#lesson-03-llms-for-writing" title="Permanent link">&para;</a></h1>
+<p>LLMs can help with almost every stage of scientific writing.
+They can expand a bullet list into a draft paragraph, tighten verbose prose,
+suggest transitions, and flag unclear sentences.
+Used well, they make you a more efficient writer.
+Used carelessly, they can compromise the integrity of your work and erode your
+own ability to write.</p>
+<p>This lesson draws a clear line between assistance and authorship, and gives you
+practical habits for staying on the right side of it.</p>
+<hr />
+<h2 id="drafting-versus-authoring">Drafting versus authoring<a class="headerlink" href="#drafting-versus-authoring" title="Permanent link">&para;</a></h2>
+<p><strong>Authoring</strong> means generating the ideas, the arguments, the structure, and the
+scientific judgements that constitute the work.</p>
+<p><strong>Drafting</strong> means putting those ideas into well-formed prose.</p>
+<p>An LLM can help with drafting. It cannot author your work.
+If you give an LLM your data, your conclusions, and your outline, and it returns
+a polished paragraph, you drafted with assistance. You are still the author.
+If you ask an LLM "what should I conclude from these results?" and adopt its answer,
+the LLM has contributed to the intellectual content of the work, which is a different
+matter entirely.</p>
+<p>The practical test: <strong>can you defend every claim in the text without the LLM?</strong>
+If the answer is no, you have moved from drafting assistance into something that
+requires disclosure or rethinking.</p>
+<hr />
+<h2 id="academic-integrity">Academic integrity<a class="headerlink" href="#academic-integrity" title="Permanent link">&para;</a></h2>
+<p>Different institutions and publishers have different policies on LLM use.
+Know the rules that apply to your work before you use any AI assistance.</p>
+<p>As of 2025, common positions include:</p>
+<table>
+<thead>
+<tr>
+<th>Context</th>
+<th>Typical policy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PhD thesis</td>
+<td>Varies: many institutions prohibit or require disclosure; check your university's policy</td>
+</tr>
+<tr>
+<td>Journal submission</td>
+<td>Most major journals require disclosure; some prohibit LLM use for manuscript text</td>
+</tr>
+<tr>
+<td>Conference papers</td>
+<td>Policies vary by venue; NeurIPS, ICML, and others require disclosure</td>
+</tr>
+<tr>
+<td>Grant applications</td>
+<td>Most funding agencies prohibit LLM-generated text in proposals</td>
+</tr>
+<tr>
+<td>Internal reports and notes</td>
+<td>Generally unrestricted, but be consistent</td>
+</tr>
+</tbody>
+</table>
+<p><strong>When in doubt, disclose.</strong>
+A note that "portions of this manuscript were drafted with LLM assistance and subsequently
+revised by the authors" is honest and increasingly standard.
+Submitting LLM-generated text without disclosure where it is required is a form of
+academic misconduct.</p>
+<hr />
+<h2 id="where-llms-genuinely-help">Where LLMs genuinely help<a class="headerlink" href="#where-llms-genuinely-help" title="Permanent link">&para;</a></h2>
+<h3 id="overcoming-the-blank-page">Overcoming the blank page<a class="headerlink" href="#overcoming-the-blank-page" title="Permanent link">&para;</a></h3>
+<p>The hardest part of writing is often starting.
+Give the LLM your outline, key points, and the intended audience, and ask for a first draft.
+You will almost certainly rewrite most of it, but having something to react to is faster
+than drafting from nothing.</p>
+<h3 id="tightening-prose">Tightening prose<a class="headerlink" href="#tightening-prose" title="Permanent link">&para;</a></h3>
+<p>Paste a paragraph and ask: "Make this more concise without losing any meaning."
+Or: "This sentence is unclear. Suggest three alternatives."
+Use the suggestions as options to evaluate, not replacements to accept.</p>
+<h3 id="consistency-and-register">Consistency and register<a class="headerlink" href="#consistency-and-register" title="Permanent link">&para;</a></h3>
+<p>Ask the LLM to check that terminology is used consistently throughout a section,
+or that the register is appropriate for the intended audience (general public vs specialists).</p>
+<h3 id="translation">Translation<a class="headerlink" href="#translation" title="Permanent link">&para;</a></h3>
+<p>Non-native English writers can use LLMs to improve grammar and fluency.
+This is generally considered acceptable, in the same category as using a spell-checker,
+provided the scientific content is your own.</p>
+<h3 id="explaining-to-a-different-audience">Explaining to a different audience<a class="headerlink" href="#explaining-to-a-different-audience" title="Permanent link">&para;</a></h3>
+<p>Ask the LLM to rewrite a technical paragraph for a general audience, or for a specific
+journal's style. Use the output as a starting point, not as final copy.</p>
+<hr />
+<h2 id="where-llms-fail-for-writing">Where LLMs fail for writing<a class="headerlink" href="#where-llms-fail-for-writing" title="Permanent link">&para;</a></h2>
+<h3 id="factual-accuracy">Factual accuracy<a class="headerlink" href="#factual-accuracy" title="Permanent link">&para;</a></h3>
+<p>LLMs will silently introduce incorrect claims.
+A fluent sentence with a wrong number, a misattributed idea, or a subtly wrong summary
+of a paper can survive editing if you are not reading for content.
+Always verify factual claims independently.</p>
+<h3 id="voice-and-style">Voice and style<a class="headerlink" href="#voice-and-style" title="Permanent link">&para;</a></h3>
+<p>LLMs produce a characteristic style: well-structured, hedged, and slightly formal.
+Over time, relying on LLM drafts can flatten your own voice.
+Your writing is part of your scientific identity. The goal is to improve your writing,
+not to outsource it.</p>
+<h3 id="hallucinated-citations-and-claims">Hallucinated citations and claims<a class="headerlink" href="#hallucinated-citations-and-claims" title="Permanent link">&para;</a></h3>
+<p>An LLM asked to draft a related-work section may insert plausible-sounding citations
+that do not exist.
+Never include a citation in your text unless you have personally verified that the source
+exists and says what you claim it says.
+See <a href="../lesson-04/">Lesson 04</a> for more on this.</p>
+<h3 id="long-documents">Long documents<a class="headerlink" href="#long-documents" title="Permanent link">&para;</a></h3>
+<p>LLM performance degrades on very long documents.
+For a paper-length draft, work section by section rather than submitting the whole
+document at once.</p>
+<hr />
+<h2 id="a-practical-workflow">A practical workflow<a class="headerlink" href="#a-practical-workflow" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>You write the outline.</strong> The structure and the argument are yours.</li>
+<li><strong>You write bullet-point notes for each section.</strong> These are the ideas the section
+   must convey.</li>
+<li><strong>Ask the LLM to draft the section from your notes.</strong></li>
+<li><strong>Read the draft critically.</strong> Every sentence should say something you intended.
+   Every factual claim should be one you can verify.</li>
+<li><strong>Rewrite in your own voice.</strong> Treat the LLM draft as a rough starting point.</li>
+<li><strong>Never include a citation the LLM generated</strong> without checking the source yourself.</li>
+</ol>
+<hr />
+<h2 id="industrial-context-llms-in-professional-writing">Industrial context: LLMs in professional writing<a class="headerlink" href="#industrial-context-llms-in-professional-writing" title="Permanent link">&para;</a></h2>
+<p><strong>Disclosure norms.</strong> Most professional and academic contexts now require disclosure
+of LLM use. Tools like Turnitin and GPTZero are used by journals and institutions to
+detect LLM-generated text, with varying accuracy. The safe strategy is transparent
+disclosure.</p>
+<p><strong>Brand voice and consistency.</strong> In industry, organisations use LLMs with detailed
+style guides and system prompts to maintain a consistent brand voice across documents.
+As a researcher, your equivalent is your field's conventions and your own established
+voice, which an LLM can learn if you give it examples.</p>
+<p><strong>Fact-checking pipelines.</strong> Serious media and publishing organisations run LLM-assisted
+drafts through fact-checking pipelines before publication. For research papers, the
+peer review process is not designed to catch LLM-introduced errors. That responsibility
+sits with the authors.</p>
+<p><strong>Human-in-the-loop for consequential text.</strong> In regulated industries (medical device
+documentation, legal filings, financial disclosures), LLM-generated text is always
+reviewed and approved by a human before use. Research papers are consequential text.
+Apply the same standard.</p>
+<hr />
+<h2 id="checklist">Checklist<a class="headerlink" href="#checklist" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] I know my institution's and target journal's policy on LLM use.</li>
+<li>[ ] Every idea and argument in my text originated with me.</li>
+<li>[ ] I have verified every factual claim and citation independently.</li>
+<li>[ ] I have disclosed LLM assistance where required.</li>
+<li>[ ] I have read every sentence for accuracy, not just fluency.</li>
+<li>[ ] I could defend every claim in a discussion without referring to the LLM.</li>
+</ul>
+<hr />
+<h2 id="what-to-read-next">What to read next<a class="headerlink" href="#what-to-read-next" title="Permanent link">&para;</a></h2>
+<p><a href="../lesson-04/">Lesson 04</a> is specifically about citations: why LLM-generated references
+must never be used without verification, and how to use LLMs safely for literature search.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../lesson-02/" class="btn btn-neutral float-left" title="Lesson 02 — LLMs for Code"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lesson-04/" class="btn btn-neutral float-right" title="Lesson 04 — LLMs for Literature Search">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../lesson-02/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lesson-04/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/clipboard.js"></script>
+      <script src="../../../js/copy_code.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

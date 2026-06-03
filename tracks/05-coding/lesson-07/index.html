@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Lesson 07 — ML Basics with PyTorch - Nestling</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 07 \u2014 ML Basics with PyTorch";
+        var mkdocs_page_input_path = "tracks/05-coding/lesson-07.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/environment-setup/">Environment Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >ArXiv & Reading Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-01/">Lesson 01 — Finding Papers</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-03/">Lesson 03 — Managing Papers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Writing Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-04/">Lesson 04 — LaTeX Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Git & GitHub</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-01/">Lesson 01 — Git Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-02/">Lesson 02 — Branching</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-03/">Lesson 03 — GitHub Collaboration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Coding Practices</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-02/">Lesson 02 — Python & Jupyter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-04/">Lesson 04 — Scientific Python Stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-05/">Lesson 05 — Code Style & Quality</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-06/">Lesson 06 — Performance & Parallelism</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lesson 07 — ML Basics with PyTorch</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#where-ml-fits-in-physics-research">Where ML fits in physics research</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tensors">Tensors</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#a-simple-neural-network">A simple neural network</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#the-training-loop">The training loop</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#evaluation-and-saving">Evaluation and saving</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#physics-use-cases">Physics use-cases</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#libraries-worth-knowing">Libraries worth knowing</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#further-reading">Further reading</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-to-read-next">What to read next</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-10/">Lesson 10 — Testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Plotting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-01/">Lesson 01 — Figure Design Principles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-04/">Lesson 04 — Colour and Accessibility</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Working with LLMs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-01/">Lesson 01 — What LLMs Are and Are Not</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-02/">Lesson 02 — LLMs for Code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-03/">Lesson 03 — LLMs for Writing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-04/">Lesson 04 — LLMs for Literature Search</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-05/">Lesson 05 — Prompt Engineering for Research</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-06/">Lesson 06 — Verification Habits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-07/">Lesson 07 — Skill Files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/paper-outline/">Paper Outline</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tracks</li>
+          <li class="breadcrumb-item">Coding Practices</li>
+      <li class="breadcrumb-item active">Lesson 07 — ML Basics with PyTorch</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/tracks/05-coding/lesson-07.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-07-ml-basics-with-pytorch">Lesson 07: ML Basics with PyTorch<a class="headerlink" href="#lesson-07-ml-basics-with-pytorch" title="Permanent link">&para;</a></h1>
+<p>Machine learning has become a standard tool in high-energy physics, neutrino astronomy,
+and gravitational-wave analysis.
+This lesson covers the concepts and PyTorch mechanics you need to start using it,
+and to understand what it is actually doing.</p>
+<hr />
+<h2 id="where-ml-fits-in-physics-research">Where ML fits in physics research<a class="headerlink" href="#where-ml-fits-in-physics-research" title="Permanent link">&para;</a></h2>
+<p>ML is not a replacement for physics understanding. It is a function approximator that is
+useful when:</p>
+<ul>
+<li>The relationship between inputs and outputs is too complex to write by hand (e.g.
+  classifying signal from background in a high-dimensional feature space).</li>
+<li>You need a <strong>surrogate model</strong>: a neural network trained to emulate an expensive simulation
+  so you can call it millions of times during inference.</li>
+<li>You want to reconstruct a physical quantity (energy, direction, vertex) from raw detector
+  data.</li>
+<li>You are doing parameter estimation and need a differentiable likelihood.</li>
+</ul>
+<p><a href="https://github.com/Harvard-Neutrino/prometheus">Prometheus</a> uses ML-based photon
+propagation (the <code>olympus</code> module) as a surrogate for the full optical simulation,
+exactly the surrogate model use case. Instead of running the slow photon transport code
+for every event, it calls a trained neural network that gives the same answer in
+microseconds.</p>
+<hr />
+<h2 id="tensors">Tensors<a class="headerlink" href="#tensors" title="Permanent link">&para;</a></h2>
+<p>A PyTorch <code>Tensor</code> is conceptually the same as a NumPy array, but it can live on a GPU
+and tracks gradient information for automatic differentiation.</p>
+<pre><code class="language-sh">pip install torch
+</code></pre>
+<pre><code class="language-python">import torch
+
+x = torch.tensor([1.0, 2.0, 3.0])          # from a list
+y = torch.zeros(100)                         # zeros
+z = torch.randn(32, 10)                      # random normal, shape (32, 10)
+
+# Operations look identical to NumPy
+x ** 2                                       # element-wise square
+z.shape                                      # torch.Size([32, 10])
+z.mean(), z.std()
+</code></pre>
+<p>Converting between NumPy and PyTorch:</p>
+<pre><code class="language-python">a = z.numpy()                                # tensor → numpy (CPU only)
+b = torch.from_numpy(a)                      # numpy → tensor
+</code></pre>
+<p>Moving to GPU when available:</p>
+<pre><code class="language-python">device = &quot;cuda&quot; if torch.cuda.is_available() else &quot;cpu&quot;
+z = z.to(device)
+</code></pre>
+<hr />
+<h2 id="a-simple-neural-network">A simple neural network<a class="headerlink" href="#a-simple-neural-network" title="Permanent link">&para;</a></h2>
+<p>PyTorch models are classes that inherit from <code>torch.nn.Module</code>.
+Define the layers in <code>__init__</code>, and the forward computation in <code>forward</code>.</p>
+<pre><code class="language-python">import torch
+import torch.nn as nn
+
+class FluxRegressor(nn.Module):
+    &quot;&quot;&quot;Predicts log-flux from log-energy using a small fully-connected network.&quot;&quot;&quot;
+
+    def __init__(self, n_hidden: int = 64):
+        super().__init__()
+        self.net = nn.Sequential(
+            nn.Linear(1, n_hidden),
+            nn.ReLU(),
+            nn.Linear(n_hidden, n_hidden),
+            nn.ReLU(),
+            nn.Linear(n_hidden, 1),
+        )
+
+    def forward(self, x: torch.Tensor) -&gt; torch.Tensor:
+        return self.net(x)
+
+model = FluxRegressor(n_hidden=128)
+</code></pre>
+<hr />
+<h2 id="the-training-loop">The training loop<a class="headerlink" href="#the-training-loop" title="Permanent link">&para;</a></h2>
+<p>Training a neural network follows the same four steps every iteration:</p>
+<ol>
+<li><strong>Forward pass</strong>: run the model on a batch of inputs to get predictions.</li>
+<li><strong>Compute loss</strong>: measure how wrong the predictions are.</li>
+<li><strong>Backward pass</strong>: compute gradients via backpropagation.</li>
+<li><strong>Update weights</strong>: move parameters in the direction that reduces the loss.</li>
+</ol>
+<pre><code class="language-python">import torch
+import torch.nn as nn
+from torch.optim import Adam
+
+# Toy training data: power-law spectrum
+E_train = torch.logspace(2, 6, 2000).unsqueeze(1)   # shape (2000, 1)
+phi_true = E_train ** -2.37
+
+log_E = torch.log10(E_train)
+log_phi = torch.log10(phi_true)
+
+model = FluxRegressor(n_hidden=128)
+optimizer = Adam(model.parameters(), lr=1e-3)
+loss_fn = nn.MSELoss()
+
+for epoch in range(1000):
+    optimizer.zero_grad()                       # 1. clear old gradients
+    log_phi_pred = model(log_E)                 # 2. forward pass
+    loss = loss_fn(log_phi_pred, log_phi)       # 3. compute loss
+    loss.backward()                             # 4. compute gradients
+    optimizer.step()                            # 5. update weights
+
+    if epoch % 200 == 0:
+        print(f&quot;Epoch {epoch:5d}  Loss {loss.item():.4e}&quot;)
+</code></pre>
+<p>After training, the model evaluates new energies in microseconds, even if the
+training data took hours to generate.</p>
+<hr />
+<h2 id="evaluation-and-saving">Evaluation and saving<a class="headerlink" href="#evaluation-and-saving" title="Permanent link">&para;</a></h2>
+<p>Switch the model to evaluation mode before making predictions
+(this disables dropout and batch normalisation layers if present):</p>
+<pre><code class="language-python">model.eval()
+
+with torch.no_grad():                           # disable gradient tracking
+    log_phi_pred = model(log_E_test)
+    phi_pred = 10 ** log_phi_pred.squeeze()
+
+# Save
+torch.save(model.state_dict(), &quot;flux_model.pt&quot;)
+
+# Load
+loaded = FluxRegressor(n_hidden=128)
+loaded.load_state_dict(torch.load(&quot;flux_model.pt&quot;, weights_only=True))
+loaded.eval()
+</code></pre>
+<hr />
+<h2 id="physics-use-cases">Physics use-cases<a class="headerlink" href="#physics-use-cases" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>ML approach</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Signal/background classification</td>
+<td>Binary classifier (sigmoid output + BCELoss)</td>
+</tr>
+<tr>
+<td>Energy / direction reconstruction</td>
+<td>Regression (MSELoss)</td>
+</tr>
+<tr>
+<td>Fast surrogate for slow simulation</td>
+<td>Regression or normalising flow</td>
+</tr>
+<tr>
+<td>Posterior estimation</td>
+<td>Neural posterior estimation (see <a href="https://sbi-dev.github.io/sbi/">sbi</a>)</td>
+</tr>
+<tr>
+<td>Anomaly detection</td>
+<td>Autoencoder or flow-based density model</td>
+</tr>
+</tbody>
+</table>
+<h3 id="libraries-worth-knowing">Libraries worth knowing<a class="headerlink" href="#libraries-worth-knowing" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Library</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://lightning.ai/">pytorch-lightning</a></td>
+<td>Reduces training loop boilerplate</td>
+</tr>
+<tr>
+<td><a href="https://sbi-dev.github.io/sbi/">sbi</a></td>
+<td>Simulation-based inference</td>
+</tr>
+<tr>
+<td><a href="https://github.com/probabilists/zuko">zuko</a></td>
+<td>Normalising flows in PyTorch</td>
+</tr>
+<tr>
+<td><a href="https://pytorch-geometric.readthedocs.io/">torch-geometric</a></td>
+<td>Graph neural networks (event reconstruction)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="further-reading">Further reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
+<p>The <a href="https://pytorch.org/tutorials/">official PyTorch tutorials</a> go considerably deeper than
+this lesson, covering data loading, custom datasets, transfer learning, and model deployment.
+The "Learn the Basics" section is the right starting point and directly extends what is covered here.</p>
+<h2 id="what-to-read-next">What to read next<a class="headerlink" href="#what-to-read-next" title="Permanent link">&para;</a></h2>
+<p><a href="../lesson-08/">Lesson 08</a> starts the best-practices block: how to structure a Python
+project so the code you have been writing can be shared, tested, and maintained.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../lesson-06/" class="btn btn-neutral float-left" title="Lesson 06 — Performance & Parallelism"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lesson-08/" class="btn btn-neutral float-right" title="Lesson 08 — Project Layout">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../lesson-06/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lesson-08/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/clipboard.js"></script>
+      <script src="../../../js/copy_code.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

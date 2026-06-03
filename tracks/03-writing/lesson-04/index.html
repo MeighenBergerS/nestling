@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Lesson 04 — LaTeX Basics - Nestling</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 04 \u2014 LaTeX Basics";
+        var mkdocs_page_input_path = "tracks/03-writing/lesson-04.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/environment-setup/">Environment Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >ArXiv & Reading Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-01/">Lesson 01 — Finding Papers</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-03/">Lesson 03 — Managing Papers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Writing Papers</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lesson 04 — LaTeX Basics</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#where-to-write-overleaf">Where to write: Overleaf</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#document-class-and-essential-packages">Document class and essential packages</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#figures">Figures</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#single-column-figure">Single-column figure</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#two-column-wide-figure">Two-column-wide figure</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#caption-structure">Caption structure</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#equations">Equations</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#single-equation">Single equation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aligned-equations">Aligned equations</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#math-notation">Math notation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cross-references-in-text">Cross-references in text</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#label-naming-conventions">Label naming conventions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#citations">Citations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#text-formatting-details">Text formatting details</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#section-separators-in-source-files">Section separators in source files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#appendix-block">Appendix block</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bibliography">Bibliography</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#further-reading">Further reading</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-to-read-next">What to read next</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Git & GitHub</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-01/">Lesson 01 — Git Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-02/">Lesson 02 — Branching</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-03/">Lesson 03 — GitHub Collaboration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Coding Practices</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-02/">Lesson 02 — Python & Jupyter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-04/">Lesson 04 — Scientific Python Stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-05/">Lesson 05 — Code Style & Quality</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-06/">Lesson 06 — Performance & Parallelism</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-07/">Lesson 07 — ML Basics with PyTorch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-10/">Lesson 10 — Testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Plotting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-01/">Lesson 01 — Figure Design Principles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-04/">Lesson 04 — Colour and Accessibility</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Working with LLMs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-01/">Lesson 01 — What LLMs Are and Are Not</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-02/">Lesson 02 — LLMs for Code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-03/">Lesson 03 — LLMs for Writing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-04/">Lesson 04 — LLMs for Literature Search</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-05/">Lesson 05 — Prompt Engineering for Research</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-06/">Lesson 06 — Verification Habits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-07/">Lesson 07 — Skill Files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/paper-outline/">Paper Outline</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tracks</li>
+          <li class="breadcrumb-item">Writing Papers</li>
+      <li class="breadcrumb-item active">Lesson 04 — LaTeX Basics</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/tracks/03-writing/lesson-04.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-04-latex-basics">Lesson 04: LaTeX Basics<a class="headerlink" href="#lesson-04-latex-basics" title="Permanent link">&para;</a></h1>
+<p>HEP papers are written in LaTeX, specifically using the RevTeX 4-2 document class for APS journals.
+This lesson covers the conventions that apply throughout: document setup, figures, equations,
+cross-references, and citations.
+The goal is not to teach LaTeX from scratch, but to establish the specific patterns used in this subfield
+so you do not have to rediscover them from journal guidelines or by copying someone else's preamble.</p>
+<hr />
+<h2 id="where-to-write-overleaf">Where to write: Overleaf<a class="headerlink" href="#where-to-write-overleaf" title="Permanent link">&para;</a></h2>
+<p>The standard collaborative tool in HEP is <a href="https://www.overleaf.com/project">Overleaf</a>.
+Overleaf is a browser-based LaTeX editor that compiles in the cloud, tracks history, and lets multiple
+authors edit simultaneously, removing the need to install a local LaTeX distribution or manage
+a shared repository for the source files.</p>
+<p>When starting a new paper, create a new project on Overleaf and share it with your collaborators.
+This is how most papers in this subfield are written in practice.</p>
+<div class="admonition tip">
+<p class="admonition-title">Version history</p>
+<p>Overleaf keeps a full version history. Before a major revision or before sending to collaborators,
+label the current version with a tag ("before referee round 1", "submitted to PRD") so you can
+recover it cleanly if needed.</p>
+</div>
+<hr />
+<h2 id="document-class-and-essential-packages">Document class and essential packages<a class="headerlink" href="#document-class-and-essential-packages" title="Permanent link">&para;</a></h2>
+<pre><code class="language-latex">\documentclass[aps,prd,twocolumn,superscriptaddress,bibnotes,longbibliography,
+               preprintnumbers,floatfix,10pt]{revtex4-2}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage[colorlinks]{hyperref}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{multirow}
+</code></pre>
+<p>Set all hyperlinks to violet. This is the standard in these papers:</p>
+<pre><code class="language-latex">\hypersetup{
+    pdfnewwindow=true,
+    colorlinks=true,
+    linkcolor=violet,
+    citecolor=violet,
+    filecolor=violet,
+    urlcolor=violet
+}
+</code></pre>
+<p>Set the figure path once in the preamble:</p>
+<pre><code class="language-latex">\graphicspath{{./figures/}}
+</code></pre>
+<p>All <code>\newcommand</code> definitions go at the top of the preamble, before <code>\begin{document}</code>.
+Remove any <code>\Scomm{}</code> or <code>\AGcomm{}</code> author-note macros from any submitted draft.</p>
+<hr />
+<h2 id="figures">Figures<a class="headerlink" href="#figures" title="Permanent link">&para;</a></h2>
+<h3 id="single-column-figure">Single-column figure<a class="headerlink" href="#single-column-figure" title="Permanent link">&para;</a></h3>
+<pre><code class="language-latex">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/filename.pdf}
+\caption{Caption text here. \textit{Key takeaway in italics.}}
+\label{fig:descriptive_name}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+</code></pre>
+<h3 id="two-column-wide-figure">Two-column-wide figure<a class="headerlink" href="#two-column-wide-figure" title="Permanent link">&para;</a></h3>
+<pre><code class="language-latex">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/filename.pdf}
+\caption{...}
+\label{fig:descriptive_name}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+</code></pre>
+<p><strong>Rules:</strong></p>
+<ul>
+<li><code>\centering</code> always appears before <code>\includegraphics</code>. Never use <code>{\centering ...}</code> or <code>\begin{center}</code>.</li>
+<li><code>\label{}</code> always immediately follows <code>\caption{}</code> on the next line.</li>
+<li>Width is <code>\columnwidth</code> (single-column) or <code>\textwidth</code> (two-column). Never <code>[width=...]</code> without specifying the fraction.</li>
+<li>The final takeaway sentence of a caption is wrapped in <code>\textit{...}</code>.</li>
+<li>Multi-panel captions label panels with <code>\textbf{Left panel:}</code>, <code>\textbf{Right panel:}</code>, etc.</li>
+<li>Placement: the first figure in the paper uses <code>[b]</code>; all others use <code>[t]</code>. Never <code>[h]</code> or <code>[H]</code>.</li>
+<li>Figure filenames are <code>lowercase_with_underscores.pdf</code>, no uppercase, no spaces.</li>
+</ul>
+<h3 id="caption-structure">Caption structure<a class="headerlink" href="#caption-structure" title="Permanent link">&para;</a></h3>
+<p>Each caption has a three-sentence structure:</p>
+<ol>
+<li><strong>What it shows</strong> (result-first): "Energy deposited in S4714 as a fraction of stellar luminosity, as a function of DM mass."</li>
+<li><strong>What data or model was used</strong>: "Solid (dotted) lines show the full Gould formalism (naive estimate). Experimental constraints from [refs] are included."</li>
+<li><strong>Key takeaway</strong> (optional): "The spiked profile yields the largest predicted deposition, reaching O(L★) well below current sensitivity." Wrap in <code>\textit{...}</code>.</li>
+</ol>
+<p>Captions must be self-contained. A reader should understand what the figure shows without reading the main text.
+Do not repeat verbatim what the surrounding paragraph says.</p>
+<hr />
+<h2 id="equations">Equations<a class="headerlink" href="#equations" title="Permanent link">&para;</a></h2>
+<h3 id="single-equation">Single equation<a class="headerlink" href="#single-equation" title="Permanent link">&para;</a></h3>
+<pre><code class="language-latex">%
+\begin{equation}
+    \sigma_j(E_\nu) = \frac{G_F^2}{\pi}(E_\nu - \omega_j)^2 B_j(GT).
+    \label{eq:descriptive_name}
+\end{equation}
+%
+</code></pre>
+<h3 id="aligned-equations">Aligned equations<a class="headerlink" href="#aligned-equations" title="Permanent link">&para;</a></h3>
+<pre><code class="language-latex">%
+\begin{eqnarray}
+    \mathcal{R}^\mathrm{CC} &amp; \propto &amp; \phi_{\nu_e} \label{eq:CC} \\
+    \mathcal{R}^\mathrm{ES} &amp; \propto &amp; \phi_{\nu_e} + \tfrac{1}{6}(\phi_{\nu_\mu} + \phi_{\nu_\tau}), \label{eq:ES}
+\end{eqnarray}
+%
+</code></pre>
+<p><strong>Rules:</strong></p>
+<ul>
+<li>A bare <code>%</code> comment line appears immediately above and below every equation block.</li>
+<li>Four-space indentation inside equation environments.</li>
+<li>Equations end with punctuation (<code>.</code> or <code>,</code>) matching the surrounding sentence.</li>
+<li>Equation labels: <code>eq:descriptive_name</code>, lowercase, underscores only.</li>
+</ul>
+<hr />
+<h2 id="math-notation">Math notation<a class="headerlink" href="#math-notation" title="Permanent link">&para;</a></h2>
+<p><strong>Upright text in subscripts</strong>: always <code>\mathrm{}</code> for multi-letter labels:</p>
+<table>
+<thead>
+<tr>
+<th>✅ Write this</th>
+<th>❌ Not this</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\mathcal{R}^\mathrm{CC}</code></td>
+<td><code>\mathcal{R}^{CC}</code></td>
+</tr>
+<tr>
+<td><code>\phi_\mathrm{tot}</code></td>
+<td><code>\phi_{tot}</code></td>
+</tr>
+<tr>
+<td><code>\frac{\mathrm{d}\Phi}{\mathrm{d}E}</code></td>
+<td><code>\frac{d\Phi}{dE}</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Approximate equalities:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$\sim$</code></td>
+<td>Order-of-magnitude equalities: "σ ~ 10⁻³³ cm²"</td>
+</tr>
+<tr>
+<td><code>$\simeq$</code></td>
+<td>Approximate numerical equality in equations (within 10–20%)</td>
+</tr>
+<tr>
+<td><code>$\approx$</code></td>
+<td>Reserved for numerical approximations. Do <strong>not</strong> use for rough estimates</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Calligraphic letters</strong>: <code>\mathcal{R}</code> for rates, <code>\mathcal{N}</code> for counts.</p>
+<hr />
+<h2 id="cross-references-in-text">Cross-references in text<a class="headerlink" href="#cross-references-in-text" title="Permanent link">&para;</a></h2>
+<p>This is one of the most common sources of inconsistency in drafts. Follow these patterns exactly:</p>
+<table>
+<thead>
+<tr>
+<th>Object</th>
+<th>Correct format</th>
+<th>LaTeX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Figure</td>
+<td><code>Figure~\ref{fig:name}</code></td>
+<td>Always "Figure", never "Fig."</td>
+</tr>
+<tr>
+<td>Equation</td>
+<td><code>Eq.~(\ref{eq:name})</code></td>
+<td>"Eq." with tilde and explicit parentheses</td>
+</tr>
+<tr>
+<td>Section</td>
+<td><code>Section~\ref{sec:name}</code></td>
+<td>Spelled out</td>
+</tr>
+<tr>
+<td>Appendix</td>
+<td><code>Appendix~\ref{app:name}</code></td>
+<td>Spelled out</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Do not use</strong> <code>\eqref{}</code>. Use <code>Eq.~(\ref{})</code> explicitly.
+<strong>Do not use</strong> <code>\autoref{}</code> or <code>\Cref{}</code>.</p>
+<p>The non-breaking tilde <code>~</code> between the word and <code>\ref{}</code> is required in every case.</p>
+<table>
+<thead>
+<tr>
+<th>✅ Write this</th>
+<th>❌ Not this</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Figure~\ref{fig:dm_density}</code></td>
+<td><code>Fig.~\ref{fig:dm_density}</code></td>
+</tr>
+<tr>
+<td><code>Eq.~(\ref{eq:gould})</code></td>
+<td><code>\eqref{eq:gould}</code></td>
+</tr>
+<tr>
+<td><code>Section~\ref{sec:results}</code></td>
+<td><code>Sec.~\ref{sec:results}</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="label-naming-conventions">Label naming conventions<a class="headerlink" href="#label-naming-conventions" title="Permanent link">&para;</a></h2>
+<p>Use these prefixes consistently:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Prefix</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Section</td>
+<td><code>sec:</code></td>
+<td><code>\label{sec:results}</code></td>
+</tr>
+<tr>
+<td>Appendix</td>
+<td><code>app:</code></td>
+<td><code>\label{app:systematics}</code></td>
+</tr>
+<tr>
+<td>Figure</td>
+<td><code>fig:</code></td>
+<td><code>\label{fig:dm_density}</code></td>
+</tr>
+<tr>
+<td>Equation</td>
+<td><code>eq:</code></td>
+<td><code>\label{eq:gould}</code></td>
+</tr>
+<tr>
+<td>Table</td>
+<td><code>tab:</code></td>
+<td><code>\label{tab:stellar_params}</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="citations">Citations<a class="headerlink" href="#citations" title="Permanent link">&para;</a></h2>
+<p><strong>Citation style:</strong></p>
+<table>
+<thead>
+<tr>
+<th>✅ Write this</th>
+<th>❌ Not this</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"...as shown in Ref. [42]"</td>
+<td>"...as has been shown [42]" (too passive)</td>
+</tr>
+<tr>
+<td>"...from Refs. [42, 43]"</td>
+<td>"...previously [42, 43, 44, 45, 46]" (too many at once)</td>
+</tr>
+</tbody>
+</table>
+<p>Maximum 3–4 references per claim. For large literature clusters, use a review reference.</p>
+<p><strong>Citation ordering</strong>: When citing multiple references simultaneously, order them chronologically
+by publication or submission year (oldest first). Within the same year, sort alphabetically by first author surname.</p>
+<pre><code class="language-latex">% Correct: oldest → newest
+\cite{Author1995abc, Author2003xyz, Author2017def, Author2022ghi}
+</code></pre>
+<p><strong>Do not cite in the abstract.</strong></p>
+<p>Spell out experiment names on first use:
+"the Xenon One Ton experiment (XENON1T) [ref]", then use "XENON1T" throughout.</p>
+<p><strong>BibTeX keys</strong>: Use INSPIRE-style keys (<code>Author:YYYYabc</code>). Include arXiv IDs for preprints.</p>
+<hr />
+<h2 id="text-formatting-details">Text formatting details<a class="headerlink" href="#text-formatting-details" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>En-dash for ranges</strong>: <code>3--10</code> not <code>3-10</code>.</li>
+<li><strong>Non-breaking space before units</strong>: <code>100~kton-year</code>, <code>1.5~km</code>, <code>$\sim$3~MeV</code>.</li>
+<li><strong>Percent</strong>: <code>10\%</code> with no space before <code>\%</code>.</li>
+<li><strong>Acknowledgements</strong>: <code>\section*{Acknowledgements}</code>, asterisk (unnumbered), British spelling.</li>
+</ul>
+<hr />
+<h2 id="section-separators-in-source-files">Section separators in source files<a class="headerlink" href="#section-separators-in-source-files" title="Permanent link">&para;</a></h2>
+<p>Major sections (Introduction, Results, Conclusions, Appendices) are separated by double comment-line blocks:</p>
+<pre><code class="language-latex">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Section Title}
+</code></pre>
+<p>Figure environments are wrapped in shorter single-line comment blocks:</p>
+<pre><code class="language-latex">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+...
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+</code></pre>
+<hr />
+<h2 id="appendix-block">Appendix block<a class="headerlink" href="#appendix-block" title="Permanent link">&para;</a></h2>
+<pre><code class="language-latex">\appendix
+\counterwithin{figure}{section}
+\vspace{0.75cm}
+\centerline{\Large {\bf Appendices}}
+\vspace{0.75cm}
+
+Here, we provide additional details...
+
+\section{Appendix Title}
+\label{app:name}
+</code></pre>
+<p><code>\counterwithin{figure}{section}</code> must appear immediately after <code>\appendix</code> to produce "Figure A1", "Figure B1" labels.
+Each appendix is a full <code>\section{}</code>, not a <code>\subsection{}</code>.</p>
+<hr />
+<h2 id="bibliography">Bibliography<a class="headerlink" href="#bibliography" title="Permanent link">&para;</a></h2>
+<pre><code class="language-latex">\clearpage
+\bibliography{bibliography}
+</code></pre>
+<p><code>\clearpage</code> before <code>\bibliography</code> flushes all pending floats.
+The <code>longbibliography</code> class option is already set. Do not override it.</p>
+<hr />
+<h2 id="further-reading">Further reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://journals.aps.org/revtex">RevTeX 4-2 documentation</a>: the official documentation for the
+  document class used throughout this track. The full author's guide covers every option and package
+  interaction not addressed here.</li>
+<li><a href="https://journals.aps.org/prd/authors">Physical Review D author guidelines</a>: the journal-level
+  specifications that underlie the conventions in this lesson. Worth bookmarking before submission.</li>
+<li><a href="https://tobi.oetiker.ch/lshort/lshort.pdf">The Not So Short Introduction to LaTeX</a> (Oetiker et al.):
+  the standard first reference for learning LaTeX properly. If the conventions in this lesson feel
+  unfamiliar, work through the relevant sections here before applying them.</li>
+</ul>
+<h2 id="what-to-read-next">What to read next<a class="headerlink" href="#what-to-read-next" title="Permanent link">&para;</a></h2>
+<p><a href="../lesson-05/">Lesson 05</a> is the revision checklist, a systematic pass through everything covered
+in this track, designed to be run on a full draft before submission.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../lesson-03/" class="btn btn-neutral float-left" title="Lesson 03 — Writing Conventions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lesson-05/" class="btn btn-neutral float-right" title="Lesson 05 — Revision Checklist">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../lesson-03/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lesson-05/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/clipboard.js"></script>
+      <script src="../../../js/copy_code.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Lesson 01 — Figure Design Principles - Nestling</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 01 \u2014 Figure Design Principles";
+        var mkdocs_page_input_path = "tracks/06-plotting/lesson-01.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/environment-setup/">Environment Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >ArXiv & Reading Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-01/">Lesson 01 — Finding Papers</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-03/">Lesson 03 — Managing Papers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Writing Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-04/">Lesson 04 — LaTeX Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Git & GitHub</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-01/">Lesson 01 — Git Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-02/">Lesson 02 — Branching</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-03/">Lesson 03 — GitHub Collaboration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Coding Practices</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-02/">Lesson 02 — Python & Jupyter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-04/">Lesson 04 — Scientific Python Stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-05/">Lesson 05 — Code Style & Quality</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-06/">Lesson 06 — Performance & Parallelism</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-07/">Lesson 07 — ML Basics with PyTorch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-10/">Lesson 10 — Testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Plotting</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lesson 01 — Figure Design Principles</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#the-goal-of-a-scientific-figure">The goal of a scientific figure</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#clarity">Clarity</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#data-ink-ratio">Data-ink ratio</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#labels-and-units">Labels and units</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#tick-marks">Tick marks</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#font-size">Font size</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#honesty">Honesty</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#aspect-ratio-and-axis-limits">Aspect ratio and axis limits</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#error-bars-and-uncertainty-bands">Error bars and uncertainty bands</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#smoothing-and-binning">Smoothing and binning</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#accessibility">Accessibility</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#colour">Colour</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#font-and-contrast">Font and contrast</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#caption-completeness">Caption completeness</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#common-mistakes">Common mistakes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#checklist-before-submitting-a-figure">Checklist before submitting a figure</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-to-read-next">What to read next</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-04/">Lesson 04 — Colour and Accessibility</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Working with LLMs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-01/">Lesson 01 — What LLMs Are and Are Not</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-02/">Lesson 02 — LLMs for Code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-03/">Lesson 03 — LLMs for Writing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-04/">Lesson 04 — LLMs for Literature Search</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-05/">Lesson 05 — Prompt Engineering for Research</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-06/">Lesson 06 — Verification Habits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-07/">Lesson 07 — Skill Files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/paper-outline/">Paper Outline</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tracks</li>
+          <li class="breadcrumb-item">Plotting</li>
+      <li class="breadcrumb-item active">Lesson 01 — Figure Design Principles</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/tracks/06-plotting/lesson-01.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-01-figure-design-principles">Lesson 01: Figure Design Principles<a class="headerlink" href="#lesson-01-figure-design-principles" title="Permanent link">&para;</a></h1>
+<p>A scientific figure has one job: to let the reader extract the result as quickly and accurately
+as possible.
+Every element that fails that job, unnecessary gridlines, duplicate legends, decorative 3D
+effects, is in the way.
+This lesson covers the principles that separate figures which communicate from figures which
+merely display.</p>
+<p>The two plots below show the same data. One applies every bad habit listed in this lesson;
+the other follows the Nestling style guide.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">What not to do</th>
+<th style="text-align: center;">What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img alt="Before: common mistakes" src="../figures/before.png" /></td>
+<td style="text-align: center;"><img alt="After: Nestling style" src="../figures/after.png" /></td>
+</tr>
+<tr>
+<td style="text-align: center;">Title inside panel, no units, outward ticks, framed legend</td>
+<td style="text-align: center;">No title, LaTeX labels, inward mirror ticks, direct annotation</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Acknowledgement</p>
+<p>Several principles in this lesson are drawn from or inspired by Ciaran O'Hare's
+<a href="https://github.com/cajohare/HowToMakeAPlot">HowToMakeAPlot</a>, a concise, practical guide
+to scientific plotting in Python. It is well worth reading in full.</p>
+</div>
+<hr />
+<h2 id="the-goal-of-a-scientific-figure">The goal of a scientific figure<a class="headerlink" href="#the-goal-of-a-scientific-figure" title="Permanent link">&para;</a></h2>
+<p>A figure should answer a specific question.
+Before you open matplotlib, write down the question in one sentence:</p>
+<blockquote>
+<p>"What is the flux as a function of energy for these three models?"</p>
+</blockquote>
+<p>If you cannot state the question, you are not ready to make the figure.
+If the figure cannot be read by someone who knows the question, the figure has failed.</p>
+<hr />
+<h2 id="clarity">Clarity<a class="headerlink" href="#clarity" title="Permanent link">&para;</a></h2>
+<h3 id="data-ink-ratio">Data-ink ratio<a class="headerlink" href="#data-ink-ratio" title="Permanent link">&para;</a></h3>
+<p>Edward Tufte introduced the concept of <strong>data-ink ratio</strong> in <em>The Visual Display of
+Quantitative Information</em> (1983): the fraction of the ink on a figure that encodes data,
+as opposed to decoration.
+The practical rule is: remove anything that does not carry information.</p>
+<p>Common culprits:</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Problem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Box around the plot</td>
+<td>Already implied by axes; adds nothing</td>
+</tr>
+<tr>
+<td>Grid lines (heavy)</td>
+<td>Dominate the data; use only faint ones if needed for reading off values</td>
+</tr>
+<tr>
+<td>3D effects on bars or pies</td>
+<td>Distort the data while adding no information</td>
+</tr>
+<tr>
+<td>Redundant legend inside a panel with only one line</td>
+<td>The label on the axis already names it</td>
+</tr>
+<tr>
+<td>Excessively wide default margins</td>
+<td>Waste space in multi-panel figures</td>
+</tr>
+</tbody>
+</table>
+<p>Removing these elements is not minimalism for its own sake. It reduces the cognitive load on
+the reader and lets the data speak.</p>
+<h3 id="labels-and-units">Labels and units<a class="headerlink" href="#labels-and-units" title="Permanent link">&para;</a></h3>
+<p>Every axis must have a label.
+Every label must include units.
+"Energy" is not a label. "$E$ / GeV" is.</p>
+<p>Use the same symbol in the label as in the body of the paper.
+If the paper writes $\phi_\nu$, the axis should read $\phi_\nu$, not "flux".</p>
+<h3 id="tick-marks">Tick marks<a class="headerlink" href="#tick-marks" title="Permanent link">&para;</a></h3>
+<p>Ticks should face inward (into the plot area), not outward.
+Ticks on both top and right edges (mirror ticks) are conventional in particle and astroparticle
+physics and help the reader read off values without a grid.
+The Nestling style enables this by default. See <a href="../lesson-03/">Lesson 03</a>.</p>
+<h3 id="font-size">Font size<a class="headerlink" href="#font-size" title="Permanent link">&para;</a></h3>
+<p>The default matplotlib font size (10 pt) is almost always too large relative to the figure size.
+A figure destined for a single-column journal panel (roughly 88 mm wide) looks fine in a
+notebook but becomes unreadable at print size.
+Set font sizes to match the <strong>printed</strong> output, not the on-screen preview.
+The Nestling style uses 8 pt throughout, which is legible at typical journal column widths.</p>
+<hr />
+<h2 id="honesty">Honesty<a class="headerlink" href="#honesty" title="Permanent link">&para;</a></h2>
+<h3 id="aspect-ratio-and-axis-limits">Aspect ratio and axis limits<a class="headerlink" href="#aspect-ratio-and-axis-limits" title="Permanent link">&para;</a></h3>
+<p>The aspect ratio and axis limits control what the reader perceives as a "large" difference.
+A factor-of-two change can look dramatic or negligible depending on axis choice.</p>
+<ul>
+<li>Never crop axes to exclude zero when the baseline matters, e.g., a bar chart where only the
+  top 5 % is shown dramatically exaggerates differences.</li>
+<li>Log scales are appropriate for quantities that span orders of magnitude.
+  Use them for energy spectra, flux, probability densities. Do not use them where the
+  quantity has a natural zero that anchors the comparison.</li>
+</ul>
+<h3 id="error-bars-and-uncertainty-bands">Error bars and uncertainty bands<a class="headerlink" href="#error-bars-and-uncertainty-bands" title="Permanent link">&para;</a></h3>
+<p>Always show uncertainties.
+If you show a fit, show the uncertainty on the fit.
+If you show data, show the measurement uncertainty.
+Choosing a plot range that excludes the large-error tails is acceptable only if this is stated
+explicitly in the caption.</p>
+<h3 id="smoothing-and-binning">Smoothing and binning<a class="headerlink" href="#smoothing-and-binning" title="Permanent link">&para;</a></h3>
+<p>Changing the bin width of a histogram can make a distribution look smooth or noisy.
+Changing the smoothing kernel of a continuous estimate can suppress or reveal features.
+Neither choice is neutral, and neither should be invisible.
+State binning and smoothing choices in the caption.</p>
+<hr />
+<h2 id="accessibility">Accessibility<a class="headerlink" href="#accessibility" title="Permanent link">&para;</a></h2>
+<h3 id="colour">Colour<a class="headerlink" href="#colour" title="Permanent link">&para;</a></h3>
+<p>Do not rely on colour alone to distinguish curves or regions.
+Roughly 8 % of men and 0.5 % of women have some form of colour vision deficiency.
+Additionally, many readers encounter your figure in greyscale (printouts, black-and-white
+preprints).</p>
+<p>Two strategies that work together:</p>
+<ol>
+<li>
+<p><strong>Use a colourblind-friendly palette.</strong> The Nestling style uses the Dark2 palette from
+   <a href="https://colorbrewer2.org/#type=qualitative&amp;scheme=Dark2&amp;n=6">ColorBrewer</a>, which is
+   distinguishable by the most common types of colour vision deficiency.</p>
+</li>
+<li>
+<p><strong>Differentiate by line style or marker shape as well as colour.</strong>
+   Solid, dashed, and dotted lines are distinguishable without colour.
+   Squares, circles, and triangles are distinguishable without colour.</p>
+</li>
+</ol>
+<h3 id="font-and-contrast">Font and contrast<a class="headerlink" href="#font-and-contrast" title="Permanent link">&para;</a></h3>
+<p>Use a font with clear distinction between commonly confused characters (1/l/I, 0/O).
+Avoid very light colours for text or axis labels. Ensure sufficient contrast with the
+background.
+The default white background with dark text is the safest choice for publication.</p>
+<h3 id="caption-completeness">Caption completeness<a class="headerlink" href="#caption-completeness" title="Permanent link">&para;</a></h3>
+<p>A figure caption should allow the reader to understand the figure without consulting the main
+text.
+It should state:</p>
+<ul>
+<li>What is shown (the quantity plotted).</li>
+<li>What data or model produced it.</li>
+<li>The meaning of each colour, line style, or marker.</li>
+<li>Any important caveats (smoothing, cuts, approximations).</li>
+</ul>
+<hr />
+<h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Mistake</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title inside the panel ("Flux vs Energy")</td>
+<td>Remove it; the caption carries this</td>
+</tr>
+<tr>
+<td>Legend font smaller than axis font</td>
+<td>Match the sizes</td>
+</tr>
+<tr>
+<td>Zero suppressed on bar chart</td>
+<td>Start the y-axis at zero</td>
+</tr>
+<tr>
+<td>Rasterised lines in a PDF figure</td>
+<td>Save as vector (PDF/SVG) or use high DPI</td>
+</tr>
+<tr>
+<td>Colours that clash or are indistinguishable</td>
+<td>Switch to a ColorBrewer palette</td>
+</tr>
+<tr>
+<td>Too many curves on one panel</td>
+<td>Split into sub-panels</td>
+</tr>
+<tr>
+<td>Marker size so small it is invisible at print scale</td>
+<td>Test at the final print size</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="checklist-before-submitting-a-figure">Checklist before submitting a figure<a class="headerlink" href="#checklist-before-submitting-a-figure" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] Every axis has a label with units.</li>
+<li>[ ] Font sizes are legible at the final print size.</li>
+<li>[ ] Colours are distinguishable without relying on colour alone.</li>
+<li>[ ] No chartjunk (gridlines, boxes, 3D effects).</li>
+<li>[ ] Uncertainties are shown.</li>
+<li>[ ] The caption is self-contained.</li>
+<li>[ ] The file is saved in a vector format (PDF or SVG) or as a high-DPI raster (≥ 300 DPI).</li>
+</ul>
+<hr />
+<h2 id="what-to-read-next">What to read next<a class="headerlink" href="#what-to-read-next" title="Permanent link">&para;</a></h2>
+<p><a href="../lesson-02/">Lesson 02</a> turns these principles into code, covering the matplotlib API and
+the most common plot types you will use in physics research.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../" class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lesson-02/" class="btn btn-neutral float-right" title="Lesson 02 — matplotlib Basics">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lesson-02/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/clipboard.js"></script>
+      <script src="../../../js/copy_code.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

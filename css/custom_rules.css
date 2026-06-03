@@ -1,0 +1,107 @@
+details[class*="source"] {
+  padding-bottom: 1em;
+}
+
+/* -------------- */
+/* Custom colour scheme */
+.wy-nav-side {
+    background: #343251 !important;
+}
+
+.wy-side-nav-search {
+    background: #e7298a;
+}
+
+.wy-menu-vertical li.current {
+    background: #d1ceff;
+}
+
+.wy-menu-vertical li[class*="toctree-l"].current li[class*="toctree-l"]>a {
+    background: #d1ceff;
+}
+
+.wy-menu-vertical li[class*="toctree-l"].current li[class*="toctree-l"] > a:hover {
+    background: #cac6fd;
+    color: #404040;
+}
+
+ul.wy-breadcrumbs a.icon.icon-home:hover {
+    color: #e7298a;
+}
+
+/* Links */
+a {
+    color: #1b9e77;
+}
+
+a:hover {
+    color: #e7298a;
+}
+
+a.icon.icon-home:hover {
+    color: #fcfcfc;
+}
+
+/* Headings in nav */
+.caption-text {
+    color: #47ffc8;
+}
+
+/* Links in the TOC menu */
+a.reference.internal:hover {
+    background: #25243b;
+    color: #f985c1;
+}
+
+a.reference.internal.current {
+    background: #e7e5fc;
+}
+
+a.reference.internal.current:hover {
+    background: #e7e5fc;
+    color: #e7298a;
+}
+
+/* -------------- */
+/* Copy to clipboard in code blocks support */
+.clipboard {
+    position: relative;
+    display: block;
+    float: right;
+    width: 0;
+    line-height: 0;
+}
+
+.btn-clipboard {
+    position: relative;
+    top: .5rem;
+    right: 2rem;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    padding: 0;
+    cursor: pointer;
+    background: #f5f5f5;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    color: #555;
+    opacity: 0;
+    transition: opacity 150ms, color 150ms, background 150ms;
+}
+
+pre:hover .btn-clipboard {
+    opacity: 1;
+}
+
+.btn-clipboard:hover {
+    background: #e8e8e8;
+    color: #222;
+}
+
+.btn-clipboard svg {
+    pointer-events: none;
+}
+/* -------------- */

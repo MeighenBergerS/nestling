@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Lesson 02 — LLMs for Code - Nestling</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 02 \u2014 LLMs for Code";
+        var mkdocs_page_input_path = "tracks/07-llm-practices/lesson-02.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/environment-setup/">Environment Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >ArXiv & Reading Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-01/">Lesson 01 — Finding Papers</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-03/">Lesson 03 — Managing Papers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Writing Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-04/">Lesson 04 — LaTeX Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Git & GitHub</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-01/">Lesson 01 — Git Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-02/">Lesson 02 — Branching</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-03/">Lesson 03 — GitHub Collaboration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Coding Practices</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-02/">Lesson 02 — Python & Jupyter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-04/">Lesson 04 — Scientific Python Stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-05/">Lesson 05 — Code Style & Quality</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-06/">Lesson 06 — Performance & Parallelism</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-07/">Lesson 07 — ML Basics with PyTorch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-10/">Lesson 10 — Testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Plotting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-01/">Lesson 01 — Figure Design Principles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-04/">Lesson 04 — Colour and Accessibility</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Working with LLMs</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-01/">Lesson 01 — What LLMs Are and Are Not</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lesson 02 — LLMs for Code</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#the-pair-programming-model">The pair-programming model</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#effective-prompts-for-code">Effective prompts for code</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#what-to-include">What to include</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example-vague-prompt">Example: vague prompt</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example-specific-prompt">Example: specific prompt</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reviewing-llm-generated-code">Reviewing LLM-generated code</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#testing-llm-generated-code">Testing LLM-generated code</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#what-to-test">What to test</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#asking-the-llm-to-write-tests">Asking the LLM to write tests</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#common-workflows">Common workflows</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#workflow-1-draft-and-review">Workflow 1: Draft and review</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#workflow-2-explain-and-debug">Workflow 2: Explain and debug</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#workflow-3-code-review">Workflow 3: Code review</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#security-considerations">Security considerations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#industrial-context-how-the-field-approaches-llm-assisted-development">Industrial context: how the field approaches LLM-assisted development</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#checklist">Checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-to-read-next">What to read next</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-03/">Lesson 03 — LLMs for Writing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-04/">Lesson 04 — LLMs for Literature Search</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-05/">Lesson 05 — Prompt Engineering for Research</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-06/">Lesson 06 — Verification Habits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-07/">Lesson 07 — Skill Files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/paper-outline/">Paper Outline</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tracks</li>
+          <li class="breadcrumb-item">Working with LLMs</li>
+      <li class="breadcrumb-item active">Lesson 02 — LLMs for Code</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/tracks/07-llm-practices/lesson-02.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-02-llms-for-code">Lesson 02: LLMs for Code<a class="headerlink" href="#lesson-02-llms-for-code" title="Permanent link">&para;</a></h1>
+<p>LLMs have become genuinely useful coding assistants.
+Used well, they compress the time from "I need a function that does X" to working,
+tested code. Used poorly, they introduce subtle bugs that pass casual inspection and
+fail only under the conditions that matter most.</p>
+<p>This lesson covers how to pair-program with an LLM while keeping you in control of
+correctness.</p>
+<hr />
+<h2 id="the-pair-programming-model">The pair-programming model<a class="headerlink" href="#the-pair-programming-model" title="Permanent link">&para;</a></h2>
+<p>Think of the LLM as a very fast, knowledgeable junior colleague.
+It knows a lot of syntax, patterns, and library APIs.
+It can produce a first draft quickly.
+But it can be confidently wrong, it does not know your codebase, and it has no skin in the game
+when the analysis produces the wrong result.</p>
+<p>Your role is:</p>
+<ol>
+<li><strong>Specify clearly.</strong> You define what the code must do and what constraints apply.</li>
+<li><strong>Review critically.</strong> You read the output as you would any code submission.</li>
+<li><strong>Test rigorously.</strong> You write or demand tests; you do not accept "it looks right".</li>
+<li><strong>Understand before using.</strong> You do not merge code you cannot explain.</li>
+</ol>
+<p>The LLM accelerates step 1 to draft; you own steps 2–4 entirely.</p>
+<hr />
+<h2 id="effective-prompts-for-code">Effective prompts for code<a class="headerlink" href="#effective-prompts-for-code" title="Permanent link">&para;</a></h2>
+<p>The quality of LLM-generated code is strongly correlated with the quality of your prompt.
+Vague prompts produce vague code. Specific prompts produce specific code.</p>
+<h3 id="what-to-include">What to include<a class="headerlink" href="#what-to-include" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Language and version.</strong> "Python 3.11", "C++17", "JavaScript ESNext".</li>
+<li><strong>What the function should do.</strong> One sentence in plain English.</li>
+<li><strong>Input types and shapes.</strong> "Takes a numpy array of shape (N, 3)".</li>
+<li><strong>Output format.</strong> "Returns a dict mapping strings to floats".</li>
+<li><strong>Constraints.</strong> "Must handle empty input", "Must be vectorised", "No external dependencies".</li>
+<li><strong>Style.</strong> "Follow NumPy docstring conventions", "Use type hints".</li>
+</ul>
+<h3 id="example-vague-prompt">Example: vague prompt<a class="headerlink" href="#example-vague-prompt" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>"Write a function to process the data."</p>
+</blockquote>
+<p>The model will produce something. It will not be what you want.</p>
+<h3 id="example-specific-prompt">Example: specific prompt<a class="headerlink" href="#example-specific-prompt" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>"Write a Python 3.11 function <code>bin_energies(events, edges)</code> that takes a 1-D NumPy
+array <code>events</code> of floats and a 1-D NumPy array <code>edges</code> of bin edges (length N+1 for N bins),
+and returns a 1-D NumPy array of length N containing the count of events in each bin.
+Use <code>numpy.digitize</code>. Handle empty <code>events</code> by returning an array of zeros.
+Include a NumPy-style docstring and type hints."</p>
+</blockquote>
+<p>This prompt will produce usable, testable code.</p>
+<hr />
+<h2 id="reviewing-llm-generated-code">Reviewing LLM-generated code<a class="headerlink" href="#reviewing-llm-generated-code" title="Permanent link">&para;</a></h2>
+<p>Never merge LLM-generated code without reading every line.
+The model can produce code that:</p>
+<ul>
+<li><strong>Looks correct but has off-by-one errors.</strong> Bin edges, array slicing, loop bounds.</li>
+<li><strong>Uses the wrong API.</strong> Deprecated functions, arguments in the wrong order,
+  misunderstood return types.</li>
+<li><strong>Handles only the happy path.</strong> Empty arrays, NaN values, edge cases at domain
+  boundaries are commonly omitted.</li>
+<li><strong>Has security issues.</strong> Shell injection via <code>subprocess</code>, SQL injection via string
+  formatting, unsafe deserialisation. These patterns appear in training data and the model
+  reproduces them.</li>
+<li><strong>Is subtly non-reproducible.</strong> Unset random seeds, floating-point operations that
+  differ across platforms, silent type coercions.</li>
+</ul>
+<p>Read code from an LLM as you would read code from a student, with respect but with
+attention to every assumption.</p>
+<hr />
+<h2 id="testing-llm-generated-code">Testing LLM-generated code<a class="headerlink" href="#testing-llm-generated-code" title="Permanent link">&para;</a></h2>
+<p>A key industrial discipline is: <strong>do not trust code you have not tested</strong>.
+For LLM-generated code this discipline is especially important.</p>
+<h3 id="what-to-test">What to test<a class="headerlink" href="#what-to-test" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Expected inputs.</strong> Does the function produce the correct output on a case you can
+  verify by hand?</li>
+<li><strong>Edge cases.</strong> Empty input, single-element input, extreme values, NaN, inf.</li>
+<li><strong>Type behaviour.</strong> What happens if an integer is passed where a float is expected?</li>
+<li><strong>Error handling.</strong> Does the function raise, return None, or silently return garbage
+  on bad input?</li>
+</ul>
+<h3 id="asking-the-llm-to-write-tests">Asking the LLM to write tests<a class="headerlink" href="#asking-the-llm-to-write-tests" title="Permanent link">&para;</a></h3>
+<p>You can ask the model to write tests for the code it produced.
+This is useful, as it reveals the model's assumptions about what the code is supposed to do.
+But the model may write tests that pass trivially or that test only the happy path.
+You must still review the tests.</p>
+<blockquote>
+<p>"Write pytest unit tests for the function above. Include tests for an empty array,
+an array with one element, an array where all values fall outside the bin range,
+and an array with NaN values."</p>
+</blockquote>
+<hr />
+<h2 id="common-workflows">Common workflows<a class="headerlink" href="#common-workflows" title="Permanent link">&para;</a></h2>
+<h3 id="workflow-1-draft-and-review">Workflow 1: Draft and review<a class="headerlink" href="#workflow-1-draft-and-review" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Write a clear specification (docstring or comment).</li>
+<li>Ask the model to implement it.</li>
+<li>Read every line. Flag anything you do not understand.</li>
+<li>Run the tests. Fix failures yourself or ask the model to explain and fix them.</li>
+<li>Commit only code you understand.</li>
+</ol>
+<h3 id="workflow-2-explain-and-debug">Workflow 2: Explain and debug<a class="headerlink" href="#workflow-2-explain-and-debug" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Paste the code and the error message.</li>
+<li>Ask the model to explain what the error means and where it originates.</li>
+<li>Evaluate the explanation: is it plausible? Does it match what you know about the code?</li>
+<li>Apply the fix. Understand why it works before moving on.</li>
+</ol>
+<h3 id="workflow-3-code-review">Workflow 3: Code review<a class="headerlink" href="#workflow-3-code-review" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Paste a function or module.</li>
+<li>Ask the model to identify potential bugs, edge cases, and style issues.</li>
+<li>Treat the output as a checklist, not a verdict. Investigate each flagged item.</li>
+</ol>
+<hr />
+<h2 id="security-considerations">Security considerations<a class="headerlink" href="#security-considerations" title="Permanent link">&para;</a></h2>
+<p>LLM-generated code reproduces patterns from training data, including insecure patterns.</p>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Example</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shell injection</td>
+<td><code>subprocess.run(f"ls {user_input}", shell=True)</code></td>
+<td>Use argument lists, not shell strings</td>
+</tr>
+<tr>
+<td>SQL injection</td>
+<td><code>cursor.execute(f"SELECT * FROM t WHERE id={val}")</code></td>
+<td>Use parameterised queries</td>
+</tr>
+<tr>
+<td>Unsafe deserialisation</td>
+<td><code>pickle.loads(user_data)</code></td>
+<td>Use safe formats (JSON) for untrusted data</td>
+</tr>
+<tr>
+<td>Hardcoded credentials</td>
+<td><code>API_KEY = "sk-..."</code> in source</td>
+<td>Use environment variables or secrets managers</td>
+</tr>
+<tr>
+<td>Arbitrary code execution</td>
+<td><code>eval(user_input)</code></td>
+<td>Never eval untrusted strings</td>
+</tr>
+</tbody>
+</table>
+<p>If you are generating code for a service that handles external input, security review
+is essential regardless of whether the code was LLM-generated or human-written.</p>
+<hr />
+<h2 id="industrial-context-how-the-field-approaches-llm-assisted-development">Industrial context: how the field approaches LLM-assisted development<a class="headerlink" href="#industrial-context-how-the-field-approaches-llm-assisted-development" title="Permanent link">&para;</a></h2>
+<p><strong>Copilot and code review gates.</strong> Organisations using GitHub Copilot or similar tools
+typically require the same code review process for AI-assisted code as for human-written
+code. The origin of the code does not change the review obligation.</p>
+<p><strong>Prompt injection in code.</strong> When LLMs are embedded in automated pipelines that
+process user-supplied text, adversarial inputs can manipulate the model's output.
+If you are building a pipeline that feeds external data to an LLM, treat that data
+as untrusted and constrain the model's output format.</p>
+<p><strong>Test generation at scale.</strong> Industry teams use LLMs to generate test suites for
+existing code. The limiting factor is always the quality of the specification. Tests
+generated from an underspecified function test the implementation, not the intended
+behaviour.</p>
+<p><strong>Reproducibility in research pipelines.</strong> Code generated for a paper must produce
+the same results from the same data regardless of who runs it and when.
+LLM-generated code often omits seeds, version pins, and determinism flags.
+Add these explicitly before treating any output as final.</p>
+<hr />
+<h2 id="checklist">Checklist<a class="headerlink" href="#checklist" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] My prompts specify language, input/output types, and constraints.</li>
+<li>[ ] I read every line of LLM-generated code before using it.</li>
+<li>[ ] I have tests covering expected inputs and edge cases.</li>
+<li>[ ] I understand every function I commit. I can explain what it does and why.</li>
+<li>[ ] I have checked for security issues if the code handles external input.</li>
+<li>[ ] Random seeds and version pins are set for any code that produces results.</li>
+</ul>
+<hr />
+<h2 id="what-to-read-next">What to read next<a class="headerlink" href="#what-to-read-next" title="Permanent link">&para;</a></h2>
+<p><a href="../lesson-03/">Lesson 03</a> covers LLMs for writing: when drafting assistance is appropriate
+and how to maintain authorship of your own work.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../lesson-01/" class="btn btn-neutral float-left" title="Lesson 01 — What LLMs Are and Are Not"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lesson-03/" class="btn btn-neutral float-right" title="Lesson 03 — LLMs for Writing">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../lesson-01/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lesson-03/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/clipboard.js"></script>
+      <script src="../../../js/copy_code.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

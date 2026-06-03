@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Lesson 06 — Performance & Parallelism - Nestling</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 06 \u2014 Performance \u0026 Parallelism";
+        var mkdocs_page_input_path = "tracks/05-coding/lesson-06.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/environment-setup/">Environment Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >ArXiv & Reading Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-01/">Lesson 01 — Finding Papers</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-03/">Lesson 03 — Managing Papers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Writing Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-04/">Lesson 04 — LaTeX Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Git & GitHub</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-01/">Lesson 01 — Git Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-02/">Lesson 02 — Branching</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-03/">Lesson 03 — GitHub Collaboration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Coding Practices</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-02/">Lesson 02 — Python & Jupyter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-04/">Lesson 04 — Scientific Python Stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-05/">Lesson 05 — Code Style & Quality</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lesson 06 — Performance & Parallelism</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#why-python-loops-are-slow">Why Python loops are slow</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#vectorisation-first">Vectorisation first</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#profiling-find-the-bottleneck-first">Profiling: find the bottleneck first</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#cprofile">cProfile</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#line_profiler">line_profiler</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#multiprocessing">Multiprocessing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#numba">Numba</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#jax">JAX</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#gpu-computing">GPU computing</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-gpus-are-fast">Why GPUs are fast</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#the-memory-bottleneck">The memory bottleneck</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#pytorch-on-gpu">PyTorch on GPU</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#moving-data-between-cpu-and-gpu">Moving data between CPU and GPU</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#jax-on-gpu">JAX on GPU</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#hardware-options">Hardware options</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#decision-guide">Decision guide</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-to-read-next">What to read next</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-07/">Lesson 07 — ML Basics with PyTorch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-10/">Lesson 10 — Testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Plotting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-01/">Lesson 01 — Figure Design Principles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-04/">Lesson 04 — Colour and Accessibility</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Working with LLMs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-01/">Lesson 01 — What LLMs Are and Are Not</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-02/">Lesson 02 — LLMs for Code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-03/">Lesson 03 — LLMs for Writing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-04/">Lesson 04 — LLMs for Literature Search</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-05/">Lesson 05 — Prompt Engineering for Research</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-06/">Lesson 06 — Verification Habits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-07/">Lesson 07 — Skill Files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/paper-outline/">Paper Outline</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tracks</li>
+          <li class="breadcrumb-item">Coding Practices</li>
+      <li class="breadcrumb-item active">Lesson 06 — Performance & Parallelism</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/tracks/05-coding/lesson-06.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-06-performance-parallelism">Lesson 06: Performance &amp; Parallelism<a class="headerlink" href="#lesson-06-performance-parallelism" title="Permanent link">&para;</a></h1>
+<p>Python is slow for explicit loops but can be as fast as C when you use the right tools.
+This lesson explains why, how to find bottlenecks, and which technique to reach for first.</p>
+<hr />
+<h2 id="why-python-loops-are-slow">Why Python loops are slow<a class="headerlink" href="#why-python-loops-are-slow" title="Permanent link">&para;</a></h2>
+<p>Python executes one bytecode instruction at a time, with type checking and memory
+management overhead on every operation.
+A loop over a million elements that runs in milliseconds in C can take seconds in Python.</p>
+<p>The <strong>Global Interpreter Lock (GIL)</strong> adds a second constraint: the CPython interpreter
+allows only one thread to execute Python bytecode at a time.
+Pure-Python threading does not give you CPU parallelism.</p>
+<p>The solution is not to rewrite in C. It is to push loops into libraries that run in
+compiled code.</p>
+<hr />
+<h2 id="vectorisation-first">Vectorisation first<a class="headerlink" href="#vectorisation-first" title="Permanent link">&para;</a></h2>
+<p>Replacing Python <code>for</code> loops with NumPy operations is called <strong>vectorisation</strong>.
+It should be your first instinct whenever you find yourself looping over array elements.</p>
+<pre><code class="language-python">import numpy as np
+
+# Slow: explicit Python loop
+def slow_flux(energies, gamma):
+    result = []
+    for E in energies:
+        result.append(E ** (-gamma))
+    return result
+
+# Fast: vectorised
+def fast_flux(energies: np.ndarray, gamma: float) -&gt; np.ndarray:
+    return energies ** (-gamma)
+</code></pre>
+<p>The vectorised version runs the same arithmetic in compiled C code inside NumPy.
+For arrays with a million elements the difference is typically 100–1000×.</p>
+<p>SciPy, Pandas, and most of the scientific Python stack are already vectorised internally.
+The rule: <strong>if you are writing a <code>for</code> loop over a NumPy array, ask whether a NumPy or
+SciPy function already does what you need.</strong></p>
+<hr />
+<h2 id="profiling-find-the-bottleneck-first">Profiling: find the bottleneck first<a class="headerlink" href="#profiling-find-the-bottleneck-first" title="Permanent link">&para;</a></h2>
+<p>Optimising the wrong function wastes time and makes code harder to read.
+Always profile before optimising.</p>
+<h3 id="cprofile">cProfile<a class="headerlink" href="#cprofile" title="Permanent link">&para;</a></h3>
+<pre><code class="language-sh">python -m cProfile -s cumtime myscript.py | head -20
+</code></pre>
+<p>This prints the 20 functions where your program spends the most cumulative time.</p>
+<h3 id="line_profiler">line_profiler<a class="headerlink" href="#line_profiler" title="Permanent link">&para;</a></h3>
+<p>For line-by-line timing within a specific function:</p>
+<pre><code class="language-sh">pip install line-profiler
+</code></pre>
+<p>Decorate the function you want to examine:</p>
+<pre><code class="language-python">@profile
+def compute_spectrum(energies, gamma):
+    ...
+</code></pre>
+<p>Run with:</p>
+<pre><code class="language-sh">kernprof -l -v myscript.py
+</code></pre>
+<hr />
+<h2 id="multiprocessing">Multiprocessing<a class="headerlink" href="#multiprocessing" title="Permanent link">&para;</a></h2>
+<p>When you have many <strong>independent</strong> tasks, such as running the same simulation with different seeds
+or processing different files, <code>multiprocessing</code> gives you true CPU parallelism by spawning
+separate processes, each on its own core, bypassing the GIL entirely.</p>
+<pre><code class="language-python">from multiprocessing import Pool
+import numpy as np
+
+def run_simulation(seed: int) -&gt; float:
+    rng = np.random.default_rng(seed)
+    events = rng.exponential(scale=1e5, size=10000)
+    return float(events.mean())
+
+seeds = list(range(500))
+
+with Pool(processes=8) as pool:
+    results = pool.map(run_simulation, seeds)
+</code></pre>
+<p><code>concurrent.futures.ProcessPoolExecutor</code> is a cleaner modern API for the same thing:</p>
+<pre><code class="language-python">from concurrent.futures import ProcessPoolExecutor
+
+with ProcessPoolExecutor(max_workers=8) as executor:
+    results = list(executor.map(run_simulation, seeds))
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Threading vs multiprocessing</p>
+<p>Use <strong>threading</strong> for I/O-bound work (downloading files, reading from disk)
+where the bottleneck is waiting, not computing. Threads release the GIL while waiting.
+Use <strong>multiprocessing</strong> for CPU-bound work where you want to use multiple cores.
+For most physics computation, multiprocessing is the right choice.</p>
+</div>
+<hr />
+<h2 id="numba">Numba<a class="headerlink" href="#numba" title="Permanent link">&para;</a></h2>
+<p><a href="https://numba.readthedocs.io/">Numba</a> compiles Python functions to native machine code
+using LLVM. It is most useful when your computation is genuinely loop-heavy and cannot
+be vectorised, for example when each step depends on the result of the previous one.</p>
+<pre><code class="language-sh">pip install numba
+</code></pre>
+<pre><code class="language-python">from numba import njit
+import numpy as np
+
+@njit
+def track_particle(positions: np.ndarray, momenta: np.ndarray,
+                   dt: float, n_steps: int) -&gt; np.ndarray:
+    for step in range(n_steps):
+        for i in range(len(positions)):
+            positions[i] += momenta[i] * dt
+    return positions
+</code></pre>
+<p>The <code>@njit</code> decorator compiles the function the <strong>first time it is called</strong>.
+Subsequent calls run at near-C speed.
+The compilation happens once per session; after that you pay only the cost of the computation.</p>
+<p><strong>When to use Numba</strong>: loops that cannot be vectorised, recurrence relations, particle
+tracking with branching logic.</p>
+<hr />
+<h2 id="jax">JAX<a class="headerlink" href="#jax" title="Permanent link">&para;</a></h2>
+<p><a href="https://jax.readthedocs.io/">JAX</a> is a NumPy replacement that runs on CPUs, GPUs, and
+TPUs, and supports <strong>automatic differentiation</strong> (autodiff).
+It is used in machine learning (including physics applications with PyTorch-adjacent
+workflows) and increasingly in physics simulation.</p>
+<pre><code class="language-sh">pip install jax
+</code></pre>
+<pre><code class="language-python">import jax.numpy as jnp
+from jax import jit, grad
+
+@jit
+def chi_squared(params: jnp.ndarray, E: jnp.ndarray, observed: jnp.ndarray) -&gt; float:
+    gamma, norm = params
+    predicted = norm * E ** (-gamma)
+    return jnp.sum((predicted - observed) ** 2)
+
+# Compute the gradient exactly — no finite differences
+gradient = grad(chi_squared)(params, E, observed)
+</code></pre>
+<p><code>@jit</code> compiles the function to XLA code. <code>grad</code> computes its exact gradient via backpropagation.
+This is very powerful for fitting problems where you optimise over many parameters at once.</p>
+<p>JAX enforces <strong>functional programming</strong>: no in-place mutation of arrays.
+This is the main learning curve; once you are comfortable with it, the performance and
+autodiff capabilities are hard to give up.</p>
+<hr />
+<h2 id="gpu-computing">GPU computing<a class="headerlink" href="#gpu-computing" title="Permanent link">&para;</a></h2>
+<h3 id="why-gpus-are-fast">Why GPUs are fast<a class="headerlink" href="#why-gpus-are-fast" title="Permanent link">&para;</a></h3>
+<p>A modern CPU has 8–64 powerful cores designed to execute complex, branchy code as fast as
+possible. A modern GPU has thousands of simpler cores designed to execute the <em>same</em>
+instruction on thousands of data elements simultaneously. This is called
+<strong>SIMT</strong> (Single Instruction, Multiple Threads).</p>
+<p>For physics work this matters when:</p>
+<ul>
+<li>You are training or running a neural network (matrix multiplications on millions of weights)</li>
+<li>You are running many independent simulations (particle showers, MC sampling)</li>
+<li>You are computing large FFTs or solving dense linear systems</li>
+</ul>
+<p>It does <strong>not</strong> help when:</p>
+<ul>
+<li>The computation is sequential (each step depends on the previous)</li>
+<li>The array fits comfortably in CPU cache and the operation is simple (vectorised NumPy is
+  already close to optimal)</li>
+<li>The time to transfer data to GPU memory (VRAM) exceeds the time saved by faster compute</li>
+</ul>
+<h3 id="the-memory-bottleneck">The memory bottleneck<a class="headerlink" href="#the-memory-bottleneck" title="Permanent link">&para;</a></h3>
+<p>Data lives in CPU RAM by default. Before the GPU can operate on it, it must be copied to
+GPU VRAM. For small problems this transfer cost can dominate entirely. The GPU is faster per
+FLOP but you spend more time moving data than computing. Rule of thumb: only use GPU if the
+computation takes at least 10× longer than the transfer would on its own.</p>
+<h3 id="pytorch-on-gpu">PyTorch on GPU<a class="headerlink" href="#pytorch-on-gpu" title="Permanent link">&para;</a></h3>
+<p>PyTorch makes GPU programming straightforward. The core pattern is selecting a device and
+moving tensors to it; all subsequent operations run on that device automatically.</p>
+<pre><code class="language-python">import torch
+
+# Select the best available device
+if torch.cuda.is_available():
+    device = &quot;cuda&quot;          # NVIDIA GPU
+elif hasattr(torch, &quot;xpu&quot;) and torch.xpu.is_available():
+    device = &quot;xpu&quot;           # Intel Arc GPU (requires intel-extension-for-pytorch)
+elif torch.backends.mps.is_available():
+    device = &quot;mps&quot;           # Apple Silicon
+else:
+    device = &quot;cpu&quot;
+
+print(f&quot;Using: {device}&quot;)
+
+# Create tensors directly on the device
+a = torch.randn(10_000, 10_000, device=device)
+b = torch.randn(10_000, 10_000, device=device)
+
+# This matrix multiplication runs on the GPU — no code change needed
+c = a @ b
+</code></pre>
+<p>For accurate GPU timing you must call <code>torch.cuda.synchronize()</code> before stopping the clock,
+because GPU kernels are dispatched asynchronously. The Python line returns immediately while
+the GPU is still computing.</p>
+<pre><code class="language-python">import time
+
+# CPU timing — straightforward
+t0 = time.perf_counter()
+c_cpu = a_cpu @ b_cpu
+t_cpu = time.perf_counter() - t0
+
+# GPU timing — must synchronise first
+t0 = time.perf_counter()
+c_gpu = a_gpu @ b_gpu
+torch.cuda.synchronize()   # wait for GPU to finish
+t_gpu = time.perf_counter() - t0
+</code></pre>
+<p>Forgetting <code>synchronize()</code> produces meaningless GPU timings that appear impossibly fast.</p>
+<h3 id="moving-data-between-cpu-and-gpu">Moving data between CPU and GPU<a class="headerlink" href="#moving-data-between-cpu-and-gpu" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python"># CPU → GPU
+tensor_gpu = tensor_cpu.to(device)          # or .cuda()
+
+# GPU → CPU (needed before converting to NumPy)
+tensor_cpu = tensor_gpu.cpu()
+arr = tensor_cpu.numpy()
+</code></pre>
+<p>Keep transfers to a minimum. Load your data once onto the GPU at the start of a loop, do
+all the compute there, and transfer back only the final result.</p>
+<h3 id="jax-on-gpu">JAX on GPU<a class="headerlink" href="#jax-on-gpu" title="Permanent link">&para;</a></h3>
+<p>JAX selects the GPU automatically, no device management needed.
+The same <code>@jit</code>-decorated function runs on CPU or GPU depending on what is installed.</p>
+<pre><code class="language-python">import jax
+import jax.numpy as jnp
+from jax import jit
+
+print(jax.devices())   # shows [CudaDevice(id=0)] on a GPU machine
+
+@jit
+def matmul(a, b):
+    return a @ b
+
+a = jnp.ones((10_000, 10_000))
+b = jnp.ones((10_000, 10_000))
+c = matmul(a, b)   # runs on GPU if available, CPU otherwise
+</code></pre>
+<h3 id="hardware-options">Hardware options<a class="headerlink" href="#hardware-options" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Hardware</th>
+<th>Framework</th>
+<th>Device string</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NVIDIA GPU</td>
+<td>PyTorch (standard)</td>
+<td><code>"cuda"</code></td>
+</tr>
+<tr>
+<td>NVIDIA GPU</td>
+<td>JAX</td>
+<td>automatic</td>
+</tr>
+<tr>
+<td>Intel Arc GPU</td>
+<td><a href="https://intel.github.io/intel-extension-for-pytorch/">intel-extension-for-pytorch</a></td>
+<td><code>"xpu"</code></td>
+</tr>
+<tr>
+<td>AMD GPU</td>
+<td>PyTorch (ROCm build)</td>
+<td><code>"cuda"</code> (ROCm maps to the CUDA API)</td>
+</tr>
+<tr>
+<td>Apple Silicon</td>
+<td>PyTorch (standard)</td>
+<td><code>"mps"</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">WSL2 and Intel Arc</p>
+<p>Intel Arc GPU compute (OpenCL / Level Zero / IPEX XPU) requires the <code>/dev/dri</code> render
+node provided by Intel's DRM kernel driver. The Microsoft WSL2 kernel does not include
+this driver, so Intel GPU compute is not accessible from WSL2 without a custom kernel.
+Run Linux natively for full Intel Arc support.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">HPC clusters</p>
+<p>Research computing clusters almost universally provide NVIDIA GPUs.
+Check with <code>nvidia-smi</code> on the login node or in the job script to confirm availability
+and see which CUDA version is loaded.</p>
+</div>
+<hr />
+<h2 id="decision-guide">Decision guide<a class="headerlink" href="#decision-guide" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Recommended tool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Loop over array elements</td>
+<td>NumPy vectorisation (always try this first)</td>
+</tr>
+<tr>
+<td>Many independent tasks in parallel</td>
+<td><code>multiprocessing</code> / <code>ProcessPoolExecutor</code></td>
+</tr>
+<tr>
+<td>Loop-heavy code that cannot be vectorised</td>
+<td>Numba <code>@njit</code></td>
+</tr>
+<tr>
+<td>Large matrix ops, neural networks, many-particle simulation</td>
+<td>GPU via PyTorch or JAX</td>
+</tr>
+<tr>
+<td>Autodiff / differentiable programming</td>
+<td>JAX or PyTorch autograd</td>
+</tr>
+<tr>
+<td>I/O-bound parallel work</td>
+<td><code>threading</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="what-to-read-next">What to read next<a class="headerlink" href="#what-to-read-next" title="Permanent link">&para;</a></h2>
+<p><a href="../lesson-07/">Lesson 07</a> introduces machine learning with PyTorch, where the performance
+ideas from this lesson (GPU arrays, differentiable computation) become central.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../lesson-05/" class="btn btn-neutral float-left" title="Lesson 05 — Code Style & Quality"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lesson-07/" class="btn btn-neutral float-right" title="Lesson 07 — ML Basics with PyTorch">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../lesson-05/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lesson-07/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/clipboard.js"></script>
+      <script src="../../../js/copy_code.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

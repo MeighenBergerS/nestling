@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Lesson 10 — Testing - Nestling</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 10 \u2014 Testing";
+        var mkdocs_page_input_path = "tracks/05-coding/lesson-10.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/environment-setup/">Environment Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >ArXiv & Reading Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-01/">Lesson 01 — Finding Papers</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-03/">Lesson 03 — Managing Papers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Writing Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-04/">Lesson 04 — LaTeX Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Git & GitHub</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-01/">Lesson 01 — Git Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-02/">Lesson 02 — Branching</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-03/">Lesson 03 — GitHub Collaboration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Coding Practices</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-02/">Lesson 02 — Python & Jupyter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-04/">Lesson 04 — Scientific Python Stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-05/">Lesson 05 — Code Style & Quality</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-06/">Lesson 06 — Performance & Parallelism</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-07/">Lesson 07 — ML Basics with PyTorch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lesson 10 — Testing</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#pytest-basics">pytest basics</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#floating-point-comparisons">Floating-point comparisons</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#testing-error-cases">Testing error cases</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fixtures">Fixtures</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-to-test">What to test</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#slow-tests">Slow tests</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#docstring-examples-as-tests">Docstring examples as tests</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-to-read-next">What to read next</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Plotting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-01/">Lesson 01 — Figure Design Principles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-04/">Lesson 04 — Colour and Accessibility</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Working with LLMs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-01/">Lesson 01 — What LLMs Are and Are Not</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-02/">Lesson 02 — LLMs for Code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-03/">Lesson 03 — LLMs for Writing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-04/">Lesson 04 — LLMs for Literature Search</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-05/">Lesson 05 — Prompt Engineering for Research</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-06/">Lesson 06 — Verification Habits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-07/">Lesson 07 — Skill Files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/paper-outline/">Paper Outline</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tracks</li>
+          <li class="breadcrumb-item">Coding Practices</li>
+      <li class="breadcrumb-item active">Lesson 10 — Testing</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/tracks/05-coding/lesson-10.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-10-testing">Lesson 10: Testing<a class="headerlink" href="#lesson-10-testing" title="Permanent link">&para;</a></h1>
+<p>Research code that is not tested is likely wrong in ways you have not found yet.
+This is not hypothetical. Every physicist who has written numerical code has eventually
+found a bug they thought was physics.
+Tests do not eliminate bugs, but they catch the common ones early and give you confidence
+when refactoring.</p>
+<hr />
+<h2 id="pytest-basics">pytest basics<a class="headerlink" href="#pytest-basics" title="Permanent link">&para;</a></h2>
+<p><a href="https://docs.pytest.org/">pytest</a> is the standard Python testing framework.</p>
+<pre><code class="language-sh">pip install pytest
+</code></pre>
+<p>A test file is any file matching <code>test_*.py</code> or <code>*_test.py</code>.
+A test function starts with <code>test_</code>.</p>
+<pre><code class="language-python"># tests/test_flux.py
+from mypackage.physics import compute_flux
+
+def test_flux_at_unit_energy():
+    # flux(1 GeV, gamma=2) = 1^(-2) = 1
+    assert compute_flux(energy=1.0, gamma=2.0) == 1.0
+
+def test_flux_scales_with_spectral_index():
+    # Flux at 10x the energy should drop by 10^gamma
+    flux_low = compute_flux(energy=1e3, gamma=2.0)
+    flux_high = compute_flux(energy=1e4, gamma=2.0)
+    assert abs(flux_low / flux_high - 100.0) &lt; 1e-10
+</code></pre>
+<p>Run all tests:</p>
+<pre><code class="language-sh">pytest
+</code></pre>
+<p>Run with verbose output:</p>
+<pre><code class="language-sh">pytest -v
+</code></pre>
+<hr />
+<h2 id="floating-point-comparisons">Floating-point comparisons<a class="headerlink" href="#floating-point-comparisons" title="Permanent link">&para;</a></h2>
+<p>Never use <code>==</code> to compare floats.
+Use <code>pytest.approx</code>, which allows a small relative tolerance:</p>
+<pre><code class="language-python">from pytest import approx
+
+def test_flux_value():
+    result = compute_flux(1e5, 2.37)
+    assert result == approx(1e5 ** -2.37, rel=1e-6)
+</code></pre>
+<p><a href="https://github.com/Harvard-Neutrino/prometheus">Prometheus</a> uses this correctly
+throughout <code>tests/test_detector_unit.py</code>.
+Using bare <code>==</code> on floats produces intermittent failures that are hard to debug.</p>
+<hr />
+<h2 id="testing-error-cases">Testing error cases<a class="headerlink" href="#testing-error-cases" title="Permanent link">&para;</a></h2>
+<p>Test that your code raises the right exception for invalid input:</p>
+<pre><code class="language-python">import pytest
+from mypackage.physics import compute_flux
+
+def test_negative_gamma_raises():
+    &quot;&quot;&quot;Negative spectral index is unphysical.&quot;&quot;&quot;
+    with pytest.raises(ValueError, match=&quot;gamma must be positive&quot;):
+        compute_flux(1e5, gamma=-1.0)
+</code></pre>
+<p>The <code>match</code> argument verifies the error message, making tests self-documenting and
+preventing silent mis-matches where the right exception type is raised for the wrong reason.</p>
+<hr />
+<h2 id="fixtures">Fixtures<a class="headerlink" href="#fixtures" title="Permanent link">&para;</a></h2>
+<p>A <strong>fixture</strong> is setup code shared between multiple tests.
+Define one with <code>@pytest.fixture</code>:</p>
+<pre><code class="language-python">import pytest
+import numpy as np
+from mypackage.detector import Detector
+
+@pytest.fixture
+def simple_detector():
+    return Detector(n_modules=10, spacing=50.0, seed=42)
+
+def test_detector_has_correct_module_count(simple_detector):
+    assert len(simple_detector.modules) == 10
+
+def test_detector_volume_is_positive(simple_detector):
+    assert simple_detector.volume &gt; 0
+</code></pre>
+<p>Put shared fixtures in <code>tests/conftest.py</code>. Pytest finds them automatically.
+Prometheus uses <code>conftest.py</code> to define detectors and particle configurations reused
+across its 16+ test modules.</p>
+<hr />
+<h2 id="what-to-test">What to test<a class="headerlink" href="#what-to-test" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Test type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Known analytical result</td>
+<td><code>compute_flux(1.0, 2.0) == 1.0</code></td>
+</tr>
+<tr>
+<td>Boundary conditions</td>
+<td>Zero energy, empty list, single event</td>
+</tr>
+<tr>
+<td>Error paths</td>
+<td>Wrong input raises the right exception with a clear message</td>
+</tr>
+<tr>
+<td>Physics invariants</td>
+<td>Total flux integrates to the expected value; direction vector norm is 1</td>
+</tr>
+<tr>
+<td>Regression test</td>
+<td>Fix a bug, add a test that would have caught it</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What not to test</strong>: implementation details that change during refactoring, third-party
+library behaviour, trivial one-line getters.</p>
+<hr />
+<h2 id="slow-tests">Slow tests<a class="headerlink" href="#slow-tests" title="Permanent link">&para;</a></h2>
+<p>Mark end-to-end tests that take minutes as slow so they can be excluded from fast
+development runs:</p>
+<pre><code class="language-python">import pytest
+
+@pytest.mark.slow
+def test_full_neutrino_simulation():
+    ...
+</code></pre>
+<p>Configure the marker in <code>pyproject.toml</code>:</p>
+<pre><code class="language-toml">[tool.pytest.ini_options]
+testpaths = [&quot;tests&quot;]
+markers = [&quot;slow: full end-to-end simulation tests, excluded from CI&quot;]
+</code></pre>
+<p>Run excluding slow tests:</p>
+<pre><code class="language-sh">pytest -m &quot;not slow&quot;
+</code></pre>
+<p>Prometheus uses exactly this pattern. The e2e tests in <code>tests/test_e2e.py</code> are marked slow
+and excluded from the CI workflow. They are run locally before opening a pull request.</p>
+<hr />
+<h2 id="docstring-examples-as-tests">Docstring examples as tests<a class="headerlink" href="#docstring-examples-as-tests" title="Permanent link">&para;</a></h2>
+<p>Short usage examples in docstrings can be tested automatically:</p>
+<pre><code class="language-python">def compute_flux(energy: float, gamma: float) -&gt; float:
+    &quot;&quot;&quot;
+    Examples
+    --------
+    &gt;&gt;&gt; compute_flux(1.0, 2.0)
+    1.0
+    &quot;&quot;&quot;
+    return energy ** (-gamma)
+</code></pre>
+<p>Run with:</p>
+<pre><code class="language-sh">pytest --doctest-modules mypackage/
+</code></pre>
+<p>This is a lightweight way to keep examples in docstrings accurate without maintaining
+a separate test file.</p>
+<hr />
+<h2 id="what-to-read-next">What to read next<a class="headerlink" href="#what-to-read-next" title="Permanent link">&para;</a></h2>
+<p><a href="../lesson-11/">Lesson 11</a> covers packaging: making your project installable with
+<code>pip install</code> so collaborators can use it without copying files.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../lesson-09/" class="btn btn-neutral float-left" title="Lesson 09 — Documentation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lesson-11/" class="btn btn-neutral float-right" title="Lesson 11 — Packaging">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../lesson-09/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lesson-11/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/clipboard.js"></script>
+      <script src="../../../js/copy_code.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

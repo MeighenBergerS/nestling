@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Lesson 01 — Git Basics - Nestling</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 01 \u2014 Git Basics";
+        var mkdocs_page_input_path = "tracks/04-git-github/lesson-01.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/environment-setup/">Environment Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >ArXiv & Reading Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-01/">Lesson 01 — Finding Papers</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-03/">Lesson 03 — Managing Papers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Writing Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-04/">Lesson 04 — LaTeX Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Git & GitHub</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lesson 01 — Git Basics</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#what-git-is">What Git is</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#initial-setup">Initial setup</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#creating-a-repository">Creating a repository</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#the-three-areas">The three areas</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#staging-and-committing">Staging and committing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#commit-best-practices">Commit best practices</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#one-logical-change-per-commit">One logical change per commit</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#keep-the-subject-line-short-and-specific">Keep the subject line short and specific</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#add-a-body-when-the-why-is-not-obvious">Add a body when the why is not obvious</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#never-commit-secrets-or-large-binary-files">Never commit secrets or large binary files</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ignoring-files">Ignoring files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reading-history">Reading history</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comparing-changes">Comparing changes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#undoing-changes">Undoing changes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#a-typical-daily-workflow">A typical daily workflow</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#further-reading">Further reading</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-to-read-next">What to read next</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-02/">Lesson 02 — Branching</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-03/">Lesson 03 — GitHub Collaboration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Coding Practices</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-02/">Lesson 02 — Python & Jupyter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-04/">Lesson 04 — Scientific Python Stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-05/">Lesson 05 — Code Style & Quality</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-06/">Lesson 06 — Performance & Parallelism</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-07/">Lesson 07 — ML Basics with PyTorch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-10/">Lesson 10 — Testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Plotting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-01/">Lesson 01 — Figure Design Principles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-04/">Lesson 04 — Colour and Accessibility</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Working with LLMs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-01/">Lesson 01 — What LLMs Are and Are Not</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-02/">Lesson 02 — LLMs for Code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-03/">Lesson 03 — LLMs for Writing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-04/">Lesson 04 — LLMs for Literature Search</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-05/">Lesson 05 — Prompt Engineering for Research</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-06/">Lesson 06 — Verification Habits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-07/">Lesson 07 — Skill Files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/paper-outline/">Paper Outline</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tracks</li>
+          <li class="breadcrumb-item">Git & GitHub</li>
+      <li class="breadcrumb-item active">Lesson 01 — Git Basics</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/tracks/04-git-github/lesson-01.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-01-git-basics">Lesson 01: Git Basics<a class="headerlink" href="#lesson-01-git-basics" title="Permanent link">&para;</a></h1>
+<p>Version control is one of the most important habits you can build as a researcher.
+It lets you track every change you make to code, scripts, and text files, revert to any previous state,
+and collaborate without accidentally overwriting each other's work.
+This lesson covers the core workflow you will use every day.</p>
+<hr />
+<h2 id="what-git-is">What Git is<a class="headerlink" href="#what-git-is" title="Permanent link">&para;</a></h2>
+<p>Git is a version control system: a tool that records the history of a directory as a series of snapshots called <strong>commits</strong>.
+Each commit captures the exact state of every tracked file at a moment in time, along with a message describing what changed and why.</p>
+<p>Git is local by default.
+Everything in this lesson happens on your own machine.
+<a href="../lesson-03/">Lesson 03</a> covers how to share your history with others via GitHub.</p>
+<hr />
+<h2 id="initial-setup">Initial setup<a class="headerlink" href="#initial-setup" title="Permanent link">&para;</a></h2>
+<p>Before using Git for the first time, tell it who you are.
+This information is recorded in every commit you create.</p>
+<p>Set your name:</p>
+<pre><code class="language-sh">git config --global user.name &quot;Your Name&quot;
+</code></pre>
+<p>Set your email:</p>
+<pre><code class="language-sh">git config --global user.email &quot;you@example.com&quot;
+</code></pre>
+<p>Set your preferred editor (used when Git opens a text editor for you):</p>
+<pre><code class="language-sh">git config --global core.editor &quot;nano&quot;
+</code></pre>
+<p>These settings are stored in <code>~/.gitconfig</code> and apply to every repository on your machine.</p>
+<hr />
+<h2 id="creating-a-repository">Creating a repository<a class="headerlink" href="#creating-a-repository" title="Permanent link">&para;</a></h2>
+<p>To start tracking a directory, navigate into it and run:</p>
+<pre><code class="language-sh">git init
+</code></pre>
+<p>This creates a hidden <code>.git/</code> folder that stores the entire history of the project.
+You never need to touch anything inside <code>.git/</code> directly.</p>
+<p>To verify that the repository was created:</p>
+<pre><code class="language-sh">git status
+</code></pre>
+<p>On a brand-new repository with no files, Git reports that you are on the initial branch and there is nothing to commit yet.</p>
+<hr />
+<h2 id="the-three-areas">The three areas<a class="headerlink" href="#the-three-areas" title="Permanent link">&para;</a></h2>
+<p>Understanding Git's three areas is the key to understanding every command.</p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>What it contains</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Working directory</strong></td>
+<td>Your files as they exist on disk right now</td>
+</tr>
+<tr>
+<td><strong>Staging area (index)</strong></td>
+<td>Changes you have selected to include in the next commit</td>
+</tr>
+<tr>
+<td><strong>Repository (history)</strong></td>
+<td>All committed snapshots, permanently recorded</td>
+</tr>
+</tbody>
+</table>
+<p><code>git add</code> moves changes from the working directory into the staging area.
+<code>git commit</code> moves everything in the staging area into the repository as a new commit.</p>
+<p>The staging area might feel like an unnecessary extra step at first.
+Its purpose is control.
+At the end of an afternoon of work you may have edited five files for three different reasons.
+The staging area lets you group those changes into three separate, focused commits instead of
+one large, confusing one.
+A clean commit history is much easier to navigate when something breaks later.</p>
+<hr />
+<h2 id="staging-and-committing">Staging and committing<a class="headerlink" href="#staging-and-committing" title="Permanent link">&para;</a></h2>
+<p>After editing a file, check what has changed:</p>
+<pre><code class="language-sh">git status
+</code></pre>
+<p>Stage the file:</p>
+<pre><code class="language-sh">git add filename.py
+</code></pre>
+<p>Stage everything in the current directory:</p>
+<pre><code class="language-sh">git add .
+</code></pre>
+<p>Commit with a message:</p>
+<pre><code class="language-sh">git commit -m &quot;Add initial simulation script&quot;
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Stage specific files</p>
+<p>Prefer staging files by name (<code>git add analysis.py</code>) rather than staging everything (<code>git add .</code>).
+This forces you to review what goes into each commit and keeps your history clean.</p>
+</div>
+<hr />
+<h2 id="commit-best-practices">Commit best practices<a class="headerlink" href="#commit-best-practices" title="Permanent link">&para;</a></h2>
+<p>Writing good commit messages is a habit that develops over time. Early commits are often rough and that is completely fine.
+The conventions below are worth building from the start, but do not let them slow you down while you are learning the basics.
+A well-structured history is easy to search, easy to review, and easy to recover from.</p>
+<h3 id="one-logical-change-per-commit">One logical change per commit<a class="headerlink" href="#one-logical-change-per-commit" title="Permanent link">&para;</a></h3>
+<p>An <strong>atomic commit</strong> contains exactly one logical change, something you can describe in a single sentence.
+If your commit message needs "and" to describe what happened, you probably have two commits.</p>
+<p><strong>Why this matters</strong>: when something breaks, Git can search history automatically to find which commit
+introduced the problem (using <code>git bisect</code>).
+An atomic history makes that search fast and precise.
+A commit that changes ten unrelated things makes it impossible to isolate what went wrong.
+When you need to undo a mistake, you can revert one clean commit without disturbing anything else.</p>
+<p><strong>Common pitfall</strong>: committing everything at the end of the day as "day's work".
+The staging area exists precisely so you can commit each logical change as you finish it,
+even if you edited several files in the process.</p>
+<h3 id="keep-the-subject-line-short-and-specific">Keep the subject line short and specific<a class="headerlink" href="#keep-the-subject-line-short-and-specific" title="Permanent link">&para;</a></h3>
+<p>The subject line is the most important part of a commit message.
+It is what appears in <code>git log --oneline</code>, on GitHub, and in code review tools.</p>
+<p>Write commit messages in the <strong>imperative mood</strong>: "Fix", "Add", "Remove", "Update",
+not "Fixed", "Adding", or "I updated".
+Think of completing the sentence: "If applied, this commit will..."</p>
+<p>Keep the subject under <strong>72 characters</strong>. GitHub truncates longer subjects in the commit list.</p>
+<div class="admonition note">
+<p class="admonition-title">Credit</p>
+<p>The imperative mood convention, the 72-character subject limit, and the blank-line-before-body
+rule are drawn from Tim Pope's
+<a href="https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">"A Note About Git Commit Messages"</a>
+(2008), which established the conventions now standard across the Git community.</p>
+</div>
+<p>Good subject lines:</p>
+<ul>
+<li><code>Fix normalisation factor in flux calculation</code></li>
+<li><code>Add energy loss model for iron nuclei</code></li>
+<li><code>Remove unused import in analysis.py</code></li>
+</ul>
+<p>Bad subject lines:</p>
+<ul>
+<li><code>fix stuff</code>: says nothing</li>
+<li><code>WIP</code>: not a commit message</li>
+<li><code>updates</code>: meaningless</li>
+<li><code>Fixed the thing with the numbers that was wrong</code>: vague and past tense</li>
+</ul>
+<p><strong>Common pitfall</strong>: writing "Update code" or "Fix bug" because you are in a hurry.
+Two months later you will not remember what this commit did, and neither will your collaborators.</p>
+<h3 id="add-a-body-when-the-why-is-not-obvious">Add a body when the why is not obvious<a class="headerlink" href="#add-a-body-when-the-why-is-not-obvious" title="Permanent link">&para;</a></h3>
+<p>For commits where the reason is not self-evident, open your editor and add a body:</p>
+<pre><code class="language-sh">git commit
+</code></pre>
+<p>Write the subject on the first line, leave a blank line, then explain why:</p>
+<pre><code class="language-text">Fix normalisation factor in flux calculation
+
+The previous factor of 2π was correct for isotropic emission but wrong
+for the directed beam case used in the sensitivity study. This affects
+all results in Section III.
+</code></pre>
+<p>The body explains <em>why</em> the change was made, not <em>what</em> changed. The diff already shows what changed.</p>
+<h3 id="never-commit-secrets-or-large-binary-files">Never commit secrets or large binary files<a class="headerlink" href="#never-commit-secrets-or-large-binary-files" title="Permanent link">&para;</a></h3>
+<p>Do not commit passwords, API keys, or access tokens.
+Setting up a <code>.gitignore</code> before your first <code>git add</code> is the easiest way to prevent this by accident.
+See the next section.
+If a secret does reach a public repository, treat it as compromised: rotate the key immediately
+and notify whoever manages that service.
+(Removing a secret from Git history is possible but requires rewriting every commit that followed it,
+which is disruptive for everyone who has cloned the repository.)</p>
+<p>Do not commit large data files or compiled outputs (see the <code>.gitignore</code> section below).</p>
+<hr />
+<h2 id="ignoring-files">Ignoring files<a class="headerlink" href="#ignoring-files" title="Permanent link">&para;</a></h2>
+<p>Not everything in a project directory should be tracked.
+Compiled outputs, temporary files, and data files that can be regenerated should be excluded.</p>
+<p><strong>Why this matters</strong>: Git stores the complete history of every file it tracks.
+A large data file committed once stays in the repository forever, even after deletion,
+because the old version lives in the history.
+This bloats the repository for every collaborator who clones it.
+Credentials (passwords, API keys) committed to a public repository are immediately exposed
+and should be treated as compromised.</p>
+<p>Create a <code>.gitignore</code> file in the root of the repository:</p>
+<pre><code class="language-gitignore"># Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Output data
+data/output/
+*.h5
+</code></pre>
+<p>Files matching these patterns will not appear in <code>git status</code> and cannot be staged accidentally.</p>
+<div class="admonition warning">
+<p class="admonition-title">Add to .gitignore before the first commit</p>
+<p>Adding a <code>.gitignore</code> rule after accidentally committing a file does not remove it from history.
+The rule only prevents future commits.
+Set up your <code>.gitignore</code> before running <code>git add</code> for the first time.</p>
+</div>
+<hr />
+<h2 id="reading-history">Reading history<a class="headerlink" href="#reading-history" title="Permanent link">&para;</a></h2>
+<p>View the commit log:</p>
+<pre><code class="language-sh">git log
+</code></pre>
+<p>View a compact one-line-per-commit summary:</p>
+<pre><code class="language-sh">git log --oneline
+</code></pre>
+<p>Show what changed in a specific commit (replace <code>abc1234</code> with the first seven characters of any commit hash):</p>
+<pre><code class="language-sh">git show abc1234
+</code></pre>
+<hr />
+<h2 id="comparing-changes">Comparing changes<a class="headerlink" href="#comparing-changes" title="Permanent link">&para;</a></h2>
+<p>See what you have changed in the working directory since the last commit:</p>
+<pre><code class="language-sh">git diff
+</code></pre>
+<p>See what is staged (ready to commit) versus the last commit:</p>
+<pre><code class="language-sh">git diff --staged
+</code></pre>
+<hr />
+<h2 id="undoing-changes">Undoing changes<a class="headerlink" href="#undoing-changes" title="Permanent link">&para;</a></h2>
+<p>Discard changes to a file in the working directory (revert it to the last committed state):</p>
+<pre><code class="language-sh">git restore filename.py
+</code></pre>
+<p>Unstage a file you added by accident (without discarding the change):</p>
+<pre><code class="language-sh">git restore --staged filename.py
+</code></pre>
+<div class="admonition warning">
+<p class="admonition-title">git restore is permanent for uncommitted changes</p>
+<p><code>git restore filename.py</code> discards changes that have not been committed.
+Once you run it, those changes are gone.
+Committed history is safe; uncommitted work is not.</p>
+</div>
+<hr />
+<h2 id="a-typical-daily-workflow">A typical daily workflow<a class="headerlink" href="#a-typical-daily-workflow" title="Permanent link">&para;</a></h2>
+<p>Most of your Git usage fits into this loop:</p>
+<ol>
+<li>Edit files.</li>
+<li>Run <code>git status</code> to see what changed.</li>
+<li>Run <code>git diff</code> to review the changes in detail.</li>
+<li>Stage the files you want to include: <code>git add filename.py</code>.</li>
+<li>Commit with a clear message: <code>git commit -m "Fix normalisation in spectrum calculation"</code>.</li>
+<li>Repeat.</li>
+</ol>
+<hr />
+<h2 id="further-reading">Further reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
+<p><a href="https://git-scm.com/book/en/v2">Pro Git</a> by Scott Chacon and Ben Straub is the definitive
+reference for Git, freely available online. Chapters 1 and 2 cover everything in this lesson
+in greater depth; chapters 3 and 5 cover branching and distributed workflows.
+If you want to understand what Git is actually doing rather than just how to use it,
+this is the book to read.</p>
+<h2 id="what-to-read-next">What to read next<a class="headerlink" href="#what-to-read-next" title="Permanent link">&para;</a></h2>
+<p><a href="../lesson-02/">Lesson 02</a> covers branches, the mechanism that lets you develop a new feature
+or run an experiment without touching the main line of your project.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../" class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lesson-02/" class="btn btn-neutral float-right" title="Lesson 02 — Branching">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lesson-02/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/clipboard.js"></script>
+      <script src="../../../js/copy_code.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Lesson 05 — Prompt Engineering for Research - Nestling</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 05 \u2014 Prompt Engineering for Research";
+        var mkdocs_page_input_path = "tracks/07-llm-practices/lesson-05.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/environment-setup/">Environment Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >ArXiv & Reading Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-01/">Lesson 01 — Finding Papers</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-03/">Lesson 03 — Managing Papers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Writing Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-04/">Lesson 04 — LaTeX Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Git & GitHub</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-01/">Lesson 01 — Git Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-02/">Lesson 02 — Branching</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-03/">Lesson 03 — GitHub Collaboration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Coding Practices</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-02/">Lesson 02 — Python & Jupyter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-04/">Lesson 04 — Scientific Python Stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-05/">Lesson 05 — Code Style & Quality</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-06/">Lesson 06 — Performance & Parallelism</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-07/">Lesson 07 — ML Basics with PyTorch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-10/">Lesson 10 — Testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Plotting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-01/">Lesson 01 — Figure Design Principles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-04/">Lesson 04 — Colour and Accessibility</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Working with LLMs</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-01/">Lesson 01 — What LLMs Are and Are Not</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-02/">Lesson 02 — LLMs for Code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-03/">Lesson 03 — LLMs for Writing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-04/">Lesson 04 — LLMs for Literature Search</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lesson 05 — Prompt Engineering for Research</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#the-mental-model-briefing-a-smart-assistant">The mental model: briefing a smart assistant</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#core-techniques">Core techniques</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#1-give-context-before-the-task">1. Give context before the task</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#2-specify-the-format-of-the-output">2. Specify the format of the output</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#3-set-the-audience-and-level">3. Set the audience and level</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#4-ask-for-reasoning-chain-of-thought">4. Ask for reasoning (chain-of-thought)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#5-give-examples-few-shot-prompting">5. Give examples (few-shot prompting)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#6-constrain-what-to-avoid">6. Constrain what to avoid</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#prompts-for-common-research-tasks">Prompts for common research tasks</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#summarisation">Summarisation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#concept-explanation">Concept explanation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#brainstorming">Brainstorming</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#code-generation">Code generation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#structured-extraction">Structured extraction</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#argument-strengthening">Argument strengthening</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#system-prompts-and-persistent-context">System prompts and persistent context</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#temperature-and-parameters">Temperature and parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#iterating-on-prompts">Iterating on prompts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#industrial-context-prompt-engineering-as-a-discipline">Industrial context: prompt engineering as a discipline</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#checklist">Checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-to-read-next">What to read next</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-06/">Lesson 06 — Verification Habits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-07/">Lesson 07 — Skill Files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/paper-outline/">Paper Outline</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tracks</li>
+          <li class="breadcrumb-item">Working with LLMs</li>
+      <li class="breadcrumb-item active">Lesson 05 — Prompt Engineering for Research</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/tracks/07-llm-practices/lesson-05.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-05-prompt-engineering-for-research">Lesson 05: Prompt Engineering for Research<a class="headerlink" href="#lesson-05-prompt-engineering-for-research" title="Permanent link">&para;</a></h1>
+<p>Prompt engineering is the practice of writing inputs to an LLM that reliably produce
+useful outputs.
+It is not a mystical art. It is the application of clear communication to a system
+that responds well to clear communication.</p>
+<p>This lesson covers the techniques that matter most for research tasks:
+summarisation, explanation, brainstorming, and structured output.</p>
+<hr />
+<h2 id="the-mental-model-briefing-a-smart-assistant">The mental model: briefing a smart assistant<a class="headerlink" href="#the-mental-model-briefing-a-smart-assistant" title="Permanent link">&para;</a></h2>
+<p>Write your prompt as if you were briefing a knowledgeable colleague who has just joined
+the project.
+They are capable but know nothing about your specific context unless you tell them.
+They will do exactly what you ask, not more, not less, so be specific about what
+you want.</p>
+<hr />
+<h2 id="core-techniques">Core techniques<a class="headerlink" href="#core-techniques" title="Permanent link">&para;</a></h2>
+<h3 id="1-give-context-before-the-task">1. Give context before the task<a class="headerlink" href="#1-give-context-before-the-task" title="Permanent link">&para;</a></h3>
+<p>Bad:</p>
+<blockquote>
+<p>"Summarise this."</p>
+</blockquote>
+<p>Better:</p>
+<blockquote>
+<p>"I am a PhD student in astroparticle physics writing a thesis introduction.
+Summarise the following abstract in two sentences suitable for a specialist audience."</p>
+</blockquote>
+<p>The context shapes the register, the level of detail, and what counts as important.</p>
+<h3 id="2-specify-the-format-of-the-output">2. Specify the format of the output<a class="headerlink" href="#2-specify-the-format-of-the-output" title="Permanent link">&para;</a></h3>
+<p>If you want a bullet list, say so. If you want a single paragraph, say so.
+If you want structured output (JSON, a table, a numbered list), describe the exact format.</p>
+<blockquote>
+<p>"Return your answer as a markdown table with columns: Term | Definition | Example."
+"List the five most important points as a numbered list. One sentence per point."</p>
+</blockquote>
+<h3 id="3-set-the-audience-and-level">3. Set the audience and level<a class="headerlink" href="#3-set-the-audience-and-level" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>"Explain this to a physicist who has not worked in machine learning."
+"Write this for a general audience with no physics background."
+"Assume I am familiar with the standard model but new to cosmology."</p>
+</blockquote>
+<p>The model will adjust vocabulary, assumed knowledge, and depth accordingly.</p>
+<h3 id="4-ask-for-reasoning-chain-of-thought">4. Ask for reasoning (chain-of-thought)<a class="headerlink" href="#4-ask-for-reasoning-chain-of-thought" title="Permanent link">&para;</a></h3>
+<p>For complex problems, asking the model to reason step by step before giving an answer
+often produces more accurate results.</p>
+<blockquote>
+<p>"Think through this step by step before giving your answer."
+"First identify what information is needed, then answer the question."</p>
+</blockquote>
+<p>This is especially useful for checking whether the model's reasoning is sound,
+even if the answer is ultimately wrong.</p>
+<h3 id="5-give-examples-few-shot-prompting">5. Give examples (few-shot prompting)<a class="headerlink" href="#5-give-examples-few-shot-prompting" title="Permanent link">&para;</a></h3>
+<p>If you want output in a specific style or format, the most reliable way to get it
+is to show an example.</p>
+<blockquote>
+<p>"Rewrite the following sentences in the style of the example below.</p>
+<p>Example input: The measurements were performed at low temperature.
+Example output: Measurements were performed at low temperature.</p>
+<p>Input: The analysis was conducted using the software developed by the team."</p>
+</blockquote>
+<h3 id="6-constrain-what-to-avoid">6. Constrain what to avoid<a class="headerlink" href="#6-constrain-what-to-avoid" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>"Do not include citations."
+"Do not use bullet points."
+"Do not suggest anything that requires internet access."</p>
+</blockquote>
+<p>Constraints prevent the model from producing output you will have to discard.</p>
+<hr />
+<h2 id="prompts-for-common-research-tasks">Prompts for common research tasks<a class="headerlink" href="#prompts-for-common-research-tasks" title="Permanent link">&para;</a></h2>
+<h3 id="summarisation">Summarisation<a class="headerlink" href="#summarisation" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>"Summarise the following [abstract / paper / section] in [N sentences / one paragraph /
+a bullet list].
+Audience: [graduate students / specialists / general public].
+Focus on: [the main result / the methodology / the limitations]."</p>
+</blockquote>
+<h3 id="concept-explanation">Concept explanation<a class="headerlink" href="#concept-explanation" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>"Explain [concept] at the level of a [first-year PhD student / undergraduate / expert].
+Cover: what it is, why it matters, and the main caveats.
+Do not use analogies I would need to fact-check."</p>
+</blockquote>
+<h3 id="brainstorming">Brainstorming<a class="headerlink" href="#brainstorming" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>"I am investigating [problem].
+Generate [N] hypotheses or approaches I might not have considered.
+For each, give one sentence on why it might be worth pursuing and one sentence on its
+main weakness."</p>
+</blockquote>
+<h3 id="code-generation">Code generation<a class="headerlink" href="#code-generation" title="Permanent link">&para;</a></h3>
+<p>(See <a href="../lesson-02/">Lesson 02</a> for code-specific prompts.)</p>
+<h3 id="structured-extraction">Structured extraction<a class="headerlink" href="#structured-extraction" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>"From the following text, extract all named physical quantities, their values,
+and their units. Return a markdown table with columns: Quantity | Value | Unit | Source sentence."</p>
+</blockquote>
+<h3 id="argument-strengthening">Argument strengthening<a class="headerlink" href="#argument-strengthening" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>"I am making the following argument in a paper: [argument].
+Identify the two weakest points in this argument and suggest how to address each."</p>
+</blockquote>
+<hr />
+<h2 id="system-prompts-and-persistent-context">System prompts and persistent context<a class="headerlink" href="#system-prompts-and-persistent-context" title="Permanent link">&para;</a></h2>
+<p>If you are using an LLM via an API or a tool that supports system prompts, you can
+provide persistent context that applies to all messages in a session.
+This is useful for:</p>
+<ul>
+<li>Setting your role and background once rather than repeating it every prompt.</li>
+<li>Enforcing output format constraints.</li>
+<li>Specifying style conventions.</li>
+</ul>
+<p>Example system prompt for research writing:</p>
+<pre><code class="language-text">You are assisting a PhD student in astroparticle physics.
+The student is fluent in physics but not in machine learning.
+Respond concisely. Use LaTeX for all mathematical expressions.
+Do not generate citations — the student will find references independently.
+Flag any claim you are uncertain about.
+</code></pre>
+<hr />
+<h2 id="temperature-and-parameters">Temperature and parameters<a class="headerlink" href="#temperature-and-parameters" title="Permanent link">&para;</a></h2>
+<p>Most LLM interfaces expose at least one generation parameter:</p>
+<p><strong>Temperature</strong> controls randomness. A higher temperature (e.g. 0.9) makes the model
+sample more diverse tokens; a lower temperature (e.g. 0.2) makes it more deterministic
+and focused.</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Temperature guidance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factual extraction or summarisation</td>
+<td>Low (0.0–0.3): you want the most likely correct answer</td>
+</tr>
+<tr>
+<td>Brainstorming or creative drafting</td>
+<td>Higher (0.7–1.0): you want variety</td>
+</tr>
+<tr>
+<td>Code generation</td>
+<td>Low to medium (0.0–0.5): you want correct, predictable output</td>
+</tr>
+</tbody>
+</table>
+<p>For most research tasks, the default temperature (typically 0.7–1.0) is fine.
+If you are using the API and need reproducible output, set temperature to 0 and fix the
+random seed if the API supports it.</p>
+<hr />
+<h2 id="iterating-on-prompts">Iterating on prompts<a class="headerlink" href="#iterating-on-prompts" title="Permanent link">&para;</a></h2>
+<p>Your first prompt is rarely optimal.
+Prompt engineering is an iterative process:</p>
+<ol>
+<li>Write a first prompt and look at the output.</li>
+<li>Identify what is wrong: too long, wrong level, missing something, wrong format.</li>
+<li>Revise the prompt to address that specific issue.</li>
+<li>Repeat until the output is useful.</li>
+</ol>
+<p>Keep a record of prompts that work well.
+A prompt that reliably produces good summaries of astrophysics abstracts is worth saving.</p>
+<hr />
+<h2 id="industrial-context-prompt-engineering-as-a-discipline">Industrial context: prompt engineering as a discipline<a class="headerlink" href="#industrial-context-prompt-engineering-as-a-discipline" title="Permanent link">&para;</a></h2>
+<p><strong>Prompt versioning.</strong> Organisations that deploy LLMs in production treat prompts
+as code: they are version-controlled, reviewed, and tested.
+For research workflows you use repeatedly, document the prompts that work.</p>
+<p><strong>Prompt injection.</strong> When user-supplied text is incorporated into a prompt, adversarial
+inputs can manipulate the model's behaviour.
+If you are building an automated pipeline that feeds external data to an LLM, sanitise
+inputs and constrain the model's output format.</p>
+<p><strong>Structured outputs.</strong> Modern APIs support JSON mode or structured output schemas,
+where the model is constrained to produce valid JSON matching a specified structure.
+This is much more reliable than asking the model to "return a JSON object" in free text.
+Use structured outputs for any pipeline that processes LLM output programmatically.</p>
+<p><strong>Evaluation.</strong> Industrial teams evaluate prompts systematically: a prompt change
+is tested on a benchmark set of inputs before deployment.
+For research, this means testing a new prompt on several representative examples
+before relying on it for important work.</p>
+<hr />
+<h2 id="checklist">Checklist<a class="headerlink" href="#checklist" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] My prompts include relevant context (my role, the purpose of the task, the audience).</li>
+<li>[ ] My prompts specify the desired output format.</li>
+<li>[ ] I iterate on prompts rather than accepting the first output.</li>
+<li>[ ] I have saved prompts that reliably produce useful results.</li>
+<li>[ ] I use low temperature for tasks where accuracy matters.</li>
+<li>[ ] For automated pipelines, I use structured output formats.</li>
+</ul>
+<hr />
+<h2 id="what-to-read-next">What to read next<a class="headerlink" href="#what-to-read-next" title="Permanent link">&para;</a></h2>
+<p><a href="../lesson-06/">Lesson 06</a> brings everything together in a verification checklist:
+the habits that separate researchers who use LLMs safely from those who do not.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../lesson-04/" class="btn btn-neutral float-left" title="Lesson 04 — LLMs for Literature Search"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lesson-06/" class="btn btn-neutral float-right" title="Lesson 06 — Verification Habits">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../lesson-04/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lesson-06/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/clipboard.js"></script>
+      <script src="../../../js/copy_code.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

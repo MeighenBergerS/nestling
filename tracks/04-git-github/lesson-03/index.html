@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Lesson 03 — GitHub Collaboration - Nestling</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 03 \u2014 GitHub Collaboration";
+        var mkdocs_page_input_path = "tracks/04-git-github/lesson-03.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/environment-setup/">Environment Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >ArXiv & Reading Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-01/">Lesson 01 — Finding Papers</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-03/">Lesson 03 — Managing Papers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Writing Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-04/">Lesson 04 — LaTeX Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Git & GitHub</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-01/">Lesson 01 — Git Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-02/">Lesson 02 — Branching</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lesson 03 — GitHub Collaboration</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#remotes">Remotes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pushing">Pushing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pulling">Pulling</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#pruning-stale-remote-tracking-branches">Pruning stale remote-tracking branches</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cloning">Cloning</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#forks">Forks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pull-requests">Pull requests</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pull-request-best-practices">Pull request best practices</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#write-a-useful-title-and-description">Write a useful title and description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#self-review-before-requesting-a-review">Self-review before requesting a review</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#use-draft-pull-requests-for-work-in-progress">Use draft pull requests for work in progress</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#respond-to-every-review-comment">Respond to every review comment</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#do-not-push-significant-changes-after-approval">Do not push significant changes after approval</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reviewing-a-pull-request">Reviewing a pull request</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#keeping-your-branch-up-to-date">Keeping your branch up to date</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-to-read-next">What to read next</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Coding Practices</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-02/">Lesson 02 — Python & Jupyter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-04/">Lesson 04 — Scientific Python Stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-05/">Lesson 05 — Code Style & Quality</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-06/">Lesson 06 — Performance & Parallelism</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-07/">Lesson 07 — ML Basics with PyTorch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-10/">Lesson 10 — Testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Plotting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-01/">Lesson 01 — Figure Design Principles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-04/">Lesson 04 — Colour and Accessibility</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Working with LLMs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-01/">Lesson 01 — What LLMs Are and Are Not</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-02/">Lesson 02 — LLMs for Code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-03/">Lesson 03 — LLMs for Writing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-04/">Lesson 04 — LLMs for Literature Search</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-05/">Lesson 05 — Prompt Engineering for Research</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-06/">Lesson 06 — Verification Habits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../07-llm-practices/lesson-07/">Lesson 07 — Skill Files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/paper-outline/">Paper Outline</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tracks</li>
+          <li class="breadcrumb-item">Git & GitHub</li>
+      <li class="breadcrumb-item active">Lesson 03 — GitHub Collaboration</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/tracks/04-git-github/lesson-03.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-03-github-collaboration">Lesson 03: GitHub Collaboration<a class="headerlink" href="#lesson-03-github-collaboration" title="Permanent link">&para;</a></h1>
+<p>GitHub hosts your Git repository on the internet so that others can read it, contribute to it,
+and review your work.
+This lesson covers how to push your local history to GitHub, how to collaborate using forks and
+pull requests, and how to keep your copy of a repository up to date with changes from others.</p>
+<hr />
+<h2 id="remotes">Remotes<a class="headerlink" href="#remotes" title="Permanent link">&para;</a></h2>
+<p>A <strong>remote</strong> is a repository stored somewhere other than your local machine.
+GitHub is the most common host, but the Git commands are the same regardless of where the remote lives.</p>
+<p>After creating a repository on GitHub, connect it to your local repository:</p>
+<pre><code class="language-sh">git remote add origin https://github.com/username/repo-name.git
+</code></pre>
+<p>The name <code>origin</code> is a convention for the primary remote. You can verify it was added:</p>
+<pre><code class="language-sh">git remote -v
+</code></pre>
+<hr />
+<h2 id="pushing">Pushing<a class="headerlink" href="#pushing" title="Permanent link">&para;</a></h2>
+<p>Push your local commits to the remote:</p>
+<pre><code class="language-sh">git push -u origin main
+</code></pre>
+<p>The <code>-u</code> flag sets <code>origin main</code> as the default upstream for the current branch.
+After the first push, subsequent pushes only need:</p>
+<pre><code class="language-sh">git push
+</code></pre>
+<p>Push a feature branch:</p>
+<pre><code class="language-sh">git push -u origin my-feature
+</code></pre>
+<hr />
+<h2 id="pulling">Pulling<a class="headerlink" href="#pulling" title="Permanent link">&para;</a></h2>
+<p>Pull brings remote commits into your local branch.
+It is equivalent to <code>git fetch</code> followed by <code>git merge</code>.</p>
+<pre><code class="language-sh">git pull
+</code></pre>
+<p>Use <code>git fetch</code> if you want to see what is on the remote without merging it immediately:</p>
+<pre><code class="language-sh">git fetch origin
+</code></pre>
+<p>Then inspect the difference before merging:</p>
+<pre><code class="language-sh">git diff main origin/main
+</code></pre>
+<h3 id="pruning-stale-remote-tracking-branches">Pruning stale remote-tracking branches<a class="headerlink" href="#pruning-stale-remote-tracking-branches" title="Permanent link">&para;</a></h3>
+<p>On an active repository, branches are created and deleted frequently.
+Git does not automatically remove your local references to remote branches that have been deleted on the remote.
+These stale references (<code>origin/some-old-feature</code>) accumulate over time and clutter <code>git branch -r</code> output.</p>
+<p>Pass <code>--prune</code> to clean them up during a fetch:</p>
+<pre><code class="language-sh">git fetch --prune
+</code></pre>
+<p>Or prune without fetching:</p>
+<pre><code class="language-sh">git remote prune origin
+</code></pre>
+<div class="admonition tip">
+<p class="admonition-title">Make pruning automatic</p>
+<p>You can tell Git to always prune when fetching:
+<code>sh
+git config --global fetch.prune true</code>
+After this, every <code>git fetch</code> and <code>git pull</code> prunes stale references automatically.</p>
+</div>
+<hr />
+<h2 id="cloning">Cloning<a class="headerlink" href="#cloning" title="Permanent link">&para;</a></h2>
+<p>To start working on an existing repository, clone it:</p>
+<pre><code class="language-sh">git clone https://github.com/username/repo-name.git
+</code></pre>
+<p>This downloads the full history and automatically sets the remote to <code>origin</code>.</p>
+<hr />
+<h2 id="forks">Forks<a class="headerlink" href="#forks" title="Permanent link">&para;</a></h2>
+<p>A <strong>fork</strong> is a copy of someone else's repository under your own GitHub account.
+Forks are used when you do not have write access to the original repository,
+which is the standard situation for contributing to any project you do not own.</p>
+<p>To fork a repository, click <strong>Fork</strong> on its GitHub page.
+Then clone your fork:</p>
+<pre><code class="language-sh">git clone https://github.com/your-username/repo-name.git
+</code></pre>
+<p>Add the original repository as a second remote, conventionally named <code>upstream</code>:</p>
+<pre><code class="language-sh">git remote add upstream https://github.com/original-owner/repo-name.git
+</code></pre>
+<p>This lets you pull new changes from the original project into your fork:</p>
+<pre><code class="language-sh">git fetch upstream
+</code></pre>
+<pre><code class="language-sh">git merge upstream/main
+</code></pre>
+<hr />
+<h2 id="pull-requests">Pull requests<a class="headerlink" href="#pull-requests" title="Permanent link">&para;</a></h2>
+<p>A <strong>pull request</strong> (PR) is a proposal to merge a branch or fork into another branch.
+It is the primary mechanism for code review on GitHub.</p>
+<p>The typical workflow:</p>
+<ol>
+<li>Create a branch for your changes: <code>git switch -c fix-cross-section</code></li>
+<li>Commit your changes on that branch.</li>
+<li>Before opening the PR, update <code>main</code> and rebase your branch onto it (see below).</li>
+<li>Push the branch to GitHub: <code>git push -u origin fix-cross-section</code></li>
+<li>On GitHub, open a pull request from <code>fix-cross-section</code> into <code>main</code>.</li>
+<li>Collaborators review the code, leave comments, and request changes if needed.</li>
+<li>Address any feedback by adding more commits to the same branch.</li>
+<li>Once approved, merge the pull request on GitHub.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Your first pull request does not need to be perfect</p>
+<p>The review process exists precisely to catch things.
+If you miss something, a collaborator will flag it and you will know for next time.
+Opening a PR that gets comments is not a failure. It is how the workflow is supposed to function.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Keep pull requests small</p>
+<p>A PR that touches one thing is much easier to review than one that touches ten.
+If your branch has grown large, consider splitting it into several smaller PRs.
+Reviewers are more thorough and faster when there is less to read.</p>
+</div>
+<hr />
+<h2 id="pull-request-best-practices">Pull request best practices<a class="headerlink" href="#pull-request-best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="write-a-useful-title-and-description">Write a useful title and description<a class="headerlink" href="#write-a-useful-title-and-description" title="Permanent link">&para;</a></h3>
+<p>The PR title follows the same rules as a commit subject line: imperative, specific, under 72 characters.</p>
+<p>The description should answer three questions:</p>
+<ol>
+<li><strong>What changed?</strong> A short summary: one paragraph or a brief bullet list.</li>
+<li><strong>Why?</strong> The motivation. Link to the relevant issue if one exists (<code>Fixes #12</code>).</li>
+<li><strong>How to verify it?</strong> What a reviewer should check to confirm the change works correctly.</li>
+</ol>
+<p>A PR with a blank description forces reviewers to read every line of code before they even
+understand what they are looking at.
+A clear description means they can review faster and catch real problems instead of asking
+orientation questions.</p>
+<h3 id="self-review-before-requesting-a-review">Self-review before requesting a review<a class="headerlink" href="#self-review-before-requesting-a-review" title="Permanent link">&para;</a></h3>
+<p>Before tagging anyone as a reviewer, open your own PR on GitHub and read the diff yourself.</p>
+<p>Look for:</p>
+<ul>
+<li>Leftover debug prints or commented-out code.</li>
+<li>Files you did not mean to include.</li>
+<li>Typos in variable names or commit messages.</li>
+<li>Any change that looks confusing without an explanation.</li>
+</ul>
+<p><strong>Why this matters</strong>: finding these yourself takes two minutes.
+Making a reviewer find them wastes their time and adds an unnecessary round of back-and-forth.</p>
+<p><strong>Common pitfall</strong>: pushing the branch and immediately requesting a review without looking at the
+GitHub diff. The web view renders the diff differently from your editor and regularly catches
+things you missed locally.</p>
+<h3 id="use-draft-pull-requests-for-work-in-progress">Use draft pull requests for work in progress<a class="headerlink" href="#use-draft-pull-requests-for-work-in-progress" title="Permanent link">&para;</a></h3>
+<p>If you want early feedback on an incomplete change, open the PR as a <strong>Draft</strong> on GitHub
+(use the dropdown next to "Create pull request" and select "Create draft pull request").
+Draft PRs are visible to the team but clearly marked as not ready for review.</p>
+<p>When the work is complete, convert it to a regular PR with the "Ready for review" button.</p>
+<p><strong>Why this matters</strong>: a draft PR starts the discussion early, makes your work visible to the team,
+and runs CI checks, so you catch failures before the final review.
+It also signals to collaborators what you are working on, which avoids duplicated effort.</p>
+<h3 id="respond-to-every-review-comment">Respond to every review comment<a class="headerlink" href="#respond-to-every-review-comment" title="Permanent link">&para;</a></h3>
+<p>When a reviewer leaves a comment, respond to it, even if only to say you have addressed it.
+If you disagree with a suggestion, explain why rather than silently ignoring it.
+Once all threads are resolved, re-request a review.</p>
+<p><strong>Common pitfall</strong>: fixing the code but not replying to the comment thread.
+The reviewer does not know whether their feedback was read and the PR stalls.</p>
+<h3 id="do-not-push-significant-changes-after-approval">Do not push significant changes after approval<a class="headerlink" href="#do-not-push-significant-changes-after-approval" title="Permanent link">&para;</a></h3>
+<p>Once a PR has been approved, only push small, unambiguous fixes (a typo, a missing docstring).
+Adding significant code after approval means the reviewer has not seen what is about to be merged.</p>
+<p>If you realise a substantial change is needed after approval, notify the reviewer and ask them
+to re-review before you merge.</p>
+<hr />
+<h2 id="reviewing-a-pull-request">Reviewing a pull request<a class="headerlink" href="#reviewing-a-pull-request" title="Permanent link">&para;</a></h2>
+<p>When someone asks you to review their code, your job is not to approve everything.
+It is to check whether the changes are correct, readable, and consistent with the project.</p>
+<p>On GitHub, you can:</p>
+<ul>
+<li>Leave a <strong>comment</strong> on any line to ask a question or flag something unclear.</li>
+<li>Mark a comment as a <strong>suggestion</strong> to propose a specific replacement (the author can apply it with one click).</li>
+<li><strong>Approve</strong> the PR when you are satisfied.</li>
+<li><strong>Request changes</strong> when something must be addressed before merging.</li>
+</ul>
+<p>Use the comment field on the PR page to leave a summary review.
+Keep comments specific: "Line 42: this loop will fail if <code>particles</code> is empty" is more useful than "looks off".</p>
+<hr />
+<h2 id="keeping-your-branch-up-to-date">Keeping your branch up to date<a class="headerlink" href="#keeping-your-branch-up-to-date" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">This section is for when you are comfortable with the basics</p>
+<p>If this is your first or second pull request, you can skip this section for now.
+Once you are working on a project where <code>main</code> is moving frequently, come back to it.</p>
+</div>
+<p>On a project with multiple developers, <code>main</code> moves forward continuously.
+Before opening a pull request, it is good practice to update your local <code>main</code> and rebase your feature branch onto it.
+This ensures your PR is tested against the latest code and produces a clean, linear history for reviewers.</p>
+<p><strong>Step 1</strong>: update your local <code>main</code> to match the remote:</p>
+<pre><code class="language-sh">git switch main
+</code></pre>
+<pre><code class="language-sh">git pull --rebase
+</code></pre>
+<p><strong>Step 2</strong>: rebase your feature branch onto the updated <code>main</code>:</p>
+<pre><code class="language-sh">git switch my-feature
+</code></pre>
+<pre><code class="language-sh">git rebase main
+</code></pre>
+<p><strong>Step 3</strong>: force-push the rebased branch (its commit hashes have changed):</p>
+<pre><code class="language-sh">git push --force-with-lease
+</code></pre>
+<p>Use <code>--force-with-lease</code> rather than <code>--force</code>.
+It fails if someone else has pushed to the branch since your last fetch,
+protecting you from overwriting work you did not know about.</p>
+<p>If conflicts arise during the rebase, Git pauses at each conflicted commit.
+Resolve the file, stage it, and continue:</p>
+<pre><code class="language-sh">git add the-conflicted-file.py
+</code></pre>
+<pre><code class="language-sh">git rebase --continue
+</code></pre>
+<p>See <a href="../lesson-02/">Lesson 02</a> for a full explanation of what rebase does and how to abort if needed.</p>
+<div class="admonition warning">
+<p class="admonition-title">Only rebase your own branch</p>
+<p>Rebase rewrites commit hashes, so anyone else who has checked out your branch will have a diverged copy.
+Rebase is safe on a feature branch that only you are working on.
+Never rebase <code>main</code> itself or any branch shared with others.</p>
+</div>
+<hr />
+<h2 id="what-to-read-next">What to read next<a class="headerlink" href="#what-to-read-next" title="Permanent link">&para;</a></h2>
+<p><a href="../lesson-04/">Lesson 04</a> covers GitHub Issues: how to track work, report bugs, and link issues
+to specific commits and pull requests.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../lesson-02/" class="btn btn-neutral float-left" title="Lesson 02 — Branching"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lesson-04/" class="btn btn-neutral float-right" title="Lesson 04 — Issues and Project Management">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../lesson-02/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lesson-04/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/clipboard.js"></script>
+      <script src="../../../js/copy_code.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

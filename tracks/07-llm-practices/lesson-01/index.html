@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Lesson 01 — What LLMs Are and Are Not - Nestling</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 01 \u2014 What LLMs Are and Are Not";
+        var mkdocs_page_input_path = "tracks/07-llm-practices/lesson-01.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/environment-setup/">Environment Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >ArXiv & Reading Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-01/">Lesson 01 — Finding Papers</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-03/">Lesson 03 — Managing Papers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Writing Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-04/">Lesson 04 — LaTeX Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Git & GitHub</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-01/">Lesson 01 — Git Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-02/">Lesson 02 — Branching</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-03/">Lesson 03 — GitHub Collaboration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Coding Practices</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-02/">Lesson 02 — Python & Jupyter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-04/">Lesson 04 — Scientific Python Stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-05/">Lesson 05 — Code Style & Quality</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-06/">Lesson 06 — Performance & Parallelism</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-07/">Lesson 07 — ML Basics with PyTorch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-10/">Lesson 10 — Testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Plotting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-01/">Lesson 01 — Figure Design Principles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-04/">Lesson 04 — Colour and Accessibility</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Working with LLMs</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lesson 01 — What LLMs Are and Are Not</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#what-an-llm-does">What an LLM does</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hallucination">Hallucination</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#why-hallucinations-are-dangerous-in-research">Why hallucinations are dangerous in research</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#when-hallucinations-are-most-likely">When hallucinations are most likely</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#confidence-does-not-imply-correctness">Confidence does not imply correctness</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#the-transformer-architecture-brief">The transformer architecture (brief)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-llms-are-actually-good-at">What LLMs are actually good at</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#industrial-context-how-the-field-thinks-about-this">Industrial context: how the field thinks about this</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#checklist">Checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-to-read-next">What to read next</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-02/">Lesson 02 — LLMs for Code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-03/">Lesson 03 — LLMs for Writing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-04/">Lesson 04 — LLMs for Literature Search</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-05/">Lesson 05 — Prompt Engineering for Research</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-06/">Lesson 06 — Verification Habits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-07/">Lesson 07 — Skill Files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/paper-outline/">Paper Outline</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tracks</li>
+          <li class="breadcrumb-item">Working with LLMs</li>
+      <li class="breadcrumb-item active">Lesson 01 — What LLMs Are and Are Not</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/tracks/07-llm-practices/lesson-01.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-01-what-llms-are-and-are-not">Lesson 01: What LLMs Are and Are Not<a class="headerlink" href="#lesson-01-what-llms-are-and-are-not" title="Permanent link">&para;</a></h1>
+<p>Large language models are among the most useful tools available to researchers today.
+They are also among the most misunderstood.
+This lesson explains what LLMs actually do, why they produce confident-sounding errors,
+and what mental model you should carry whenever you use one.</p>
+<hr />
+<h2 id="what-an-llm-does">What an LLM does<a class="headerlink" href="#what-an-llm-does" title="Permanent link">&para;</a></h2>
+<p>An LLM is a statistical model trained to predict the next token in a sequence.
+A <strong>token</strong> is roughly a word fragment: "uncer" and "tainty" might each be one token.
+Given a prompt, the model assigns probabilities over its vocabulary and samples the next token,
+then repeats until a stopping condition is met.</p>
+<p>That is it. There is no reasoning engine, no knowledge database being looked up,
+no internal simulation of the world. The model has learned extraordinarily rich statistical
+patterns from text, and it uses those patterns to produce text that is likely to follow
+the input.</p>
+<p>This has important consequences:</p>
+<ul>
+<li>The model produces whatever token sequence is <em>statistically likely given the training data</em>,
+  not whatever sequence is <em>true</em>.</li>
+<li>It has no access to information newer than its training cutoff.</li>
+<li>It has no persistent memory between conversations unless given explicit context.</li>
+<li>It cannot run code unless a tool is wired up to do so.</li>
+</ul>
+<hr />
+<h2 id="hallucination">Hallucination<a class="headerlink" href="#hallucination" title="Permanent link">&para;</a></h2>
+<p><strong>Hallucination</strong> is the term used when a model generates factually incorrect content
+with apparent confidence.
+It is not a bug or a rare failure mode. It is an intrinsic property of how these models work.</p>
+<p>A model that produces a plausible-sounding citation is not lying. It is doing exactly what
+it was trained to do: generating a token sequence that looks like a citation. Whether the
+paper exists is simply not part of the prediction objective.</p>
+<h3 id="why-hallucinations-are-dangerous-in-research">Why hallucinations are dangerous in research<a class="headerlink" href="#why-hallucinations-are-dangerous-in-research" title="Permanent link">&para;</a></h3>
+<ul>
+<li>They are hard to spot. The output reads fluently and the claim may be plausible.</li>
+<li>They can propagate. A hallucinated reference copied into a draft may survive peer review
+  if nobody checks the source.</li>
+<li>They are inconsistent. The model may give correct information on the same question
+  in one conversation and wrong information in another.</li>
+</ul>
+<h3 id="when-hallucinations-are-most-likely">When hallucinations are most likely<a class="headerlink" href="#when-hallucinations-are-most-likely" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Asking for specific citations</td>
+<td>High: model generates plausible-looking but nonexistent papers</td>
+</tr>
+<tr>
+<td>Asking about recent events</td>
+<td>High: model has a training cutoff</td>
+</tr>
+<tr>
+<td>Asking about niche or specialised topics</td>
+<td>High: sparse training data means poor calibration</td>
+</tr>
+<tr>
+<td>Asking for well-established general knowledge</td>
+<td>Lower, but still possible</td>
+</tr>
+<tr>
+<td>Asking the model to summarise text you have provided</td>
+<td>Lower: model has the ground truth in context</td>
+</tr>
+</tbody>
+</table>
+<p>The practical rule: <strong>the further the question is from the centre of the training
+distribution, the less you should trust the answer without external verification.</strong></p>
+<hr />
+<h2 id="confidence-does-not-imply-correctness">Confidence does not imply correctness<a class="headerlink" href="#confidence-does-not-imply-correctness" title="Permanent link">&para;</a></h2>
+<p>LLMs are trained on text produced by humans who are often confident.
+As a result, the model has learned to produce confident-sounding text regardless of whether
+the content is correct.</p>
+<p>This is fundamentally different from how scientific uncertainty works.
+A calibrated scientist hedges when uncertain. A language model hedges when the <em>training
+distribution</em> contains hedged text about that topic, which is not the same thing.</p>
+<p>You cannot use fluency, certainty of tone, or apparent authority as a proxy for accuracy.
+The only proxy for accuracy is <strong>checking the claim against a reliable source</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">The confident wrong answer</p>
+<p>If you ask a model "what is the best evidence for X?" and it gives you a fluent,
+confident, well-structured answer, resist the temptation to accept it.
+The answer is a prediction about what a helpful response would look like,
+not a retrieval from a database of vetted facts.</p>
+</div>
+<hr />
+<h2 id="the-transformer-architecture-brief">The transformer architecture (brief)<a class="headerlink" href="#the-transformer-architecture-brief" title="Permanent link">&para;</a></h2>
+<p>You do not need to understand the architecture in depth to use LLMs well, but a high-level
+picture helps clarify the limits.</p>
+<p>Modern LLMs are <strong>transformer</strong> models.
+The key mechanism is <strong>self-attention</strong>: the model can, at each position in the output,
+attend to all previous tokens and weight their influence.
+This allows the model to capture long-range dependencies. It can use a term defined early
+in a document when generating text thousands of tokens later.</p>
+<p>Critically, the model has a <strong>context window</strong>, a maximum number of tokens it can attend to
+at once. Anything outside this window is simply not available.
+Current frontier models have context windows in the range of 100 000 to 1 000 000 tokens,
+but performance typically degrades on tasks that require precise retrieval from the far end
+of a very long context.</p>
+<hr />
+<h2 id="what-llms-are-actually-good-at">What LLMs are actually good at<a class="headerlink" href="#what-llms-are-actually-good-at" title="Permanent link">&para;</a></h2>
+<p>Given the above, it might seem like LLMs are unreliable. In some domains they are.
+But used correctly they are extraordinarily powerful.</p>
+<p><strong>LLMs are good at:</strong></p>
+<ul>
+<li>Drafting, paraphrasing, and restructuring text.</li>
+<li>Explaining concepts at a requested level of abstraction.</li>
+<li>Translating between programming languages or styles.</li>
+<li>Suggesting approaches to problems (which you then evaluate).</li>
+<li>Brainstorming a list of options (which you then filter).</li>
+<li>Summarising text you have provided (where hallucination risk is low).</li>
+<li>Writing boilerplate code in well-represented languages and frameworks.</li>
+<li>Identifying possible errors in text or code you have written.</li>
+</ul>
+<p><strong>LLMs are not good at:</strong></p>
+<ul>
+<li>Providing reliable citations.</li>
+<li>Performing precise arithmetic or symbolic manipulation (though tool-augmented models are better).</li>
+<li>Keeping track of state across long or multi-session interactions without explicit context.</li>
+<li>Tasks that require real-time or post-training information.</li>
+<li>Tasks where a single subtle error is catastrophic and undetectable.</li>
+</ul>
+<hr />
+<h2 id="industrial-context-how-the-field-thinks-about-this">Industrial context: how the field thinks about this<a class="headerlink" href="#industrial-context-how-the-field-thinks-about-this" title="Permanent link">&para;</a></h2>
+<p>In industry, organisations deploying LLMs at scale have converged on several practices:</p>
+<p><strong>Model cards and system cards.</strong> Leading labs publish documentation summarising
+a model's capabilities, limitations, failure modes, and intended use cases before release.
+Reading the model card for a model you use heavily is a good habit.</p>
+<p><strong>Red-teaming.</strong> Before deployment, models are tested by teams whose job is to find
+failure modes: incorrect outputs, unsafe responses, and edge cases.
+The existence of red-teaming reflects the fact that all current models have failure modes
+that are not fully characterised.</p>
+<p><strong>Calibration and uncertainty.</strong> Research groups such as Anthropic, DeepMind, and others
+publish work on model calibration, measuring how well the model's expressed confidence
+tracks actual accuracy. Current models are imperfectly calibrated. Do not infer correctness
+from confidence.</p>
+<p><strong>Human-in-the-loop.</strong> High-stakes industrial deployments, in medicine, law,
+and financial services, require human review of LLM output before it is acted on.
+The same principle applies to research: you are the expert, and you bear responsibility
+for what you publish.</p>
+<hr />
+<h2 id="checklist">Checklist<a class="headerlink" href="#checklist" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] I understand that LLMs predict tokens, not retrieve facts.</li>
+<li>[ ] I understand what hallucination is and why it happens.</li>
+<li>[ ] I treat confident LLM output with the same scepticism as any uncited claim.</li>
+<li>[ ] I know which tasks LLMs handle reliably and which they do not.</li>
+<li>[ ] I verify specific factual claims (citations, numbers, dates) against primary sources.</li>
+</ul>
+<hr />
+<h2 id="what-to-read-next">What to read next<a class="headerlink" href="#what-to-read-next" title="Permanent link">&para;</a></h2>
+<p><a href="../lesson-02/">Lesson 02</a> applies this mental model to code: how to pair-program with
+an LLM while keeping you, not the model, in control of correctness.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../" class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lesson-02/" class="btn btn-neutral float-right" title="Lesson 02 — LLMs for Code">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lesson-02/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/clipboard.js"></script>
+      <script src="../../../js/copy_code.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

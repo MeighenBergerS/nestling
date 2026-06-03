@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Lesson 06 — Verification Habits - Nestling</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 06 \u2014 Verification Habits";
+        var mkdocs_page_input_path = "tracks/07-llm-practices/lesson-06.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/environment-setup/">Environment Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >ArXiv & Reading Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-01/">Lesson 01 — Finding Papers</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-03/">Lesson 03 — Managing Papers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Writing Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-04/">Lesson 04 — LaTeX Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Git & GitHub</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-01/">Lesson 01 — Git Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-02/">Lesson 02 — Branching</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-03/">Lesson 03 — GitHub Collaboration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Coding Practices</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-02/">Lesson 02 — Python & Jupyter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-04/">Lesson 04 — Scientific Python Stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-05/">Lesson 05 — Code Style & Quality</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-06/">Lesson 06 — Performance & Parallelism</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-07/">Lesson 07 — ML Basics with PyTorch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-10/">Lesson 10 — Testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Plotting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-01/">Lesson 01 — Figure Design Principles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-04/">Lesson 04 — Colour and Accessibility</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Working with LLMs</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-01/">Lesson 01 — What LLMs Are and Are Not</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-02/">Lesson 02 — LLMs for Code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-03/">Lesson 03 — LLMs for Writing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-04/">Lesson 04 — LLMs for Literature Search</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-05/">Lesson 05 — Prompt Engineering for Research</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lesson 06 — Verification Habits</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#the-verification-mindset">The verification mindset</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#verification-by-type-of-output">Verification by type of output</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#factual-claims">Factual claims</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#citations">Citations</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#code">Code</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#summaries-of-text-you-provided">Summaries of text you provided</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#explanations-and-concept-descriptions">Explanations and concept descriptions</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#the-verification-checklist">The verification checklist</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#factual-content">Factual content</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#citations_1">Citations</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#code_1">Code</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#writing">Writing</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#building-habits-over-time">Building habits over time</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#industrial-context-systematic-verification-practices">Industrial context: systematic verification practices</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#a-note-on-models-and-their-limitations-changing-over-time">A note on models and their limitations changing over time</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-to-revisit">What to revisit</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-07/">Lesson 07 — Skill Files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/paper-outline/">Paper Outline</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tracks</li>
+          <li class="breadcrumb-item">Working with LLMs</li>
+      <li class="breadcrumb-item active">Lesson 06 — Verification Habits</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/tracks/07-llm-practices/lesson-06.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-06-verification-habits">Lesson 06: Verification Habits<a class="headerlink" href="#lesson-06-verification-habits" title="Permanent link">&para;</a></h1>
+<p>The previous lessons covered what LLMs can and cannot do, and how to use them
+in specific contexts.
+This lesson distils those lessons into a set of habits you can apply consistently
+to any LLM-assisted work.</p>
+<p>Good verification habits are not about distrust. They are about knowing what
+to check and doing it efficiently.</p>
+<hr />
+<h2 id="the-verification-mindset">The verification mindset<a class="headerlink" href="#the-verification-mindset" title="Permanent link">&para;</a></h2>
+<p>The core habit is simple: <strong>treat every LLM output as a first draft that requires review,
+not as a finished product.</strong></p>
+<p>This is not a counsel of paranoia. LLMs produce genuinely useful output most of the time.
+But the failure modes, confident wrong answers, hallucinated citations, subtle code bugs,
+are hard to spot and consequential in research.
+A consistent habit of checking costs little time and prevents most problems.</p>
+<p>The analogy from the previous lessons bears repeating: the LLM is a fast, capable junior
+colleague who is occasionally confidently wrong. You would not publish a junior colleague's
+draft without reading it. Apply the same standard here.</p>
+<hr />
+<h2 id="verification-by-type-of-output">Verification by type of output<a class="headerlink" href="#verification-by-type-of-output" title="Permanent link">&para;</a></h2>
+<h3 id="factual-claims">Factual claims<a class="headerlink" href="#factual-claims" title="Permanent link">&para;</a></h3>
+<p><strong>Check:</strong> Does the claim appear in a primary source you can access?</p>
+<ul>
+<li>For numerical values (cross-sections, distances, physical constants): verify against a
+  textbook, a reviewed paper, or an authoritative database (PDG, NIST).</li>
+<li>For statements about papers ("Smith et al. showed that..."): find the paper and read
+  the relevant passage.</li>
+<li>For current events, policies, or recent results: the model has a training cutoff.
+  Use a current source.</li>
+</ul>
+<p><strong>Red flag:</strong> The claim is plausible but you cannot find a source for it.
+Plausible and correct are not the same thing.</p>
+<h3 id="citations">Citations<a class="headerlink" href="#citations" title="Permanent link">&para;</a></h3>
+<p><strong>Check:</strong> Does this paper exist? Does it say what is claimed?</p>
+<ol>
+<li>Search for the paper by title, authors, and year in arXiv, ADS, InspireHEP, or Google Scholar.</li>
+<li>Confirm the DOI or arXiv identifier.</li>
+<li>Read the abstract. If the paper is central to your argument, read the relevant section.</li>
+</ol>
+<p>Never include a citation you have not verified at step 1–2 at minimum.</p>
+<h3 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h3>
+<p><strong>Check:</strong> Does the code do what the specification says, for all inputs?</p>
+<ul>
+<li>Read every line before running.</li>
+<li>Run the code on a case you can verify by hand.</li>
+<li>Test edge cases: empty input, extreme values, NaN/inf.</li>
+<li>Check for security issues if the code handles external input.</li>
+<li>Confirm random seeds and version pins are set.</li>
+</ul>
+<h3 id="summaries-of-text-you-provided">Summaries of text you provided<a class="headerlink" href="#summaries-of-text-you-provided" title="Permanent link">&para;</a></h3>
+<p><strong>Check:</strong> Is the summary accurate? Has anything been omitted or changed?</p>
+<ul>
+<li>Read the original alongside the summary.</li>
+<li>The model can drop qualifications ("not always true" becomes "true"),
+  change quantifiers ("most" becomes "all"), or lose important caveats.</li>
+</ul>
+<h3 id="explanations-and-concept-descriptions">Explanations and concept descriptions<a class="headerlink" href="#explanations-and-concept-descriptions" title="Permanent link">&para;</a></h3>
+<p><strong>Check:</strong> Is the explanation correct at the level of detail that matters for your use?</p>
+<ul>
+<li>Explanations of well-known concepts are usually reliable.</li>
+<li>Explanations of niche or recent topics are higher risk.</li>
+<li>Verify the key technical claims against a textbook or a reviewed source
+  before teaching or repeating them.</li>
+</ul>
+<hr />
+<h2 id="the-verification-checklist">The verification checklist<a class="headerlink" href="#the-verification-checklist" title="Permanent link">&para;</a></h2>
+<p>Use this before incorporating any LLM output into your work.</p>
+<h3 id="factual-content">Factual content<a class="headerlink" href="#factual-content" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Every numerical value has been checked against a primary source.</li>
+<li>[ ] Every attribution ("X showed that Y") has been verified against the cited source.</li>
+<li>[ ] No claim relies solely on LLM output as its basis.</li>
+</ul>
+<h3 id="citations_1">Citations<a class="headerlink" href="#citations_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Every cited paper was found in a real database.</li>
+<li>[ ] Authors, title, journal, year, and DOI/arXiv number are correct.</li>
+<li>[ ] The paper says what I am claiming it says.</li>
+</ul>
+<h3 id="code_1">Code<a class="headerlink" href="#code_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] I have read every line of LLM-generated code.</li>
+<li>[ ] The code has been tested on expected inputs and edge cases.</li>
+<li>[ ] I can explain what every function does.</li>
+<li>[ ] Random seeds and version pins are set.</li>
+<li>[ ] Security issues have been checked if the code handles external input.</li>
+</ul>
+<h3 id="writing">Writing<a class="headerlink" href="#writing" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Every idea and argument originated with me.</li>
+<li>[ ] I have disclosed LLM assistance where required.</li>
+<li>[ ] I have read every sentence for accuracy, not just fluency.</li>
+<li>[ ] Qualifications and caveats are preserved.</li>
+</ul>
+<hr />
+<h2 id="building-habits-over-time">Building habits over time<a class="headerlink" href="#building-habits-over-time" title="Permanent link">&para;</a></h2>
+<p>A checklist is most useful when it becomes automatic, when you run through it
+without thinking, as part of your normal workflow.
+The habits that matter most, in order of impact:</p>
+<ol>
+<li>
+<p><strong>Never include a citation you have not verified.</strong> This is the highest-consequence
+   failure mode and the easiest to prevent.</p>
+</li>
+<li>
+<p><strong>Read every line of code before using it.</strong> You are responsible for what runs in
+   your analysis.</p>
+</li>
+<li>
+<p><strong>Verify numerical values against a primary source.</strong> A wrong constant propagates
+   silently through a whole analysis.</p>
+</li>
+<li>
+<p><strong>Disclose assistance where required.</strong> Know your institution's and journal's policy
+   and apply it consistently.</p>
+</li>
+<li>
+<p><strong>Treat confident output with the same scepticism as uncertain output.</strong>
+   Fluency and accuracy are independent properties of LLM output.</p>
+</li>
+</ol>
+<hr />
+<h2 id="industrial-context-systematic-verification-practices">Industrial context: systematic verification practices<a class="headerlink" href="#industrial-context-systematic-verification-practices" title="Permanent link">&para;</a></h2>
+<p><strong>Red-teaming and adversarial testing.</strong> Before deploying an LLM-based system,
+organisations test it by trying to make it fail: produce wrong answers, unsafe content,
+or policy violations.
+For your own use, "red-teaming" your workflow means occasionally asking the LLM
+a question you already know the answer to, to calibrate how often and how badly it
+is wrong on your kinds of tasks.</p>
+<p><strong>Audit trails.</strong> In regulated industries, every LLM-generated output that influences
+a decision is logged: the prompt, the output, the reviewer, and the action taken.
+For research, keeping a record of which parts of a paper or analysis involved
+LLM assistance is good practice and increasingly expected by journals.</p>
+<p><strong>Staged review.</strong> Industrial pipelines for high-stakes LLM use have multiple review
+stages, automated checks, then human review, then subject-matter expert review,
+before output is acted on.
+For a research paper, the analogous stages are: you verify the LLM output,
+your supervisor or collaborators review the work, and the peer review process provides
+a further check.</p>
+<p><strong>Calibration.</strong> Organisations that depend on LLM output track how often the model
+is correct on their specific task domain.
+If you use an LLM heavily for a specific type of task (code in a particular language,
+summaries of astrophysics papers, etc.), periodically spot-check a sample of its
+output to maintain calibration on its error rate for that task.</p>
+<hr />
+<h2 id="a-note-on-models-and-their-limitations-changing-over-time">A note on models and their limitations changing over time<a class="headerlink" href="#a-note-on-models-and-their-limitations-changing-over-time" title="Permanent link">&para;</a></h2>
+<p>LLM capabilities improve rapidly. A task that a model handled unreliably in 2023 may
+be handled well in 2025, and vice versa. New models sometimes regress on specific tasks.</p>
+<p>This means:</p>
+<ul>
+<li>Habits that rely on specific known failure modes may need updating.</li>
+<li>Model cards and evaluation reports for the specific model you are using are more
+  reliable than general reputation.</li>
+<li>When you switch to a new model version, spot-check your common tasks rather than
+  assuming the same reliability profile.</li>
+</ul>
+<p>The verification habits in this lesson are robust to model changes: they do not assume
+any particular failure mode, only that LLMs can be wrong in ways that are hard to detect
+without checking.</p>
+<hr />
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Output type</th>
+<th>Key check</th>
+<th>Most important habit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factual claims</td>
+<td>Find the primary source</td>
+<td>Never cite what you have not read</td>
+</tr>
+<tr>
+<td>Citations</td>
+<td>Verify paper exists and says what you claim</td>
+<td>Verify before including, not after</td>
+</tr>
+<tr>
+<td>Code</td>
+<td>Read every line, test edge cases</td>
+<td>Understand before committing</td>
+</tr>
+<tr>
+<td>Summaries</td>
+<td>Compare to original</td>
+<td>Check qualifications are preserved</td>
+</tr>
+<tr>
+<td>Explanations</td>
+<td>Verify key claims in a textbook</td>
+<td>Higher scrutiny for niche topics</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="what-to-revisit">What to revisit<a class="headerlink" href="#what-to-revisit" title="Permanent link">&para;</a></h2>
+<p>This lesson is designed to be a reference you return to. After completing the track,
+the most useful practice is to re-read the verification checklist at the start of
+each new LLM-assisted task until the checks are automatic.</p>
+<p><a href="../">Back to track overview</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../lesson-05/" class="btn btn-neutral float-left" title="Lesson 05 — Prompt Engineering for Research"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lesson-07/" class="btn btn-neutral float-right" title="Lesson 07 — Skill Files">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../lesson-05/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lesson-07/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/clipboard.js"></script>
+      <script src="../../../js/copy_code.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

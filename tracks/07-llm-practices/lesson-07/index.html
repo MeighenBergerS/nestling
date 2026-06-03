@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Stephan Meighen-Berger" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Lesson 07 — Skill Files - Nestling</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../../css/custom_rules.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 07 \u2014 Skill Files";
+        var mkdocs_page_input_path = "tracks/07-llm-practices/lesson-07.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/how-to-use-this-repo/">How to Use This Repo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/environment-setup/">Environment Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tracks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >ArXiv & Reading Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-01/">Lesson 01 — Finding Papers</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-02/">Lesson 02 — Reading Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../01-arxiv/lesson-03/">Lesson 03 — Managing Papers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Journal Club</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-01/">Lesson 01 — How to Present a Paper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-02/">Lesson 02 — Leading a Discussion</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../02-journal-club/lesson-03/">Lesson 03 — Giving Feedback</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Writing Papers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-01/">Lesson 01 — Paper Structure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-02/">Lesson 02 — The Abstract Formula</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-03/">Lesson 03 — Writing Conventions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-04/">Lesson 04 — LaTeX Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../03-writing/lesson-05/">Lesson 05 — Revision Checklist</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Git & GitHub</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-01/">Lesson 01 — Git Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-02/">Lesson 02 — Branching</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-03/">Lesson 03 — GitHub Collaboration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-04/">Lesson 04 — Issues and Project Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../04-git-github/lesson-05/">Lesson 05 — GitHub Actions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Coding Practices</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-01/">Lesson 01 — IDE Setup</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-02/">Lesson 02 — Python & Jupyter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-03/">Lesson 03 — Package Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-04/">Lesson 04 — Scientific Python Stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-05/">Lesson 05 — Code Style & Quality</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-06/">Lesson 06 — Performance & Parallelism</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-07/">Lesson 07 — ML Basics with PyTorch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-08/">Lesson 08 — Project Layout</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-09/">Lesson 09 — Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-10/">Lesson 10 — Testing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-11/">Lesson 11 — Packaging</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../05-coding/lesson-12/">Lesson 12 — Linting & Automation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Plotting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-01/">Lesson 01 — Figure Design Principles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-02/">Lesson 02 — matplotlib Basics</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-03/">Lesson 03 — Publication Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../06-plotting/lesson-04/">Lesson 04 — Colour and Accessibility</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Working with LLMs</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-01/">Lesson 01 — What LLMs Are and Are Not</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-02/">Lesson 02 — LLMs for Code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-03/">Lesson 03 — LLMs for Writing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-04/">Lesson 04 — LLMs for Literature Search</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-05/">Lesson 05 — Prompt Engineering for Research</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lesson-06/">Lesson 06 — Verification Habits</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lesson 07 — Skill Files</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#what-a-skill-file-is">What a skill file is</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#a-real-example-prometheus">A real example: Prometheus</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#what-the-prometheus-skill-file-achieves">What the Prometheus skill file achieves</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#a-general-coding-and-documentation-template">A general coding and documentation template</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#what-to-include-in-a-coding-skill-file">What to include in a coding skill file</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#a-writing-skill-file-for-physics-papers">A writing skill file for physics papers</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#what-the-writing-skill-file-encodes">What the writing skill file encodes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-this-connects-to-the-writing-papers-track">How this connects to the Writing Papers track</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#using-the-writing-skill-file-two-modes">Using the writing skill file: two modes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example-interaction">Example interaction</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#writing-your-own-skill-file">Writing your own skill file</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#start-from-what-goes-wrong">Start from what goes wrong</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#keep-it-honest">Keep it honest</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#keep-it-concise">Keep it concise</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#organise-by-role-not-by-tool">Organise by role, not by tool</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#industrial-context">Industrial context</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-to-read-next">What to read next</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Code of Conduct</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../08-code-of-conduct/lesson-01/">Lesson 01 — Understanding and Living the Code of Conduct</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Templates</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/journal-club/">Journal Club</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../templates/paper-outline/">Paper Outline</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../community/">Community</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Nestling</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tracks</li>
+          <li class="breadcrumb-item">Working with LLMs</li>
+      <li class="breadcrumb-item active">Lesson 07 — Skill Files</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/MeighenBergerS/nestling/edit/master/docs/tracks/07-llm-practices/lesson-07.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-07-skill-files">Lesson 07: Skill Files<a class="headerlink" href="#lesson-07-skill-files" title="Permanent link">&para;</a></h1>
+<p>Previous lessons covered how to write effective prompts for individual tasks.
+But much of the context you need, your project's structure, the conventions you follow,
+the rules you want applied every time, is repetitive.
+Typing it again in every conversation is tedious and error-prone.</p>
+<p>A <strong>skill file</strong> solves this problem.
+It is a document that encodes persistent context for an LLM: the things the model should
+always know when working in a particular domain or on a particular project.
+You load it once at the start of a session and the model behaves consistently from that point.</p>
+<p>This lesson explains what skill files are, when to use them, how to read an existing one,
+and how to write your own. It also presents two ready-to-use examples:
+a general coding and documentation template, and a writing skill file built from the
+conventions in the <a href="../../03-writing/">Writing Papers track</a>.</p>
+<hr />
+<h2 id="what-a-skill-file-is">What a skill file is<a class="headerlink" href="#what-a-skill-file-is" title="Permanent link">&para;</a></h2>
+<p>A skill file is a text document, usually Markdown, that you pass to an LLM as
+persistent context.
+It is not a prompt for a single task.
+It is a briefing that applies to an entire session or workflow.</p>
+<p>The contents vary by purpose, but a useful skill file typically covers:</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What it contains</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Environment</td>
+<td>How to run the code; which interpreter, which commands</td>
+</tr>
+<tr>
+<td>Project structure</td>
+<td>Where things live; what each directory contains</td>
+</tr>
+<tr>
+<td>Conventions</td>
+<td>Style rules, naming conventions, forbidden patterns</td>
+</tr>
+<tr>
+<td>Workflow</td>
+<td>The sequence of steps for common tasks</td>
+</tr>
+<tr>
+<td>Checklists</td>
+<td>What to verify before a result is trusted</td>
+</tr>
+</tbody>
+</table>
+<p>In Claude Code and similar tools, skill files are stored in <code>.claude/commands/</code>
+as Markdown files and are loaded by name when you invoke them with a slash command
+(e.g. <code>/prometheus</code>).
+But skill files are not tool-specific: you can paste one into any LLM conversation
+as a system prompt or opening message.</p>
+<hr />
+<h2 id="a-real-example-prometheus">A real example: Prometheus<a class="headerlink" href="#a-real-example-prometheus" title="Permanent link">&para;</a></h2>
+<p>The <a href="https://github.com/Harvard-Neutrino/prometheus">Prometheus neutrino simulation package</a>
+uses a skill file at <code>.claude/commands/prometheus.md</code>.
+Here is the opening section:</p>
+<pre><code class="language-markdown">## Environment
+
+**Python interpreter** (use paths relative to repo root — never rely on `python` or
+`python3` being on PATH):
+
+    .prometheus_env/bin/python
+
+**Pytest binary:**
+
+    .prometheus_env/bin/pytest
+
+**Activate for interactive terminal sessions:**
+
+    source scripts/activate.sh .prometheus_env
+</code></pre>
+<p>This one section prevents a common class of error: running the wrong Python.
+Without it, the LLM might call <code>python</code> and get a system Python with the wrong
+packages, producing confusing import errors.
+The skill file makes the correct behaviour automatic.</p>
+<p>Further down, the skill file documents the simulation pipeline:</p>
+<pre><code class="language-text">Prometheus.sim()
+└─ inject()            ← LeptonInjector generates neutrino events
+└─ propagate()
+   └─ OlympusPhotonPropagator.propagate(particle, rng_key)
+      ├─ [tracks]  generate_realistic_track()
+      └─ [cascades] generate_cascade()
+</code></pre>
+<p>And it records domain knowledge that is not in the source code:</p>
+<pre><code class="language-markdown">| Thing | Value / location |
+|---|---|
+| Distance cutoff | 300 m (normalizing flow not trained beyond this) |
+| Cascade resolution | 0.2 m longitudinal step |
+| Noise window | 5000 ns |
+</code></pre>
+<p>These are the numbers a contributor needs to avoid subtle bugs, and they are exactly
+the kind of thing that is forgotten between sessions and expensive to re-derive.
+The skill file makes the model aware of them permanently.</p>
+<p>Finally, it records coding conventions:</p>
+<pre><code class="language-markdown">## Docstring style
+
+NumPy format. Summary line must not start with &quot;make&quot;. Use &quot;create&quot; or &quot;build&quot; for
+factory functions.
+</code></pre>
+<p>This single rule prevents a whole class of inconsistency without requiring anyone to
+remember it.</p>
+<h3 id="what-the-prometheus-skill-file-achieves">What the Prometheus skill file achieves<a class="headerlink" href="#what-the-prometheus-skill-file-achieves" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A developer opening this project in a new session does not need to re-explain the
+  environment, the architecture, or the naming conventions.</li>
+<li>The LLM consistently uses <code>.prometheus_env/bin/python</code>, writes NumPy docstrings,
+  and respects the 300 m cutoff.</li>
+<li>The skill file is version-controlled alongside the code, so it stays accurate as
+  the project evolves.</li>
+</ul>
+<hr />
+<h2 id="a-general-coding-and-documentation-template">A general coding and documentation template<a class="headerlink" href="#a-general-coding-and-documentation-template" title="Permanent link">&para;</a></h2>
+<p>A reusable coding skill file template is provided at
+<code>examples/skill-files/coding-docs-template.md</code>.
+It covers the most important elements for any Python research project:
+environment setup, project layout, testing workflow, coding conventions, and
+documentation style.</p>
+<p>Adapt it for your project by filling in the bracketed placeholders.
+The key principle is: <strong>include anything that you find yourself explaining repeatedly,
+or anything that the model gets wrong if you do not say it explicitly.</strong></p>
+<h3 id="what-to-include-in-a-coding-skill-file">What to include in a coding skill file<a class="headerlink" href="#what-to-include-in-a-coding-skill-file" title="Permanent link">&para;</a></h3>
+<h4 id="environment">Environment<a class="headerlink" href="#environment" title="Permanent link">&para;</a></h4>
+<pre><code class="language-markdown">## Environment
+Python: `.venv/bin/python` (never use bare `python3`)
+Install: `.venv/bin/pip install -e .`
+Tests: `.venv/bin/pytest tests/ -x`
+Lint: `.venv/bin/ruff check src/`
+</code></pre>
+<h4 id="project-layout-list-only-the-directories-that-matter-to-working-tasks">Project layout (list only the directories that matter to working tasks)<a class="headerlink" href="#project-layout-list-only-the-directories-that-matter-to-working-tasks" title="Permanent link">&para;</a></h4>
+<pre><code class="language-markdown">## Structure
+src/mypackage/        main package
+  core.py             [what it contains]
+  analysis.py         [what it contains]
+tests/                pytest test suite
+examples/             runnable scripts demonstrating key workflows
+</code></pre>
+<h4 id="key-invariants-the-things-the-model-should-never-violate">Key invariants (the things the model should never violate)<a class="headerlink" href="#key-invariants-the-things-the-model-should-never-violate" title="Permanent link">&para;</a></h4>
+<pre><code class="language-markdown">## Invariants
+- All results in physical units (GeV, cm², etc.) — no dimensionless intermediates
+- Numpy random state always passed explicitly — no global seeds
+- Output arrays are always shape (N,) not (N,1)
+</code></pre>
+<h4 id="docstring-and-style-conventions">Docstring and style conventions<a class="headerlink" href="#docstring-and-style-conventions" title="Permanent link">&para;</a></h4>
+<pre><code class="language-markdown">## Conventions
+- Docstrings: NumPy format
+- All public functions have type hints
+- No magic numbers in function bodies — define named constants at module level
+</code></pre>
+<hr />
+<h2 id="a-writing-skill-file-for-physics-papers">A writing skill file for physics papers<a class="headerlink" href="#a-writing-skill-file-for-physics-papers" title="Permanent link">&para;</a></h2>
+<p>For the context of writing and revising physics papers, skill files are
+equally powerful.
+The conventions of HEP writing, described in the <a href="../../03-writing/">Writing Papers track</a>,
+are detailed enough that an LLM can apply them reliably if told exactly what they are.
+But they are also too numerous to type into every session.</p>
+<p>A writing skill file encodes these conventions once, so that every LLM interaction
+in a writing session automatically respects them.</p>
+<p>The file <code>examples/skill-files/writing-hep.md</code> is a full writing skill file
+based on:</p>
+<ul>
+<li>The conventions taught in the Writing Papers track (lessons 01–05)</li>
+<li>An exhaustive list of rules one learns to follow when writing with John Beacom</li>
+</ul>
+<h3 id="what-the-writing-skill-file-encodes">What the writing skill file encodes<a class="headerlink" href="#what-the-writing-skill-file-encodes" title="Permanent link">&para;</a></h3>
+<p>The skill file is a condensed, LLM-optimised version of the style guide.
+It covers:</p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Key rules encoded</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Voice</td>
+<td>First-person plural "we"; active verbs; never passive for key results</td>
+</tr>
+<tr>
+<td>Abstract</td>
+<td>4–5 sentence structure; quantitative result required; no citations</td>
+</tr>
+<tr>
+<td>Introduction</td>
+<td>Four-paragraph structure; "In this work, we..." in paragraph 3; Figure 1 in paragraph 3</td>
+</tr>
+<tr>
+<td>Paragraph structure</td>
+<td>Opening sentence states the main point; 3–6 sentences; no orphan sentences</td>
+</tr>
+<tr>
+<td>Results</td>
+<td>Figure-first ("Figure X shows..."); at least one OOM estimate per results section</td>
+</tr>
+<tr>
+<td>Conclusion</td>
+<td>Opens "We have shown/computed/demonstrated..."; no new results</td>
+</tr>
+<tr>
+<td>LaTeX</td>
+<td><code>Figure~\ref{}</code> not <code>Fig.</code>; <code>Eq.~(\ref{})</code> not <code>\eqref{}</code>; <code>\mathrm{}</code> for subscripts</td>
+</tr>
+<tr>
+<td>Figures</td>
+<td>3-sentence caption structure; key takeaway in <code>\textit{...}</code></td>
+</tr>
+<tr>
+<td>Citations</td>
+<td>Chronological order; max 3–4 per claim; no citations in abstract</td>
+</tr>
+<tr>
+<td>Forbidden phrases</td>
+<td>"As can be seen in Figure X..." → "Figure X shows..."; passive constructions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="how-this-connects-to-the-writing-papers-track">How this connects to the Writing Papers track<a class="headerlink" href="#how-this-connects-to-the-writing-papers-track" title="Permanent link">&para;</a></h3>
+<p>Track 03 teaches the rules through explanation and examples.
+The writing skill file operationalises those same rules as a persistent LLM context.
+The relationship is:</p>
+<blockquote>
+<p>Track 03 = understanding the rules
+Writing skill file = enforcing the rules in every session</p>
+</blockquote>
+<p>A student who has worked through track 03 can load the skill file and have the LLM
+check their draft against the exact conventions they have learned.
+A student who has not yet done track 03 will still get useful corrections from the skill
+file, and the corrections are a concrete entry point into the underlying rules.</p>
+<h3 id="using-the-writing-skill-file-two-modes">Using the writing skill file: two modes<a class="headerlink" href="#using-the-writing-skill-file-two-modes" title="Permanent link">&para;</a></h3>
+<h4 id="mode-1-drafting">Mode 1: Drafting<a class="headerlink" href="#mode-1-drafting" title="Permanent link">&para;</a></h4>
+<p>Load the skill file and give the model your notes or bullet points for a section.
+Ask it to draft the section following the style guide.</p>
+<pre><code class="language-text">[Skill file loaded]
+
+Draft the following as a Introduction paragraph 3 (the &quot;In this work, we...&quot; paragraph).
+My notes:
+- We study the sensitivity of Hyper-K to atmospheric neutrino flux
+- We compute event rates for CC and NC interactions
+- Main result: we reduce flux uncertainty from ~20% to ~7%
+- Figure 1 shows the ratio of measured to predicted flux as a function of energy
+</code></pre>
+<p>The model will produce a paragraph that follows the style conventions without you
+having to specify them in the prompt.</p>
+<h4 id="mode-2-review">Mode 2: Review<a class="headerlink" href="#mode-2-review" title="Permanent link">&para;</a></h4>
+<p>Load the skill file and paste a section of your draft.
+Ask the model to check it against the style rules and list violations.</p>
+<pre><code class="language-text">[Skill file loaded]
+
+Review the following Introduction section for style violations.
+For each violation, quote the offending text, name the rule, and suggest the fix.
+
+[paste your text]
+</code></pre>
+<p>This is an interactive workflow, so you can ask follow-up questions about each flagged item.</p>
+<h3 id="example-interaction">Example interaction<a class="headerlink" href="#example-interaction" title="Permanent link">&para;</a></h3>
+<p><strong>Input:</strong></p>
+<pre><code class="language-text">It is shown that the sensitivity of IceCube to the diffuse supernova neutrino background
+is significant. As can be seen in Figure 2, the expected event rate peaks at 20 MeV.
+The analysis is performed using the maximum likelihood method.
+</code></pre>
+<p><strong>Expected output from a model with the skill file loaded:</strong></p>
+<pre><code class="language-text">Three violations:
+
+1. VOICE: &quot;It is shown that...&quot; → &quot;We show that...&quot; (passive for key result)
+2. FIGURE: &quot;As can be seen in Figure 2...&quot; → &quot;Figure 2 shows...&quot; (forbidden phrase)
+3. VOICE: &quot;The analysis is performed using...&quot; → &quot;We perform the analysis using...&quot;
+   (passive construction in body text)
+</code></pre>
+<p>Without the skill file, the model might paraphrase these sentences without catching
+the violations. With the skill file, the specific rules are in its context and it
+applies them reliably.</p>
+<hr />
+<h2 id="writing-your-own-skill-file">Writing your own skill file<a class="headerlink" href="#writing-your-own-skill-file" title="Permanent link">&para;</a></h2>
+<h3 id="start-from-what-goes-wrong">Start from what goes wrong<a class="headerlink" href="#start-from-what-goes-wrong" title="Permanent link">&para;</a></h3>
+<p>The most valuable items in a skill file are the things the LLM gets wrong if you
+do not tell it.
+Start by listing:</p>
+<ul>
+<li>Commands or paths the model uses incorrectly.</li>
+<li>Style decisions the model makes wrong (units, variable names, docstring format).</li>
+<li>Domain invariants it violates (numerical cutoffs, sign conventions, required disclaimers).</li>
+<li>Workflow steps it skips.</li>
+</ul>
+<p>These are your highest-priority items.</p>
+<h3 id="keep-it-honest">Keep it honest<a class="headerlink" href="#keep-it-honest" title="Permanent link">&para;</a></h3>
+<p>A skill file that is out of date is worse than no skill file:
+the model follows stale instructions and produces inconsistent output.
+Treat the skill file as part of the codebase or document:
+update it when the conventions change, and review it when a model starts behaving unexpectedly.</p>
+<h3 id="keep-it-concise">Keep it concise<a class="headerlink" href="#keep-it-concise" title="Permanent link">&para;</a></h3>
+<p>A skill file that is too long will overwhelm the model's context and will not be
+read carefully.
+Aim for the minimum that prevents the most important errors.
+If a rule is already enforced by a linter or formatter, you do not need to repeat it
+in the skill file.</p>
+<h3 id="organise-by-role-not-by-tool">Organise by role, not by tool<a class="headerlink" href="#organise-by-role-not-by-tool" title="Permanent link">&para;</a></h3>
+<p>Write the skill file for what the model needs to know, not for how the tool works.
+"Run tests with <code>.venv/bin/pytest tests/ -x</code>" is useful.
+"Claude Code supports skill files in <code>.claude/commands/</code>" is not. That belongs in
+the documentation for the tool, not in the project skill file.</p>
+<hr />
+<h2 id="industrial-context">Industrial context<a class="headerlink" href="#industrial-context" title="Permanent link">&para;</a></h2>
+<p><strong>System prompts.</strong> In API-based deployments, the persistent context provided to
+an LLM is called a <strong>system prompt</strong>.
+It plays exactly the role of a skill file: it is loaded once and shapes every
+response in the session.
+Professional deployments version-control system prompts as carefully as application code,
+because a change to the system prompt can alter the behaviour of every downstream interaction.</p>
+<p><strong>Prompt libraries.</strong> Large organisations maintain libraries of validated system prompts
+for different task types: customer support, code generation, document review.
+A skill file is the individual contributor's equivalent: a validated context document
+for a specific project or domain.</p>
+<p><strong>RAG over style guides.</strong> Some organisations embed their style and convention documents
+in a retrieval system, so the model can look up the relevant rule at query time rather
+than having the entire document in context.
+For most research uses, a single well-maintained skill file is simpler and equally
+effective. Retrieval adds complexity without benefit at this scale.</p>
+<p><strong>Evaluation and regression testing.</strong> When a skill file is updated, its effect on
+model behaviour can be measured by running a fixed set of test inputs and checking
+that the outputs respect the new conventions.
+For example one can run a set of test sections through the style checker and
+check that violations are correctly identified.
+For a hand-maintained skill file, periodic spot-checks serve the same purpose.</p>
+<hr />
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Skill file</td>
+<td>A persistent context document loaded into an LLM session</td>
+</tr>
+<tr>
+<td>Why useful</td>
+<td>Avoids repeating context; enforces conventions; encodes domain knowledge</td>
+</tr>
+<tr>
+<td>Prometheus example</td>
+<td>Covers environment, architecture, pipeline, and coding conventions</td>
+</tr>
+<tr>
+<td>Coding template</td>
+<td><code>examples/skill-files/coding-docs-template.md</code></td>
+</tr>
+<tr>
+<td>Writing skill file</td>
+<td><code>examples/skill-files/writing-hep.md</code>: encodes the conventions from the Writing Papers track</td>
+</tr>
+<tr>
+<td>Two modes</td>
+<td>Drafting mode (generate text that follows the style) and review mode (check violations)</td>
+</tr>
+<tr>
+<td>System prompt</td>
+<td>The industrial equivalent: persistent context in API deployments</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="what-to-read-next">What to read next<a class="headerlink" href="#what-to-read-next" title="Permanent link">&para;</a></h2>
+<p>This is the final lesson in the track.
+Return to the <a href="../">track overview</a> for the verification checklist from
+<a href="../lesson-06/">Lesson 06</a>, which applies to everything, including LLM-assisted
+revision of a draft checked against a skill file.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../lesson-06/" class="btn btn-neutral float-left" title="Lesson 06 — Verification Habits"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../08-code-of-conduct/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Nestling Contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/MeighenBergerS/nestling" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../lesson-06/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../08-code-of-conduct/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/clipboard.js"></script>
+      <script src="../../../js/copy_code.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
