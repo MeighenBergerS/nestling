@@ -70,6 +70,31 @@ Then inspect the difference before merging:
 git diff main origin/main
 ```
 
+### Pruning stale remote-tracking branches
+
+On an active repository, branches are created and deleted frequently.
+Git does not automatically remove your local references to remote branches that have been deleted on the remote —
+these stale references (`origin/some-old-feature`) accumulate over time and clutter `git branch -r` output.
+
+Pass `--prune` to clean them up during a fetch:
+
+```sh
+git fetch --prune
+```
+
+Or prune without fetching:
+
+```sh
+git remote prune origin
+```
+
+!!! tip "Make pruning automatic"
+    You can tell Git to always prune when fetching:
+    ```sh
+    git config --global fetch.prune true
+    ```
+    After this, every `git fetch` and `git pull` prunes stale references automatically.
+
 ---
 
 ## Cloning

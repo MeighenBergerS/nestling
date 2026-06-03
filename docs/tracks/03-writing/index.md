@@ -1,5 +1,12 @@
 # Writing Papers
 
+!!! note "These are guidelines, not rules"
+    Paper writing is as much craft as science, and experienced researchers hold a wide range of
+    opinions on style, structure, and emphasis. The lessons in this track reflect one well-developed
+    approach, but they are **guidelines** — not universal mandates. Before submitting or making final
+    style decisions, talk to your supervisor or other senior colleagues in your group. Their feedback
+    and preferences take precedence over anything written here.
+
 This track covers how to write a physics research paper from first draft to submission.
 The focus is on the specific conventions used in high-energy and astroparticle physics:
 how to structure the argument, what each section must do, how to write clearly in the field's voice,
