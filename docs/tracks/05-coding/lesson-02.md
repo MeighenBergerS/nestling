@@ -183,6 +183,12 @@ module once it works.
 
 ---
 
+## Further reading
+
+The [official Python tutorial](https://docs.python.org/3/tutorial/) covers the full language
+in depth, from data structures and control flow to classes and standard library modules.
+It is the natural next step if any of the concepts in this lesson felt unfamiliar.
+
 ## What to read next
 
 [Lesson 03](lesson-03.md) covers `pip` and virtual environments, the machinery that installs

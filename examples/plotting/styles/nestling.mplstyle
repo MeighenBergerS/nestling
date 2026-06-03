@@ -1,5 +1,4 @@
 # Nestling matplotlib style
-# Adapted from the Beacom-group conformal style.
 # Optimised for publication-quality single or two-column figures.
 #
 # To enable LaTeX rendering (requires a local LaTeX installation):

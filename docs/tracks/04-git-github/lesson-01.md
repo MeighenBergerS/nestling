@@ -152,6 +152,12 @@ Think of completing the sentence: "If applied, this commit will..."
 
 Keep the subject under **72 characters**. GitHub truncates longer subjects in the commit list.
 
+!!! note "Credit"
+    The imperative mood convention, the 72-character subject limit, and the blank-line-before-body
+    rule are drawn from Tim Pope's
+    ["A Note About Git Commit Messages"](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+    (2008), which established the conventions now standard across the Git community.
+
 Good subject lines:
 
 - `Fix normalisation factor in flux calculation`
@@ -311,6 +317,14 @@ Most of your Git usage fits into this loop:
 6. Repeat.
 
 ---
+
+## Further reading
+
+[Pro Git](https://git-scm.com/book/en/v2) by Scott Chacon and Ben Straub is the definitive
+reference for Git, freely available online. Chapters 1 and 2 cover everything in this lesson
+in greater depth; chapters 3 and 5 cover branching and distributed workflows.
+If you want to understand what Git is actually doing rather than just how to use it,
+this is the book to read.
 
 ## What to read next
 

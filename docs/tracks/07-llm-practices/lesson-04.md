@@ -153,7 +153,7 @@ to check the claim against the source immediately.
 This is better practice than accepting ungrounded LLM output.
 
 **Retractions and errors.** Even real papers can be wrong or retracted.
-The Retraction Watch database tracks retracted papers.
+The [Retraction Watch](https://retractionwatch.com/) database tracks retracted papers.
 For any paper that forms a cornerstone of your argument, check its citation history
 and retraction status.
 

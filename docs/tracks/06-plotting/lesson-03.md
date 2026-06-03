@@ -8,9 +8,10 @@ This lesson covers the Nestling style file, LaTeX labels, and how to size figure
 for journal submission.
 
 !!! note "Acknowledgement"
-    The Nestling style is adapted from the approach documented in Ciaran O'Hare's
-    [HowToMakeAPlot](https://github.com/cajohare/HowToMakeAPlot), which is an excellent
-    reference for the broader question of what distinguishes publication-quality figures.
+    The Nestling style is the author's own. Ciaran O'Hare's
+    [HowToMakeAPlot](https://github.com/cajohare/HowToMakeAPlot) is an excellent reference
+    for the broader question of what distinguishes publication-quality figures and is well
+    worth reading alongside this lesson.
 
 ---
 

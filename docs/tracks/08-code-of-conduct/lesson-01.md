@@ -15,7 +15,7 @@ requires, why each part exists, and what to do if something goes wrong.
 
 Research environments have historically struggled with harassment, exclusion, and the abuse of
 power differentials.
-Studies consistently show that hostile group climates drive talented people, disproportionately
+Research has consistently shown that hostile group climates drive talented people, disproportionately
 those from underrepresented groups, out of science.
 The harm is not only personal: it degrades the quality and breadth of research itself.
 

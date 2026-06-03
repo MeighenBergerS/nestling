@@ -1,8 +1,9 @@
 # Working with LLMs
 
-This track teaches you to use large language models (LLMs) effectively and responsibly in research.
-You will learn where LLMs are genuinely useful, where they are unreliable, and how to build habits
-that keep you in control of your work.
+LLMs have become genuinely useful research tools in a short time, and genuinely misleading ones
+when used without care. The difference is almost entirely in how you use them. This track covers
+where they add real value, where they fail, and how to build habits that keep you in control of
+your work.
 
 ## Lessons
 

@@ -38,8 +38,9 @@ If the figure cannot be read by someone who knows the question, the figure has f
 
 ### Data-ink ratio
 
-Edward Tufte introduced the concept of **data-ink ratio**: the fraction of the ink on a figure
-that encodes data, as opposed to decoration.
+Edward Tufte introduced the concept of **data-ink ratio** in *The Visual Display of
+Quantitative Information* (1983): the fraction of the ink on a figure that encodes data,
+as opposed to decoration.
 The practical rule is: remove anything that does not carry information.
 
 Common culprits:

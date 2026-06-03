@@ -27,11 +27,9 @@ If you are revising a draft, jump to the lesson that covers what you need.
 
 ## Style guide and reference papers
 
-The conventions in this track are drawn from a writing style guide developed by analysing
-representative papers and refined through collaboration with
-[John Beacom](https://inspirehep.net/authors/1017043), whose high standards for clarity and precision
-are directly reflected in the rules you will encounter here.
-Stylistic choices also reflect the author's own evolving preferences.
+The writing conventions in this track reflect standards developed through the author's own research,
+in close collaboration with [John Beacom](https://inspirehep.net/authors/1017043), whose high standards
+for clarity and precision are directly reflected in the rules you will encounter here.
 
 The three papers below are used as worked examples throughout the lessons:
 

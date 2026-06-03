@@ -300,6 +300,17 @@ The `longbibliography` class option is already set. Do not override it.
 
 ---
 
+## Further reading
+
+- [RevTeX 4-2 documentation](https://journals.aps.org/revtex): the official documentation for the
+  document class used throughout this track. The full author's guide covers every option and package
+  interaction not addressed here.
+- [Physical Review D author guidelines](https://journals.aps.org/prd/authors): the journal-level
+  specifications that underlie the conventions in this lesson. Worth bookmarking before submission.
+- [The Not So Short Introduction to LaTeX](https://tobi.oetiker.ch/lshort/lshort.pdf) (Oetiker et al.):
+  the standard first reference for learning LaTeX properly. If the conventions in this lesson feel
+  unfamiliar, work through the relevant sections here before applying them.
+
 ## What to read next
 
 [Lesson 05](lesson-05.md) is the revision checklist, a systematic pass through everything covered

@@ -1,8 +1,9 @@
 # Plotting
 
-This track teaches you to create clear, publication-quality scientific figures.
-You will learn the principles of good data visualisation and how to apply them
-using matplotlib and the Nestling style file.
+Figures do a lot of work in a physics paper or talk. A clear figure makes a complex result
+easy to follow; a poorly designed one can obscure it entirely. This track covers how to
+design figures that communicate well and how to produce them efficiently using matplotlib
+and the Nestling style file.
 
 !!! note "Acknowledgement"
     Several lessons in this track draw on Ciaran O'Hare's

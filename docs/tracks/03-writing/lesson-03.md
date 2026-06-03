@@ -245,6 +245,15 @@ sometimes by a referee, and sometimes by an automated checker.
 
 ---
 
+## Further reading
+
+George Gopen and Judith Swan's
+["The Science of Scientific Writing"](https://www.americanscientist.org/blog/the-long-view/the-science-of-scientific-writing)
+(American Scientist, 1990) is a two-page paper that explains, from a linguistic perspective, why
+readers struggle with scientific prose and what structural choices cause those difficulties.
+It is not a style guide for physics specifically, but the underlying theory of why paragraph
+structure matters is worth reading alongside this lesson.
+
 ## What to read next
 
 [Lesson 04](lesson-04.md) covers the LaTeX conventions that implement these writing rules in practice:

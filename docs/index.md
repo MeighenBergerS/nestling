@@ -1,6 +1,10 @@
 # Welcome to Nestling
 
-Nestling is a collection of short guides, examples, and templates to help you build the practical skills that every researcher needs.
+Most people start research without being formally taught the practical side: how to find and read papers,
+how to manage code, how to prepare a journal club talk. These things are picked up gradually, often by
+trial and error, and rarely as well as they could be.
+
+Nestling is a collection of short guides, examples, and templates to help with exactly that.
 It is designed to complement your work with your supervisor, not to replace that conversation.
 
 !!! tip "Before you begin: three questions for your supervisor"

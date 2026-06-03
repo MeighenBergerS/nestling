@@ -1,7 +1,8 @@
 # Journal Club
 
-This track prepares you to participate in and present at a journal club.
-The focus is on building confidence: you do not need to be an expert to present a paper or ask a good question.
+Journal clubs can feel intimidating at first, especially when you are new to the field and the
+papers feel opaque. This track prepares you to participate and present, with the focus on
+building confidence rather than assuming expertise you do not yet have.
 
 ## Lessons
 

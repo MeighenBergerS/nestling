@@ -257,8 +257,7 @@ For each violation, quote the offending text, name the rule, and suggest the fix
 [paste your text]
 ```
 
-This is the same workflow as the automated pipeline in the SMB_style_guidelines
-project, but interactive, so you can ask follow-up questions about each flagged item.
+This is an interactive workflow, so you can ask follow-up questions about each flagged item.
 
 ### Example interaction
 
@@ -363,7 +362,7 @@ For a hand-maintained skill file, periodic spot-checks serve the same purpose.
 | Why useful | Avoids repeating context; enforces conventions; encodes domain knowledge |
 | Prometheus example | Covers environment, architecture, pipeline, and coding conventions |
 | Coding template | `examples/skill-files/coding-docs-template.md` |
-| Writing skill file | `examples/skill-files/writing-hep.md`: encodes track 03 + SMB style guide |
+| Writing skill file | `examples/skill-files/writing-hep.md`: encodes the conventions from the Writing Papers track |
 | Two modes | Drafting mode (generate text that follows the style) and review mode (check violations) |
 | System prompt | The industrial equivalent: persistent context in API deployments |
 

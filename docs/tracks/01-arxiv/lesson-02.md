@@ -5,6 +5,11 @@ Papers are written to communicate new results to specialists, not to teach from 
 A systematic approach helps you extract what you need, but "what you need" is often just the gist,
 and that is completely fine.
 
+!!! note "Credit"
+    The multi-pass reading strategy in this lesson is based on S. Keshav's
+    ["How to Read a Paper"](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf) (2007),
+    adapted here for physics research. The original is two pages and worth reading in its own right.
+
 !!! note "You are not expected to understand everything"
     Research papers are written by specialists for specialists.
     It is entirely normal, at any career stage, to finish a paper and only understand parts of it.
