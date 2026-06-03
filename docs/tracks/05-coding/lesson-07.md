@@ -181,6 +181,12 @@ loaded.eval()
 
 ---
 
+## Further reading
+
+The [official PyTorch tutorials](https://pytorch.org/tutorials/) go considerably deeper than
+this lesson, covering data loading, custom datasets, transfer learning, and model deployment.
+The "Learn the Basics" section is the right starting point and directly extends what is covered here.
+
 ## What to read next
 
 [Lesson 08](lesson-08.md) starts the best-practices block: how to structure a Python

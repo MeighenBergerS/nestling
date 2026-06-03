@@ -141,6 +141,13 @@ Both approaches produce standard packages; setuptools is simpler to start with.
 
 ---
 
+## Further reading
+
+The [Python Packaging User Guide](https://packaging.python.org/) is the authoritative reference
+for everything covered in this lesson and beyond: build backends, lock files, publishing
+workflows, and dependency management strategies. When you run into packaging questions that
+go beyond the basics here, this is the right place to look.
+
 ## What to read next
 
 [Lesson 12](lesson-12.md) covers the final step: automating lint checks, tests, and

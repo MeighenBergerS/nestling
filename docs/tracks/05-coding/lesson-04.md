@@ -266,6 +266,13 @@ in neutrino physics, cosmic-ray analysis, and gravitational-wave parameter estim
 
 ---
 
+## Further reading
+
+The [Scientific Python Lectures](https://lectures.scientific-python.org/) (formerly the SciPy
+Lecture Notes) are the canonical free reference for the scientific Python stack. They cover
+NumPy, SciPy, and matplotlib in considerably more depth than this lesson, with worked examples
+throughout. If you want to go beyond the essentials covered here, start there.
+
 ## What to read next
 
 [Lesson 05](lesson-05.md) covers code style: why consistent formatting matters,
