@@ -331,26 +331,6 @@ A figure never mentioned in the text either belongs in an appendix or does not b
 
 ---
 
-## The automated pipeline
-
-The [SMB_style_guidelines](https://github.com/MeighenBergerS/SMB_style_guidelines) repository
-contains an automated pipeline that runs all of the above checks, and more, directly on a `.tex` file.
-
-| Stage | What it checks | LLM? |
-| --- | --- | --- |
-| Mechanical (Stage 1a) | All 15 grep rules above, via regex | No |
-| Style (Stage 1b) | Voice, abstract form, OOM presence per section | Fast |
-| Estimate (Stage 3) | Re-derives your OOM estimates independently; flags >1 OOM disagreement | Fast |
-| Equations (Stage 3b) | Dimensional consistency, prefactors, signs, literature match | Smart |
-| Flow (Stage 3c) | Figure citation order + full narrative structure analysis | Smart |
-| Review (Stage 4) | Full PRD-style structured referee report | Smart |
-
-The mechanical stage runs with no API key and produces results immediately. It is worth running
-even on an early draft to catch the trivial violations before focusing on the harder ones.
-Once a draft is close to submission-ready, the full pipeline gives a structured list of remaining issues.
-
----
-
 ## Final check
 
 Once the checklist is clear, compile the paper one more time from scratch and read the abstract,
