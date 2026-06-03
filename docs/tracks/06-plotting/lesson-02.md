@@ -225,6 +225,13 @@ PDF and SVG scale without quality loss; PNG does not.
 
 ---
 
+## Further reading
+
+The [matplotlib gallery](https://matplotlib.org/stable/gallery/) contains hundreds of
+worked examples covering every plot type covered in this lesson and many more. Each example
+includes the full source code. When you need a plot type not covered here, the gallery is
+the fastest place to find a starting point.
+
 ## What to read next
 
 [Lesson 03](lesson-03.md) shows how to apply the Nestling style file so every figure you
