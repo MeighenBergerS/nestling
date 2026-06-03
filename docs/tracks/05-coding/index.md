@@ -1,10 +1,13 @@
 # Coding Practices
 
-This track takes you from a blank machine to writing efficient, well-structured research
-code. The first seven lessons are practical: you will set up your tools, learn enough
-Python to run physics calculations, and get familiar with the packages used throughout
-the research group. The final five lessons cover the habits that make code maintainable
-and reproducible over time.
+Writing code for research is different from writing code for a course: there is no expected
+output to check against, the same script needs to run again in six months, and a collaborator
+may need to understand what you did without asking you. The tools and habits that make this
+work well are the focus of this track.
+
+The first seven lessons are practical: you will set up your tools, learn enough Python to run
+physics calculations, and get familiar with the packages used throughout the research group.
+The final five lessons cover the habits that make code maintainable and reproducible over time.
 
 [Prometheus](https://github.com/Harvard-Neutrino/prometheus), a neutrino telescope
 simulation used in IceCube and KM3NeT analyses, is used as a running example throughout.

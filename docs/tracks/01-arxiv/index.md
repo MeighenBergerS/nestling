@@ -1,8 +1,8 @@
 # ArXiv & Reading Papers
 
-This track teaches you to find, read, and manage physics research papers efficiently.
-By the end, you will be comfortable navigating ArXiv, identifying relevant literature,
-and building a systematic reading workflow.
+Reading papers is one of the first things your supervisor will ask you to do, and it is less
+straightforward than it sounds. This track covers how to find relevant work, how to read it
+without getting lost, and how to build a system for managing what you find.
 
 ## Lessons
 
