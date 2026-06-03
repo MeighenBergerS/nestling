@@ -1,4 +1,4 @@
-# Lesson 02 — LLMs for Code
+# Lesson 02: LLMs for Code
 
 LLMs have become genuinely useful coding assistants.
 Used well, they compress the time from "I need a function that does X" to working,
@@ -77,7 +77,7 @@ The model can produce code that:
 - **Is subtly non-reproducible.** Unset random seeds, floating-point operations that
   differ across platforms, silent type coercions.
 
-Read code from an LLM as you would read code from a student — with respect, but with
+Read code from an LLM as you would read code from a student, with respect but with
 attention to every assumption.
 
 ---
@@ -99,7 +99,7 @@ For LLM-generated code this discipline is especially important.
 ### Asking the LLM to write tests
 
 You can ask the model to write tests for the code it produced.
-This is useful — it reveals the model's assumptions about what the code is supposed to do.
+This is useful, as it reveals the model's assumptions about what the code is supposed to do.
 But the model may write tests that pass trivially or that test only the happy path.
 You must still review the tests.
 
@@ -123,7 +123,7 @@ You must still review the tests.
 
 1. Paste the code and the error message.
 2. Ask the model to explain what the error means and where it originates.
-3. Evaluate the explanation — is it plausible? Does it match what you know about the code?
+3. Evaluate the explanation: is it plausible? Does it match what you know about the code?
 4. Apply the fix. Understand why it works before moving on.
 
 ### Workflow 3: Code review
@@ -163,7 +163,7 @@ If you are building a pipeline that feeds external data to an LLM, treat that da
 as untrusted and constrain the model's output format.
 
 **Test generation at scale.** Industry teams use LLMs to generate test suites for
-existing code. The limiting factor is always the quality of the specification — tests
+existing code. The limiting factor is always the quality of the specification. Tests
 generated from an underspecified function test the implementation, not the intended
 behaviour.
 
@@ -179,7 +179,7 @@ Add these explicitly before treating any output as final.
 - [ ] My prompts specify language, input/output types, and constraints.
 - [ ] I read every line of LLM-generated code before using it.
 - [ ] I have tests covering expected inputs and edge cases.
-- [ ] I understand every function I commit — I can explain what it does and why.
+- [ ] I understand every function I commit. I can explain what it does and why.
 - [ ] I have checked for security issues if the code handles external input.
 - [ ] Random seeds and version pins are set for any code that produces results.
 

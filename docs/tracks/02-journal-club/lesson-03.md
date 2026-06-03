@@ -1,15 +1,15 @@
-# Lesson 03 — Giving Feedback
+# Lesson 03: Giving Feedback
 
 Being a good audience member is a skill, and it matters.
 The quality of a journal club discussion depends as much on how the audience engages as on how well the paper was presented.
-This lesson covers how to participate usefully — asking good questions, offering constructive criticism,
+This lesson covers how to participate usefully: asking good questions, offering constructive criticism,
 and making the presenter feel supported rather than interrogated.
 
 ---
 
 ## Why your participation matters
 
-As a junior researcher, you might feel like your questions or comments are not worth raising —
+As a junior researcher, you might feel like your questions or comments are not worth raising,
 that the senior people in the room will say the important things, and you should just listen.
 
 This is backwards.
@@ -32,14 +32,14 @@ A good question does one or more of the following:
 - Expresses genuine scepticism about a result or method.
 
 You do not need a fully formed thought to ask a question.
-"I do not quite understand how they got from X to Y — can you walk through that?" is a good question.
-"This result surprised me — did anyone expect it to come out this way?" is a good question.
+"I do not quite understand how they got from X to Y. Can you walk through that?" is a good question.
+"This result surprised me. Did anyone expect it to come out this way?" is a good question.
 "I might be missing something, but does this contradict what [other paper] found?" is a good question.
 
 !!! tip "Start with a genuine reaction"
     The best questions come from honest reactions to the paper: confusion, surprise, scepticism, curiosity.
     If something felt off to you, trust that reaction and ask about it.
-    You might be wrong — but you might also have noticed something others missed.
+    You might be wrong, but you might also have noticed something others missed.
 
 ---
 
@@ -56,7 +56,7 @@ Useful criticism is specific.
 
 Useful criticism is about the work, not the presenter.
 The presenter did not write the paper. They are sharing it with the group to think through together.
-Critique the paper's claims, methods, and conclusions — not the presenter's explanation of them.
+Critique the paper's claims, methods, and conclusions, not the presenter's explanation of them.
 
 It is also fine to be wrong.
 If you raise a criticism and someone explains why it is not a real problem, that is a good outcome.
@@ -72,7 +72,7 @@ If a result seems implausible, a method seems flawed, or a conclusion seems over
 A few ways to frame it:
 
 - "I find it hard to believe this result because... does anyone else share that concern?"
-- "The method here seems to assume [X] — is that a safe assumption in this regime?"
+- "The method here seems to assume [X]. Is that a safe assumption in this regime?"
 - "The conclusion feels stronger than what the data actually shows. Am I reading that right?"
 
 You are not obliged to accept a paper's conclusions just because it was published.
@@ -83,13 +83,13 @@ Journal club exists partly to develop the critical reading skills needed to eval
 ## Supporting the presenter
 
 The presenter has done the work of reading a paper carefully enough to share it with the group.
-That takes effort, and it takes courage — especially for junior researchers presenting for the first time.
+That takes effort, and it takes courage, especially for junior researchers presenting for the first time.
 
 A few habits that make a big difference:
 
 - Ask questions in a way that invites explanation rather than puts the presenter on the spot.
   "Can you walk me through the main figure?" is friendlier than "What does the y-axis even mean?"
-- If the presenter is not sure of something, do not pile on — offer what you know if you can.
+- If the presenter is not sure of something, do not pile on. Offer what you know if you can.
 - If you disagree with the presenter's interpretation, frame it as a question or alternative view,
   not as a correction.
 
@@ -109,7 +109,7 @@ A few lines are enough:
 - The paper's central claim in one sentence.
 - The strongest result shown.
 - Questions that came up and were not resolved.
-- Your own reaction — did you find it convincing?
+- Your own reaction: did you find it convincing?
 
 These notes become useful when you encounter the paper again, cite it in your own work,
 or want to recommend it to someone.
@@ -120,7 +120,7 @@ Attach them to the paper entry in your reference manager
 
 ## A note on building confidence
 
-Asking questions in front of a group — especially one that includes senior researchers — feels risky.
+Asking questions in front of a group, especially one that includes senior researchers, feels risky.
 What if the question is obvious? What if someone thinks you missed something basic?
 
 In practice, this almost never happens.

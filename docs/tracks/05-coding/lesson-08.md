@@ -1,4 +1,4 @@
-# Lesson 08 — Project Layout
+# Lesson 08: Project Layout
 
 How you organise your files matters.
 A clear structure makes it obvious where code lives, prevents circular imports, and is
@@ -49,14 +49,14 @@ __all__ = ["run_simulation", "Detector", "Config"]
 Users import from the package root, not from internal submodules:
 
 ```python
-from mypackage import run_simulation      # clean — the intended way
+from mypackage import run_simulation      # clean: the intended way
 from mypackage.core import run_simulation # works, but exposes internals
 ```
 
 [Prometheus](https://github.com/Harvard-Neutrino/prometheus) does this correctly.
 `prometheus/__init__.py` exports `Prometheus`, `Detector`, and `config` via an explicit
 `__all__`. Users are insulated from the internal `lepton_propagation/`,
-`photon_propagation/` subpackage structure — if those subpackages are ever restructured,
+`photon_propagation/` subpackage structure. If those subpackages are ever restructured,
 the public import paths stay the same.
 
 ---
@@ -116,7 +116,7 @@ class SimConfig:
 ```
 
 Prometheus uses nested dataclass composition (`PrometheusConfig` contains `RunConfig`,
-`DetectorConfig`, `InjectionConfig`) — a clean pattern that scales well for complex
+`DetectorConfig`, `InjectionConfig`), a clean pattern that scales well for complex
 configurations.
 
 !!! warning "Always validate at construction time"
@@ -124,7 +124,7 @@ configurations.
     configurations at construction time rather than deep inside a long simulation run.
     Always validate at the boundary where data enters your system.
     In contrast, `PropagatableParticle` has `position: np.ndarray` and
-    `direction: np.ndarray` with no validation — if you pass a 2-D array where a 1-D
+    `direction: np.ndarray` with no validation. If you pass a 2-D array where a 1-D
     one is expected, the error appears far later in propagation and is hard to trace.
 
 ---
@@ -154,7 +154,7 @@ if propagator_name not in KNOWN_PROPAGATORS:
     )
 ```
 
-Compare to `raise ValueError("bad propagator")` — the custom exception is immediately
+Compare to `raise ValueError("bad propagator")`. The custom exception is immediately
 identifiable in a traceback and can be caught specifically by callers.
 
 ---
@@ -162,7 +162,7 @@ identifiable in a traceback and can be caught specifically by callers.
 ## What to avoid
 
 **Flat scripts**: a single 1000-line `analysis.py` with no functions.
-This cannot be tested, imported, or reused — and when something breaks, there is nowhere
+This cannot be tested, imported, or reused, and when something breaks, there is nowhere
 to look except the whole file.
 
 **Circular imports**: package A imports from B, and B imports from A.

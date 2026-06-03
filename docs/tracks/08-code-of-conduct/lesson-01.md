@@ -1,9 +1,9 @@
-# Lesson 01 — Understanding and Living the Code of Conduct
+# Lesson 01: Understanding and Living the Code of Conduct
 
 Research is a collaborative endeavour.
 You share offices, code, data, and ideas with people who have different backgrounds, expectations,
 and levels of power within the group.
-A code of conduct is the written agreement that makes those interactions workable for everyone —
+A code of conduct is the written agreement that makes those interactions workable for everyone,
 not just for those who already feel comfortable.
 
 This lesson explains what the Nestling [Code of Conduct](https://github.com/MeighenBergerS/nestling/blob/main/CODE_OF_CONDUCT.md)
@@ -15,8 +15,8 @@ requires, why each part exists, and what to do if something goes wrong.
 
 Research environments have historically struggled with harassment, exclusion, and the abuse of
 power differentials.
-Studies consistently show that hostile group climates drive talented people — disproportionately
-those from underrepresented groups — out of science.
+Studies consistently show that hostile group climates drive talented people, disproportionately
+those from underrepresented groups, out of science.
 The harm is not only personal: it degrades the quality and breadth of research itself.
 
 A code of conduct does three things:
@@ -29,11 +29,11 @@ A code of conduct does three things:
    A code of conduct tells you exactly what to do and what will happen next.
 
 3. **Signals who the community is for.** Publishing a code of conduct is a statement that the
-   community is actively committed to being safe and equitable — not just in principle, but in practice.
+   community is actively committed to being safe and equitable, not just in principle, but in practice.
 
 !!! note "Codes of conduct are not about policing speech"
     The goal is not to create a list of forbidden words.
-    It is to protect people's ability to participate fully in the community —
+    It is to protect people's ability to participate fully in the community,
     to ask questions, share work, and disagree productively without being harassed or excluded.
 
 ---
@@ -54,7 +54,7 @@ The pledge acknowledges that and asks everyone to factor it into how they behave
 The pledge covers a broad list of characteristics: race, ethnicity, caste, age, neurodiversity,
 disability, sex, gender identity, sexual orientation, language, religion, national origin,
 socio-economic background, and education level.
-This list is not exhaustive — the phrase "or other status" is intentional.
+This list is not exhaustive. The phrase "or other status" is intentional.
 If a characteristic shapes how someone is treated in the community, it falls within the scope of the pledge.
 
 ---
@@ -68,7 +68,7 @@ The CoC lists six encouraged behaviours:
 | Engaging **kindly and honestly** | Kindness without honesty produces empty validation. Honesty without kindness produces needless harm. Both together make feedback useful. |
 | Respecting **different viewpoints** | Research improves when ideas compete on evidence, not on the seniority of who holds them. |
 | **Taking responsibility** for our actions | Defensiveness after a mistake compounds the harm. Owning what you did is the first step toward repair. |
-| Giving and accepting **constructive feedback** | Feedback is how research improves. Learning to give it well — and receive it without defensiveness — is a skill worth building deliberately. |
+| Giving and accepting **constructive feedback** | Feedback is how research improves. Learning to give it well, and receive it without defensiveness, is a skill worth building deliberately. |
 | Committing to **repairing harm** when it occurs | Harm happens even in well-functioning communities. What distinguishes healthy communities is the willingness to address it. |
 | Promoting the **well-being of our community** | The community is a shared resource. Protecting it is everyone's responsibility, not just those in formal leadership roles. |
 
@@ -80,7 +80,7 @@ They describe the baseline standard of conduct expected from every member.
 ## Restricted behaviours
 
 The CoC identifies categories of behaviour that are never acceptable.
-Understanding what falls into each category matters — incidents are sometimes ambiguous,
+Understanding what falls into each category matters, as incidents are sometimes ambiguous,
 and the categories help clarify whether something crosses the line.
 
 ### Harassment
@@ -91,7 +91,7 @@ after a clear request to stop.
 The clearest example: someone says "please don't contact me outside of group meetings" and you
 continue to message them privately.
 But harassment does not require an explicit prior refusal.
-Repeated, unwanted attention — particularly attention that is personal rather than professional —
+Repeated, unwanted attention, particularly attention that is personal rather than professional,
 is harassment even on a first occurrence if it is egregious enough.
 
 ### Character attacks
@@ -106,7 +106,7 @@ code like this").
 
 ### Stereotyping or discrimination
 
-Characterising someone's personality or behaviour on the basis of their identity or traits —
+Characterising someone's personality or behaviour on the basis of their identity or traits,
 race, gender, nationality, disability, and so on.
 
 In research settings this often appears as low expectations ("surprising that you got this far"),
@@ -153,16 +153,16 @@ The CoC also restricts:
 The CoC applies within all community spaces: the repository, issue tracker, pull requests,
 group meetings, and any communication channel used by the group.
 
-It also applies when a member is officially representing the community externally — at a conference,
+It also applies when a member is officially representing the community externally, at a conference,
 in a public forum, or as a named contributor on a publication.
 
-Behaviour in personal spaces is generally outside the scope — unless it creates a situation that
+Behaviour in personal spaces is generally outside the scope, unless it creates a situation that
 affects someone's ability to participate safely in the community.
 
 !!! note "CoCs apply far beyond software repositories"
     Codes of conduct are standard practice in many settings: academic conferences, workshops,
     summer schools, reading groups, online forums, and research collaborations.
-    If you organise or attend any of these, you are likely already operating under one — or should be.
+    If you organise or attend any of these, you are likely already operating under one, or should be.
     The principles in this lesson transfer directly to all of those contexts.
 
 ---
@@ -199,7 +199,7 @@ one unreported.
 4. You are informed of the outcome to the extent that confidentiality allows.
 
 Investigation and enforcement are kept as transparent as possible while prioritising the safety
-and confidentiality of everyone involved — especially the person who reported.
+and confidentiality of everyone involved, especially the person who reported.
 
 !!! note "You will not be penalised for reporting in good faith"
     Retaliation against someone who reports a possible violation is itself a violation of the CoC.
@@ -226,7 +226,7 @@ behaviour.
 Warnings exist because many violations are not malicious.
 Someone may not have realised their behaviour was causing harm.
 A warning gives them the opportunity to understand and change.
-It is not a punishment — it is a signal that something needs to change.
+It is not a punishment. It is a signal that something needs to change.
 
 ### Temporary suspension
 
@@ -251,7 +251,7 @@ violation so serious that no other response can keep the community safe.
     Enforcement is ultimately a matter of judgment.
     The ladder does not prevent skipping rungs for a sufficiently serious violation, nor does it
     require escalation if earlier steps have been effective.
-    The goal at every step is to repair harm and protect the community — not to punish mechanically.
+    The goal at every step is to repair harm and protect the community, not to punish mechanically.
 
 ---
 
@@ -280,7 +280,7 @@ incident that damages trust over time.
 ## What to read next
 
 The full [Code of Conduct](https://github.com/MeighenBergerS/nestling/blob/main/CODE_OF_CONDUCT.md)
-is the authoritative document — this lesson explains it, but the CoC itself is what governs.
+is the authoritative document. This lesson explains it, but the CoC itself is what governs.
 
 For broader context on building inclusive research environments, the
 [Mozilla Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/)

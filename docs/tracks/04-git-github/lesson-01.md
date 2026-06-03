@@ -1,4 +1,4 @@
-# Lesson 01 — Git Basics
+# Lesson 01: Git Basics
 
 Version control is one of the most important habits you can build as a researcher.
 It lets you track every change you make to code, scripts, and text files, revert to any previous state,
@@ -122,13 +122,13 @@ git commit -m "Add initial simulation script"
 
 ## Commit best practices
 
-Writing good commit messages is a habit that develops over time — early commits are often rough and that is completely fine.
+Writing good commit messages is a habit that develops over time. Early commits are often rough and that is completely fine.
 The conventions below are worth building from the start, but do not let them slow you down while you are learning the basics.
 A well-structured history is easy to search, easy to review, and easy to recover from.
 
 ### One logical change per commit
 
-An **atomic commit** contains exactly one logical change — something you can describe in a single sentence.
+An **atomic commit** contains exactly one logical change, something you can describe in a single sentence.
 If your commit message needs "and" to describe what happened, you probably have two commits.
 
 **Why this matters**: when something breaks, Git can search history automatically to find which commit
@@ -146,11 +146,11 @@ even if you edited several files in the process.
 The subject line is the most important part of a commit message.
 It is what appears in `git log --oneline`, on GitHub, and in code review tools.
 
-Write commit messages in the **imperative mood**: "Fix", "Add", "Remove", "Update" —
+Write commit messages in the **imperative mood**: "Fix", "Add", "Remove", "Update",
 not "Fixed", "Adding", or "I updated".
 Think of completing the sentence: "If applied, this commit will..."
 
-Keep the subject under **72 characters** — GitHub truncates longer subjects in the commit list.
+Keep the subject under **72 characters**. GitHub truncates longer subjects in the commit list.
 
 Good subject lines:
 
@@ -160,10 +160,10 @@ Good subject lines:
 
 Bad subject lines:
 
-- `fix stuff` — says nothing
-- `WIP` — not a commit message
-- `updates` — meaningless
-- `Fixed the thing with the numbers that was wrong` — vague and past tense
+- `fix stuff`: says nothing
+- `WIP`: not a commit message
+- `updates`: meaningless
+- `Fixed the thing with the numbers that was wrong`: vague and past tense
 
 **Common pitfall**: writing "Update code" or "Fix bug" because you are in a hurry.
 Two months later you will not remember what this commit did, and neither will your collaborators.
@@ -186,13 +186,13 @@ for the directed beam case used in the sensitivity study. This affects
 all results in Section III.
 ```
 
-The body explains *why* the change was made, not *what* changed — the diff already shows what changed.
+The body explains *why* the change was made, not *what* changed. The diff already shows what changed.
 
 ### Never commit secrets or large binary files
 
 Do not commit passwords, API keys, or access tokens.
-Setting up a `.gitignore` before your first `git add` is the easiest way to prevent this by accident —
-see the next section.
+Setting up a `.gitignore` before your first `git add` is the easiest way to prevent this by accident.
+See the next section.
 If a secret does reach a public repository, treat it as compromised: rotate the key immediately
 and notify whoever manages that service.
 (Removing a secret from Git history is possible but requires rewriting every commit that followed it,
@@ -208,7 +208,7 @@ Not everything in a project directory should be tracked.
 Compiled outputs, temporary files, and data files that can be regenerated should be excluded.
 
 **Why this matters**: Git stores the complete history of every file it tracks.
-A large data file committed once stays in the repository forever — even after deletion —
+A large data file committed once stays in the repository forever, even after deletion,
 because the old version lives in the history.
 This bloats the repository for every collaborator who clones it.
 Credentials (passwords, API keys) committed to a public repository are immediately exposed
@@ -314,5 +314,5 @@ Most of your Git usage fits into this loop:
 
 ## What to read next
 
-[Lesson 02](lesson-02.md) covers branches — the mechanism that lets you develop a new feature
+[Lesson 02](lesson-02.md) covers branches, the mechanism that lets you develop a new feature
 or run an experiment without touching the main line of your project.

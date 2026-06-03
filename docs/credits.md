@@ -31,8 +31,8 @@ The writing track conventions, style rules, and the HEP writing skill file are b
 collaborative work with:
 
 **John Beacom** (Ohio State University)
-: Many of the stylistic choices and rules — from paragraph structure and voice to
-  figure captions and OOM estimates — originate from or were refined through working
+: Many of the stylistic choices and rules, from paragraph structure and voice to
+  figure captions and OOM estimates, originate from or were refined through working
   closely with John Beacom on published research papers.
   His high standards for clarity and precision are directly reflected throughout
   the Writing Papers track and the `examples/skill-files/writing-hep.md` skill file.
@@ -45,8 +45,8 @@ The coding track conventions, docstring style, and documentation practices are
 primarily attributed to:
 
 **Ana Lastoviria** ([`@chivoi`](https://github.com/chivoi))
-: The coding conventions and documentation style taught in Nestling — including
-  NumPy docstring format, project layout, and testing discipline — were largely
+: The coding conventions and documentation style taught in Nestling, including
+  NumPy docstring format, project layout, and testing discipline, were largely
   defined by Ana Lastoviria for the Prometheus project.
 
 These conventions are reflected in the **Prometheus** codebase:

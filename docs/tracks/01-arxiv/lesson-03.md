@@ -1,4 +1,4 @@
-# Lesson 03 — Managing Papers
+# Lesson 03: Managing Papers
 
 Finding and reading papers is only useful if you can find them again later.
 A reference manager keeps your literature organised, stores your notes,
@@ -19,7 +19,7 @@ A good reference manager lets you:
 - Generate BibTeX entries for use in LaTeX documents.
 - Sync across devices so your library is available wherever you work.
 
-Setting this up early — before your library grows large — is much easier than organising retroactively.
+Setting this up early, before your library grows large, is much easier than organising retroactively.
 
 ---
 
@@ -31,7 +31,7 @@ It is the most common choice in physics and related fields.
 ### Getting started with Zotero
 
 1. Download and install Zotero from [zotero.org](https://www.zotero.org/download/).
-2. Install the **Zotero Connector** browser extension — this lets you save papers to your library with one click while browsing ArXiv or journal websites.
+2. Install the **Zotero Connector** browser extension, which lets you save papers to your library with one click while browsing ArXiv or journal websites.
 3. Create a free Zotero account to sync your library across devices.
 
 ### Adding papers from ArXiv
@@ -49,10 +49,10 @@ in Zotero, click **File → Add item by identifier** and paste the number.
 
 - Create **Collections** (folders) by project or topic.
 - Use **Tags** for cross-cutting themes (e.g. `to-read`, `important`, `method-paper`).
-- Add notes to each paper while you read — the note field in Zotero is a good home for your per-paper summaries from [Lesson 02](lesson-02.md).
+- Add notes to each paper while you read. The note field in Zotero is a good home for your per-paper summaries from [Lesson 02](lesson-02.md).
 - Use **Zotero Groups** to share a library with your research group. Many labs maintain a shared group
   library so that everyone has access to the papers the group has collected and annotated.
-  Ask your supervisor whether your group has one — joining it is often the fastest way to bootstrap
+  Ask your supervisor whether your group has one. Joining it is often the fastest way to bootstrap
   your library with relevant papers.
 
 ### Exporting BibTeX
@@ -66,7 +66,7 @@ In Zotero:
 3. Select **BibTeX** as the format and save the `.bib` file.
 
 Alternatively, use the [Better BibTeX](https://retorque.re/zotero-better-bibtex/) plugin,
-which keeps an auto-updated `.bib` file linked to your Zotero library — very convenient for active writing projects.
+which keeps an auto-updated `.bib` file linked to your Zotero library, very convenient for active writing projects.
 
 ---
 
@@ -81,7 +81,7 @@ Zotero is a solid default, but alternatives exist:
 | [Papers](https://www.papersapp.com) | Polished interface, Mac and iOS focus. Paid. |
 | Manual `.bib` file | Works, but scales poorly and has no annotation or search. |
 
-Ask your group what they use — sharing a group Zotero library (Zotero Groups feature) is common in some labs.
+Ask your group what they use. Sharing a group Zotero library (Zotero Groups feature) is common in some labs.
 
 ---
 
@@ -93,11 +93,11 @@ Most reference managers include basic annotation (highlighting, sticky notes).
 For more powerful annotation:
 
 - **Zotero's built-in PDF reader** (version 6+) supports highlights and notes that sync with your library.
-- **[Okular](https://okular.kde.org)** (Linux) — free, excellent for annotation.
-- **[PDF Expert](https://pdfexpert.com)** (Mac/iOS) — paid, very polished.
-- **[Adobe Acrobat Reader](https://www.adobe.com/acrobat/pdf-reader.html)** — free version supports basic highlighting.
+- **[Okular](https://okular.kde.org)** (Linux): free, excellent for annotation.
+- **[PDF Expert](https://pdfexpert.com)** (Mac/iOS): paid, very polished.
+- **[Adobe Acrobat Reader](https://www.adobe.com/acrobat/pdf-reader.html)**: free version supports basic highlighting.
 
-Whatever tool you use, the key habit is to add a brief note when you highlight — not just a yellow stripe, but a word or two about why the passage mattered.
+Whatever tool you use, the key habit is to add a brief note when you highlight: not just a yellow stripe, but a word or two about why the passage mattered.
 
 ---
 
@@ -122,10 +122,10 @@ A reference library is only useful if it stays accurate.
 
 A few habits that help:
 
-- **Save immediately** — add a paper to Zotero when you first open it, not after you read it. Papers you intend to save later often disappear.
-- **Check metadata on import** — ArXiv metadata is usually correct, but author names and titles occasionally need fixing.
-- **Note why you saved it** — even one sentence reminds you why a paper was relevant when you come back to it months later.
-- **Prune occasionally** — if a paper turned out to be irrelevant, removing it keeps searches clean.
+- **Save immediately**: add a paper to Zotero when you first open it, not after you read it. Papers you intend to save later often disappear.
+- **Check metadata on import**: ArXiv metadata is usually correct, but author names and titles occasionally need fixing.
+- **Note why you saved it**: even one sentence reminds you why a paper was relevant when you come back to it months later.
+- **Prune occasionally**: if a paper turned out to be irrelevant, removing it keeps searches clean.
 
 !!! tip "Your reference library is a long-term asset"
     The library you build during your PhD or first research project will still be useful years later.

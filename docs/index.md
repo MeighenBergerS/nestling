@@ -1,19 +1,31 @@
 # Welcome to Nestling
 
 Nestling is a collection of short guides, examples, and templates to help you build the practical skills that every researcher needs.
-It is designed to complement your work with your supervisor — not to replace that conversation.
+It is designed to complement your work with your supervisor, not to replace that conversation.
 
-!!! tip "Before you begin — three questions for your supervisor"
+!!! tip "Before you begin: three questions for your supervisor"
     1. Which track should I start with?
     2. Do I need to run the code examples locally, or just read the lessons?
     3. How often should we check in as I work through this?
+
+## Working Together
+
+Before diving into any track, it is worth understanding the relationships and expectations that
+shape research life. These three pages cover the foundations.
+
+- [Code of Conduct](tracks/08-code-of-conduct/index.md): the standards that apply to everyone
+  in the community, always
+- [Your Supervisor](working-together/supervisor.md): what good supervision looks like, common
+  failure modes, and what to do when something is wrong
+- [Your Role](working-together/student.md): how to get the most out of the relationship and
+  the research environment
 
 ## Getting Started
 
 If you are new, begin here:
 
-1. [How to Use This Repo](getting-started/how-to-use-this-repo.md) — what is in Nestling and how to navigate it
-2. [Environment Setup](getting-started/environment-setup.md) — only needed if you plan to run the code examples
+1. [How to Use This Repo](getting-started/how-to-use-this-repo.md): what is in Nestling and how to navigate it
+2. [Environment Setup](getting-started/environment-setup.md): only needed if you plan to run the code examples
 
 ## Learning Tracks
 
@@ -39,9 +51,9 @@ Ready-to-use starting points for common research tasks are in [Templates](templa
 !!! note "A note on this resource"
     Nestling is maintained by a researcher, not a professional educator.
     The content reflects personal experience and, in places, personal opinion.
-    There will be mistakes — and your supervisor's guidance always takes priority over anything written here.
+    There will be mistakes, and your supervisor's guidance always takes priority over anything written here.
     Feedback is genuinely welcome: if you spot an error or have a suggestion,
-    [open a GitHub issue](https://github.com/MeighenBergerS/nestling/issues) — it takes two minutes and helps everyone who comes after you.
-    Contributions are welcome too — and if you are working through the [Git & GitHub](tracks/04-git-github/index.md)
+    [open a GitHub issue](https://github.com/MeighenBergerS/nestling/issues): it takes two minutes and helps everyone who comes after you.
+    Contributions are welcome too, and if you are working through the [Git & GitHub](tracks/04-git-github/index.md)
     or [Coding Practices](tracks/05-coding/index.md) tracks, submitting a fix or a new lesson is a great real-world exercise.
     See [CONTRIBUTING.md](https://github.com/MeighenBergerS/nestling/blob/main/CONTRIBUTING.md) to get started.

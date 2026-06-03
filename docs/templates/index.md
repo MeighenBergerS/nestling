@@ -16,10 +16,10 @@ The `resources/paper-template/` folder in the repository contains a full LaTeX t
 for a two-column RevTeX physics paper, configured to match the group style guide.
 It includes:
 
-- `main.tex` — document class, packages, author block, all section scaffolding,
+- `main.tex`: document class, packages, author block, all section scaffolding,
   figure and equation environments with comments, acknowledgements, appendix block, and bibliography call.
-- `references.bib` — example BibTeX entries in INSPIRE format, including the three group reference papers.
-- `figures/` — placeholder directory; place all figure PDFs here.
+- `references.bib`: example BibTeX entries in INSPIRE format, including the three group reference papers.
+- `figures/`: placeholder directory; place all figure PDFs here.
 
 To use it, copy the entire `resources/paper-template/` folder, rename it for your paper,
 and start filling in `main.tex`.

@@ -97,7 +97,7 @@ In Nestling, `ruff` is the primary linter.
 **LLM (Large Language Model)**
 : A type of AI model trained on large amounts of text to predict and generate language.
 Examples include Claude, GPT-4, and Gemini.
-LLMs are useful for code assistance and drafting, but can hallucinate — see [Working with LLMs](tracks/07-llm-practices/index.md).
+LLMs are useful for code assistance and drafting, but can hallucinate. See [Working with LLMs](tracks/07-llm-practices/index.md).
 
 **Markdown**
 : A lightweight markup language for writing formatted text using plain characters (e.g., `**bold**`, `# Heading`).
@@ -128,7 +128,7 @@ Running `pip install <package>` downloads and installs a library from the Python
 
 **Prompt (LLM)**
 : The text input you give to a large language model to elicit a response.
-Writing clear, specific prompts — prompt engineering — significantly affects output quality.
+Writing clear, specific prompts (prompt engineering) significantly affects output quality.
 
 **Pull Request (PR)**
 : A GitHub mechanism for proposing changes to a repository and requesting review before merging.
@@ -165,7 +165,7 @@ Also called the command line, shell, or console.
 On macOS and Linux it is built in; on Windows it is accessible via WSL or the Command Prompt.
 
 **Token (LLM)**
-: The basic unit of text that a language model processes — roughly a word or word fragment.
+: The basic unit of text that a language model processes, roughly a word or word fragment.
 Models have a context window measured in tokens that limits how much text they can process at once.
 
 **Vectorisation**

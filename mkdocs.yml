@@ -11,6 +11,9 @@ theme:
 
 nav:
   - Home: index.md
+  - Working Together:
+    - Your Supervisor: working-together/supervisor.md
+    - Your Role: working-together/student.md
   - Getting Started:
     - How to Use This Repo: getting-started/how-to-use-this-repo.md
     - Environment Setup: getting-started/environment-setup.md

@@ -1,6 +1,6 @@
-# Lesson 01 — How to Present a Paper
+# Lesson 01: How to Present a Paper
 
-Journal clubs are one of the most valuable — and least intimidating — things you will encounter in research.
+Journal clubs are one of the most valuable and least intimidating things you will encounter in research.
 This lesson explains what a journal club actually is, what you are trying to achieve when you present,
 and how to approach it in a way that is useful to everyone in the room.
 
@@ -43,7 +43,7 @@ Every presentation should answer one question first: why did you bring this pape
 The answer does not have to be grand or formally scientific. For example:
 
 - This is directly relevant to a problem I am working on.
-- I found the result surprising — I would not have expected this.
+- I found the result surprising. I would not have expected this.
 - The main figure is striking and I wanted to understand it.
 - I am not sure I believe this result; I want the group's opinion.
 - This is the paper that introduced the technique we all use.
@@ -60,14 +60,14 @@ That is enough to orient the discussion.
 After establishing why you care, the presentation itself is usually three things:
 
 1. **What is the question?** What problem is the paper trying to solve, and why does that problem exist?
-2. **What did they find?** Walk through the key result — usually the main figure or two.
+2. **What did they find?** Walk through the key result, usually the main figure or two.
 3. **What do you think?** Is the result convincing? What would you want to see next? What are you uncertain about?
 
 That is it. Everything else is optional.
 
 You do not need to explain every section of the paper.
 You do not need to have understood the methods in full detail.
-Saying "I didn't fully follow section 3, but the key result they get from it is X" is completely fine —
+Saying "I didn't fully follow section 3, but the key result they get from it is X" is completely fine,
 and more useful than either skipping over the gap or pretending you understood something you did not.
 
 !!! tip "The main figure is usually enough"
@@ -85,10 +85,10 @@ Thorough preparation is useful, but the bar is lower than you probably think.
 
 A reasonable preparation process:
 
-1. Read the paper properly — at least the abstract, introduction, main results, and conclusion.
+1. Read the paper properly, at least the abstract, introduction, main results, and conclusion.
    (See [Lesson 02 of the ArXiv track](../01-arxiv/lesson-02.md) for a structured reading approach.)
 2. Write one or two sentences explaining why you find it interesting.
-3. Identify the key figure — the one that best shows the main result.
+3. Identify the key figure, the one that best shows the main result.
 4. Note two or three things you found unclear, surprising, or worth debating.
 
 That is a solid foundation for any journal club presentation.
@@ -104,12 +104,12 @@ A few things worth knowing before you present for the first time:
 **It is fine to say "I do not know."**
 Journal club is a shared learning environment. The group is there to think through the paper together.
 If someone asks a question you cannot answer, say so honestly.
-"I am not sure — what do you think?" is a perfectly good response, and it moves the discussion forward.
+"I am not sure, what do you think?" is a perfectly good response, and it moves the discussion forward.
 
 **You are not being examined.**
 Presenting at journal club is not a test of how well you understand the paper.
 It is an invitation to the group to engage with it.
-If you have misunderstood something, someone will gently correct it — and everyone will learn from that too.
+If you have misunderstood something, someone will gently correct it, and everyone will learn from that too.
 
 **Short is fine.**
 A ten-minute presentation that sparks a lively forty-minute discussion is better than a forty-minute
@@ -118,7 +118,7 @@ When in doubt, cover less and stop sooner.
 
 **Your opinion matters.**
 You are not just summarising the paper for people who could read it themselves.
-Your reaction — what surprised you, what you found confusing, what you are sceptical about —
+Your reaction, what surprised you, what you found confusing, what you are sceptical about,
 is part of what makes a journal club talk worth attending.
 
 !!! note "The discussion is the point"

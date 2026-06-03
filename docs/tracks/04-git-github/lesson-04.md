@@ -1,4 +1,4 @@
-# Lesson 04 — Issues and Project Management
+# Lesson 04: Issues and Project Management
 
 GitHub Issues are the primary way to track work, report bugs, and plan new features on a project.
 They keep conversations and decisions attached to the repository, where they remain searchable
@@ -73,8 +73,8 @@ typically tied to a deadline or a version.
 
 Examples for a research project:
 
-- `Submission v1` — everything that must be done before the paper is submitted
-- `Code release` — cleanup and documentation required before making the code public
+- `Submission v1`: everything that must be done before the paper is submitted
+- `Code release`: cleanup and documentation required before making the code public
 
 Create milestones from **Issues → Milestones → New milestone**.
 Each milestone shows a progress bar based on how many of its issues are closed.
@@ -138,5 +138,5 @@ and read exactly why that change was made.
 
 ## What to read next
 
-[Lesson 05](lesson-05.md) covers GitHub Actions — how to run tests and checks automatically
+[Lesson 05](lesson-05.md) covers GitHub Actions: how to run tests and checks automatically
 on every push, so problems are caught before they reach `main`.

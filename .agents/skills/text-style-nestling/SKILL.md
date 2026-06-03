@@ -44,7 +44,16 @@ When describing what classes, methods, and other pieces of code do, prefer prese
 - ❌ `value: A float which will be used to scale the output.`
 - ✅ `value: A float which **is** used to scale the output.`
 
-### 4. Use one command per code block for shell commands
+### 4. Avoid em dashes
+
+Do not use em dashes (—) in prose or documentation. Replace each one with the form that reads
+most naturally:
+
+- A **comma**, for parenthetical elaboration: "X, which does Y" not "X — which does Y"
+- A **colon**, for introducing a list or description: "the tools: A, B, C" not "the tools — A, B, C"
+- A **new sentence**, when two independent clauses are joined: "X. Y." not "X — Y."
+
+### 5. Use one command per code block for shell commands
 
 When generating text that includes shell commands:
 

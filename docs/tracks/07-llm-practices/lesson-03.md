@@ -1,4 +1,4 @@
-# Lesson 03 — LLMs for Writing
+# Lesson 03: LLMs for Writing
 
 LLMs can help with almost every stage of scientific writing.
 They can expand a bullet list into a draft paragraph, tighten verbose prose,
@@ -21,7 +21,7 @@ scientific judgements that constitute the work.
 
 An LLM can help with drafting. It cannot author your work.
 If you give an LLM your data, your conclusions, and your outline, and it returns
-a polished paragraph, you drafted with assistance — you are still the author.
+a polished paragraph, you drafted with assistance. You are still the author.
 If you ask an LLM "what should I conclude from these results?" and adopt its answer,
 the LLM has contributed to the intellectual content of the work, which is a different
 matter entirely.
@@ -41,7 +41,7 @@ As of 2025, common positions include:
 
 | Context | Typical policy |
 |---------|---------------|
-| PhD thesis | Varies — many institutions prohibit or require disclosure; check your university's policy |
+| PhD thesis | Varies: many institutions prohibit or require disclosure; check your university's policy |
 | Journal submission | Most major journals require disclosure; some prohibit LLM use for manuscript text |
 | Conference papers | Policies vary by venue; NeurIPS, ICML, and others require disclosure |
 | Grant applications | Most funding agencies prohibit LLM-generated text in proposals |
@@ -61,7 +61,7 @@ academic misconduct.
 
 The hardest part of writing is often starting.
 Give the LLM your outline, key points, and the intended audience, and ask for a first draft.
-You will almost certainly rewrite most of it — but having something to react to is faster
+You will almost certainly rewrite most of it, but having something to react to is faster
 than drafting from nothing.
 
 ### Tightening prose
@@ -143,11 +143,11 @@ disclosure.
 **Brand voice and consistency.** In industry, organisations use LLMs with detailed
 style guides and system prompts to maintain a consistent brand voice across documents.
 As a researcher, your equivalent is your field's conventions and your own established
-voice — which an LLM can learn if you give it examples.
+voice, which an LLM can learn if you give it examples.
 
 **Fact-checking pipelines.** Serious media and publishing organisations run LLM-assisted
 drafts through fact-checking pipelines before publication. For research papers, the
-peer review process is not designed to catch LLM-introduced errors — that responsibility
+peer review process is not designed to catch LLM-introduced errors. That responsibility
 sits with the authors.
 
 **Human-in-the-loop for consequential text.** In regulated industries (medical device

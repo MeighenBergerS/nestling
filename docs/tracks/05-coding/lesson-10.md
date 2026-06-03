@@ -1,7 +1,7 @@
-# Lesson 10 — Testing
+# Lesson 10: Testing
 
 Research code that is not tested is likely wrong in ways you have not found yet.
-This is not hypothetical — every physicist who has written numerical code has eventually
+This is not hypothetical. Every physicist who has written numerical code has eventually
 found a bug they thought was physics.
 Tests do not eliminate bugs, but they catch the common ones early and give you confidence
 when refactoring.
@@ -81,7 +81,7 @@ def test_negative_gamma_raises():
         compute_flux(1e5, gamma=-1.0)
 ```
 
-The `match` argument verifies the error message — making tests self-documenting and
+The `match` argument verifies the error message, making tests self-documenting and
 preventing silent mis-matches where the right exception type is raised for the wrong reason.
 
 ---
@@ -107,7 +107,7 @@ def test_detector_volume_is_positive(simple_detector):
     assert simple_detector.volume > 0
 ```
 
-Put shared fixtures in `tests/conftest.py` — pytest finds them automatically.
+Put shared fixtures in `tests/conftest.py`. Pytest finds them automatically.
 Prometheus uses `conftest.py` to define detectors and particle configurations reused
 across its 16+ test modules.
 
@@ -156,7 +156,7 @@ pytest -m "not slow"
 ```
 
 Prometheus uses exactly this pattern. The e2e tests in `tests/test_e2e.py` are marked slow
-and excluded from the CI workflow — they are run locally before opening a pull request.
+and excluded from the CI workflow. They are run locally before opening a pull request.
 
 ---
 

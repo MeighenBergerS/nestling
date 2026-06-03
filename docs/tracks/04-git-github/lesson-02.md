@@ -1,7 +1,7 @@
-# Lesson 02 — Branching
+# Lesson 02: Branching
 
 A branch is an independent line of development within a repository.
-Branches let you work on a new feature, try an experiment, or fix a bug in isolation —
+Branches let you work on a new feature, try an experiment, or fix a bug in isolation,
 without touching the main line of the project until you are ready.
 This lesson covers how to create, switch between, merge, and delete branches,
 and how to resolve conflicts when two branches have edited the same file.
@@ -178,7 +178,7 @@ git rebase main
 Git replays each commit on `my-feature` as if you had started the branch from the current tip of `main`.
 The result is identical code, but with a cleaner, straight-line history.
 
-If there are conflicts during replay, Git pauses and asks you to resolve them — one commit at a time.
+If there are conflicts during replay, Git pauses and asks you to resolve them, one commit at a time.
 After resolving each conflict:
 
 ```sh
@@ -204,9 +204,9 @@ When to use rebase, when to use merge:
 
 | Situation | Recommendation |
 | --- | --- |
-| Updating a private feature branch before a PR | **Rebase** — keeps the history linear and clean |
-| Merging a completed feature branch into `main` | **Merge** — creates a clear record that the feature landed |
-| Updating a shared branch that others have cloned | **Merge** — never rebase shared branches |
+| Updating a private feature branch before a PR | **Rebase**: keeps the history linear and clean |
+| Merging a completed feature branch into `main` | **Merge**: creates a clear record that the feature landed |
+| Updating a shared branch that others have cloned | **Merge**: never rebase shared branches |
 
 See [Lesson 03](lesson-03.md) for the full pre-PR rebase workflow with remotes.
 

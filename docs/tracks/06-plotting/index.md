@@ -11,10 +11,10 @@ using matplotlib and the Nestling style file.
 
 ## Lessons
 
-- [**Lesson 01 — Figure Design Principles**](lesson-01.md): What makes a good scientific figure: clarity, honesty, and accessibility.
-- [**Lesson 02 — matplotlib Basics**](lesson-02.md): Creating line plots, scatter plots, histograms, and multi-panel figures.
-- [**Lesson 03 — Publication Style**](lesson-03.md): Using the Nestling matplotlib style, LaTeX labels, and exporting to PDF.
-- [**Lesson 04 — Colour and Accessibility**](lesson-04.md): Choosing colourblind-friendly palettes and avoiding common pitfalls.
+- [**Lesson 01: Figure Design Principles**](lesson-01.md): What makes a good scientific figure: clarity, honesty, and accessibility.
+- [**Lesson 02: matplotlib Basics**](lesson-02.md): Creating line plots, scatter plots, histograms, and multi-panel figures.
+- [**Lesson 03: Publication Style**](lesson-03.md): Using the Nestling matplotlib style, LaTeX labels, and exporting to PDF.
+- [**Lesson 04: Colour and Accessibility**](lesson-04.md): Choosing colourblind-friendly palettes and avoiding common pitfalls.
 
 ## Examples
 

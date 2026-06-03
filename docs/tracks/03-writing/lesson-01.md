@@ -1,10 +1,10 @@
-# Lesson 01 — Paper Structure
+# Lesson 01: Paper Structure
 
-Writing your first paper feels daunting — and that is completely normal.
+Writing your first paper feels daunting, and that is completely normal.
 Every researcher, at every career stage, finds the blank page difficult.
 What makes it easier is understanding that a physics paper has a fixed, learnable structure.
 Once you know what each part is supposed to do, the question changes from "how do I start?"
-to "what goes in this section?" — which is a much more manageable problem.
+to "what goes in this section?", which is a much more manageable problem.
 
 A physics paper is not a chronological account of what you tried.
 It is a logical argument: a single central claim, supported by a chain of derivations and figures,
@@ -17,24 +17,24 @@ This lesson explains that structure and why every part of it exists.
 
 Every HEP paper follows the same narrative arc, regardless of how many sections it has.
 
-**Act I — Motivation (Introduction)**
+**Act I: Motivation (Introduction)**
 Establish the physical system as interesting. Identify the specific gap or opportunity this paper addresses.
 State the one central question. Show Figure 1 as a visual summary of the answer.
 The reader should finish the introduction knowing exactly what the paper does and roughly what the answer is.
 
-**Act II — Derivation (Methods and Results)**
+**Act II: Derivation (Methods and Results)**
 Answer the central question in logically ordered steps.
 Each section builds directly on the previous one.
 The section sequence you promised in the introduction maps one-to-one to the actual sections.
 Never present a result before introducing the method used to derive it.
 
-**Act III — Implications (Conclusion)**
+**Act III: Implications (Conclusion)**
 Restate the quantitative result. Explain what it means for the field.
 Note what was assumed. Point to future work.
 The conclusion makes no claims that are not already established in Act II.
 
 !!! note "The introduction–conclusion contract"
-    Every claim in your introduction must be discharged — proved or calculated — before the conclusion.
+    Every claim in your introduction must be discharged, proved or calculated, before the conclusion.
     The conclusion restates the main result with the same numbers you already gave.
     If the conclusion introduces a new result, that result belongs in a Results section.
 
@@ -47,7 +47,7 @@ For example: "We demonstrate that Hyper-K can reduce the cosmic-ray flux uncerta
 improving the sin²θ₂₃ measurement by 50--73%."
 
 Secondary results are clearly subordinate: they support the main result, assess its robustness,
-or explore a natural extension — but they are never presented as co-equal claims.
+or explore a natural extension, but they are never presented as co-equal claims.
 
 Before you start writing, identify your one number. Every section exists either to derive it
 or to assess how robust it is. If a section does neither, it probably does not belong in the paper.
@@ -69,7 +69,7 @@ The three reference papers for this track each have a single primary claim:
 The introduction has a fixed four-paragraph structure:
 
 1. **Broad physical setting** (3–5 sentences): Why is this system or environment interesting?
-   Reference landmark experiments concisely — one citation per result, not clusters of five.
+   Reference landmark experiments concisely, one citation per result, not clusters of five.
 2. **Specific opportunity and prior work** (3–5 sentences): Zoom in on the precise gap this paper fills.
    Cite prior work without summarising it at length.
 3. **What this paper does** (2–4 sentences): Begin explicitly with "In this work, we..." or
@@ -77,19 +77,19 @@ The introduction has a fixed four-paragraph structure:
 4. **Paper structure** (1–2 sentences, optional): "In Section II, we... We conclude in Section IV."
    Only include this if the structure is non-obvious.
 
-Figure 1 — a sketch or overview diagram — belongs in the introduction and must be referenced explicitly
+Figure 1, a sketch or overview diagram, belongs in the introduction and must be referenced explicitly
 in the text: "Figure 1 illustrates our approach." Never let a figure float past the introduction
 without a sentence pointing to it.
 
 ### Methods and Results sections
 
 Open each section with one or two sentences stating what this section does and why.
-Do not repeat motivation already given in the introduction — a brief back-reference ("As noted above,...")
+Do not repeat motivation already given in the introduction. A brief back-reference ("As noted above,...")
 is sufficient if needed at all.
 
 Present figures before interpreting them. The standard pattern is: "Figure X shows [what]."
 Then the paragraph interpreting the figure follows immediately.
-Never write "As can be seen in Figure X" — see [Lesson 03](lesson-03.md) for the full list.
+Never write "As can be seen in Figure X". See [Lesson 03](lesson-03.md) for the full list.
 
 When there are multiple scenarios (NFW vs. spike, Milky Way vs. NGC 1068),
 present the simplest or most general case first, then the more elaborate one.
@@ -170,6 +170,6 @@ A few hard rules that are easy to violate in a first draft:
 
 ## What to read next
 
-[Lesson 02](lesson-02.md) covers the abstract — the most-read part of any paper and the part
+[Lesson 02](lesson-02.md) covers the abstract, the most-read part of any paper and the part
 most authors write last and least carefully.
 [Lesson 03](lesson-03.md) covers sentence- and paragraph-level writing conventions.

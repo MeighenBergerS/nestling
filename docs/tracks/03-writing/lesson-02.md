@@ -1,12 +1,12 @@
-# Lesson 02 — The Abstract Formula
+# Lesson 02: The Abstract Formula
 
 The abstract is the most-read part of your paper.
 Most readers will never get past it.
 Editors and referees will form their first impression from it.
 And yet it is almost always written last, in a hurry, after the authors are exhausted from finishing the paper.
 
-This lesson gives you a template that forces the abstract to say exactly what it needs to say —
-no more, no less — in four to five sentences.
+This lesson gives you a template that forces the abstract to say exactly what it needs to say,
+no more, no less, in four to five sentences.
 
 ---
 
@@ -32,26 +32,26 @@ and why it matters.
 
 Every abstract follows the same four-sentence structure, with one optional fifth sentence:
 
-**Sentence 1 — Setting and motivation**
+**Sentence 1: Setting and motivation**
 Establish the physical system and the opportunity it offers.
 This sentence should stand alone and make sense to any physicist in a related field.
 
 > "Next-generation neutrino detectors will observe cosmic-ray induced atmospheric neutrinos with unprecedented precision."
 
-**Sentence 2 (and optional 2b) — What we do**
+**Sentence 2 (and optional 2b): What we do**
 Name the method, the systems studied, and the scope.
 Begin with "We...".
 
 > "We investigate the capabilities of Hyper-Kamiokande to measure the CR energy spectrum using the atmospheric neutrino flux."
 
-**Sentence 3 — Main quantitative result**
+**Sentence 3: Main quantitative result**
 A specific number or comparison. Not vague. Not "significant improvement".
 If you cannot write a number here, you do not yet know what your main result is.
 
 > "We demonstrate that Hyper-K reduces the flux uncertainty from ~20% to ~7% at 1 GeV,
 > improving the sin²θ₂₃ sensitivity by 50--73% relative to current measurements."
 
-**Sentence 4 — Broader implication**
+**Sentence 4: Broader implication**
 One sentence on why this matters: what complementary probe it provides, what it opens up,
 or why the community should care.
 
@@ -87,10 +87,10 @@ Keep that sentence visible as you write. Every section should be building toward
 
 Once the paper is finished:
 
-1. Write Sentence 3 first — the quantitative result. If you cannot write it, stop and figure out what your number is.
-2. Write Sentence 2 — what you did to get that result.
-3. Write Sentence 1 — what physical system makes this interesting.
-4. Write Sentence 4 — one implication.
+1. Write Sentence 3 first: the quantitative result. If you cannot write it, stop and figure out what your number is.
+2. Write Sentence 2: what you did to get that result.
+3. Write Sentence 1: what physical system makes this interesting.
+4. Write Sentence 4: one implication.
 5. Trim to ≤ 5 sentences total and check for vague language.
 
 !!! tip "Read it out loud"

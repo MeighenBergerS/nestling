@@ -1,4 +1,4 @@
-# Lesson 04 — Colour and Accessibility
+# Lesson 04: Colour and Accessibility
 
 Colour is the element of a figure most likely to cause problems for readers and most likely to
 be handled carelessly.
@@ -21,7 +21,7 @@ photocopy, or a low-contrast projection.
 
 A figure that relies on colour as the sole distinguishing feature excludes a significant fraction
 of your audience.
-The fix is not to abandon colour — it is to use colour correctly.
+The fix is not to abandon colour. It is to use colour correctly.
 
 ---
 
@@ -35,7 +35,7 @@ Choose the palette type to match the type of data:
 | **Sequential** | Ordered data from low to high | Flux intensity, temperature, probability |
 | **Diverging** | Data diverging from a meaningful midpoint | Residuals, signed differences, correlation |
 
-Using a sequential palette for categorical data is a common mistake — the implied ordering
+Using a sequential palette for categorical data is a common mistake, as the implied ordering
 misleads the reader.
 
 ---
@@ -61,13 +61,13 @@ These are already set as the default colour cycle in `nestling.mplstyle`.
 
 Other well-tested qualitative palettes from ColorBrewer:
 
-- **Set1** — high-contrast, slightly garish; works when CVD is not a concern.
-- **Set2** — softer, but less distinguishable in greyscale.
-- **Paired** — six pairs of light/dark variants; good for showing related quantities.
+- **Set1**: high-contrast, slightly garish; works when CVD is not a concern.
+- **Set2**: softer, but less distinguishable in greyscale.
+- **Paired**: six pairs of light/dark variants; good for showing related quantities.
 
 Explore all options interactively at
-[colorbrewer2.org](https://colorbrewer2.org/#type=qualitative&scheme=Set1&n=7) —
-the site lets you filter by CVD-safe and print-safe status.
+[colorbrewer2.org](https://colorbrewer2.org/#type=qualitative&scheme=Set1&n=7).
+The site lets you filter by CVD-safe and print-safe status.
 
 ---
 
@@ -141,7 +141,7 @@ ax.loglog(E, 1e-18 * (E / 1e5) ** -2.4,
 ax.legend()
 ```
 
-Here colour AND line style distinguish the curves — the figure is still readable when
+Here colour AND line style distinguish the curves. The figure is still readable when
 printed in black and white.
 
 For scatter plots, pair colour with marker shape:
@@ -166,10 +166,10 @@ If they do not, add line style or marker differentiation.
 
 Several online tools simulate how your figure appears with common colour vision deficiencies:
 
-- [Coblis — Color Blindness Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/) — upload an image, get CVD-simulated previews.
-- [Viz Palette](https://projects.susielu.com/viz-palette) — test named palettes interactively.
+- [Coblis: Color Blindness Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/): upload an image, get CVD-simulated previews.
+- [Viz Palette](https://projects.susielu.com/viz-palette): test named palettes interactively.
 
-The ColorBrewer site also labels palettes as "colorblind safe" — filter by this when choosing.
+The ColorBrewer site also labels palettes as "colorblind safe". Filter by this when choosing.
 
 ### matplotlib's built-in greyscale preview
 
@@ -190,7 +190,7 @@ plt.imsave("check_grey.png", grey, cmap="grey")
 
 ## Colour in context: a few more rules
 
-- **Avoid red and green together** for any information-carrying distinction — this is the most
+- **Avoid red and green together** for any information-carrying distinction. This is the most
   common CVD combination.
 - **Don't use colour to encode the same information as position.**
   If the x-axis already distinguishes the curves, adding colour is redundant and distracting.
@@ -215,9 +215,9 @@ plt.imsave("check_grey.png", grey, cmap="grey")
 
 ## Resources
 
-- [ColorBrewer 2.0](https://colorbrewer2.org/#type=qualitative&scheme=Set1&n=7) — interactive palette explorer, filtered by CVD-safe and print-safe status.
-- [Ciaran O'Hare — HowToMakeAPlot](https://github.com/cajohare/HowToMakeAPlot) — worked examples of palette choice and CVD simulation in matplotlib.
-- [matplotlib colormap reference](https://matplotlib.org/stable/gallery/color/colormap_reference.html) — full list of built-in colormaps.
-- [Coblis CVD simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/) — upload any figure and preview CVD variants.
-- [Viz Palette](https://projects.susielu.com/viz-palette) — design and test named palettes interactively.
-- [Scientific colour maps (Crameri)](https://www.fabiocrameri.ch/colourmaps/) — perceptually uniform, CVD-safe maps optimised for scientific data.
+- [ColorBrewer 2.0](https://colorbrewer2.org/#type=qualitative&scheme=Set1&n=7): interactive palette explorer, filtered by CVD-safe and print-safe status.
+- [Ciaran O'Hare: HowToMakeAPlot](https://github.com/cajohare/HowToMakeAPlot): worked examples of palette choice and CVD simulation in matplotlib.
+- [matplotlib colormap reference](https://matplotlib.org/stable/gallery/color/colormap_reference.html): full list of built-in colormaps.
+- [Coblis CVD simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/): upload any figure and preview CVD variants.
+- [Viz Palette](https://projects.susielu.com/viz-palette): design and test named palettes interactively.
+- [Scientific colour maps (Crameri)](https://www.fabiocrameri.ch/colourmaps/): perceptually uniform, CVD-safe maps optimised for scientific data.

@@ -1,4 +1,4 @@
-# Lesson 01 — IDE Setup
+# Lesson 01: IDE Setup
 
 A good editor makes you significantly more productive: it catches errors before you run code,
 navigates large codebases instantly, and integrates with Git, terminals, and debuggers.
@@ -9,13 +9,13 @@ Choosing one and learning it well is worth the upfront investment.
 ## Choosing an editor
 
 For physics research the practical choice is **Visual Studio Code (VSCode)**.
-It is free, cross-platform, and has excellent Python tooling — autocompletion, a built-in
+It is free, cross-platform, and has excellent Python tooling: autocompletion, a built-in
 debugger, Git integration, and Jupyter notebook support all work out of the box.
 It is also what most people in the group use, which means help is easy to find.
 The examples in this track assume VSCode, but the concepts apply to any editor.
 
-If you prefer a terminal-based workflow — common in HPC environments where you SSH into a
-cluster — **Neovim** is the modern choice, with a large plugin ecosystem that replicates most
+If you prefer a terminal-based workflow, common in HPC environments where you SSH into a
+cluster, **Neovim** is the modern choice, with a large plugin ecosystem that replicates most
 of what VSCode offers. The learning curve is steep; only pursue it if you spend most of your
 time on remote machines and genuinely value that workflow.
 
@@ -70,7 +70,7 @@ there, including `pip install` and `python`.
 For quick runs, click the play button (▷) in the top-right of any `.py` file.
 For real debugging:
 
-1. Click to the left of a line number to set a **breakpoint** — a red dot appears.
+1. Click to the left of a line number to set a **breakpoint**. A red dot appears.
 2. Press **F5** to start the debugger.
 3. Execution pauses at the breakpoint. Inspect variables in the left panel;
    step through with **F10** (next line) / **F11** (step into function).
@@ -107,5 +107,5 @@ on the remote machine.
 
 ## What to read next
 
-[Lesson 02](lesson-02.md) covers Python basics and Jupyter notebooks — the interactive
+[Lesson 02](lesson-02.md) covers Python basics and Jupyter notebooks, the interactive
 environment where most day-to-day physics work happens.

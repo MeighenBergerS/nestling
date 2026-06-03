@@ -4,7 +4,7 @@
 
 Git is a **version control system**: a tool that records the complete history of every change
 made to a set of files.
-Every time you save a snapshot of your work — called a **commit** — Git stores what changed,
+Every time you save a snapshot of your work, called a **commit**, Git stores what changed,
 who changed it, and when.
 You can go back to any previous snapshot at any time.
 
@@ -54,18 +54,18 @@ Git solves all of these problems:
 !!! note "Version control is not just for software"
     Git works well for anything text-based: Python scripts, LaTeX source files, Jupyter notebooks,
     configuration files, and plain-text notes.
-    It is not suitable for large binary files (data files, images, compiled outputs) — those should
+    It is not suitable for large binary files (data files, images, compiled outputs). Those should
     be listed in `.gitignore` and stored elsewhere.
 
 ## Lessons
 
 | Lesson | Topic | What you will learn |
 | --- | --- | --- |
-| [01 — Git Basics](lesson-01.md) | Repositories and commits | Initialising a repository, staging changes, committing, and reading history |
-| [02 — Branching](lesson-02.md) | Parallel lines of work | Creating and merging branches and resolving conflicts |
-| [03 — GitHub Collaboration](lesson-03.md) | Forks and pull requests | Pushing to a remote, opening pull requests, and reviewing code |
-| [04 — Issues and Project Management](lesson-04.md) | Tracking work | Creating issues, linking them to commits, and using labels and milestones |
-| [05 — GitHub Actions](lesson-05.md) | Automated checks | Running tests and linters on every push with a workflow file |
+| [01: Git Basics](lesson-01.md) | Repositories and commits | Initialising a repository, staging changes, committing, and reading history |
+| [02: Branching](lesson-02.md) | Parallel lines of work | Creating and merging branches and resolving conflicts |
+| [03: GitHub Collaboration](lesson-03.md) | Forks and pull requests | Pushing to a remote, opening pull requests, and reviewing code |
+| [04: Issues and Project Management](lesson-04.md) | Tracking work | Creating issues, linking them to commits, and using labels and milestones |
+| [05: GitHub Actions](lesson-05.md) | Automated checks | Running tests and linters on every push with a workflow file |
 
 Work through the lessons in order if you are new to Git.
 If you already use Git daily and want a specific topic, jump to the lesson that covers it.

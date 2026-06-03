@@ -1,4 +1,4 @@
-# Lesson 03 — Writing Conventions
+# Lesson 03: Writing Conventions
 
 Physics writing has a dialect.
 It is not literary prose, and it is not the informal style of a lab notebook.
@@ -137,7 +137,7 @@ Never "Summary and Conclusions".
 
 ## Order-of-magnitude estimates
 
-Every paper should contain at least one clearly signposted order-of-magnitude (OOM) estimate —
+Every paper should contain at least one clearly signposted order-of-magnitude (OOM) estimate,
 an argument a reader can reproduce with pencil and paper in under five minutes.
 Its role is to build intuition for *why* the answer comes out the way it does, not to replace the full calculation.
 
@@ -152,7 +152,7 @@ Set it off explicitly: "To build intuition, we note that..." or "A simple estima
 **Structure of a well-formed estimate:**
 
 1. Name the one or two quantities that dominate the answer.
-2. Write the scaling — a product or ratio of those quantities, using ~ freely.
+2. Write the scaling: a product or ratio of those quantities, using ~ freely.
 3. Plug in numbers and state the result (one significant figure).
 
 Example (from arXiv:2512.18093):
@@ -170,11 +170,11 @@ Always close the estimate paragraph with a sentence comparing it to the full res
 | "The full result is a factor of ~3 larger because of the spike profile, discussed in Section IV." | |
 
 **Notation for estimates:** Use ~ for order-of-magnitude equalities, ≃ for approximate numerical equality
-(within 10–20%). Do not use ≈ for rough estimates — reserve it for numerical approximations in equations.
+(within 10–20%). Do not use ≈ for rough estimates. Reserve it for numerical approximations in equations.
 
 ### Before and after: a poorly-written versus a well-formed estimate
 
-**❌ Poor version** — no controlling quantities named, no algebra shown, no comparison to the full result:
+**❌ Poor version**: no controlling quantities named, no algebra shown, no comparison to the full result:
 
 > "The DM–nucleon cross section is constrained to be small. The mean free path of a UHECR must be
 > large enough for it to escape the AGN. This gives a rough bound on the cross section."
@@ -208,7 +208,7 @@ Always introduce a figure before or at the start of the paragraph that interpret
 | "Figure 3 shows the predicted event rate as a function of energy." | "As can be seen in Figure 3, the event rate..." |
 | "The results are presented in Figure 3." | "The event rate (Figure 3) is..." (when Figure 3 hasn't been referenced yet) |
 
-Always spell out "Figure" — never "Fig.". See [Lesson 04](lesson-04.md) for the LaTeX conventions.
+Always spell out "Figure", never "Fig.". See [Lesson 04](lesson-04.md) for the LaTeX conventions.
 
 ---
 
@@ -226,7 +226,7 @@ If you find yourself using bullet points in a Results section, convert them to p
 ## Common phrases: use and avoid
 
 The left column is the standard phrasing in this group's papers.
-The right column is the version that will be flagged in review — sometimes by a co-author,
+The right column is the version that will be flagged in review, sometimes by a co-author,
 sometimes by a referee, and sometimes by an automated checker.
 
 | ✅ Use | ❌ Avoid | Why |

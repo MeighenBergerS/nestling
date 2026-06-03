@@ -1,7 +1,7 @@
-# Lesson 02 — matplotlib Basics
+# Lesson 02: matplotlib Basics
 
 matplotlib is the standard plotting library in scientific Python.
-It is verbose by design — every element of a figure can be controlled explicitly — and that
+It is verbose by design. Every element of a figure can be controlled explicitly, and that
 verbosity pays off when you need publication-quality output.
 
 This lesson covers the API patterns you will use in almost every figure, illustrated with
@@ -13,8 +13,8 @@ physics-relevant examples.
 
 matplotlib separates the canvas from the plot area:
 
-- **`Figure`** — the whole image, including all panels and any surrounding whitespace.
-- **`Axes`** — a single plot panel, with its own axis limits, labels, ticks, and data.
+- **`Figure`**: the whole image, including all panels and any surrounding whitespace.
+- **`Axes`**: a single plot panel, with its own axis limits, labels, ticks, and data.
 
 One Figure can contain many Axes.
 Always create them together:
@@ -32,7 +32,7 @@ The `fig` object is what you save.
 
 !!! tip "Prefer the object-oriented API"
     matplotlib has two interfaces: the `plt.plot(...)` shortcut (procedural) and `ax.plot(...)`
-    (object-oriented). Always use the object-oriented form — it makes multi-panel figures and
+    (object-oriented). Always use the object-oriented form. It makes multi-panel figures and
     function-based code unambiguous.
 
 ---
@@ -140,7 +140,7 @@ plt.savefig("histogram.pdf")
 plt.close(fig)
 ```
 
-- `histtype="step"` draws an outline without fill — cleaner for overlaying multiple distributions.
+- `histtype="step"` draws an outline without fill, cleaner for overlaying multiple distributions.
 - `density=True` normalises to a probability density (area = 1).
 - `bins` can be an integer (number of bins) or an array of bin edges.
 
@@ -187,7 +187,7 @@ plt.savefig("two_panels.pdf")
 plt.close(fig)
 ```
 
-- `sharey=True` / `sharex=True` links axis limits across panels — useful when comparing the
+- `sharey=True` / `sharex=True` links axis limits across panels, useful when comparing the
   same quantity side by side.
 - `fig.suptitle` places a shared title above all panels.
 - Adjust `figsize` so the final printed width matches the journal column width.

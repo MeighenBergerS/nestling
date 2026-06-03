@@ -1,4 +1,4 @@
-# Lesson 01 — Finding Papers
+# Lesson 01: Finding Papers
 
 Before you can read a paper, you need to find it.
 This lesson covers the main tools physicists use to locate research literature,
@@ -12,7 +12,7 @@ how ArXiv is structured, and how to set up alerts so new relevant work lands in 
 A **preprint** is a version of a paper that the authors have made publicly available before (or alongside) formal peer review.
 
 In physics, mathematics, and related fields, ArXiv is the central hub for research.
-Papers usually appear on ArXiv on the same day they are submitted to a journal —
+Papers usually appear on ArXiv on the same day they are submitted to a journal,
 which means you can read new results weeks or months before they appear in a published journal.
 
 !!! note "ArXiv versus published journals"
@@ -29,9 +29,9 @@ Each category has a short identifier. The ones most common in physics research a
 
 | Identifier | Area |
 |---|---|
-| `hep-ph` | High-energy physics — phenomenology |
-| `hep-th` | High-energy physics — theory |
-| `hep-ex` | High-energy physics — experiment |
+| `hep-ph` | High-energy physics: phenomenology |
+| `hep-th` | High-energy physics: theory |
+| `hep-ex` | High-energy physics: experiment |
 | `astro-ph` | Astrophysics (with sub-categories like `astro-ph.HE`, `astro-ph.CO`) |
 | `cond-mat` | Condensed matter physics |
 | `gr-qc` | General relativity and quantum cosmology |
@@ -48,16 +48,16 @@ It is common to watch two or three related categories at once.
 
 Before diving into primary research papers, look for a **review article** on your topic.
 Review articles are written specifically to introduce a field, summarise its current state,
-and point to the key primary literature — exactly what you need when you are new to an area.
+and point to the key primary literature, exactly what you need when you are new to an area.
 
 Good places to find review articles:
 
 - Search ArXiv for your topic with the word "review" or "introduction" in the title:
   `ti:review AND ti:neutrino AND cat:hep-ph`
-- [Physics Reports](https://www.sciencedirect.com/journal/physics-reports) — in-depth reviews across all physics.
-- [Annual Review of Nuclear and Particle Science](https://www.annualreviews.org/journal/nucl) — HEP and nuclear physics.
-- [Living Reviews in Relativity](https://link.springer.com/journal/41114) — continuously updated reviews in GR and cosmology.
-- Ask your supervisor directly — they will know which review papers people in your subfield actually read.
+- [Physics Reports](https://www.sciencedirect.com/journal/physics-reports): in-depth reviews across all physics.
+- [Annual Review of Nuclear and Particle Science](https://www.annualreviews.org/journal/nucl): HEP and nuclear physics.
+- [Living Reviews in Relativity](https://link.springer.com/journal/41114): continuously updated reviews in GR and cosmology.
+- Ask your supervisor directly. They will know which review papers people in your subfield actually read.
 
 !!! tip "Read a review before reading primary papers"
     A good review article will teach you the vocabulary, the open questions, and the ten papers
@@ -99,14 +99,14 @@ It indexes ArXiv papers and journal articles together, tracks citation counts,
 and makes it easy to find which papers cite a given paper (useful for tracing how a field has developed).
 
 Inspire-HEP is also the standard source for **BibTeX citation entries** in HEP.
-Each paper has a *texkey* — a short identifier like `ATLAS:2012yve` — which is what you use in `\cite{}`
+Each paper has a *texkey*, a short identifier like `ATLAS:2012yve`, which is what you use in `\cite{}`
 commands in a LaTeX document. You can copy a ready-to-use BibTeX entry directly from any paper's Inspire page.
 
 If your project is in particle physics or related areas, Inspire-HEP is worth bookmarking alongside ArXiv.
 
 **Following citations forward:** once you find a key paper, use the *Cited by* tab on its Inspire page
 to see every paper that has cited it. This is one of the most effective ways to trace how a subfield
-has developed and to find the current state of the art — start from a foundational paper and follow
+has developed and to find the current state of the art. Start from a foundational paper and follow
 the thread forward to the most recent work.
 
 ### Google Scholar
@@ -127,7 +127,7 @@ When a colleague or supervisor mentions a paper, they will often give you just t
 !!! note "Preprint vs. published version"
     The ArXiv version and the published journal version of a paper sometimes differ.
     Most of the time the differences are minor (typos, small clarifications), but occasionally
-    a correction is substantial. When a published version exists, that is what you should cite —
+    a correction is substantial. When a published version exists, that is what you should cite,
     and for papers that are central to your work, it is worth checking whether the published version
     contains corrections relative to the preprint.
     The DOI link on the ArXiv abstract page takes you directly to the published version.
@@ -145,7 +145,7 @@ Email alerts let new relevant papers come to you.
 2. Click **"Subscribe"** at the top of the page.
 3. Enter your email address. You will receive a daily digest of new submissions.
 
-This gives you everything in the category — useful for staying broad, but noisy if the category is large.
+This gives you everything in the category, which is useful for staying broad, but noisy if the category is large.
 
 ### Inspire-HEP author alerts
 
@@ -166,13 +166,13 @@ This works across disciplines and catches papers that may not be on ArXiv.
 ## What to do with a paper once you find it
 
 Finding a paper is just the first step.
-Once you have identified something relevant, save it to your reference manager before you forget about it — you will thank yourself later.
+Once you have identified something relevant, save it to your reference manager before you forget about it. You will thank yourself later.
 The next lesson, [Lesson 02](lesson-02.md), covers how to actually read a paper efficiently.
 [Lesson 03](lesson-03.md) covers how to manage and organise what you find.
 
 !!! tip "Ask your supervisor about the field's key papers"
     Every subfield has a small set of foundational papers that almost everyone knows.
-    Ask your supervisor for two or three papers to start with — reading those first will give you the vocabulary to search more effectively.
+    Ask your supervisor for two or three papers to start with. Reading those first will give you the vocabulary to search more effectively.
 
 ---
 
@@ -180,10 +180,10 @@ The next lesson, [Lesson 02](lesson-02.md), covers how to actually read a paper 
 
 The [`examples/arxiv/`](https://github.com/MeighenBergerS/nestling/tree/main/examples/arxiv) folder
 contains runnable Python scripts and Jupyter notebooks that demonstrate everything covered in this lesson.
-You do not need to run these to follow the track — they are for when you want to automate or explore programmatically.
+You do not need to run these to follow the track. They are for when you want to automate or explore programmatically.
 Each topic has a plain script for quick reference and a notebook with step-by-step commentary.
 
-### ArXiv API — [`arxiv_api.py`](https://github.com/MeighenBergerS/nestling/tree/main/examples/arxiv/arxiv_api.py) · [`arxiv_api.ipynb`](https://github.com/MeighenBergerS/nestling/tree/main/examples/arxiv/notebooks/arxiv_api.ipynb)
+### ArXiv API: [`arxiv_api.py`](https://github.com/MeighenBergerS/nestling/tree/main/examples/arxiv/arxiv_api.py) · [`arxiv_api.ipynb`](https://github.com/MeighenBergerS/nestling/tree/main/examples/arxiv/notebooks/arxiv_api.ipynb)
 
 Uses the [`arxiv`](https://pypi.org/project/arxiv/) Python package to:
 
@@ -203,7 +203,7 @@ for result in client.results(search):
     print(result.title, result.entry_id)
 ```
 
-### Inspire-HEP API — [`inspire_api.py`](https://github.com/MeighenBergerS/nestling/tree/main/examples/arxiv/inspire_api.py) · [`inspire_api.ipynb`](https://github.com/MeighenBergerS/nestling/tree/main/examples/arxiv/notebooks/inspire_api.ipynb)
+### Inspire-HEP API: [`inspire_api.py`](https://github.com/MeighenBergerS/nestling/tree/main/examples/arxiv/inspire_api.py) · [`inspire_api.ipynb`](https://github.com/MeighenBergerS/nestling/tree/main/examples/arxiv/notebooks/inspire_api.ipynb)
 
 !!! note "HEP bias"
     This script uses the Inspire-HEP API, which covers high-energy physics literature.
@@ -212,9 +212,9 @@ for result in client.results(search):
 Uses the [Inspire-HEP REST API](https://inspirehep.net/api/) (no authentication needed) to:
 
 - Search by keyword, author, or any Inspire query syntax.
-- Fetch a paper's full metadata — including its texkey and citation count — by ArXiv ID.
+- Fetch a paper's full metadata, including its texkey and citation count, by ArXiv ID.
 - Retrieve a ready-to-use BibTeX entry from Inspire, which is the standard citation format in HEP.
-- **Verify that a paper actually exists** — useful when working with LLMs, which sometimes hallucinate
+- **Verify that a paper actually exists**: useful when working with LLMs, which sometimes hallucinate
   plausible-sounding citations. Querying Inspire with the ArXiv ID or texkey is a fast sanity check:
   a clean hit with a matching title is strong evidence the paper is real; no hit means proceed with caution.
 

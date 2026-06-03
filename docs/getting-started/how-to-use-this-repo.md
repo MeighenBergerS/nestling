@@ -2,14 +2,14 @@
 
 Nestling is organised into three parts:
 
-- **Tracks** — the main learning content. Each is a short, self-contained sequence of lessons on one skill.
-- **Examples** — runnable notebooks and scripts in the `examples/` folder of the repository.
-- **Templates** — ready-to-adapt starting points for papers, slides, and other research documents.
+- **Tracks**: the main learning content. Each is a short, self-contained sequence of lessons on one skill.
+- **Examples**: runnable notebooks and scripts in the `examples/` folder of the repository.
+- **Templates**: ready-to-adapt starting points for papers, slides, and other research documents.
 
 ## Choosing a track
 
 Your supervisor will usually point you to a specific track to begin with.
-If they haven't yet, ask — they know what is most relevant to your project right now.
+If they haven't yet, ask. They know what is most relevant to your project right now.
 
 As a rough guide:
 
@@ -28,7 +28,7 @@ Work through what is relevant now and come back when you need the rest.
 ## Running examples
 
 Some tracks include runnable code examples.
-To run these locally you will need Python set up on your machine — see [Environment Setup](environment-setup.md).
+To run these locally you will need Python set up on your machine. See [Environment Setup](environment-setup.md).
 
 If you are only reading the lessons, you do not need to install anything.
 This site is all you need.
@@ -41,4 +41,4 @@ Your supervisor can advise on which template fits your current task.
 
 !!! tip "Questions?"
     If something here is unclear, or doesn't match what your supervisor has asked you to do, ask them.
-    Nestling is a starting point — your supervisor's guidance always takes priority.
+    Nestling is a starting point. Your supervisor's guidance always takes priority.

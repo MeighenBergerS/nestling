@@ -1,8 +1,8 @@
-# Lesson 05 — Prompt Engineering for Research
+# Lesson 05: Prompt Engineering for Research
 
 Prompt engineering is the practice of writing inputs to an LLM that reliably produce
 useful outputs.
-It is not a mystical art — it is the application of clear communication to a system
+It is not a mystical art. It is the application of clear communication to a system
 that responds well to clear communication.
 
 This lesson covers the techniques that matter most for research tasks:
@@ -15,7 +15,7 @@ summarisation, explanation, brainstorming, and structured output.
 Write your prompt as if you were briefing a knowledgeable colleague who has just joined
 the project.
 They are capable but know nothing about your specific context unless you tell them.
-They will do exactly what you ask — not more, not less — so be specific about what
+They will do exactly what you ask, not more, not less, so be specific about what
 you want.
 
 ---
@@ -154,9 +154,9 @@ and focused.
 
 | Task | Temperature guidance |
 |------|---------------------|
-| Factual extraction or summarisation | Low (0.0–0.3) — you want the most likely correct answer |
-| Brainstorming or creative drafting | Higher (0.7–1.0) — you want variety |
-| Code generation | Low to medium (0.0–0.5) — you want correct, predictable output |
+| Factual extraction or summarisation | Low (0.0–0.3): you want the most likely correct answer |
+| Brainstorming or creative drafting | Higher (0.7–1.0): you want variety |
+| Code generation | Low to medium (0.0–0.5): you want correct, predictable output |
 
 For most research tasks, the default temperature (typically 0.7–1.0) is fine.
 If you are using the API and need reproducible output, set temperature to 0 and fix the
