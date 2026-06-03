@@ -109,6 +109,20 @@ to see every paper that has cited it. This is one of the most effective ways to 
 has developed and to find the current state of the art. Start from a foundational paper and follow
 the thread forward to the most recent work.
 
+### NASA ADS
+
+!!! note "Astrophysics focus"
+    NASA ADS is the standard literature database in astrophysics and space science.
+    If your project is in astroparticle physics or has an astrophysics component, it is worth knowing
+    alongside Inspire-HEP.
+
+[NASA ADS](https://ui.adsabs.harvard.edu/) (Astrophysics Data System) indexes astrophysics,
+physics, and space science literature. Like Inspire-HEP, it tracks citations and links ArXiv
+preprints to their published journal versions. It covers a broader range of astrophysics
+subfields than Inspire-HEP, and its citation tools are widely used in that community.
+
+If you are unsure which database your subfield uses, ask your supervisor.
+
 ### Google Scholar
 
 [Google Scholar](https://scholar.google.com) indexes papers across all disciplines,
