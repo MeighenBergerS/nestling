@@ -136,6 +136,13 @@ Add linting and documentation checks once the basic test job is working.
 
 ---
 
+## Further reading
+
+The [GitHub Actions documentation](https://docs.github.com/en/actions) covers everything beyond
+what this lesson introduces: workflow syntax in full, the available runner environments, secrets
+management, reusable workflows, and the Actions marketplace. When your CI needs grow beyond a
+basic test-and-lint setup, the official docs are the right place to start.
+
 ## What to read next
 
 This is the last lesson in the Git & GitHub track.
